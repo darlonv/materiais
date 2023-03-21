@@ -1,0 +1,114 @@
+version: '3'
+services:
+  #REDES
+  redes_init:
+    image: node:19-slim
+    container_name: redes_init
+    profiles: ['init', 'redes', 'all']
+    volumes:
+      - ./redes:/redes
+    working_dir: /redes
+    command: npm install
+
+  redes:
+    image: node:19-slim
+    container_name: redes
+    profiles: ['run', 'redes', 'all']
+    volumes:
+      - ./redes:/redes
+    ports:
+      - "3001:3000"
+    working_dir: /redes
+    command: npx docusaurus start --host 0.0.0.0
+    
+  redes_deploy:
+    image: node:19
+    container_name: redes_deploy
+    profiles: ['deploy', 'redes', 'all']
+    environment:
+      - GIT_USER=$GIT_USER
+      - GIT_PASS=$GIT_PASS
+      - GIT_NAME=$GIT_NAME
+      - GIT_MAIL=$GIT_MAIL
+      - USE_SSH=$USE_SSH
+      - CURRENT_BRANCH=$CURRENT_BRANCH
+    volumes:
+      - ./redes:/redes
+    working_dir: /redes
+    command: bash -c "git config --global user.email $GIT_MAIL && git config --global user.name $GIT_NAME && yarn deploy"
+    
+  #ALGORITMOS
+  algoritmos_init:
+    image: node:19-slim
+    container_name: algoritmos_init
+    profiles: ['init', 'algoritmos', 'all']
+    volumes:
+      - ./algoritmos:/algoritmos
+    working_dir: /algoritmos
+    command: bash -c "npm install && npm install --save remark-math@3 rehype-katex@5 hast-util-is-element@1.1.0"
+
+  algoritmos:
+    image: node:19-slim
+    container_name: algoritmos
+    profiles: ['run', 'algoritmos', 'all']
+    volumes:
+      - ./algoritmos:/algoritmos
+    ports:
+      - "3000:3000"
+    working_dir: /algoritmos
+    command: npx docusaurus start --host 0.0.0.0
+    
+  algoritmos_deploy:
+    image: node:19
+    container_name: algoritmos_deploy
+    profiles: ['deploy', 'algoritmos', 'all']
+    environment:
+      - GIT_USER=$GIT_USER
+      - GIT_PASS=$GIT_PASS
+      - GIT_NAME=$GIT_NAME
+      - GIT_MAIL=$GIT_MAIL
+      - USE_SSH=$USE_SSH
+      - CURRENT_BRANCH=$CURRENT_BRANCH
+    volumes:
+      - ./algoritmos:/algoritmos
+    working_dir: /algoritmos
+    command: bash -c "git config --global user.email $GIT_MAIL && git config --global user.name $GIT_NAME && yarn deploy"
+    
+    #Robotica
+  robotica_init:
+    image: node:19-slim
+    container_name: robotica_init
+    profiles: ['init', 'robotica', 'all']
+    volumes:
+      - ./robotica:/robotica
+    working_dir: /robotica
+    command: npm install
+
+  robotica:
+    image: node:19-slim
+    profiles: ['run', 'robotica', 'all']
+    container_name: robotica
+    volumes:
+      - ./robotica:/robotica
+    ports:
+      - "3030:3000"
+    working_dir: /robotica
+    command: npx docusaurus start --host 0.0.0.0
+    
+  robotica_deploy:
+    image: node:19
+    container_name: robotica_deploy
+    profiles: ['deploy', 'robotica', 'all']
+    environment:
+      - GIT_USER=$GIT_USER
+      - GIT_PASS=$GIT_PASS
+      - GIT_NAME=$GIT_NAME
+      - GIT_MAIL=$GIT_MAIL
+      - USE_SSH=$USE_SSH
+      - CURRENT_BRANCH=$CURRENT_BRANCH
+    volumes:
+      - ./robotica:/robotica
+    working_dir: /robotica
+    command: bash -c "git config --global user.email $GIT_MAIL && git config --global user.name $GIT_NAME && yarn deploy"
+    
+    
