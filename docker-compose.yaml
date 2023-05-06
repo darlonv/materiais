@@ -20,6 +20,7 @@ services:
       - "3001:3000"
     working_dir: /redes
     command: npx docusaurus start --host 0.0.0.0
+    #restart: always
     
   redes_deploy:
     image: node:19
@@ -57,6 +58,7 @@ services:
       - "3000:3000"
     working_dir: /algoritmos
     command: npx docusaurus start --host 0.0.0.0
+    #restart: always
     
   algoritmos_deploy:
     image: node:19
@@ -111,4 +113,40 @@ services:
     working_dir: /robotica
     command: bash -c "git config --global user.email $GIT_MAIL && git config --global user.name $GIT_NAME && yarn deploy"
     
+    #SO
+  so_init:
+    image: node:19-slim
+    container_name: so_init
+    profiles: ['init', 'so', 'all']
+    volumes:
+      - ./so:/so
+    working_dir: /so
+    command: bash -c "npm install && npm install --save remark-math@3 rehype-katex@5 hast-util-is-element@1.1.0"
+
+  so:
+    image: node:19-slim
+    container_name: so
+    profiles: ['run', 'so', 'all']
+    volumes:
+      - ./so:/so
+    ports:
+      - "3002:3000"
+    working_dir: /so
+    command: npx docusaurus start --host 0.0.0.0
+    #restart: always
     
+  so_deploy:
+    image: node:19
+    container_name: so_deploy
+    profiles: ['deploy', 'so', 'all']
+    environment:
+      - GIT_USER=$GIT_USER
+      - GIT_PASS=$GIT_PASS
+      - GIT_NAME=$GIT_NAME
+      - GIT_MAIL=$GIT_MAIL
+      - USE_SSH=$USE_SSH
+      - CURRENT_BRANCH=$CURRENT_BRANCH
+    volumes:
+      - ./so:/so
+    working_dir: /so
+    command: bash -c "git config --global user.email $GIT_MAIL && git config --global user.name $GIT_NAME && yarn deploy"
