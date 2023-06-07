@@ -150,3 +150,41 @@ services:
       - ./so:/so
     working_dir: /so
     command: bash -c "git config --global user.email $GIT_MAIL && git config --global user.name $GIT_NAME && yarn deploy"
+
+#PROBLEMAS
+  problemas_init:
+    image: node:19-slim
+    container_name: problemas_init
+    profiles: ['init', 'problemas', 'all']
+    volumes:
+      - ./problemas:/problemas
+    working_dir: /problemas
+    command: bash -c "npm install && npm install --save remark-math@3 rehype-katex@5 hast-util-is-element@1.1.0"
+
+  problemas:
+    image: node:19-slim
+    container_name: problemas
+    profiles: ['run', 'problemas', 'all']
+    volumes:
+      - ./problemas:/problemas
+    ports:
+      - "3010:3000"
+    working_dir: /problemas
+    command: npx docusaurus start --host 0.0.0.0
+    #restart: always
+    
+  problemas_deploy:
+    image: node:19
+    container_name: problemas_deploy
+    profiles: ['deploy', 'problemas', 'all']
+    environment:
+      - GIT_USER=$GIT_USER
+      - GIT_PASS=$GIT_PASS
+      - GIT_NAME=$GIT_NAME
+      - GIT_MAIL=$GIT_MAIL
+      - USE_SSH=$USE_SSH
+      - CURRENT_BRANCH=$CURRENT_BRANCH
+    volumes:
+      - ./problemas:/problemas
+    working_dir: /problemas
+    command: bash -c "git config --global user.email $GIT_MAIL && git config --global user.name $GIT_NAME && yarn deploy"    
