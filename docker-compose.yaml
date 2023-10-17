@@ -55,7 +55,7 @@ services:
     volumes:
       - ./algoritmos:/algoritmos
     ports:
-      - "3000:3000"
+      - "3003:3000"
     working_dir: /algoritmos
     command: npx docusaurus start --host 0.0.0.0
     #restart: always
