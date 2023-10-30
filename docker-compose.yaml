@@ -13,7 +13,7 @@ services:
   materiais:
     image: node:19-slim
     container_name: materiais
-    profiles: ['run', 'redes', 'all']
+    #profiles: ['run', 'redes', 'all']
     volumes:
       - ./:/src
     ports:
