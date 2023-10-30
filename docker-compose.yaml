@@ -38,3 +38,14 @@ services:
     working_dir: /src
     command: bash -c "git config --global user.email $GIT_MAIL && git config --global user.name $GIT_NAME && yarn deploy"
     
+
+  portainer:
+    image: portainer/portainer
+    container_name: portainer
+    profiles: ['monitor']
+    ports:
+      - 9000:9000
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./portainer:/data 
