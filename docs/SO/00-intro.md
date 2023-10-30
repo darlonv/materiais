@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Sistemas Operacionais
 
 <!-- Let's discover **Docusaurus in less than 5 minutes**.

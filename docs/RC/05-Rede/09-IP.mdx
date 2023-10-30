@@ -1,0 +1,36 @@
+import Bib from '@site/src/components/Bib';
+
+# IP
+
+
+O Protocolo IP (*Internet Protocol*) é um protocolo de rede amplamente utilizado na Internet e em redes locais. Ele pertence à camada de rede do modelo TCP/IP e é responsável pelo encaminhamento e entrega de pacotes de dados entre dispositivos computacionais conectados em rede.
+
+O IP foi especificado na [RFC 791](https://datatracker.ietf.org/doc/html/rfc791) <Bib bib='rfc_791_site' link={true}/>.
+
+Este protocolo IP permite que os dispositivos possam se comunicar entre si, independentemente do tipo de *hardware* ou sistema operacional que esteja sendo utilizado. Cada dispositivo na rede possui um endereço IP único, permitindo que os pacotes de dados sejam corretamente enviados de uma origem para um destino, seguindo uma rota determinada.
+
+A principal função do Protocolo IP é dividir os dados em pacotes, adicionando informações de cabeçalho a cada pacote para identificar o endereço de origem, o endereço de destino, além de outras informações relevantes. Esses pacotes são então transmitidos pela rede e, se necessário, encaminhados por roteadores até que alcancem o destino pretendido.
+
+O protocolo é projetado para ser independente de conexão, o que significa que ele não requer uma conexão contínua entre os dispositivos durante a transmissão. Os pacotes podem ser enviados individualmente e seguirem rotas diferentes, possibilitando uma comunicação mais eficiente, bem como a interoperabilidade entre redes diferentes.
+
+O Protocolo IP também suporta a fragmentação e remontagem de pacotes para acomodar diferentes tamanhos de pacote em redes com capacidades de transmissão diferentes.
+
+O IP não fornece mecanismos de garantia de entrega confiável ou controle de fluxo. Para isso, são utilizados protocolos de transporte, como o TCP (*Transmission Control Protocol*) e o UDP (*User Datagram Protocol*), que operam sobre o IP.
+
+Figura: Estrutura do cabeçalho do pacote do protocolo IP
+![Cabeçalho do pacote IP](https://upload.wikimedia.org/wikipedia/commons/6/60/IPv4_Packet-en.svg)
+Fonte: [BAKNI, 2022](https://commons.wikimedia.org/wiki/File:IPv4_Packet-en.svg)
+
+
+## Referências
+
+<Bib bib='rfc_791_site' type='abnt'/>.<br/>
+
+
+**Outros materiais**  
+
+[BAKNI, M. Data packet of IPv4. Wikimedia Commons, 2022](https://commons.wikimedia.org/wiki/File:IPv4_Packet-en.svg).<br/>
+
+
+
+ 
