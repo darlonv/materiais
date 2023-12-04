@@ -4,6 +4,7 @@ O Bubble Sort, ou algoritmo de ordenação da bolha é um algoritmo que consiste
 - compara a cada vez dois elementos que estão em sequência;
 - percorre o conjunto de dados $n-1$ vezes;
 - a cada vez que percorre, envia o maior valor do conjunto para a posição final;
+- o algoritmo é *in place*, alterando os dados no própio vetor. com isto, a criação de um novo vetor é dispensada.
 
 **Exemplo** 
 
@@ -30,13 +31,27 @@ Para realizar este processo é necessário que $j$ seja percorrido da posição 
 Este processo deve ser repetido $n$ vezes, porém como o último elemento já está na posição correta, não é mais necessário que $j$ acesse este elemento. Ou seja, cada vez que este processo se repete, um elemento a menos ao final precisa ser acessado.
 
 ```javascript
-int i, j, n;
-n = v.length;
-for(i=0;i<n;i++){ //percorre de 0 até n-1 (n-1 vezes)
-    for(j=1;j<n-i;j++){ //percorre de 1 até n-i
-        if(v[j]<v[j-1]){ //verifica se o elem. em j é menor que o elem. em j-1
-            troca(v, j, j-1); //caso seja menor, troca os elementos
+public static int[] bubbleSort(int[] v){
+    int i, j, n;
+    n = v.length;
+    for(i=0;i<n;i++){ //percorre de 0 até n-1 (n-1 vezes)
+        for(j=1;j<n-i;j++){ //percorre de 1 até n-i
+            if(v[j]<v[j-1]){ //verifica se o elem. em j é menor que o elem. em j-1
+                troca(v, j, j-1); //caso seja menor, troca os elementos
+            }
         }
     }
+    return v;
 }
+```
+
+
+```python
+def bubbleSort(v):
+    n = len(v)
+    for i in range(0, n-1):
+        for j in range(1, n-i):
+            if v[j] < v[j-1]:
+                troca(v, j, j-1)
+    return v
 ```
