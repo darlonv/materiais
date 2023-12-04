@@ -1,6 +1,0 @@
-# Comparações de tempo
-
-
-
-
-

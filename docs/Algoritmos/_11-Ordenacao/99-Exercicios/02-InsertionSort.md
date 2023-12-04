@@ -1,1 +1,0 @@
-O que é um algoritmo de ordenação estável? 
