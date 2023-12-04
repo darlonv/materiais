@@ -27,7 +27,7 @@ def quick_sort_lomuto(entrada):
     return entrada
 ```
 
-
+## Variações
 
 ## Tipo de dados genéricos
 
