@@ -1,5 +1,11 @@
 # Ordenação
 
+Alguns princípios
+
+- Se o vetor possui um único elemento, ele já se encontra ordenado.
+
+- Elementos de qualquer tipo podem ser ordenados. Para tal, é necessário que seja possível comparar esses elementos. É comum nas linguagens de programação que uma função de comparação seja passada.
+
 $n$ é o número total de elementos no vetor.
 
 ```c

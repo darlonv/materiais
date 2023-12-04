@@ -55,3 +55,10 @@ def bubbleSort(v):
                 troca(v, j, j-1)
     return v
 ```
+
+
+## Tipo de dados genéricos
+
+## Recursividade
+
+## Análise

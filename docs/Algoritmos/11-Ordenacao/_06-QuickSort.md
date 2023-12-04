@@ -29,3 +29,9 @@ def quick_sort_lomuto(entrada):
 
 
 
+## Tipo de dados genéricos
+
+## Recursividade
+
+## Análise
+
