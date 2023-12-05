@@ -1,6 +1,6 @@
 # Insertion Sort
 
-O algoritmo ***Insertion Sort*** consiste em percorrer a entrada da direita para a esquerda. Caso o valor observado seja menor que o valor anterior, estes são trocados, trazendo o valor observado para a esquerda até que o valor à esquerda já não seja menor.
+O algoritmo ***Insertion Sort*** consiste em percorrer a entrada da direita para a esquerda. Caso o valor observado seja menor que o valor anterior, estes são trocados, trazendo o valor observado para a esquerda até que o valor da esquerda já não seja menor.
 
 
 **Exemplo**  
@@ -60,5 +60,38 @@ def insertionSort(v):
 ## Tipo de dados genéricos
 
 ## Recursividade
+
+O algoritmo do Insertion Sort pode ser implementado também de maneira recursiva, porém não é recomendado devido ao alto número de chamadas, facilmente levando a um estouro de pilha.
+
+```javascript
+public static void insertionSortRec(int[] v){
+    insertionSortRec_(v, 1);
+}
+
+public static void insertionSortRec_(int[] v, end){
+    int i = end;
+    if(end < v.length){
+        while(i>0 && v[i]<v[i-1]){
+            troca(v,i,i-1);
+            i--;
+        }
+        insertionSortRec_(v, end+1);
+    }
+}
+```
+
+```python
+def insertionSortRec(v):
+    insertionSortRec_(v, 1)
+
+
+def insertionSortRec_(v, fim):
+    i = fim
+    if fim < len(v):
+        while i>0 and v[i]<v[i-1]:
+            troca(v, i, i-1)
+            i-=1
+        insertionSortRec(v, fim+1)
+```
 
 ## Análise
