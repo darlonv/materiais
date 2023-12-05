@@ -31,7 +31,7 @@ Para realizar este processo é necessário que $j$ seja percorrido da posição 
 Este processo deve ser repetido $n$ vezes, porém como o último elemento já está na posição correta, não é mais necessário que $j$ acesse este elemento. Ou seja, cada vez que este processo se repete, um elemento a menos ao final precisa ser acessado.
 
 ```javascript
-public static int[] bubbleSort(int[] v){
+public static void bubbleSort(int[] v){
     int i, j, n;
     n = v.length;
     for(i=0;i<n;i++){ //percorre de 0 até n-1 (n-1 vezes)
@@ -41,7 +41,6 @@ public static int[] bubbleSort(int[] v){
             }
         }
     }
-    return v;
 }
 ```
 
@@ -53,7 +52,6 @@ def bubbleSort(v):
         for j in range(1, n-i):
             if v[j] < v[j-1]:
                 troca(v, j, j-1)
-    return v
 ```
 
 
