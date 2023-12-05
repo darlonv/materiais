@@ -1,6 +1,6 @@
 # Insertion Sort
 
-O algoritmo ***Insertion Sort** consiste em percorrer a entrada da direita para a esquerda. Caso o valor observado seja menor que o valor anterior, estes são trocados, trazendo o valor para a esquerda até que o valor à esquerda já não seja menor.
+O algoritmo ***Insertion Sort*** consiste em percorrer a entrada da direita para a esquerda. Caso o valor observado seja menor que o valor anterior, estes são trocados, trazendo o valor observado para a esquerda até que o valor à esquerda já não seja menor.
 
 
 **Exemplo**  
@@ -34,7 +34,28 @@ observe que o elemento na posição $j$ é maior que o da posição $j-1$. Neste
 ![insertion_sort_10-troca.png](img/insertion_sort_10-troca.png)
 
 
+```javascript
+public static void insertionSort(int[] v){
+    int i,j;
+    for(j=1;j<v.length;j++){
+        i=j;
+        while(i>0 && v[i] < v[i-1]){
+            troca(v, i, i-1);
+            i--;
+        }
+    }
+}
+```
 
+```python
+def insertionSort(v):
+    for j in range(1, len(v)):
+        i=j
+        while i>0 and v[i] < v[i-1]:
+            troca(v, i, i-1)
+            i-=1
+
+```
 
 ## Tipo de dados genéricos
 
