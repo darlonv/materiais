@@ -59,4 +59,36 @@ def bubbleSort(v):
 
 ## Recursividade
 
+O Bubble Sort pode ser implementado de maneira recursiva, porém não é recomendado devido grande número de chamadas, podendo facilmente levar a um estouro de pilha. O número de chamadas recursivas no algoritmo é $n-1$.
+
+```javascript
+public static void bubbleSortRec(int[] v){
+    bubbleSortRec_(v, v.length);
+}
+
+public static void bubbleSortRec(int[] v, fim){
+    int j;
+    if(fim>1){
+        for(j=1;j<fim;ij++){
+            if(v[j]<v[j-1]){
+                troca(v, j, j-1);
+            }
+        }
+        bubbleSortRec(v, fim-1);
+    }
+}
+```
+
+```python
+def bubbleSortRec(v):
+    bubbleSortRec_(v, len(v))
+
+def bubbleSortRec_(v, fim):
+    if fim > 1:
+        for j in range(1,fim):
+            if v[j] < v[j-1]:
+                troca(v, j, j-1)
+        bubleSortRec(v, fim-1)
+```
+
 ## Análise
