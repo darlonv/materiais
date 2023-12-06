@@ -106,6 +106,9 @@ O algoritmo completo:
 
 ```javascript
 public static int[] mergeSort_intercalar(int[] va, int[] vb){
+    int i=0, j=0, k=0;
+    int[] vr = new int[va.length + vb.length];
+
     //caso ambos i e j ainda apontem dentro dos vetores
     while( i < va.length && j < vb.length){
         if(va[i]<=vb[j]){ //o menor dos valores apontados por i e j deve ser incluído em vr
@@ -134,7 +137,11 @@ public static int[] mergeSort_intercalar(int[] va, int[] vb){
 ```
 
 ```python
+import numpy as np
 def mergeSort_intercalar(va, vb):
+    i, j, k = 0, 0, 0
+    vr = np.zeros(len(va) + len(vb))
+    
     #caso ambos i e j ainda apontem dentro dos vetores
     while i < len(va) and j < len(vb):
         if va[i] <= vb[j]: #o menor dos valores apontados por e j deve ser incluído em vr
