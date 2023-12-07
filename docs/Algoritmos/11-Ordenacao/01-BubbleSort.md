@@ -74,7 +74,7 @@ public static void bubbleSortRec(int[] v, fim){
                 troca(v, j, j-1);
             }
         }
-        bubbleSortRec(v, fim-1);
+        bubbleSortRec_(v, fim-1);
     }
 }
 ```
@@ -88,7 +88,7 @@ def bubbleSortRec_(v, fim):
         for j in range(1,fim):
             if v[j] < v[j-1]:
                 troca(v, j, j-1)
-        bubleSortRec(v, fim-1)
+        bubleSortRec_(v, fim-1)
 ```
 
 ## Análise
