@@ -244,7 +244,7 @@ O algoritmo do Merge Sort pode ser executado recursivamente. Para tal, a entrada
 
 ![merge_sort_recursao_p1](img/merge_sort_recursao_p1.png)
 
-Após as divisões, a fase de agrupamento tem início, desempilhando as chamadas recursivas.
+Após as divisões, a fase de intercalação tem início, finalizando as chamadas recursivas da fase de divisão.
 
 ![merge_sort_recursao_p2](img/merge_sort_recursao_p2.png)
 
