@@ -97,7 +97,7 @@ while j < len(vb):
 
 ![merge_sort_p7](img/merge_sort_p7.png)
 
-quando ambos os índices $i$ e $j$ já estiverem fora dos vetores $va$ e $vb$, indica que todos os valores de ambos os vetores já foram copiados para $vr$. Quando este ponto for atingido, todos os valores já estarão ordenados em $vr$ e este processo se finaliza.
+quando ambos os índices $i$ e $j$ já estiverem fora dos vetores $va$ e $vb$, indica que todos os valores de ambos os vetores já foram copiados para $vr$. Quando este ponto for atingido, todos os valores já estarão ordenados em $vr$ e este processo é finalizado.
 
 ![merge_sort_p8](img/merge_sort_p8.png)
 
@@ -165,18 +165,263 @@ def mergeSort_intercalar(va, vb):
         k+=1
 ```
 
+**Atividade**
+-  É realmente necessária a variável com o índice $k$?
+    - como seria possível calcular o valor de $k$ sempre que necessário, sem alocar a variável?
+
 ### Divisão
 
+A fase de divisão consiste em separar a entrada em duas partes (como seu nome já diz, *dividir*).
+
+**Exemplo**
+
+Tome como exemplo a seguinte entrada, com o vetor $v$:
+
+![merge_sort_dividir_p1](img/merge_sort_dividir_p1.png)
+
+a ideia é que a entrada seja dividida em dois novos vetores: *vetor da esquerda* ($ve$) e *vetor da direita* ($vd$).
 
 
+![merge_sort_dividir_p2](img/merge_sort_dividir_p2.png)
+
+o processo de divisão desse vetor consiste em alocar dois novos vetores e copiar os elementos um a um. Obtemos o valor de $meio$, e para o vetor $ve$ copiamos os elementos de 0 a $meio-1$
+
+
+![merge_sort_dividir_p3](img/merge_sort_dividir_p3.png)
+
+e para o vetor $vd$ realizamos o mesmo processo, porém copiando os elementos da posição $meio$ até $n-1$.
+
+
+![merge_sort_dividir_p4](img/merge_sort_dividir_p4.png)
+
+Com isto, o algoritmo para o processo de divisão trata de obter dois subvetores, $ve$ com os elementos de $v$ da posição 0 até $meio$ e $vd$ com elementos de $v$ outro das posições $meio$ a $n$.
+
+```javascript
+public static int[] vetorSubVetorCopia(int []v, int ini, int fim){
+    int i, k=0;
+    int[] sub_vetor = new int[fim - ini];
+    
+    for(i=ini, i<fim; i++){ //<- o valor na posição fim não é copiado
+        sub_vetor[k] = v[i];
+        k++;
+    }
+    return sub_vetor;
+}
+
+public static void divisao(int[] v){
+    int[] ve, vd;
+    int meio;
+
+    meio = v.length/2; //obtém apenas a divisão inteira
+    ve = vetorSubVetor(v, 0, meio); //do início até a posição meio-1
+    vd = vetorSubVetor(v, meio, v.length); //de meio até tamanho-1
+}
+```
+
+```python
+import numpy as np
+def vetorSubVetorCopia(v, ini, fim){
+    k=0
+    sub_vetor = np.zeros(fim-ini)
+    for i in range(ini, fim): #<- o valor na posição fim não é copiado
+        sub_vetor[k] = v[i]
+        k+=1
+    return sub_vetor
+}
+
+def divisao(int[] v){
+    meio = len(v) // 2 #obtém apenas a divisão inteira
+    ve = vetorSubVetor(v, 0, meio); #do início até a posição meio-1
+    vd = vetorSubVetor(v, meio, len(v)); #de meio até tamanho-1
+}
+
+```
+
+
+### Recursão
+
+O algoritmo do Merge Sort pode ser executado recursivamente. Para tal, a entrada deve ser dividida recursivamente, chamando o próprio algoritmo de ordenação, até que possua um único elemento. Lembre-se: uma entrada que possui um único elemento já é uma entrada que está ordenada.
+
+![merge_sort_recursao_p1](img/merge_sort_recursao_p1.png)
+
+Após as divisões, a fase de agrupamento tem início, desempilhando as chamadas recursivas.
+
+![merge_sort_recursao_p2](img/merge_sort_recursao_p2.png)
+
+Observe que os retornos das chamadas à função `mergeSort` é utilizado como entrada para a função `mergeSort_intercalar`. 
+
+De forma completa, o algoritmo recursivo do Merge Sort pode ser definido da seguinte maneira:
+
+```javascript
+public static int[] mergeSort(int[] v){
+    int[] vr, ve_ordenado, vd_ordenado;
+    if(v.length <=1){  // <- fim da recursão
+        return v;
+    }
+
+    //Fase da divisão
+    int[] ve, vd;
+    int meio;
+
+    meio = v.length/2; //divisão inteira
+    ve = vetorSubVetor(v, 0, meio); //do início até a posição meio-1
+    vd = vetorSubVetor(v, meio, v.length); //de meio até tamanho-1
+
+    //Recursivamente, ordena os vetores da esquerda e da direita
+    ve_ordenado = mergeSort(ve)
+    vd_ordenado = mergeSort(vd)
+
+    //Fase da intercalação
+    vr = mergeSort_intercalar(ve_ordenado, vd_ordenado)
+
+    return vr;
+}
+```
+
+
+```python
+def mergeSort(v):
+    if len(v) <= 1: # <- fim da recursão
+        return v
+    
+    #Fase da divisão
+    meio = len(v) // 2 #divisão inteira
+    ve = vetorSubVetor(v, 0, meio); #do início até a posição meio-1
+    vd = vetorSubVetor(v, meio, len(v)); #de meio até tamanho-1
+
+    #Recursivamente, ordena os vetores da esquerda e da direita
+    ve_ordenado = mergeSort(ve)
+    vd_ordenado = mergeSort(vd)
+
+    #Fase da intercalação
+    vr = mergeSort_intercalar(ve_ordenado, vd_ordenado)
+
+    return vr
+```
+
+**Atividade**
+1. Na fase de divisão, quando a entrada possui uma quantidade de elementos de número ímpar, é o vetor $ve$ que fica com um elemento a menor que $vd$. Por que isso acontece?
 
 ## Tipo de dados genéricos
 
-## Otimizações
-### Intercalação com vetor auxiliar
-### Intercalação a partir de vetor único
+## Otimizações de código
+
+Algumas otimizações de código podem ser aplicadas aqui. Uma delas é a criação dos diversos vetores $ve$, $vd$ e $vr$. A criação de um ou mais vetores no decorrer do código leva a perda de desempenho. Neste caso, um único vetor auxiliar alocado no início do algoritmo pode resolver essa situação.
+
+Observando as Figuras na seção [Recursão](#recursão) podemos observar que a operação de intercalação sempre ocorre em valores que estão organizados continuamente no vetor de entrada $v$. Com isto, ao invés de alocarmos um novo vetor para retorná-lo podemos modificar o próprio vetor $v$ da entrada. 
+
+Seguindo esta mesma abordagem, podemos modificar o algoritmo de intercalação, para que ao invés de criar um novo vetor utilize o vetor auxiliar e salve o resultado no próprio vetor $v$. 
+
+```javascript
+public static void mergeSort_intercalar_aux(int[] v, int ini, int meio, int fim, int[] aux){
+    int i=ini, j=meio, k=ini;
+
+    while( i < meio && j < fim ){
+        if( v[i] <= v[j] ){
+            aux[k] = v[i];
+            i++;
+        }else{
+            aux[k] = v[i];
+            j++;
+        }
+        k++;
+    }
+
+    while( i < meio ){
+        aux[k] = v[i];
+        i++;
+        k++;
+    }
+
+    while( j < fim ){
+        aux[k] = v[j];
+        j++;
+        k++;
+    }
+
+    //os dados ordenados foram salvos no vetor aux. 
+    // é necessário copiá-los de volta ao vetor v
+    for(k=ini; k<fim; k++){
+        v[k] = aux[k];
+    }
+}
+```
+
+```python
+def mergeSort_intercalar_aux(v, ini, meio, fim, aux):
+    i=ini
+    j=meio
+    k=ini
+
+    while i < meio and j < fim :
+        if v[i] <= v[j]
+            aux[k] = v[i]
+            i+=1
+        else
+            aux[k] = v[i]
+            j+=1
+        k+=1
+    
+
+    while i < meio :
+        aux[k] = v[i]
+        i+=1
+        k+=1
+
+    while j < fim :
+        aux[k] = v[j]
+        j+=1
+        k+=1
+
+    #os dados ordenados foram salvos no vetor aux. 
+    # é necessário copiá-los de volta ao vetor v
+    for k in range(ini, fim):
+        v[k] = aux[k]
+
+```
+
+Esta ideia de usar índices ao invés de criar novos vetores também pode ser aplicada na fase da divisão. Pode-ser observar a variável `meio` indica onde o vetor $vd$ inicia, e consequentemente, `meio-1` é a posição final de $va$.
+
+```javascript
+
+public static void mergeSort(int[] v){
+    int[] aux = new int[v.length];
+    mergeSort_aux(v, 0, v.length, aux)
+}
+
+public static void mergeSort_aux(int[] v, int ini, int fim, int[] aux){
+
+    if(fim - ini > 1){
+        int meio = (fim-ini)/2 + ini
+
+        mergeSort_aux(v, ini, meio, aux) //parte esquerda
+        mergeSort_aux(v, meio, fim, aux) //parte direita
+
+        mergeSort_intercalar_aux(v, ini, meio, fim, aux)
+    }
+}
+```
+
+```python
+import numpy as np
+def mergeSort(v):
+    aux = np.zeros(len(v))
+    mergeSort_aux(v, 0, len(v), aux)
+
+def mergeSort_aux(v, ini, fim, aux):
+    if fim-ini > 1:
+        meio = (fim-ini)//2 + ini
+    
+        mergeSort_aux(v, ini, meio, aux) #parte esquerda
+        mergeSort_aux(v, meio, fim, aux) #parte direita
+
+        mergeSort_intercalar_aux(v, ini, meio, fim, aux)
+```
 
 ## Iterativo
 
 ## Análise
+
+
+
 
