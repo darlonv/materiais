@@ -66,7 +66,7 @@ public static void bubbleSortRec(int[] v){
     bubbleSortRec_(v, v.length);
 }
 
-public static void bubbleSortRec(int[] v, fim){
+public static void bubbleSortRec_(int[] v, fim){
     int j;
     if(fim>1){
         for(j=1;j<fim;ij++){
