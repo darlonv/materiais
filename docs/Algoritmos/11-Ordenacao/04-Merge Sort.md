@@ -34,7 +34,7 @@ Este processo é repetido novamente, enquanto os índices $i$ e $j$ estejam indi
 
 ![merge_sort_p5](img/merge_sort_p5.png)
 
-O menor vaoor é copiado e os índices novamente são incrementados.
+O menor valor é copiado e os índices novamente são incrementados.
 
 ![merge_sort_p6](img/merge_sort_p6.png)
 
@@ -102,14 +102,14 @@ quando ambos os índices $i$ e $j$ já estiverem fora dos vetores $va$ e $vb$, i
 ![merge_sort_p8](img/merge_sort_p8.png)
 
 
-O algoritmo completo:
+algoritmo completo da intercalação:
 
 ```javascript
 public static int[] mergeSort_intercalar(int[] va, int[] vb){
     int i=0, j=0, k=0;
     int[] vr = new int[va.length + vb.length];
 
-    //caso ambos i e j ainda apontem dentro dos vetores
+    //enquanto ambos i e j ainda apontem dentro dos vetores
     while( i < va.length && j < vb.length){
         if(va[i]<=vb[j]){ //o menor dos valores apontados por i e j deve ser incluído em vr
             vr[k] = va[i];
@@ -142,7 +142,7 @@ def mergeSort_intercalar(va, vb):
     i, j, k = 0, 0, 0
     vr = np.zeros(len(va) + len(vb))
     
-    #caso ambos i e j ainda apontem dentro dos vetores
+    #enquanto ambos i e j ainda apontem dentro dos vetores
     while i < len(va) and j < len(vb):
         if va[i] <= vb[j]: #o menor dos valores apontados por e j deve ser incluído em vr
             vr[k] = va[i]
@@ -152,13 +152,13 @@ def mergeSort_intercalar(va, vb):
             j+=1
         k+=1
 
-    #caso i esteja dentro de va, basta incluir seus valores em vr.
+    #caso j já esteja fora de vb, basta incluir os valores de va.
     while i < len(va):
         vr[k] = va[i]
         i+=1
         k+=1
 
-    #caso j esteja dentro de vb, basta incluir seus valores em vr.
+    #caso i já esteja fora de va, basta incluir os valores de vb.
     while j < len(vb):
         vr[k] = vb[j]
         j+=1
@@ -170,11 +170,13 @@ def mergeSort_intercalar(va, vb):
 
 
 
-
-
 ## Tipo de dados genéricos
 
-## Recursividade
+## Otimizações
+### Intercalação com vetor auxiliar
+### Intercalação a partir de vetor único
+
+## Iterativo
 
 ## Análise
 
