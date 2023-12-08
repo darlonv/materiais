@@ -426,13 +426,98 @@ Nesta abordagem, ao invés de dividirmos a entrada devemos observar a entrada de
 
 **Exemplo**
 
+Considere a seguinte entrada, com $n=10$:
+
 ![merge_sort_iterativo_p1](img/merge_sort_iterativo_p1.png)
+
+inicialmente temos a variável $passo=1$, ou seja o algoritmo de intercalação obém o tamanho da entradas como tendo $1$ elemento. A variável $ini$ também é inicializada com 0.
+
+Podemos calcular os demais valores e chamar a função de intercalação com:
+```javascript
+ini = 0
+fim = ini + passo*2
+meio = ini+salto
+
+mergeSort_intercalacao_aux(v, ini, meio, fim, aux);
+```
+
+```python
+ini = 0
+fim = ini + passo*2
+meio = ini + salto
+mergeSort_intercalacao_aux(v, ini, meio, fim, aux)
+```
 
 ![merge_sort_iterativo_p2](img/merge_sort_iterativo_p2.png)
 
+E o processo se repete, onde $ini$ agora deve apontar para o próximo valor da entrada que ainda não foi processado. Então temos:
+
+```javascript
+ini = ini + 2*salto
+fim = ini + passo*2
+meio = ini + salto
+mergeSort_intercalacao_aux(v, ini, meio, fim, aux);
+```
+
+```python
+ini = ini + 2*salto
+fim = ini + passo*2
+meio = ini + salto
+mergeSort_intercalacao_aux(v, ini, meio, fim, aux)
+```
+
 ![merge_sort_iterativo_p3](img/merge_sort_iterativo_p3.png)
 
+E este processo pode ser repetido, até que o valor de $ini$ percorra todos os elementos da entrada. Até agora, chegamos então ao seguinte código:
+
+```javascript
+ini = 0;
+while( ini + salto < n ){
+    fim = ini + salto*2;
+    meio = ini + salto;
+    mergeSort_intercalacao_aux(v, ini, meio, fim, aux);
+}
+```
+
+```python
+ini = 0
+while ini + salto < n :
+    fim = ini + salto*2
+    meio = ini + salto
+    mergeSort_intercalacao_aux(v, ini, meio, fim, aux)
+```
+
+que aplicado à nossa entrada temos:
+
 ![merge_sort_iterativo_p4](img/merge_sort_iterativo_p4.png)
+
+que ao chegar ao final, duplicamos o valor de passo e repetimos este processo até que $passo$ abranja todos os elementos da entrada. Temos então que:
+
+```javascript
+public static void mergeSort_iter(int[] v){
+    int[] aux = new int[v.length];
+    mergeSort_iter_aux(v, aux);
+}
+public static void mergeSort_iter_aux(v, aux){
+    int ini, fim, meio, salto=1, n = v.length;
+    while(salto < n){
+        ini = 0;
+        while( ini + salto < n){
+            fim = esq + salto*2;
+            meio = ini + salto;
+            if(fim > n){
+                fim = n;
+            }
+            mergeSort_intercalacao_aux(v, ini, meio, fim);
+            ini = ini + salto*2;
+        }
+        salto = salto *2;
+    }
+
+}
+```
+
+
 
 ![merge_sort_iterativo_p5](img/merge_sort_iterativo_p5.png)
 
