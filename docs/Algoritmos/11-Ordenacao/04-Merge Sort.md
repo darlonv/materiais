@@ -420,6 +420,32 @@ def mergeSort_aux(v, ini, fim, aux):
 
 ## Iterativo
 
+O algoritmo do Merge Sort também pode ser executado de maneira iterativa, ou seja, sem o uso de recursividade. Para tal, a função mergeSort_intercalar_aux auxilia bastante neste propósito.
+
+Nesta abordagem, ao invés de dividirmos a entrada devemos observar a entrada de acordo com um valor que aqui chamaremos de $passo$. Este valor é iniciado com $1$, e seu valor é dobrado a cada vez que a entrada completa é percorrida. $passo$ é o tamanho das entradas para a função de intercalar.
+
+**Exemplo**
+
+![merge_sort_iterativo_p1](img/merge_sort_iterativo_p1.png)
+
+![merge_sort_iterativo_p2](img/merge_sort_iterativo_p2.png)
+
+![merge_sort_iterativo_p3](img/merge_sort_iterativo_p3.png)
+
+![merge_sort_iterativo_p4](img/merge_sort_iterativo_p4.png)
+
+![merge_sort_iterativo_p5](img/merge_sort_iterativo_p5.png)
+
+![merge_sort_iterativo_p6](img/merge_sort_iterativo_p6.png)
+
+![merge_sort_iterativo_p7](img/merge_sort_iterativo_p7.png)
+
+![merge_sort_iterativo_p8](img/merge_sort_iterativo_p8.png)
+
+![merge_sort_iterativo_p9](img/merge_sort_iterativo_p9.png)
+
+![merge_sort_iterativo_p10](img/merge_sort_iterativo_p10.png)
+
 ## Análise
 
 
