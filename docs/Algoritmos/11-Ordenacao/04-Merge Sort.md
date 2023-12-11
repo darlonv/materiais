@@ -448,7 +448,7 @@ meio = ini + salto
 mergeSort_intercalacao_aux(v, ini, meio, fim, aux)
 ```
 
-![merge_sort_iterativo_p2](img/merge_sort_iterativo_p2.png)
+![merge_sort_iterativo_p2](img/merge_sort_iterativo_p2_v2.png)
 
 E o processo se repete, onde $ini$ agora deve apontar para o próximo valor da entrada que ainda não foi processado. Então temos:
 
@@ -466,7 +466,7 @@ meio = ini + salto
 mergeSort_intercalacao_aux(v, ini, meio, fim, aux)
 ```
 
-![merge_sort_iterativo_p3](img/merge_sort_iterativo_p3.png)
+![merge_sort_iterativo_p3](img/merge_sort_iterativo_p3_v2.png)
 
 E este processo pode ser repetido, até que o valor de $ini$ percorra todos os elementos da entrada. Até agora, chegamos então ao seguinte código:
 
@@ -489,9 +489,27 @@ while ini + salto < n :
 
 que aplicado à nossa entrada temos:
 
-![merge_sort_iterativo_p4](img/merge_sort_iterativo_p4.png)
+![merge_sort_iterativo_p4](img/merge_sort_iterativo_p4_v2.png)
 
-que ao chegar ao final, duplicamos o valor de passo e repetimos este processo até que $passo$ abranja todos os elementos da entrada. Temos então que:
+que ao chegar ao final, duplicamos o valor de passo e repetimos este processo até que $passo$ abranja todos os elementos da entrada. Temos então:
+
+![merge_sort_iterativo_p5](img/merge_sort_iterativo_p5_v2.png)
+
+![merge_sort_iterativo_p6](img/merge_sort_iterativo_p6_v2.png)
+
+![merge_sort_iterativo_p7](img/merge_sort_iterativo_p7_v2.png)
+
+Após os elementos serem percorridos com passo $2$, este valor é duplicado novamente ($4$), e os elementos são percorridos outra vez.
+
+![merge_sort_iterativo_p8](img/merge_sort_iterativo_p8_v2.png)
+
+![merge_sort_iterativo_p9](img/merge_sort_iterativo_p9_v2.png)
+
+E novamente, passo é duplicado. Agora, $8$.
+
+![merge_sort_iterativo_p10](img/merge_sort_iterativo_p10_v2.png)
+
+Desta forma, chegamos ao seguinte algoritmo:
 
 ```javascript
 public static void mergeSort_iter(int[] v){
@@ -517,22 +535,11 @@ public static void mergeSort_iter_aux(v, aux){
 }
 ```
 
-
-
-![merge_sort_iterativo_p5](img/merge_sort_iterativo_p5.png)
-
-![merge_sort_iterativo_p6](img/merge_sort_iterativo_p6.png)
-
-![merge_sort_iterativo_p7](img/merge_sort_iterativo_p7.png)
-
-![merge_sort_iterativo_p8](img/merge_sort_iterativo_p8.png)
-
-![merge_sort_iterativo_p9](img/merge_sort_iterativo_p9.png)
-
-![merge_sort_iterativo_p10](img/merge_sort_iterativo_p10.png)
-
 ## Análise
 
 
 
 
+## Referências
+
+[BRUNET, J.A. Estruturas de dados e Algoritmos: Ordenação por Comparação: Merge Sort. Notas de aula. Universidade Federal de Campina Grande. Campina Grande, 2019. ](https://joaoarthurbm.github.io/eda/posts/merge-sort/)
