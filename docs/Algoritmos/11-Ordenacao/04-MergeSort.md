@@ -306,11 +306,11 @@ def mergeSort(v):
 
 ## Otimizações de código
 
-Algumas otimizações de código podem ser aplicadas aqui. Uma delas é a criação dos diversos vetores $ve$, $vd$ e $vr$. A criação de um ou mais vetores no decorrer do código leva a perda de desempenho. Neste caso, um único vetor auxiliar alocado no início do algoritmo pode resolver essa situação.
+Algumas otimizações de código podem ser aplicadas aqui. Uma delas é retirar a criação dos diversos vetores $ve$, $vd$ e $vr$ a cada chamada da função `mergeSort_intercalar`. A criação de um ou mais vetores no decorrer do código leva a perda de desempenho. Neste caso, um único vetor auxiliar alocado no início do algoritmo pode resolver essa situação.
 
 Observando as Figuras na seção [Recursão](#recursão) podemos observar que a operação de intercalação sempre ocorre em valores que estão organizados continuamente no vetor de entrada $v$. Com isto, ao invés de alocarmos um novo vetor para retorná-lo podemos modificar o próprio vetor $v$ da entrada. 
 
-Seguindo esta mesma abordagem, podemos modificar o algoritmo de intercalação, para que ao invés de criar um novo vetor utilize o vetor auxiliar e salve o resultado no próprio vetor $v$. 
+Seguindo esta mesma abordagem, podemos modificar o algoritmo de intercalação, para que ao invés de criar um novo vetor utilize um vetor auxiliar e salve o resultado no próprio vetor $v$. 
 
 ```javascript
 public static void mergeSort_intercalar_aux(int[] v, int ini, int meio, int fim, int[] aux){
@@ -429,6 +429,7 @@ Nesta abordagem, ao invés de dividirmos a entrada devemos observar a entrada de
 Considere a seguinte entrada, com $n=10$:
 
 ![merge_sort_iterativo_p1](img/merge_sort_iterativo_p1.png)
+<!-- ![merge_sort_iterativo_p1](img/merge_sort_iterativo_p1_v2.svg) -->
 
 inicialmente temos a variável $passo=1$, ou seja o algoritmo de intercalação obém o tamanho da entradas como tendo $1$ elemento. A variável $ini$ também é inicializada com 0.
 
@@ -436,7 +437,7 @@ Podemos calcular os demais valores e chamar a função de intercalação com:
 ```javascript
 ini = 0
 fim = ini + passo*2
-meio = ini+salto
+meio = ini+passo
 
 mergeSort_intercalacao_aux(v, ini, meio, fim, aux);
 ```
@@ -444,7 +445,7 @@ mergeSort_intercalacao_aux(v, ini, meio, fim, aux);
 ```python
 ini = 0
 fim = ini + passo*2
-meio = ini + salto
+meio = ini + passo
 mergeSort_intercalacao_aux(v, ini, meio, fim, aux)
 ```
 
@@ -453,16 +454,16 @@ mergeSort_intercalacao_aux(v, ini, meio, fim, aux)
 E o processo se repete, onde $ini$ agora deve apontar para o próximo valor da entrada que ainda não foi processado. Então temos:
 
 ```javascript
-ini = ini + 2*salto
+ini = ini + passo*2
 fim = ini + passo*2
-meio = ini + salto
+meio = ini + passo
 mergeSort_intercalacao_aux(v, ini, meio, fim, aux);
 ```
 
 ```python
-ini = ini + 2*salto
+ini = ini + passo*2
 fim = ini + passo*2
-meio = ini + salto
+meio = ini + passo
 mergeSort_intercalacao_aux(v, ini, meio, fim, aux)
 ```
 
@@ -472,22 +473,22 @@ E este processo pode ser repetido, até que o valor de $ini$ percorra todos os e
 
 ```javascript
 ini = 0;
-while( ini + salto < n ){
-    fim = ini + salto*2;
-    meio = ini + salto;
+while( ini + passo < n ){
+    fim = ini + passo*2;
+    meio = ini + passo;
     mergeSort_intercalacao_aux(v, ini, meio, fim, aux);
 }
 ```
 
 ```python
 ini = 0
-while ini + salto < n :
-    fim = ini + salto*2
-    meio = ini + salto
+while ini + passo < n :
+    fim = ini + passo*2
+    meio = ini + passo
     mergeSort_intercalacao_aux(v, ini, meio, fim, aux)
 ```
 
-que aplicado à nossa entrada temos:
+que aplicado à entrada temos:
 
 ![merge_sort_iterativo_p4](img/merge_sort_iterativo_p4_v2.png)
 
@@ -517,22 +518,42 @@ public static void mergeSort_iter(int[] v){
     mergeSort_iter_aux(v, aux);
 }
 public static void mergeSort_iter_aux(v, aux){
-    int ini, fim, meio, salto=1, n = v.length;
-    while(salto < n){
+    int ini, fim, meio, passo=1, n = v.length;
+    while(passo < n){
         ini = 0;
-        while( ini + salto < n){
-            fim = esq + salto*2;
-            meio = ini + salto;
+        while( ini + passo < n){
+            fim = esq + passo*2;
+            meio = ini + passo;
             if(fim > n){
                 fim = n;
             }
-            mergeSort_intercalacao_aux(v, ini, meio, fim);
-            ini = ini + salto*2;
+            mergeSort_intercalacao_aux(v, ini, meio, fim, aux);
+            ini = ini + passo*2;
         }
-        salto = salto *2;
+        passo = passo *2;
     }
-
 }
+```
+
+```python
+import numpy as np
+def mergeSort_iter(v):
+    aux = np.zeros(len(v))
+    mergesort_ite_aux(v, aux)
+
+def mergesort_iter_aux(v, aux):
+    passo = 1
+    n = len(v)
+    while passo < n:
+        ini = 0
+        while ini + passo < n:
+            fim = esq + passo *2
+            meio = ini + passo
+            if fim > n:
+                fim = n
+            mergeSort_intercalacao_aux(v, ini, meio, fim, aux)
+            ini = ini + passo *2
+        passo = passo *2
 ```
 
 ## Análise
