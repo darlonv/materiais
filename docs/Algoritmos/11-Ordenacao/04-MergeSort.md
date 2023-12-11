@@ -133,6 +133,8 @@ public static int[] mergeSort_intercalar(int[] va, int[] vb){
         j++;
         k++;
     }
+
+    return vr;
 }
 ```
 
@@ -163,6 +165,8 @@ def mergeSort_intercalar(va, vb):
         vr[k] = vb[j]
         j+=1
         k+=1
+
+    return vr
 ```
 
 **Atividade**
@@ -197,11 +201,11 @@ e para o vetor $vd$ realizamos o mesmo processo, porém copiando os elementos da
 Com isto, o algoritmo para o processo de divisão trata de obter dois subvetores, $ve$ com os elementos de $v$ da posição 0 até $meio$ e $vd$ com elementos de $v$ outro das posições $meio$ a $n$.
 
 ```javascript
-public static int[] vetorSubVetorCopia(int []v, int ini, int fim){
+public static int[] vetorSubVetor_copia(int []v, int ini, int fim){
     int i, k=0;
     int[] sub_vetor = new int[fim - ini];
     
-    for(i=ini, i<fim; i++){ //<- o valor na posição fim não é copiado
+    for(i=ini; i<fim; i++){ //<- o valor na posição fim não é copiado
         sub_vetor[k] = v[i];
         k++;
     }
@@ -213,14 +217,14 @@ public static void divisao(int[] v){
     int meio;
 
     meio = v.length/2; //obtém apenas a divisão inteira
-    ve = vetorSubVetor(v, 0, meio); //do início até a posição meio-1
-    vd = vetorSubVetor(v, meio, v.length); //de meio até tamanho-1
+    ve = vetorSubVetor_copia(v, 0, meio); //do início até a posição meio-1
+    vd = vetorSubVetor_copia(v, meio, v.length); //de meio até tamanho-1
 }
 ```
 
 ```python
 import numpy as np
-def vetorSubVetorCopia(v, ini, fim){
+def vetorSubVetor_copia(v, ini, fim){
     k=0
     sub_vetor = np.zeros(fim-ini)
     for i in range(ini, fim): #<- o valor na posição fim não é copiado
@@ -231,8 +235,8 @@ def vetorSubVetorCopia(v, ini, fim){
 
 def divisao(int[] v){
     meio = len(v) // 2 #obtém apenas a divisão inteira
-    ve = vetorSubVetor(v, 0, meio); #do início até a posição meio-1
-    vd = vetorSubVetor(v, meio, len(v)); #de meio até tamanho-1
+    ve = vetorSubVetor_copia(v, 0, meio); #do início até a posição meio-1
+    vd = vetorSubVetor_copia(v, meio, len(v)); #de meio até tamanho-1
 }
 
 ```
@@ -253,7 +257,7 @@ Observe que os retornos das chamadas à função `mergeSort` é utilizado como e
 De forma completa, o algoritmo recursivo do Merge Sort pode ser definido da seguinte maneira:
 
 ```javascript
-public static int[] mergeSort(int[] v){
+public static int[] mergeSort_rec(int[] v){
     int[] vr, ve_ordenado, vd_ordenado;
     if(v.length <=1){  // <- fim da recursão
         return v;
@@ -264,15 +268,15 @@ public static int[] mergeSort(int[] v){
     int meio;
 
     meio = v.length/2; //divisão inteira
-    ve = vetorSubVetor(v, 0, meio); //do início até a posição meio-1
-    vd = vetorSubVetor(v, meio, v.length); //de meio até tamanho-1
+    ve = vetorSubVetor_copia(v, 0, meio); //do início até a posição meio-1
+    vd = vetorSubVetor_copia(v, meio, v.length); //de meio até tamanho-1
 
     //Recursivamente, ordena os vetores da esquerda e da direita
-    ve_ordenado = mergeSort(ve)
-    vd_ordenado = mergeSort(vd)
+    ve_ordenado = mergeSort_rec(ve);
+    vd_ordenado = mergeSort_rec(vd);
 
     //Fase da intercalação
-    vr = mergeSort_intercalar(ve_ordenado, vd_ordenado)
+    vr = mergeSort_intercalar(ve_ordenado, vd_ordenado);
 
     return vr;
 }
@@ -280,18 +284,18 @@ public static int[] mergeSort(int[] v){
 
 
 ```python
-def mergeSort(v):
+def mergeSort_rec(v):
     if len(v) <= 1: # <- fim da recursão
         return v
     
     #Fase da divisão
     meio = len(v) // 2 #divisão inteira
-    ve = vetorSubVetor(v, 0, meio); #do início até a posição meio-1
-    vd = vetorSubVetor(v, meio, len(v)); #de meio até tamanho-1
+    ve = vetorSubVetor_copia(v, 0, meio); #do início até a posição meio-1
+    vd = vetorSubVetor_copia(v, meio, len(v)); #de meio até tamanho-1
 
     #Recursivamente, ordena os vetores da esquerda e da direita
-    ve_ordenado = mergeSort(ve)
-    vd_ordenado = mergeSort(vd)
+    ve_ordenado = mergeSort_rec(ve)
+    vd_ordenado = mergeSort_rec(vd)
 
     #Fase da intercalação
     vr = mergeSort_intercalar(ve_ordenado, vd_ordenado)
@@ -321,7 +325,7 @@ public static void mergeSort_intercalar_aux(int[] v, int ini, int meio, int fim,
             aux[k] = v[i];
             i++;
         }else{
-            aux[k] = v[i];
+            aux[k] = v[j];
             j++;
         }
         k++;
@@ -358,7 +362,7 @@ def mergeSort_intercalar_aux(v, ini, meio, fim, aux):
             aux[k] = v[i]
             i+=1
         else
-            aux[k] = v[i]
+            aux[k] = v[j]
             j+=1
         k+=1
     
@@ -386,18 +390,18 @@ Esta ideia de usar índices ao invés de criar novos vetores também pode ser ap
 
 public static void mergeSort(int[] v){
     int[] aux = new int[v.length];
-    mergeSort_aux(v, 0, v.length, aux)
+    mergeSort_aux(v, 0, v.length, aux);
 }
 
 public static void mergeSort_aux(int[] v, int ini, int fim, int[] aux){
 
     if(fim - ini > 1){
-        int meio = (fim-ini)/2 + ini
+        int meio = (fim-ini)/2 + ini;
 
-        mergeSort_aux(v, ini, meio, aux) //parte esquerda
-        mergeSort_aux(v, meio, fim, aux) //parte direita
+        mergeSort_aux(v, ini, meio, aux); //parte esquerda
+        mergeSort_aux(v, meio, fim, aux); //parte direita
 
-        mergeSort_intercalar_aux(v, ini, meio, fim, aux)
+        mergeSort_intercalar_aux(v, ini, meio, fim, aux);
     }
 }
 ```
@@ -517,17 +521,17 @@ public static void mergeSort_iter(int[] v){
     int[] aux = new int[v.length];
     mergeSort_iter_aux(v, aux);
 }
-public static void mergeSort_iter_aux(v, aux){
+public static void mergeSort_iter_aux(int[] v, int[] aux){
     int ini, fim, meio, passo=1, n = v.length;
     while(passo < n){
         ini = 0;
         while( ini + passo < n){
-            fim = esq + passo*2;
+            fim = ini + passo*2;
             meio = ini + passo;
             if(fim > n){
                 fim = n;
             }
-            mergeSort_intercalacao_aux(v, ini, meio, fim, aux);
+            mergeSort_intercalar_aux(v, ini, meio, fim, aux);
             ini = ini + passo*2;
         }
         passo = passo *2;
