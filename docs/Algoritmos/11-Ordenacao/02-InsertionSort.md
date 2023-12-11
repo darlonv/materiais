@@ -95,3 +95,7 @@ def insertionSortRec_(v, fim):
 ```
 
 ## Análise
+
+## Referências
+
+[BRUNET, J.A. Estruturas de dados e Algoritmos: Ordenação por Comparação: Insertion Sort. Notas de aula. Universidade Federal de Campina Grande. Campina Grande, 2019. ](https://joaoarthurbm.github.io/eda/posts/insertion-sort/)
