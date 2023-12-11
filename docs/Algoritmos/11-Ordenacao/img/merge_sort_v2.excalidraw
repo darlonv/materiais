@@ -28837,8 +28837,8 @@
     },
     {
       "type": "arrow",
-      "version": 2644,
-      "versionNonce": 525601087,
+      "version": 2648,
+      "versionNonce": 1730907487,
       "isDeleted": false,
       "id": "pxMFx1_FtwoQaknLEw2l2",
       "fillStyle": "solid",
@@ -28847,12 +28847,12 @@
       "roughness": 2,
       "opacity": 100,
       "angle": 0,
-      "x": 461.33648961649624,
+      "x": 459.8165200884878,
       "y": 96.13802083333354,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
-      "width": 16.997141774833267,
-      "height": 42.94531250000017,
+      "width": 16.17578292125438,
+      "height": 43.330535767659185,
       "seed": 825850715,
       "groupIds": [],
       "frameId": null,
@@ -28860,7 +28860,7 @@
         "type": 2
       },
       "boundElements": [],
-      "updated": 1702259439135,
+      "updated": 1702263622451,
       "link": null,
       "locked": false,
       "startBinding": {
@@ -28882,8 +28882,8 @@
           0
         ],
         [
-          -16.997141774833267,
-          -42.94531250000017
+          -16.17578292125438,
+          -43.330535767659185
         ]
       ]
     },
@@ -37160,8 +37160,8 @@
     },
     {
       "type": "text",
-      "version": 1075,
-      "versionNonce": 1882921119,
+      "version": 1077,
+      "versionNonce": 82970911,
       "isDeleted": false,
       "id": "zdeAXRw4Uq1yu6V_-6g9K",
       "fillStyle": "solid",
@@ -37174,7 +37174,7 @@
       "y": 105.57928919786002,
       "strokeColor": "#1e1e1e",
       "backgroundColor": "transparent",
-      "width": 277.7611389160156,
+      "width": 271.4331359863281,
       "height": 35,
       "seed": 261072315,
       "groupIds": [],
@@ -37186,16 +37186,16 @@
           "type": "arrow"
         }
       ],
-      "updated": 1702259439140,
+      "updated": 1702263622446,
       "link": null,
       "locked": false,
       "fontSize": 28,
       "fontFamily": 1,
-      "text": "ambas já ordenadas",
+      "text": "ambos já ordenados",
       "textAlign": "left",
       "verticalAlign": "top",
       "containerId": null,
-      "originalText": "ambas já ordenadas",
+      "originalText": "ambos já ordenados",
       "lineHeight": 1.25,
       "baseline": 25
     },
