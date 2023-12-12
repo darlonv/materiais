@@ -200,6 +200,54 @@ class Ordenar {
         return v;
     }
 
+    static int partition(int[] arr, int low, int high) {
+        int pivot = arr[low];
+        int i = low - 1, j = high + 1;
+
+        while (true) {
+            // Find leftmost element greater
+            // than or equal to pivot
+            do {
+                i++;
+            } while (arr[i] < pivot);
+
+            // Find rightmost element smaller
+            // than or equal to pivot
+            do {
+                j--;
+            } while (arr[j] > pivot);
+
+            // If two pointers met.
+            if (i >= j)
+                return j;
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            // swap(arr[i], arr[j]);
+        }
+    }
+
+    public static int quickSortParticionamentoHoare(int[] v, int lim_esq, int lim_dir) {
+        int pivot = v[lim_esq]; // Escolha do pivô
+        int idx_esq = lim_esq - 1, idx_dir = lim_dir + 1;
+
+        while (true) {
+            do {
+                idx_esq++;
+            } while (v[idx_esq] < pivot); // incrementa até achar um valor menor
+
+            do {
+                idx_dir--;
+            } while (v[idx_dir] > pivot); // decrementa até achar um valor maior
+
+            if (idx_esq >= idx_dir) {
+                return idx_dir; // quando os índices se encontrarem, o índice da direita terá o pivô
+            }
+
+            troca(v, idx_esq, idx_dir);
+        }
+    }
+
     public static void ordenar(String filename, String algoritmo) {
         long tempo_antes = 0, tempo_depois = 0, tempo_segundos;
         int[] v;
@@ -245,11 +293,19 @@ class Ordenar {
 
     public static void main(String[] args) {
 
-        int[] v = { 10, 4, 1, 7, 0, 15, 8, 5, 2, 9, 6, 3 };
+        // int[] v = { 10, 4, 1, 7, 0, 15, 8, 5, 2, 9, 6, 3 };
+        int[] v = { 10, 7, 8, 9, 1, 5 };
+        int j;
+
+        vetorPrint_int(v);
+        // j = quickSortParticionamentoHoare(v, 0, v.length - 1);
+        j = partition(v, 0, v.length - 1);
+        System.out.printf("pivot: pos %d\n", j);
+        vetorPrint_int(v);
 
         // vc = mergeSort_intercalar(va, vb);
-        mergeSort_iter(v);
-        vetorPrint_int(v);
+        // mergeSort_iter(v);
+        // vetorPrint_int(v);
 
         // mergeSort_intercalar_aux(va, ini, meio, fim, aux);
         // vetorPrint_int(va);
