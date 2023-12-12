@@ -1,5 +1,19 @@
 # Quick Sort
 
+O Quick Sort é um algoritmo de ordenação que pode ser desenvolvido em duas fases.
+
+## Particionamento
+
+### Hoare
+
+### Lomuto
+
+### Melhores pivôs
+
+## Chamadas
+
+
+
 ```python
 def partic_lomuto(entrada, idx_esq, idx_dir):
     pos_pivot = idx_esq
@@ -31,7 +45,7 @@ def quick_sort_lomuto(entrada):
 
 ## Tipo de dados genéricos
 
-## Recursividade
+## Iterativo
 
 ## Análise
 
