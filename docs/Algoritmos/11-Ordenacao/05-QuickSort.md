@@ -12,30 +12,34 @@ O particionamento de *Hoare* consiste em dois índices, um a partir da esquerda 
 
 
 ```javascript
-public static int quickSortParticionamentoHoare(int v, int esq, int pos_dir){
-    int pivot = v[esq];
-    int idx_esq = esq, idx_dir = dir;
+public static int quickSortParticionamentoHoare(int[] v, int lim_esq, int lim_dir){
+    int pivot = v[lim_esq]; //Escolha do pivô
+    int idx_esq = lim_esq, idx_dir = lim_dir;
 
     while(true){
-        while( v[idx_esq] < pivot ){
+        while( v[idx_esq] < pivot){ //incrementa até achar um valor menor
             idx_esq++;
         }
 
-        while( v[idx_dir] > pivot ){
+        while( v[idx_dir] > pivot){ //decrementa até achar um valor maior
             idx_dir--;
         }
 
         if( idx_esq >= idx_dir){
-            return idx_dir;
+            return idx_dir; //quando os índices se encontrarem, o índice da direita terá o pivô
         }
 
         troca(v, idx_esq, idx_dir);
         idx_esq++;
         idx_dir++;
     }
-    return -1;
 }
 ```
+
+**Para pensar**
+
+- Nas estrutura de repetição internas, poderiam ser utilizadas as comparações $<=$ ou $>=$ em alguma delas?
+    - O que poderia acontecer na  com o algoritmo caso fosse alterado?
 
 ### Lomuto
 
