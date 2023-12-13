@@ -200,53 +200,88 @@ class Ordenar {
         return v;
     }
 
-    static int partition(int[] arr, int low, int high) {
-        int pivot = arr[low];
-        int i = low - 1, j = high + 1;
+    static int partition(int[] A, int p, int r) {
+        int x = A[r];
+        int i = p - 1;
 
-        while (true) {
-            // Find leftmost element greater
-            // than or equal to pivot
-            do {
+        for (int j = p; j < r; j++) {
+            if (A[j] <= x) {
                 i++;
-            } while (arr[i] < pivot);
-
-            // Find rightmost element smaller
-            // than or equal to pivot
-            do {
-                j--;
-            } while (arr[j] > pivot);
-
-            // If two pointers met.
-            if (i >= j)
-                return j;
-            int temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
-            // swap(arr[i], arr[j]);
+                troca(A, i, j);
+            }
         }
+        i++;
+        troca(A, i, r);
+        return i;
+
     }
 
-    public static int quickSortParticionamentoHoare(int[] v, int lim_esq, int lim_dir) {
-        int pivot = v[lim_esq]; // Escolha do pivô
-        int idx_esq = lim_esq - 1, idx_dir = lim_dir + 1;
+    static int quickSort_particionar(int[] v, int ini, int fim) {
+        int pivot, pos_menores, i;
+        pivot = v[fim]; // <- pivô é o último elemento
+        pos_menores = ini - 1; // <- menores ou iguais que o pivô
 
-        while (true) {
-            do {
-                idx_esq++;
-            } while (v[idx_esq] < pivot); // incrementa até achar um valor menor
+        for (i = ini; i < fim; i++) {
+            if (v[i] <= pivot) {
+                pos_menores++;
+                troca(v, pos_menores, i);
+            }
+        }
+        pos_menores++;
+        troca(v, pos_menores, fim);
+        return pos_menores;
 
-            do {
-                idx_dir--;
-            } while (v[idx_dir] > pivot); // decrementa até achar um valor maior
+    }
 
-            if (idx_esq >= idx_dir) {
-                return idx_dir; // quando os índices se encontrarem, o índice da direita terá o pivô
+    public static int quickSortParticionamentoHoare(int[] v, int esq, int dir, int pivot) {
+        dir--;
+
+        while (esq <= dir) {
+            while (v[esq] < pivot) {
+                esq++;
             }
 
-            troca(v, idx_esq, idx_dir);
+            while (v[dir] > pivot) {
+                dir--;
+            }
+
+            if (esq <= dir) {
+                troca(v, esq, dir);
+                esq++;
+                dir--;
+            }
         }
+
+        return esq;
+
     }
+
+    // public static int quickSortParticionamentoHoare(int[] v, int lim_esq, int
+    // lim_dir) {
+    // int pivot = v[lim_esq]; // Escolha do pivô
+    // int idx_esq = lim_esq + 1, idx_dir = lim_dir - 1;
+
+    // while (true) {
+    // while (idx_esq <= idx_dir && v[idx_dir] >= pivot) {
+    // idx_dir--;
+    // }
+
+    // while (idx_esq <= idx_dir && v[idx_esq] <= pivot) {
+    // idx_esq++;
+    // }
+
+    // if (idx_esq <= idx_dir) {
+    // troca(v, idx_esq, idx_dir);
+    // } else {
+    // break;
+    // }
+    // }
+
+    // troca(v, lim_esq, idx_dir);
+
+    // return idx_dir;
+
+    // }
 
     public static void ordenar(String filename, String algoritmo) {
         long tempo_antes = 0, tempo_depois = 0, tempo_segundos;
@@ -294,12 +329,13 @@ class Ordenar {
     public static void main(String[] args) {
 
         // int[] v = { 10, 4, 1, 7, 0, 15, 8, 5, 2, 9, 6, 3 };
-        int[] v = { 10, 7, 8, 9, 1, 5 };
+        int[] v = { 7, 4, 8, 9, 1, 5 };
         int j;
 
         vetorPrint_int(v);
-        // j = quickSortParticionamentoHoare(v, 0, v.length - 1);
-        j = partition(v, 0, v.length - 1);
+        // j = quickSortParticionamentoHoare(v, 0, v.length, 4);
+        // j = partition(v, 0, v.length - 1);
+        j = quickSort_particionar(v, 0, v.length - 1);
         System.out.printf("pivot: pos %d\n", j);
         vetorPrint_int(v);
 
