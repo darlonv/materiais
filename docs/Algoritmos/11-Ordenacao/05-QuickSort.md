@@ -144,107 +144,61 @@ def quickSortPartCormen(v, ini, fim):
 
 O particionamento de *Hoare* é o particionamento original do Quick Sort. Seu nome deve-se a seu criador, o cientista da computação britânico [Charles Antony Richard Hoare](https://pt.wikipedia.org/wiki/Charles_Antony_Richard_Hoare). O algoritmo consiste em utilizar dois índices, um a partir da esquerda do vetor e outro a partir da direita. O da esquerda é incrementado até que um valor maior que o pivô seja encontrado, e o índice da direita faz o contrário: é decrementado até encontrar um valor menor que o pivô. Quando os dois índices encontram esses valores, os valores são trocados e o processo se repete. Isto é feito até que os dois índices se encontrem. Quando se encontrarem, esta é a posição do pivô.
 
-
-```javascript
-public static int quickSortPartHoare(int[] v, int lim_esq, int lim_dir){
-    int pivot = v[lim_esq]; //Escolha do pivô
-    int idx_esq = lim_esq, idx_dir = lim_dir;
-
-    while(true){
-        while( v[idx_esq] < pivot){ //incrementa até achar um valor menor
-            idx_esq++;
-        }
-
-        while( v[idx_dir] > pivot){ //decrementa até achar um valor maior
-            idx_dir--;
-        }
-
-        if( idx_esq >= idx_dir){
-            return idx_dir; //quando os índices se encontrarem, o índice da direita terá o pivô
-        }
-
-        troca(v, idx_esq, idx_dir);
-        idx_esq++;
-        idx_dir++;
-    }
-}
-```
-
 ```javascript
 public static int quickSortPartHoare(int[] v, int ini, int fim){
     pivot = A[ini]
-    i = ini-1;
-    j = fim+1;
+    idx_esq = ini-1;
+    idx_dir = fim+1;
     while(true){
         do{
-            j--;
-        }while(v[j]<=pivot);
+            idx_dir--;
+        }while(v[idx_dir]<=pivot);
         do{
-            i++;
-        }while(v[i]>=pivot);
-        if(i<j){
-            troca(v,i,j)
+            idx_esq++;
+        }while(v[idx_esq]>=pivot);
+        if(idx_esq<j){
+            troca(v,idx_esq,idx_dir)
         }else{
-            return j;
+            return idx_dir;
         }
     }
 }
 ```
 
 ```python
-def quickSortParticionamentoHoare(v, ini, fim):
+def quickSortPartHoare(v, ini, fim):
     pivot = v[ini]
-    i = ini-1
-    j = fim+1
+    idx_esq = ini-1
+    idx_dir = fim+1
     while True:
-        j-=1
-        while v[j] <=pivot:
-            j-=1
+        idx_dir-=1
+        while v[idx_dir] <=pivot:
+            idx_dir-=1
         i+=1
-        while v[i] >= pivot:
-            i+=1
-        if i<j:
-            troca(v,i,j)
+        while v[idx_esq] >= pivot:
+            idx_esq+=1
+        if i<idx_dir:
+            troca(v,idx_esq,idx_dir)
         else:
-            return j
+            return idx_dir
 ```
 
-### Lomuto
 
-### Melhores pivôs
+### Melhores e piores pivôs
 
-## Chamadas
+Os melhores pivôs a serem utilizados são aqueles que a sua posição final divide a entrada da forma mais equilibrada possível, ou seja, em que o pivô fica na posição central.
 
+Pivôs ruins são aqueles em que a posição correta do pivô divide a entrada da maneira desequilibrada, ou seja, o pivô fica em uma das extremidades.
 
+Algumas maneiras de encontrar pivôs melhores podem ser:
+- escolher um elemento em posição aleatória
+- observar três elementos do conjunto, e escolher o elemento da mediana destes (valor do meio).
 
-```python
-def partic_lomuto(entrada, idx_esq, idx_dir):
-    pos_pivot = idx_esq
-    pivot = entrada[pos_pivot]
-    
-    i = idx_esq
-    for j in range(idx_esq+1, idx_dir+1):
-        if entrada[j] <= pivot:
-            i+=1
-            entrada[i], entrada[j] = entrada[j], entrada[i]
-        
-    entrada[pos_pivot], entrada[i] = entrada[i], entrada[pos_pivot]
-    pos_pivot = i
-    return pos_pivot
-
-def quick_sort_lomuto_interno(entrada, idx_esq, idx_dir):
-    if idx_esq < idx_dir:
-        pos_pivot = partic_lomuto(entrada, idx_esq, idx_dir)
-        quick_sort_lomuto_interno(entrada, idx_esq, pos_pivot-1)
-        quick_sort_lomuto_interno(entrada, pos_pivot+1, idx_dir )
-    
-def quick_sort_lomuto(entrada):
-    entrada = entrada.copy()
-    quick_sort_lomuto_interno(entrada, 0, len(entrada)-1)
-    return entrada
-```
-
-## Variações
+**Exercícios**  
+1. Considere como entrada para Quick Sort o vetor com os valores `1,2,3,4,5,6,7,8,9`, e em seguida
+    - ordene escolhendo sempre o elemento mais à esquerda como pivô;
+    - ordene utilizando o elemento da mediana entre os elementos nas posições ini, fim e o elemento do meio (`(fim-ini)/2+ini`)
+    - elabore as árvores de recursão, comparando as ordenações anteriores.
 
 ## Tipo de dados genéricos
 
