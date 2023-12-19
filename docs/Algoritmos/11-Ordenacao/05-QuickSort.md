@@ -55,6 +55,7 @@ De forma a demonstrar um possível tipo de particionamento simplificado, seria u
 
 Consideremos como entrada os valores presentes no vetor $v$:
 
+###### Figura: Particionamento Näive (1) {#quicksort-naive-1}
 ![quick_sort_naive_p01](img/quick_sort_naive_p01.png)
 
 Neste caso, escolheremos como pivô o primeiro elemento. Precisaremos também de um vetor auxiliar $aux$, além dos índices $k$, $i$ e $j$. O índice $k$ indica o elemento a ser comparado com o pivô. Os índices $i$ e $j$ apontam para as extremidades do vetor $aux$, sendo $i$ na primeira e $j$ na última posições.
@@ -64,7 +65,7 @@ Neste caso, escolheremos como pivô o primeiro elemento. Precisaremos também de
 
 O processo consiste em observar o valor do vetor $aux$ na posição $k$ e compará-lo com o pivô. Caso seja menor ou igual, o valor é copiado para $aux$ na posição $i$, e caso seja maior, para $aux$ na posição $j$.
 
-###### Figura
+
 
 ![quick_sort_naive_p03](img/quick_sort_naive_p03.png)
 
