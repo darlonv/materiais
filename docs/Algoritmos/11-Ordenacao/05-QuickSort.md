@@ -47,9 +47,55 @@ Uma execução recursiva completa do exemplo pode ser vista de maneira geral a s
 
 
 
-### Naive
+### Näive
 
 De forma a demonstrar um possível tipo de particionamento simplificado, seria utilizar dois vetores auxiliares: um contendo os valores maiores e outro contendo os valores menores que o pivô. 
+
+**Exemplo**
+
+Consideremos como entrada os valores presentes no vetor $v$:
+
+![quick_sort_naive_p01](img/quick_sort_naive_p01.png)
+
+Neste caso, escolheremos como pivô o primeiro elemento. Precisaremos também de um vetor auxiliar $aux$, além dos índices $k$, $i$ e $j$. O índice $k$ indica o elemento a ser comparado com o pivô. Os índices $i$ e $j$ apontam para as extremidades do vetor $aux$, sendo $i$ na primeira e $j$ na última posições.
+
+###### Figura
+![quick_sort_naive_p02](img/quick_sort_naive_p02.png)
+
+O processo consiste em observar o valor do vetor $aux$ na posição $k$ e compará-lo com o pivô. Caso seja menor ou igual, o valor é copiado para $aux$ na posição $i$, e caso seja maior, para $aux$ na posição $j$.
+
+###### Figura
+
+![quick_sort_naive_p03](img/quick_sort_naive_p03.png)
+
+Após realizar a cópia, o índices $k$ deve ser incrementado. Também deve ser incrementado o índice $i$, indicando que o próximo valor menor que o pivô seja gravado na próxima posição.
+
+![quick_sort_naive_p04](img/quick_sort_naive_p04.png)
+
+Este processo é repetido até que $k$ tenha percorrido todos os elementos da entrada. As figuras a seguir indicam este processo.
+
+![quick_sort_naive_p05](img/quick_sort_naive_p05.png)
+![quick_sort_naive_p06](img/quick_sort_naive_p06.png)
+![quick_sort_naive_p07](img/quick_sort_naive_p07.png)
+![quick_sort_naive_p08](img/quick_sort_naive_p08.png)
+![quick_sort_naive_p09](img/quick_sort_naive_p09.png)
+![quick_sort_naive_p10](img/quick_sort_naive_p10.png)
+
+
+
+![quick_sort_naive_p11](img/quick_sort_naive_p11.png)
+
+Após $k$ percorrer todos os dados da entrada, o valor do pivô é copiado para a posição que falta preencher. Neste momento, tanto $i$ como $j$ apontam para a mesma posição. No exemplo, utilizaremos o índice $i$.
+
+![quick_sort_naive_p12](img/quick_sort_naive_p12.png)
+
+Neste momento o pivô já está no vetor $aux$ em sua posição correta.
+
+![quick_sort_naive_p13](img/quick_sort_naive_p13.png)
+
+Resta então copiar os elementos do vetor $aux$ para $v$, e o processo de particionamento é finalizado.
+
+![quick_sort_naive_p14](img/quick_sort_naive_p14.png)
 
 Esta abordagem poderia ser implementada da seguinte maneira:
 
@@ -184,7 +230,7 @@ def quickSortPartHoare(v, ini, fim):
 ```
 
 
-### Melhores e piores pivôs
+### Pivôs bons e ruins
 
 Os melhores pivôs a serem utilizados são aqueles que a sua posição final divide a entrada da forma mais equilibrada possível, ou seja, em que o pivô fica na posição central.
 
