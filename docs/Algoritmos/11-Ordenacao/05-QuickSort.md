@@ -1,3 +1,5 @@
+import Bib from '@site/src/components/Bib';
+
 # Quick Sort
 
 O algoritmo do Quick Sort pode ser abordado utilizando divisão e conquista, em que a fase de divisão chamamos de particionamento. Após realizado o particionamento é obtida uma posição chave, em que elementos à esquerda dessa posição são menores que os que estão à direita dessa posição. O elemento que estiver nessa posição chave chamaremos de **pivô**.
@@ -156,6 +158,8 @@ def quickSortPartNaive(v, ini, fim):
 
 ### Cormen
 
+O particionamento apresentado em Cormen <Bib entrada="cormen2022" tipo="citation"/>
+
 ```javascript
 static int quickSortPartCormen(int[] v, int ini, int fim) {
         int pivot = v[fim]; //<- pivô é o último elemento
@@ -258,3 +262,8 @@ Algumas maneiras de encontrar pivôs melhores podem ser:
 [DEMAINE, Erik; LEISERSON, Charles. Introduction to Algorithms: Lecture 4: Quicksort, Randomized Algorithms. MIT OpenCourseWare. Massachussetts Institute of Technology. MIT, 2005.](https://ocw.mit.edu/courses/6-046j-introduction-to-algorithms-sma-5503-fall-2005/resources/lecture-4-quicksort-randomized-algorithms/)
 
 [WIKIPEDIA. Charles Antony Richard Hoare.](https://pt.wikipedia.org/wiki/Charles_Antony_Richard_Hoare)
+
+
+- <Bib entrada="cormen2022" tipo="bibliography"/>  
+- <Bib entrada="mut2011" tipo="bibliography"/>
+

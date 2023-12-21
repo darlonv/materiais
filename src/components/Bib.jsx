@@ -1,89 +1,65 @@
 
 import React from 'react';
 
-export default function Bib({bib, page, type, inline=false, link=false}) {
-  let base = {
-    ['tanenbaum_2011_book']: {
-      ['cite']: 'TANENBAUM 2011', 
-      ['abnt']: 'TANENBAUM, A.S., Wetherall, D. Redes de Computadores. 5. ed. São Paulo: Pearson do Brasil, 2011.', 
-      ['link']: 'https://plataforma.bvirtual.com.br/Acervo/Publicacao/2610',
-      
-    },
-    ['kurose_2013_book']   : {
-      ['cite']: 'KUROSE 2013',    
-      ['abnt']: 'KUROSE, Jim; ROSS, Keith W. Redes de computadores e a internet: uma abordagem top-down. 6.ed. São Paulo: Pearson, 2013. ISBN 9788581436777.',
-      ['link']: 'https://plataforma.bvirtual.com.br/Acervo/Publicacao/198909',
-    },
-    ['torres_2009_book']   : {
-      ['cite']: 'TORRES 2009',    
-      ['abnt']: 'TORRES, G. Redes de Computadores. Rio de Janeiro: Novaterra, 2009. ISBN 978-85-61893-05-7.',
-    },
-    ['stevens_1994_book']   : {
-      ['cite']: 'STEVENS 1994',    
-      ['abnt']: 'STEVENS, W. R. TCP/IP Illustrated, Volume 1: The Protocols. Boston, USA: Addison-Wesley/Pearson Education, 1994. ISBN 0-201-63346-9.',
-    },
-    ['rfc_791_site']   : {
-      ['cite']: 'IETF 1981',    
-      ['abnt']: 'IETF. RFC 791: Internet Protocol. 1981.',
-      ['link']: 'https://datatracker.ietf.org/doc/html/rfc791',
-    },
-    ['rfc_1058_site']   : {
-      ['cite']: 'IETF 1988',    
-      ['abnt']: 'IETF. RFC 1058: Routing Information Protocol. 1988.',
-      ['link']: 'https://datatracker.ietf.org/doc/html/rfc1058',
-    },
-    ['rfc_1131_site']   : {
-      ['cite']: 'IETF 1989',    
-      ['abnt']: 'IETF. RFC 1131: The OSPF Specification. 1989.',
-      ['link']: 'https://datatracker.ietf.org/doc/html/rfc1131',
-    },
-    ['forbellone_2022_book']   : {
-      ['cite']: 'FORBELLONE 2022',    
-      ['abnt']: 'FOBELLONE, A.L.V. HEBERSPÄTCHER, H.F. Lógica de programação: A construção de algoritmos e estruturas de dados.',
-      ['link']: 'https://plataforma.bvirtual.com.br/Leitor/Publicacao/323/pdf/',
-    },
+import { parseBibFile, normalizeFieldValue } from "bibtex";
+
+//https://www.npmjs.com/package/citation-js
+//https://www.npmjs.com/package/bibtex
+
+export default function Bib({ entrada, tipo = "citation", link = false }) {
+  //tipo: citation | bibliography
+
+  const bibContent = {
+    'mut2011': `
+        @InProceedings{mut2011,
+          author    = {Pradeep Muthukrishnan and Dragomir Radev and Qiaozhu Mei},
+          title     = {Simultaneous Similarity Learning and Feature-Weight Learning for Document Clustering},
+          booktitle = {Proceedings of TextGraphs-6: Graph-based Methods for Natural Language Processing},
+          month     = {June},
+          year      = {2011},
+          address   = {Portland, Oregon},
+          publisher = {Association for Computational Linguistics},
+          url       = {http://www.aclweb.org/anthology/W11-1107},
+          pages = {42--50}
+        }`,
+
+    'cormen2022': `
+        @book{Cormen2022,
+          author  = {Thomas Cormen, Charles E. Leiserson, Ronald L. Rivers, Clifford Stein},
+          title  = {Algoritmos:  Teoria e Prática},
+          publisher = {Grupo Gen},
+          year   = {2022},
+        }`
   }
 
-  let data;
 
-  //Verifica se é referência ou bibliografia
-  if(!type){
-    //referência
+  const Cite = require('citation-js');
 
-    //Verifica se é necessário incluir a página
-    if(!page){
-      //sem página
-      data = base[bib]['cite'];
-    }
-    else{
-      //com página
-      data = base[bib]['cite']+', pg. '+page;
-    }
-    
-    //Verifica se é referência inline
-    if(!inline){
-      //Caso não seja inline, coloca parênteses antes e depois
-      data = '('+data+')';
-    }
 
-    if(link){
-      //referência com link
-      data = <a href={base[bib]['link']} target='_blank'>{data}</a>
-    }
-    
-  }else{
-    //Bibliografia
-    data = base[bib][type]
-    if(link){
-      //Bibliografia com link
-      data = <a href={base[bib]['link']} target='_blank'>{data}</a>
-    }
+  // let example = new Cite(entrada)
+  let example = new Cite(bibContent[entrada])
+
+  let output = "" + example.format(tipo, {
+    format: 'text',
+    template: 'apa',
+    lang: 'en-US'
+  })
+
+  if (link) {
+    //retorna a citação com o link para a url definida no bibtex.
+    const bibFile = parseBibFile(bibContent[entrada]);
+    output = <a href={normalizeFieldValue(bibFile.getEntry(entrada).getField("url"))}>{output}</a>
 
   }
-  
-    return (
-      <>
-        {data}
-      </>
-    );
-  }
+
+  // let output = example.format(tipo, {
+  //   format: 'string'
+  // })
+  // let data = normalizeFieldValue(bibFile.getEntry(entrada).getField(chave));
+
+  return (
+    <>
+      {output}
+    </>
+  );
+}
