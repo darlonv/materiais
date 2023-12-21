@@ -4,10 +4,10 @@ services:
   init:
     image: node:19-slim
     container_name: materiais_init
-    profiles: ['init', 'redes', 'all']
+    profiles: [ 'init', 'all' ]
     volumes:
       - ./:/src
-    working_dir: /redes
+    working_dir: /src
     command: npm install
 
   materiais:
@@ -21,11 +21,11 @@ services:
     working_dir: /src
     command: npx docusaurus start --host 0.0.0.0
     restart: always
-    
+
   deploy:
     image: node:19
     container_name: materiais_deploy
-    profiles: ['deploy', 'redes', 'all']
+    profiles: [ 'deploy', 'all' ]
     environment:
       - GIT_USER=$GIT_USER
       - GIT_PASS=$GIT_PASS
@@ -37,15 +37,13 @@ services:
       - ./:/src
     working_dir: /src
     command: bash -c "git config --global user.email $GIT_MAIL && git config --global user.name $GIT_NAME && yarn deploy"
-    
-
-  portainer:
-    image: portainer/portainer
-    container_name: portainer
-    profiles: ['monitor']
-    ports:
-      - 9000:9000
-    restart: always
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ./portainer:/data 
+  # portainer:
+  #   image: portainer/portainer
+  #   container_name: portainer
+  #   profiles: ['monitor']
+  #   ports:
+  #     - 9000:9000
+  #   restart: always
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #     - ./portainer:/data 
