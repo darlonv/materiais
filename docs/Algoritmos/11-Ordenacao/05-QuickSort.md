@@ -160,6 +160,21 @@ def quickSortPartNaive(v, ini, fim):
 
 O particionamento apresentado em Cormen <Bib entrada="cormen2022" tipo="citation"/>
 
+![quick_sort_cormen_p01](img/quick_sort_cormen_p01.png)
+![quick_sort_cormen_p02](img/quick_sort_cormen_p02.png)
+![quick_sort_cormen_p03](img/quick_sort_cormen_p03.png)
+![quick_sort_cormen_p04](img/quick_sort_cormen_p04.png)
+![quick_sort_cormen_p05](img/quick_sort_cormen_p05.png)
+![quick_sort_cormen_p06](img/quick_sort_cormen_p06.png)
+![quick_sort_cormen_p07](img/quick_sort_cormen_p07.png)
+![quick_sort_cormen_p08](img/quick_sort_cormen_p08.png)
+![quick_sort_cormen_p09](img/quick_sort_cormen_p09.png)
+![quick_sort_cormen_p10](img/quick_sort_cormen_p10.png)
+![quick_sort_cormen_p11](img/quick_sort_cormen_p11.png)
+![quick_sort_cormen_p12](img/quick_sort_cormen_p12.png)
+![quick_sort_cormen_p13](img/quick_sort_cormen_p13.png)
+![quick_sort_cormen_p14](img/quick_sort_cormen_p14.png)
+
 ```javascript
 static int quickSortPartCormen(int[] v, int ini, int fim) {
         int pivot = v[fim]; //<- pivô é o último elemento
@@ -265,5 +280,4 @@ Algumas maneiras de encontrar pivôs melhores podem ser:
 
 
 - <Bib entrada="cormen2022" tipo="bibliography"/>  
-- <Bib entrada="mut2011" tipo="bibliography"/>
 
