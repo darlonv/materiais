@@ -93,6 +93,28 @@ export default function Bib({ entrada, tipo = "citation", link = false }) {
           isbn   = {},
           url    = {https://www.youtube.com/watch?v=AuiIZ_zFKP8}
         }`,
+    'demaine2005_video': `
+        @book{demaine2005_video,
+          author  = {Erik Demaine, Charles Leiserson},
+          title  = {Lecture 4: Quicksort, Randomized Algorithms},
+          publisher = {MITOpenCouseWare},
+          address   = {},
+          year   = {2005},
+          isbn   = {},
+          url    = {https://ocw.mit.edu/courses/6-046j-introduction-to-algorithms-sma-5503-fall-2005/resources/lecture-4-quicksort-randomized-algorithms/}
+        }`,
+    'wikipedia_hoare': `
+        @book{wikipedia_hoare,
+          author  = {WIKIPEDIA},
+          title  = {Charles Antony Richard Hoare
+          },
+          publisher = {},
+          address   = {},
+          year   = {2022},
+          isbn   = {},
+          url    = {https://pt.wikipedia.org/wiki/Charles_Antony_Richard_Hoare}
+        }`,
+
     'id': `
         @book{id,
           author  = {},

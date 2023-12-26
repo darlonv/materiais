@@ -280,13 +280,11 @@ Algumas maneiras de encontrar pivôs melhores podem ser:
 
 ## Referências
 
-[DEMAINE, Erik; LEISERSON, Charles. Introduction to Algorithms: Lecture 4: Quicksort, Randomized Algorithms. MIT OpenCourseWare. Massachussetts Institute of Technology. MIT, 2005.](https://ocw.mit.edu/courses/6-046j-introduction-to-algorithms-sma-5503-fall-2005/resources/lecture-4-quicksort-randomized-algorithms/)
+- <Bib entrada="cormen2022" tipo="bibliography"/> 
+- <Bib entrada="demaine2005_video" tipo="bibliography" link={true}/>
 
-[WIKIPEDIA. Charles Antony Richard Hoare.](https://pt.wikipedia.org/wiki/Charles_Antony_Richard_Hoare)
 
+### Materiais adicionais
 
-- <Bib entrada="cormen2022" tipo="bibliography"/>  
-
-### Outros materiais
-
-<Bib entrada="falcao2022_video" tipo="bibliography" link={true}/>
+- <Bib entrada="falcao2022_video" tipo="bibliography" link={true}/>
+- <Bib entrada="wikipedia_hoare" tipo="bibliography" link={true}/>
