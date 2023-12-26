@@ -156,9 +156,9 @@ def quickSortPartNaive(v, ini, fim):
     return pos_pivot
 ```
 
-### Cormen
+### Lomuto
 
-O particionamento apresentado em Cormen <Bib entrada="cormen2022" tipo="citation"/>
+O particionamento apresentado em Cormen <Bib entrada="cormen2022" tipo="citation"/> é chamado de particionamento de Lomuto.
 
 ![quick_sort_cormen_p01](img/quick_sort_cormen_p01.png)
 ![quick_sort_cormen_p02](img/quick_sort_cormen_p02.png)
@@ -205,6 +205,12 @@ def quickSortPartCormen(v, ini, fim):
     troca(v, pos_menores, fim)
     return pos_menores
 ```
+
+Uma ilustração do particionamento de Lomuto pode ser vista no vídeo do Prof. Eduardo Falcão:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AuiIZ_zFKP8?si=v_x8LeOIwlbE8P1r&amp;start=956" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
+
+Fonte: <Bib entrada="falcao2022_video"/>
 
 ### Hoare
 
@@ -281,3 +287,6 @@ Algumas maneiras de encontrar pivôs melhores podem ser:
 
 - <Bib entrada="cormen2022" tipo="bibliography"/>  
 
+### Outros materiais
+
+<Bib entrada="falcao2022_video" tipo="bibliography" link={true}/>

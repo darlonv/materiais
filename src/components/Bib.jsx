@@ -83,6 +83,16 @@ export default function Bib({ entrada, tipo = "citation", link = false }) {
           isbn   = {},
           url    = {https://plataforma.bvirtual.com.br/Acervo/Publicacao/2610}
         }`,
+    'falcao2022_video': `
+        @book{falcao2022_video,
+          author  = {Eduardo de Lucena Falcão},
+          title  = {QuickSort - Explicação e Implementação},
+          publisher = {Youtube},
+          address   = {},
+          year   = {2022},
+          isbn   = {},
+          url    = {https://www.youtube.com/watch?v=AuiIZ_zFKP8}
+        }`,
     'id': `
         @book{id,
           author  = {},
