@@ -56,3 +56,6 @@ Podem ocorrer situações em que um algoritmo de ordenação estável não prese
 
 ![ordenacao_estavel-estavel](img/ordenacao_estavel_03-nao_estavel.png)
 
+## *in place* e *out place*
+
+Os algoritmos de ordenação também podem ser diferenciados pela necessidade de utilização de espaço adicional para ordenação. Algoritmos que permitem ordenar os dados diretamente na mesma estrutura de entrada são definidos como algoritmos *in place* (no lugar), e os que requerem uma estrutura adicional como *out of place* (fora do lugar).
