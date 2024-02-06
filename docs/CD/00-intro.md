@@ -1,7 +1,3 @@
----
-sidebar_position: 1
----
-
 # Ciência de Dados
 
 <!-- Let's discover **Docusaurus in less than 5 minutes**.
