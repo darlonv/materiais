@@ -114,6 +114,16 @@ export default function Bib({ entrada, tipo = "citation", link = false }) {
           isbn   = {},
           url    = {https://pt.wikipedia.org/wiki/Charles_Antony_Richard_Hoare}
         }`,
+    'govbr2023_cienciadedados': `
+        @book{govbr2023_cienciadedados,
+          author  = {BRASIL},
+          title  = {CIÊNCIA DE DADOS},
+          publisher = {Governo digital},
+          address   = {Brasilia},
+          year   = {2023},
+          isbn   = {00},
+          url    = {https://www.gov.br/governodigital/pt-br/capacita/ciencia-de-dados}
+        }`,
 
     'id': `
         @book{id,
