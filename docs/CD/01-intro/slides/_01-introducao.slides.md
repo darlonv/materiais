@@ -19,5 +19,4 @@ A ciência de dados é uma área que envolve diversos outros ramos da ciência, 
 
 ---
 
-# outro
 
