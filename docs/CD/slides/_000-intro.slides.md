@@ -97,6 +97,16 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
         - Solicitar após a finalização das apresentações
 ---
 
+# Plano de recuperação
+- Elaborado no horário de atendimento
+- Definição das atividades
+- Cronograma com prazos
+    - Entrega
+    - Apresentação
+    - Avaliação
+
+---
+
 # Documentos
 - Plano de ensino: [Planif](https://planif.ifpr.edu.br/)
 - PPC do Curso: [Site do campus](https://ifpr.edu.br/cascavel/cursos/graduacao/tads/)
