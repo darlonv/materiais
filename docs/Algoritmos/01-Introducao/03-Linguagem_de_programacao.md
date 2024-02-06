@@ -16,7 +16,7 @@ Um homem precisa atravessar um rio com um barco que possui capacidade de transpo
 
 - Utilize apenas a função `atravessar(p)`
     - p, é o passageiro ou carga do barco, que podem ser `lobo`, `bode`, `alfafa` ou `ninguém`;
-    - a função `atravessar` vai de um lado a outro, partindo do lado em que o baro está.
+    - a função `atravessar` vai de um lado a outro, partindo do lado em que o barco está.
 
 **Atividade**  
 
