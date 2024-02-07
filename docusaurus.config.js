@@ -9,7 +9,7 @@ const katex = require('rehype-katex');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Materiais',
-  tagline: 'Materiais',
+  tagline: '',
   favicon: 'img/favicon.svg',
 
   // Set the production url of your site here
@@ -149,7 +149,7 @@ const config = {
               },
               {
                 label: 'GitHub',
-                href: 'https://github.com/darlonv/algoritmos',
+                href: 'https://github.com/darlonv/materiais',
               },
             ],
           },
