@@ -1,3 +1,3 @@
 # Materiais
 
-Materiais desenvolvidos em atividades letivas
+Materiais de apoio desenvolvidos.
