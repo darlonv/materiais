@@ -54,5 +54,4 @@ Leitura das seções 1.3.1 e 1.3.2 do KUROSE, páginas 16, 17, 18, 20 e 21.
 - DUARTE, J. Introdução às redes de computadores. Notas de aula. IFRN
 
 ## Apresentação
-
 [PDF](./slides/_01-Redes.slides.pdf)
