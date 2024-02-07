@@ -4,30 +4,30 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Algoritmos',
+    title: 'Algoritmos e Estruturas de Dados',
     Svg: require('@site/static/img/algorithm.svg').default,
     description: (
       <>
-        Lógica de programação, estruturas de seleção, repetição e funções.
+        Lógica de programação, estruturas de seleção, repetição e funções. Vetores, matrizes e algoritmos de busca e ordenação.
       </>
     ),
   },
   {
-    title: 'Estruturas de Dados',
+    title: 'Redes de Computadores',
     Svg: require('@site/static/img/sort_2.svg').default,
     description: (
       <>
-        Vetores, matrizes, listas, filas e pilhas.
+        Introdução às redes de computadores, sockets, protocolos, pilhas
+        de protocolos.
       </>
     ),
   },
   {
-    title: 'Busca e Ordenação',
+    title: 'Ciência de Dados',
     Svg: require('@site/static/img/sort.svg').default,
     description: (
       <>
-        Busca sequencial e busca binária. Bubble Sort, Selection Sort, 
-        Insertion Sort, Merge Sort, Quick Sort e Radix Sort.
+        Extração de informações, manipulação e apresentação de dados. 
       </>
     ),
   },
