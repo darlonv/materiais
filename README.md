@@ -1,2 +1,3 @@
-# materiais
-Organização dos materiais desenvolvidos
+# Materiais
+
+Materiais desenvolvidos em atividades letivas
