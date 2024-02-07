@@ -37,17 +37,22 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 # Avaliações
 
-- 1º, 2º, 3º e 4º bimestres:
-    - Trabalho
-        - Deve ser apresentado ao Prof.
-        - +- no último horário de aula do bimestre
-    - Provas
-        - Prováveis datas (podem sofrer alterações):
-            - +- no penúltimo horário de aula do bimestre
-            - 1º Bim: 17/04/2024
-            - 2º Bim: 03/07/2024
-            - 3º Bim: 18/09/2024
-            - 4º Bim: 13/11/2024
+- Trabalho e prova
+- Trabalho
+    - Deve ser apresentado ao Prof.
+    - +- no penúltimo dia de aula do bimestre
+
+---
+
+# Avaliações
+
+- Provas
+    - Prováveis datas (podem sofrer alterações):
+        - +- no último dia de aula do bimestre
+        - 1º Bim: 17/04/2024
+        - 2º Bim: 03/07/2024
+        - 3º Bim: 18/09/2024
+        - 4º Bim: 13/11/2024
 
 ---
 
