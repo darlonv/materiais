@@ -8,9 +8,9 @@ Um valor **constante** é aquele que se mantém fixo durante toda a execução, 
 - Valor do número Pi ($\pi$)
 - Valor do número $e$
 
-Um valor **variável** é aquele que no decorrer da execução é alterado (ou pode ser).
+Um valor **variável** é aquele que pode ser modificado no decorrer da execução do algoritmo.
 
-**Exemplo**
+**Exemplos**
 - Valores indicados pelo usuário
     - Os valores para A e B são 15 e 50
     - O lado do quadrado
@@ -23,7 +23,7 @@ Um valor **variável** é aquele que no decorrer da execução é alterado (ou p
 
 Um **identificador** é um nome, que corresponde a um dado a ser utilizado no algoritmo.
 
-**Exemplo**
+**Exemplos**
 - Calcule a área do quadrado que possui lado de tamanho **l**.
 - Calcule quantos dias de vida tem uma pessoa com **x** anos. Considere que um ano possui sempre 365 dias.
 

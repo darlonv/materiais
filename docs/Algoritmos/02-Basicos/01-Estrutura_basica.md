@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Estrutura básica
 
-A estrutura básica de um algoritmo consiste na delimitação inicial para que um **código** seja executado. Este espaço é importante para para delimitar e informar ao computador qual é a área de código que deve ser executada inicialmente.
+A estrutura básica de um algoritmo consiste na delimitação inicial para que um **código** seja executado. Este espaço é importante para para delimitar e informar ao computador qual código que deve ser executado inicialmente.
 
 
 <Tabs groupId='language'>
@@ -58,5 +58,5 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
 - [FORBELLONE, André Luiz Villar; EBERSPÄTCHER, Henri Frederico. Lógica de programação: A construção de algoritmoss e estruturas de dados com aplicações em Python. 4.ed. São Paulo: Pearson; Porto Alegre: Bookman, 2022](https://plataforma.bvirtual.com.br/Leitor/Publicacao/200078/pdf)
 
 ## Apresentações
-- [HTML]
-- [PDF] 
+- [HTML](pathname:///slides/Algoritmos/02-Basicos/02-Estrutura_basica.html)
+- [PDF](pathname:///slides/Algoritmos/02-Basicos/02-Estrutura_basica.pdf)
