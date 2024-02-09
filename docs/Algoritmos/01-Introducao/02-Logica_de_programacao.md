@@ -89,3 +89,7 @@ Qual a cor do vestido de cada senhora?
 
 **Referências**
 - [Forbellone, André Luiz Villar; Eberspätcher, Henri Frederico. Lógica de programação: a construção de algoritmos e estruturas de dados. 4.ed. São Paulo: Pearson Prentice Hall, 2022.](https://plataforma.bvirtual.com.br/Leitor/Publicacao/323/pdf/)
+
+## Apresentações
+- [HTML](pathname:///slides/Algoritmos/01-Introducao/02-Logica_de_programacao.html)
+- [PDF](pathname:///slides/Algoritmos/01-Introducao/02-Logica_de_programacao.pdf)
