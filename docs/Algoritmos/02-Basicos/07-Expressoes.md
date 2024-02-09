@@ -25,7 +25,6 @@ Para associar um valor a uma variável utiliza-se o operador **←** ao lado dir
   - `+` é um operador aritmético, 
   - `←` é o operador de atribuição, e
   - `soma` é uma variável.  
-  Em Java, o operador de atribuição é utilizado com o caractere `=`.
 
   Podemos ler a expressão como *"soma **recebe** cinco mais quatro"*.
 
@@ -44,7 +43,6 @@ Para associar um valor a uma variável utiliza-se o operador **←** ao lado dir
   - `+` é um operador aritmético, 
   - `=` é o operador de atribuição, e
   - `soma` é uma variável.  
-  Em Java, o operador de atribuição é utilizado com o caractere `=`.
 
   Podemos ler a expressão como *"soma **recebe** cinco mais quatro"*.
   
@@ -63,7 +61,6 @@ Para associar um valor a uma variável utiliza-se o operador **←** ao lado dir
   - `+` é um operador aritmético, 
   - `=` é o operador de atribuição, e
   - `soma` é uma variável.  
-  Em Python, o operador de atribuição é utilizado com o caractere `=`.  
 
   Podemos ler a expressão como *"soma **recebe** cinco mais quatro"*.
 
