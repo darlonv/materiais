@@ -55,6 +55,23 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
   ```
 
   </TabItem>
+  <TabItem value="c" label="C">
+
+  ```c
+  #include<stdio.h>
+  
+  int main(void){
+
+    //o código deverá ser inserido após { e antes de }.
+    //linhas que se iniciam 
+    //  com // são consideradas comentários, e 
+    //  não são executadas
+
+    return 0;
+  }
+  ```
+
+  </TabItem>
 </Tabs>
 
 ## Referências

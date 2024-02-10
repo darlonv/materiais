@@ -1,13 +1,10 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Funções básicas
+# Saída
 
-## Entrada e saída de dados
 
-Para que exista a interação do algoritmo desenvolvido com agentes externos - p.ex. usuário - é necessário a utilização de algumas funções específicas.
-
-### Saída de dados
+## Saída de dados
 
 A saída de dados que utilizaremos aqui é a tela. Para mostrar uma mensagem na tela, utilizaremos a função `escreva()`, acompanhada do que queremos que seja apresentado na tela.
 
@@ -38,7 +35,67 @@ A saída de dados que utilizaremos aqui é a tela. Para mostrar uma mensagem na 
   ```
 
   </TabItem>
+  <TabItem value="c" label="C">
+
+  ```c
+  printf("Olá Mundo");
+  ```
+
+  </TabItem>
 </Tabs>
+
+:::caution
+
+Perceba que aqui estamos observando apenas a função de saída. Para que ela possa funcionar de maneira correta no algoritmo, é necessário que ela esteja dentro de uma **estrutura básica**.
+
+<Tabs groupId='language'>
+  <TabItem value="portugol" label="Portugol" default>
+
+  ```c
+  início
+    módulo Principal
+      escreva("Olá Mundo");
+    fimmódulo;
+  fim.
+  ```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  ```javascript
+  public class Main{
+    public static void main(String args){
+      System.out.println("Olá Mundo");
+    }
+  }
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python
+  if __name__ == "main":
+    print("Olá Mundo")
+  ```
+
+  </TabItem>
+  <TabItem value="c" label="C">
+
+  ```c
+  #include <stdio.h>
+  int main(void){
+    printf("Olá Mundo"); 
+    return 0;
+  }
+  ```
+
+  </TabItem>
+
+  
+
+</Tabs>
+
+:::
 
 
 - Para apresentar a mensagem `Bom dia, José`:
@@ -63,6 +120,13 @@ A saída de dados que utilizaremos aqui é a tela. Para mostrar uma mensagem na 
 
   ```python
   print("Bom dia, José")
+  ```
+
+  </TabItem>
+  <TabItem value="c" label="C">
+
+  ```c
+  printf("Bom dia, José");
   ```
 
   </TabItem>
