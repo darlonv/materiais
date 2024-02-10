@@ -25,7 +25,7 @@ Chamamos de **código** a um algoritmo desenvolvido em uma linguagem de programa
 
 **Atividade**  
 
-- Um homem precisa atravessar um rio com um barco que possui capacidade de transportar apenas ele mesmo e mais uma de suas três cargas, que são: um lobo, um bode e uma caixa de alfafa. Indique as ações necessárias para que o homem consiga atravessar o rio sem perder suas cargas. Algumas regras devem ser sempre respeitadas: o lobo não pode ficar sozinho com o bode, o bode não pode ficar sozinho com a alfafa e sempre que o barco atravessar deve haver pelo menos um passageiro nele. 
+- Um homem precisa atravessar um rio com um barco que possui capacidade de transportar apenas ele mesmo e uma de suas três cargas, que são: um lobo, um bode e uma caixa de alfafa. Indique as ações necessárias para que o homem consiga atravessar o rio sem perder suas cargas. Algumas regras devem ser sempre respeitadas: o lobo não pode ficar sozinho com o bode, o bode não pode ficar sozinho com a alfafa. 
     - Desenvolva um algoritmo para a solução desse problema.
 
 ---
