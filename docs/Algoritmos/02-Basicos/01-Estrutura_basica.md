@@ -3,7 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Estrutura básica
 
-A estrutura básica de um algoritmo consiste na delimitação inicial para que um **código** seja executado. Este espaço é importante para para delimitar e informar ao computador qual código que deve ser executado inicialmente.
+A estrutura básica de um algoritmo consiste na delimitação inicial para que um **código** seja executado. Este espaço é importante para para delimitar e informar ao computador qual código deve ser executado inicialmente.
 
 
 <Tabs groupId='language'>
@@ -12,11 +12,13 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
   ```c
   início
 
-  //o código deverá ser inserido após início e antes de fim.
-  //linhas que se iniciam 
+    módulo Principal
+    //o código deverá ser inserido após início e antes de fim.
+    //linhas que se iniciam 
   
-  //  com // são consideradas comentários, e 
-  //  não são executadas
+    //  com // são consideradas comentários, e 
+    //  não são executadas
+    fimmódulo;
 
   fim.
   ```
@@ -26,6 +28,7 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
 
   ```javascript
   public class Main{
+
     public static void main(String args){
 
         //o código deverá ser inserido após { e antes de }.

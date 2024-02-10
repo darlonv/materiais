@@ -13,25 +13,28 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ## Estrutura básica
 
-A estrutura básica de um algoritmo consiste na delimitação inicial para que um **código** seja executado. Este espaço é importante para para delimitar e informar ao computador qual é a área de código que deve ser executada inicialmente.
+A estrutura básica de um algoritmo consiste na delimitação inicial para que um **código** seja executado. Este espaço é importante para para delimitar e informar ao computador qual código deve ser executado inicialmente.
 
 ---
 
-Pseudocódigo
+#### Pseudocódigo
+
   ```c
   início
 
-  //o código deverá ser inserido após início e antes de fim.
-  //linhas que se iniciam 
+    módulo Principal
+    //o código deverá ser inserido após início e antes de fim.
+    //linhas que se iniciam 
   
-  //  com // são consideradas comentários, e 
-  //  não são executadas
+    //  com // são consideradas comentários, e 
+    //  não são executadas
+    fimmódulo;
 
   fim.
   ```
 ---
 
-Java
+#### Java
 
   ```javascript
   public class Main{
@@ -49,7 +52,7 @@ Java
 
 ---
 
-Python
+#### Python
 
 
   ```python
