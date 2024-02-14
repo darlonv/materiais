@@ -25,6 +25,15 @@ import TabItem from '@theme/TabItem';
   ```
 
   </TabItem>
+
+  <TabItem value="c" label="C">
+
+  ```c
+  printf("Olá Mundo")
+  ```
+
+  </TabItem>
+
 </Tabs>
 
 <details>

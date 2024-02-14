@@ -1,13 +1,54 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Saída
+# Funções de entrada e saída
 
 
 ## Saída de dados
 
-A saída de dados que utilizaremos aqui é a tela. Para mostrar uma mensagem na tela, utilizaremos a função `escreva()`, acompanhada do que queremos que seja apresentado na tela.
+A saída de dados que utilizaremos aqui é a tela. Para mostrar uma mensagem na tela, utilizaremos a função abaixo, acompanhada da mensagem que desejamos apresentar na tela.
 
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  ```c
+  escreva();
+  ```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  ```javascript
+  System.out.println();
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python
+  print()
+  ```
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  ```c
+  printf();
+  ```
+
+:::caution Atenção
+Para que a função de saída `printf()` possa ser utilizada é necessário importar a biblioteca de entrada e saída padrão.
+
+Para tal, basta incluir no início do código a linha
+```c
+#include <stdio.h>
+```
+:::
+
+  </TabItem>
+
+</Tabs>
 
 **Exemplos**  
 - Para apresentar na tela a mensagem `Olá Mundo`:  
@@ -44,7 +85,12 @@ A saída de dados que utilizaremos aqui é a tela. Para mostrar uma mensagem na 
   </TabItem>
 </Tabs>
 
-:::caution
+Saída na tela:
+```
+50
+```
+
+:::caution Atenção
 
 Perceba que aqui estamos observando apenas a função de saída. Para que ela possa funcionar de maneira correta no algoritmo, é necessário que ela esteja dentro de uma **estrutura básica**.
 
@@ -84,7 +130,7 @@ Perceba que aqui estamos observando apenas a função de saída. Para que ela po
   ```c
   #include <stdio.h>
   int main(void){
-    printf("Olá Mundo"); 
+    printf("Olá Mundo\n"); 
     return 0;
   }
   ```
@@ -94,6 +140,11 @@ Perceba que aqui estamos observando apenas a função de saída. Para que ela po
   
 
 </Tabs>
+
+Saída na tela:
+```
+50
+```
 
 :::
 
@@ -126,38 +177,140 @@ Perceba que aqui estamos observando apenas a função de saída. Para que ela po
   <TabItem value="c" label="C">
 
   ```c
-  printf("Bom dia, José");
+  printf("Bom dia, José\n");
   ```
 
   </TabItem>
 </Tabs>
 
+Saída na tela:
+```
+Bom dia, José
+```
 
-**Exemplo**
-- Mostrando um valor na tela
+- Para apresentar um valor específico:
+
 
 <Tabs groupId="language">
   <TabItem value="portugol" label="Portugol" default>
 
   ```c
-  altura ← 50
-  escreva(altura)
+  escreva(18);
   ```
 
   </TabItem>
   <TabItem value="java" label="Java">
 
   ```c
-  int altura = 50;
-  System.out.println(altura);
+  System.out.println(18);
   ```
 
   </TabItem>
   <TabItem value="python" label="Python">
 
   ```python
-  altura = 50
-  print(altura)
+  print(18)
+  ```
+
+  </TabItem>
+  <TabItem value="c" label="C">
+
+  ```c
+  printf("%d\n", 18);
+  ```
+
+  </TabItem>
+</Tabs>
+
+Saída na tela:
+```
+18
+```
+
+- Pode-se também apresentar diversos resultados de uma única vez:
+
+
+<Tabs groupId="language">
+  <TabItem value="portugol" label="Portugol" default>
+
+  ```c
+  escreva("A idade mínima deve ser de ", 18, " anos");
+  ```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  ```c
+  System.out.println("A idade mínima deve ser de " + 18 + " anos");
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python
+  print("A idade mínima deve ser de ", 18, " anos")
+  ```
+
+  </TabItem>
+  <TabItem value="c" label="C">
+
+  ```c
+  printf("%s %d %s\n", "A idade mínima deve ser de", 18, "anos");
+  ```
+
+  </TabItem>
+</Tabs>
+
+Saída na tela:
+```
+A idade mínima deve ser de 18 anos
+```
+
+### Uso de armazenamento intermediário
+
+No desenvolvimento de algoritmos, podemos utilizar armazenamento intermediário de valores. Para tal, devemos indicar qual é o **tipo de dado** que deverá ser guardado e um **identificador** desse armazenamento. 
+
+:::info Informação
+O uso desse armazenamento é um tópico de grande importância no desenvolvimento de algoritmos. O veremos de forma mais detalhada ao abordarmos tipos primitivos de dados, constantes e variáveis.
+:::
+
+**Exemplo**
+- Armazenando um valor e apresentando na tela
+
+<Tabs groupId="language">
+  <TabItem value="portugol" label="Portugol" default>
+
+  ```c
+  inteiro: altura; //identificador que permite armazenar um número inteiro
+  altura ← 50;
+  escreva(altura); //saída: 50
+  ```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  ```c
+  int altura;
+  altura = 50; //identificador que permite armazenar um número inteiro
+  System.out.println(altura); //saída: 50
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python
+  altura = 50 #identificador que permite armazenar um número inteiro
+  print(altura) # saída: 50
+  ```
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  ```c
+  int altura; //identificador que permite armazenar um número inteiro
+  altura = 50;
+  printf("%d", altura); // saída: 50
   ```
 
   </TabItem>
@@ -204,10 +357,93 @@ Saída na tela:
   ```
 
   </TabItem>
+
+  <TabItem value="c" label="C">
+
+  ```c
+  char nome = "Dunga";
+  int idade;
+  
+  idade = 35;
+  printf(f"%s %s %d %s",nome,"tem", idade, "anos de idade")
+  ```
+
+  </TabItem>
 </Tabs>
 
+Saída na tela:
+```
+Dunga tem 35 anos de idade
+```
 
-### Entrada de dados
+**Exercícios**
+
+1. Desenvolva um algoritmo que mostra na tela a mensagem *Hoje é dia de aula de Algoritmos*.
+1. Desenvolva um algoritmo que dentro dele possui um armazenamento intermediário de caracteres chamado *mes_ferias_1* e *mes_ferias_2*, onde cada um deve possuir os valores *janeiro* e *julho*. Seu algoritmo deve informar na tela uma mensagem informando que estes são os meses de férias previsto no calendário acadêmico.
+1. Desenvolva um algoritmo que dentro dele possui os armazenamentos intermediários de caracteres chamado *mes_ferias_1* e *mes_ferias_2*, onde cada um deve possuir os valores *janeiro* e *julho*. Também possui os armazenamentos intermediários *dias_ferias_1* e *dias_ferias_2*, com os conteúdos *30* e *15*, respectivamente. Seu algoritmo deve informar na tela uma mensagem informando que são previstos 30 dias de férias em janeiro e 15 dias de férias em julho.
+
+## Entrada de dados
+
+Para a entrada de dados pode-se utilizar a seguinte função:
+
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  ```c
+  leia();
+  ```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  ```javascript
+  Scanner entrada = new Scanner(System.in); //associa o identificador à entrada padrão
+  entrada.next(); //entrada de dados
+  entrada.close(); //desassocia o identificador da entrada padrão
+  ```
+
+:::caution Atenção
+Para que a função de entrada possa ser utilizada é necessário importar a biblioteca também é necessário importar a biblioteca `Scanner`.
+
+Para tal, é necessário incluir no início do código a linha
+
+```javascript
+import java.util.Scanner;
+```
+:::
+
+:::caution Atenção
+O código `Scanner entrada = new Scanner(System.in);` realiza uma associação do identificador `entrada` com a entrada padrão (comumente, o teclado). 
+
+Após a finalização das entradas, é necessário desassociar o identificador, com a função `entrada.close().`
+
+```javascript
+import java.util.Scanner;
+```
+:::
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python
+  input()
+  ```
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  ```c
+  scanf();
+  ```
+
+:::caution Atenção
+Assim como na função de saída `printf`, para que a função de entrada `scanf()` possa ser utilizada também é necessário importar a biblioteca de entrada e saída padrão.
+:::
+
+  </TabItem>
+
+</Tabs>
 
 **Exemplo**  
 - Solicite ao usuário que digite seu nome
