@@ -3,6 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Funções de entrada e saída
 
+As funções de entrada e saída realizam a conexão do algoritmo com o ambiente externo, recebendo e enviando dados.
 
 ## Saída de dados
 
@@ -55,7 +56,7 @@ Para tal, basta incluir no início do código a linha
 
 
 <Tabs groupId='language'>
-  <TabItem value="portugol" label="Portugol" default>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
   ```c
   escreva("Olá Mundo");
@@ -64,7 +65,7 @@ Para tal, basta incluir no início do código a linha
   </TabItem>
   <TabItem value="java" label="Java">
 
-  ```c
+  ```javascript
   System.out.println("Olá Mundo");
   ```
 
@@ -95,7 +96,7 @@ Saída na tela:
 Perceba que aqui estamos observando apenas a função de saída. Para que ela possa funcionar de maneira correta no algoritmo, é necessário que ela esteja dentro de uma **estrutura básica**.
 
 <Tabs groupId='language'>
-  <TabItem value="portugol" label="Portugol" default>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
   ```c
   início
@@ -153,7 +154,7 @@ Saída na tela:
 
 
 <Tabs groupId="language">
-  <TabItem value="portugol" label="Portugol" default>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
   ```c
   escreva("Bom dia, José");
@@ -162,7 +163,7 @@ Saída na tela:
   </TabItem>
   <TabItem value="java" label="Java">
 
-  ```c
+  ```javascript
   System.out.println("Bom dia, José");
   ```
 
@@ -192,7 +193,7 @@ Bom dia, José
 
 
 <Tabs groupId="language">
-  <TabItem value="portugol" label="Portugol" default>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
   ```c
   escreva(18);
@@ -201,7 +202,7 @@ Bom dia, José
   </TabItem>
   <TabItem value="java" label="Java">
 
-  ```c
+  ```javascript
   System.out.println(18);
   ```
 
@@ -231,7 +232,7 @@ Saída na tela:
 
 
 <Tabs groupId="language">
-  <TabItem value="portugol" label="Portugol" default>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
   ```c
   escreva("A idade mínima deve ser de ", 18, " anos");
@@ -240,7 +241,7 @@ Saída na tela:
   </TabItem>
   <TabItem value="java" label="Java">
 
-  ```c
+  ```javascript
   System.out.println("A idade mínima deve ser de " + 18 + " anos");
   ```
 
@@ -278,7 +279,7 @@ O uso desse armazenamento é um tópico de grande importância no desenvolviment
 - Armazenando um valor e apresentando na tela
 
 <Tabs groupId="language">
-  <TabItem value="portugol" label="Portugol" default>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
   ```c
   inteiro: altura; //identificador que permite armazenar um número inteiro
@@ -289,7 +290,7 @@ O uso desse armazenamento é um tópico de grande importância no desenvolviment
   </TabItem>
   <TabItem value="java" label="Java">
 
-  ```c
+  ```javascript
   int altura;
   altura = 50; //identificador que permite armazenar um número inteiro
   System.out.println(altura); //saída: 50
@@ -328,7 +329,7 @@ Saída na tela:
 **Exemplo**  
 
 <Tabs groupId="language">
-  <TabItem value="portugol" label="Portugol" default>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
   ```c
   caractere: nome ← "Dunga";
@@ -339,13 +340,11 @@ Saída na tela:
   </TabItem>
   <TabItem value="java" label="Java">
 
-  ```c
+  ```javascript
   String nome = "Dunga";
   int idade = 35;
-  System.out.printf("%s tem %d anos de idade.\n", nome, idade)
+  System.out.println(nome + " tem " + anos " de idade.");
   ```
-
-  **Atenção** ao **f** no `printf`!
 
   </TabItem>
   <TabItem value="python" label="Python">
@@ -353,7 +352,7 @@ Saída na tela:
   ```python
   nome = Dunga
   idade = 35
-  print(f"{nome} tem {idade} anos de idade")
+  print(f"{nome} tem {idade} anos de idade.")
   ```
 
   </TabItem>
@@ -365,7 +364,7 @@ Saída na tela:
   int idade;
   
   idade = 35;
-  printf(f"%s %s %d %s",nome,"tem", idade, "anos de idade")
+  printf("%s %s %d %s",nome,"tem", idade, "anos de idade.");
   ```
 
   </TabItem>
@@ -384,22 +383,42 @@ Dunga tem 35 anos de idade
 
 ## Entrada de dados
 
+Para que a entrada de dados possa ser realizado é necessário passar ao algoritmo uma informação adicional, com o identificador em que o valor deverá ser armazenado.
+
 Para a entrada de dados pode-se utilizar a seguinte função:
 
 <Tabs groupId='language'>
   <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
   ```c
-  leia();
+  leia(); //para qualquer tipo de dados
   ```
 
   </TabItem>
   <TabItem value="java" label="Java">
 
+  Antes de iniciar a leitura de dados, é necessário associar um identificador à entrada.
+
   ```javascript
-  Scanner entrada = new Scanner(System.in); //associa o identificador à entrada padrão
-  entrada.next(); //entrada de dados
-  entrada.close(); //desassocia o identificador da entrada padrão
+  Scanner entrada = new Scanner(System.in); //entrada é um identificador
+  ```
+
+  Em seguida é possível ler o dado desejado utilizando `.next()` ou `.nextInt()`
+
+  ```javascript
+  entrada.next(); //para dados do tipo caractere
+  ```
+
+  ou
+
+  ```javascript
+  entrada.nextInt(); //para dados do tipo inteiro
+  ```
+
+  Finalizada a leitura de dados, deve-se chamar a função `.close()`.
+
+  ```javascript
+  entrada.close();
   ```
 
 :::caution Atenção
@@ -417,16 +436,19 @@ O código `Scanner entrada = new Scanner(System.in);` realiza uma associação d
 
 Após a finalização das entradas, é necessário desassociar o identificador, com a função `entrada.close().`
 
-```javascript
-import java.util.Scanner;
-```
 :::
+
 
   </TabItem>
   <TabItem value="python" label="Python">
 
   ```python
-  input()
+  input() # para dados do tipo caractere
+  ```
+  ou
+
+  ```python
+  (int) input() # para dados do tipo inteiro
   ```
 
   </TabItem>
@@ -434,84 +456,249 @@ import java.util.Scanner;
   <TabItem value="c" label="C">
 
   ```c
-  scanf();
+  gets(); // entrada de dados do tipo caractere
+  ```
+  ou
+  ```c
+  scanf("%d", &); // entrada de dados do tipo inteiro
   ```
 
 :::caution Atenção
-Assim como na função de saída `printf`, para que a função de entrada `scanf()` possa ser utilizada também é necessário importar a biblioteca de entrada e saída padrão.
+Assim como na função de saída `printf`, para que as funções de entrada `scanf()` e `gets()` possam ser utilizadas também é necessário importar a biblioteca de entrada e saída padrão.
 :::
 
   </TabItem>
 
 </Tabs>
 
+Conhecendo a função que realiza a leitura de dados da entrada padrão, devemos informar qual identificador será responsável por armazenar o dado recebido na entrada.
+
+**Exemplo**
+- recebendo valores na entrada e armazenando
+
+<Tabs groupId='language'>
+<TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+- recebendo da entrada um valor do tipo inteiro
+```c
+inteiro: numero;
+leia(numero); 
+```
+- recebendo da entrada um valor do tipo caractere
+```c
+caractere: palavra;
+leia(palavra);
+```
+</TabItem>
+  
+<TabItem value="java" label="Java">
+
+- recebendo da entrada um dado do tipo inteiro
+
+```javascript
+int numero;
+Scanner entrada = new Scanner(System.in);
+numero = entrada.nextInt();
+entrada.close();
+```
+
+- recebendo da entrada um dado do tipo caractere
+
+```javascript
+String palavra;
+Scanner entrada = new Scanner(System.in);
+palavra = entrada.next();
+entrada.close();
+```
+
+</TabItem>
+
+<TabItem value="python" label="Python">
+
+- recebendo da entrada um dado do tipo inteiro
+```python
+numero = (int) input()
+```
+
+- recebendo da entrada um dado do tipo caractere
+```python
+palavra = input()
+```
+
+</TabItem>
+
+<TabItem value="c" label="C">
+
+- recebendo da entrada um dado do tipo inteiro
+```c
+int numero;
+scanf("%d", &numero); // observe o &
+```
+
+- recebendo da entrada um dado do tipo caractere
+```c
+char palavra[100];
+gets(palavra); //perceba que o & não é necessário aqui
+```
+
+:::caution Atenção
+O uso da função `scanf()` requer cuidado ao mencionar o identificador de onde o valor será armazenado. Observe o uso do `&` antes do nome do identificado. Para caracteres com a função `gets()` este sinal não é necessário.
+
+Estas diferenças e porque isto é realizado desta forma será explicado futuramente, quando os conteúdos de vetores e manipulação de cadeias de caracteres forem abordados.
+:::
+
+</TabItem>
+
+</Tabs>
+
+
+
 **Exemplo**  
 - Solicite ao usuário que digite seu nome
 
 <Tabs groupId='language'>
-  <TabItem value="portugol" label="Portugol" default>
+<TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
-  A entrada de dados é a maneira como o usuário pode inserir dados para dentro do algoritmo. Aqui utilizaremos a função `leia()`.
-
-  ```c showLineNumbers
-  inicio;
-  //variáveis
+```c showLineNumbers
+  //identificadores
   caractere: nome;
 
   //entrada
   // highlight-next-line
-  leia(nome);
+  leia(nome);   //recebe o dado da entrada
+```
 
-  fim.
-  ```
+<details>
+<summary>Código completo</summary>
 
-  </TabItem>
-  <TabItem value="java" label="Java">
-
-  A entrada de dados é a maneira como o usuário pode inserir dados para dentro do algoritmo. Em Java utilizaremos um objeto da classe `Scanner` com seus métodos (`next`, `nextInt`..) .
-
-  ```c showLineNumbers
-  //variaveis
-  String nome;
-  // highlight-next-line
-  Scanner entrada;        //objeto que fará a leitura  
+```c showLineNumbers
+inicio;
+  //identificadores
+  caractere: nome;
 
   //entrada
   // highlight-next-line
-  entrada = new Scanner(System.in); //associa o objeto à entrada padrão
-  // highlight-next-line
-  nome = entrada.next()   //lê um dado
-  // highlight-next-line
-  entrada.close()         //finaliza a entrada de dados
-  ```
+  leia(nome);   //recebe o dado da entrada
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+fim.
+```
+</details>
 
-  A entrada de dados é a maneira como o usuário pode inserir dados para dentro do algoritmo. Em Python utilizaremos a função `input()`. 
+</TabItem>
+<TabItem value="java" label="Java">
 
-  ```python showLineNumbers
-  nome = input()
-  ```
+```javascript
+//identificadores
+String nome;
 
-  </TabItem>
+//entrada
+// highlight-next-line
+nome = entrada.next()   //recebe o dado da entrada
+```
+
+<details>
+<summary>Código completo</summary>
+
+```javascript
+public class Main{
+  public static void main(String args){
+    //identificadores
+    String nome;
+    Scanner entrada;
+
+    //entrada
+    entrada = new Scanner(System.in); //associa o objeto à entrada padrão
+
+    // highlight-next-line
+    nome = entrada.next()   //recebe o dado da entrada
+
+    entrada.close()         //finaliza a entrada de dados
+  }
+}
+```
+</details>
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+A entrada de dados é a maneira como o usuário pode inserir dados para dentro do algoritmo. Em Python utilizaremos a função `input()`. 
+
+```python showLineNumbers
+nome = input()
+```
+
+<details>
+<summary>Código completo</summary>
+
+```python
+  if __name__ == "main":
+    nome = input() #recebe o dado da entrada
+```
+</details>
+
+</TabItem>
+
+<TabItem value="c" label="C">
+
+```c
+char nome[100];
+// highlight-next-line
+gets(nome); //recebe o dado da entrada
+```
+
+<details>
+<summary>Código completo</summary>
+
+```c
+#include <stdio.h>
+
+int main(){
+  char nome[100];
+// highlight-next-line
+  gets(nome); //recebe o dado da entrada
+
+  return 0;
+}
+```
+</details>
+
+</TabItem>
+
 </Tabs>
 
 **Observação**  
 
-Perceba que no exemplo, o nome do usuário será armazenado em uma variável chamada `nome`.
+- Perceba que no exemplo, o nome do usuário será armazenado na região de armazenamento identificada como `nome`.
 
 **Exemplo**
 - Pergunte ao usuário seu nome e idade. Em seguida, mostre na tela as informações digitadas.
 
 <Tabs groupId="language">
-  <TabItem value="portugol" label="Portugol" default>
+<TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
-  ```c showLineNumbers
-  inicio
+```c
+//Identificadores
+caractere nome;
+inteiro idade;
+
+//Entrada
+escreva("Nome: ");
+leia(nome);
+escreva("Idade: ");
+leia(idade);
+
+//Saída
+escreva(nome, " tem ", idade, " anos de idade.");
+
+```
+<details>
+<summary>Código completo</summary>
+
+```c
+inicio
 
   //Variáveis
-  caracterer nome;
+  caractere nome;
   inteiro idade;
 
   //Entrada
@@ -523,36 +710,58 @@ Perceba que no exemplo, o nome do usuário será armazenado em uma variável cha
   //Saída
   escreva(nome, " tem ", idade, " anos de idade.");
 
-  fim.
-  ```
+fim.
+```
+</details>
+</TabItem>
+<TabItem value="java" label="Java">
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+```javascript
+//Identificadores
+String nome;
+int idade;
 
-  ```c showLineNumbers
-  //Variáveis
-  String nome;
-  int idade;
+//Entrada
+System.out.println("Nome: ");
+nome = entrada.next();
+System.out.println("Idade: ");
+idade = entrada.nextInt();
 
-  //Entrada
-  Scanner entrada = new Scanner(System.in);
+//Saída
+System.out.prinln(nome + " tem " + idade + " anos de idade.");
+```
 
-  System.out.println("Nome: ");
-  nome = entrada.next();
-  System.out.println("Idade: ");
-  idade = entrada.nextInt();
-  entrada.close()
+<details>
+<summary>Código completo</summary>
 
-  //Saída
-  System.out.printf("%s tem %d anos de idade.\n", nome, idade);
-  ```
+```javascript
+public class Main{
+  public static void main(String args){
+    //Variáveis
+    String nome;
+    int idade;
 
-  **Atenção** ao uso da função `printf`.
+    //Entrada
+    Scanner entrada = new Scanner(System.in);
 
-  </TabItem>
+    System.out.println("Nome: ");
+    nome = entrada.next();
+    System.out.println("Idade: ");
+    idade = entrada.nextInt();
+    entrada.close()
+
+    //Saída
+    System.out.prinln(nome + " tem " + idade + " anos de idade.");
+  }
+}
+```
+</details>
+
+
+</TabItem>
   <TabItem value="python" label="Python">
 
-  ```python showLineNumbers
+  ```python
   #Entrada
   nome = input("Nome: ")
   idade = input("Idade: ")
@@ -561,125 +770,80 @@ Perceba que no exemplo, o nome do usuário será armazenado em uma variável cha
   print(f"{nome} tem {idade} anos de idade")
   ```
 
+<details>
+<summary>Código completo</summary>
+
+```python
+if __name__ == "main":
+  #Entrada
+  nome = input("Nome: ")
+  idade = input("Idade: ")
+
+  #Saída
+  print(f"{nome} tem {idade} anos de idade")
+  ```
+
+</details>
   </TabItem>
 </Tabs>
 
 
-
-No exemplo, o nome do usuário será armazenado em uma variável chamada `nome`. Na continuação do algoritmo, este valor pode ser utilizado, acessando o conteúdo da variável.
-
-**Exemplo**  
-
-- Solicite ao usuário que digite um número. Em seguida, mostre na tela o número digitado.
-
-<Tabs groupId="language">
-  <TabItem value="portugol" label="Portugol" default>
-
-  ```c showLineNumbers
-  inicio
-  //variaveis
-  inteiro: valor;
-
-  //entrada
-  escreva("Digite um valor: ");
-  leia(valor);
-
-  //saida
-  escreva("O valor digitado foi ", valor)
-
-  fim.
-  ```
-
-  </TabItem>
-  <TabItem value="java" label="Java">
-
-  ```c showLineNumbers
-  import java.util.Scanner;
-  //variaveis
-  int valor;
-  Scanner entrada;
-
-  //entrada
-  entrada = new Scanner(System.in);
-  System.out.print("Digite um valor: ");
-  valor = entrada.nextInt();
-  entrada.close();
-
-  //saida
-  System.out.printf("O valor digitado foi %d\n", valor);
-  ```
-
-  Observe que foi utilizado o método `nextInt()`, dado que é esperado que a entrada seja do tipo `int`.
-
-  </TabItem>
-  <TabItem value="python" label="Python">
-
-  ```python showLineNumbers
-  valor = input("Digite um valor: ")
-  print(f"O valor digitado foi {valor}")
-  ```
-
-  </TabItem>
-</Tabs>
+**Observação**
+- No exemplo, o nome do usuário será armazenado no espaço identificado como `nome` e a idade em `idade`.
 
 **Exercícios**  
-- Desenvolva um algoritmo que pergunta ao usuário o nome do usuário, e em seguida responde "Boa noite, `user`", substituindo `user` pelo nome digitado.
+
+1. Solicite ao usuário que digite um número. Em seguida, mostre na tela o número digitado.
+
+1. Desenvolva um algoritmo que pergunta ao usuário o nome do usuário, e em seguida responde "Boa noite, `user`", substituindo `user` pelo nome digitado.
 
 <details>
   <summary>Resposta</summary>
 <Tabs groupId="language">
-  <TabItem value="portugol" label="Portugol" default>
+<TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
-  ```c
-  inicio;
-  //variaveis
-  caractere: nome;
+```c
+//variaveis
+caractere: nome;
 
-  //entrada
-  escreva("Seu nome: ");
-  leia(nome);
+//entrada
+escreva("Seu nome: ");
+leia(nome);
 
-  //saida
-  escreva("Boa noite, ", nome)
+//saida
+escreva("Boa noite, ", nome)
+```
 
-  fim.
-  ```
+</TabItem>
+<TabItem value="java" label="Java">
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+```javascript
+//variaveis
+String nome;
 
-  ```c
-  import java.util.Scanner;
-  //variaveis
-  String nome;
+//entrada
+Scanner entrada = new Scanner(System.in);
+System.out.print("Seu nome: ");
+nome = entrada.next();
 
-  //entrada
-  Scanner entrada = new Scanner(System.in);
-  System.out.print("Seu nome: ");
-  nome = entrada.next();
-  entrada.close();
+//saida
+System.out.println("Boa noite " + nome);
+```
 
-  //saida
-  System.out.printf("Boa noite %s\n", nome);
-  ```
+</TabItem>
+<TabItem value="python" label="Python">
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+```python
+#entrada
+nome = input("Seu nome: ")
 
-  ```python
-  #entrada
-  nome = input("Seu nome: ")
+#saida
+print(f"Boa noite, {nome}")
+```
 
-  #saida
-  print(f"Boa noite, {valor}")
-  ```
-
-  </TabItem>
+</TabItem>
 </Tabs>
 </details>
 
-- Faça um algoritmo que pergunta ao usuário a sua idade, e em seguida informa a mensagem "Você tem `X` anos", substituindo `X` pela idade digitada.
+3. Faça um algoritmo que pergunta ao usuário a sua idade, e em seguida informa a mensagem "Você tem `X` anos", substituindo `X` pela idade digitada.
 
-- Faça um algoritmo que pergunta ao usuário um valor. Em seguida, mostra esse valor elevado ao quadrado.
-
-- Desenvolva um algoritmo que calcula a média entre dois valores informados pelo usuário.
