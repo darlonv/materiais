@@ -1,8 +1,10 @@
-# Tipos primitivos de dados
+# Tipos de dados
 
 Os dados compreendem a matéria-prima básica a execução dos sistemas computacionais. Com eles podemos processá-los, transformálos, armazená-los e apresentá-los, ou seja, as tarefas que um computador é capaz de realizar.
 
 É necessário observar a diferença entre **dado** e **informação**. Uma informação é um dado com valor. Por exemplo quando observamos a data 19 de abril, temos um dado. Ao sabermos que este é o dia do índio, temos uma informação.
+
+Um tipo pode ser criado a partir de outros. Os tipos de dados iniciais já presentes em uma linguagem de programação são chamados de **tipos primitivos de dados**.
 
 ## Inteiro
 
