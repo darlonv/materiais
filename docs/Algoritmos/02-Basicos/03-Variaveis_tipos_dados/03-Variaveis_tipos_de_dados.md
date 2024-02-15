@@ -10,9 +10,108 @@ Os dados compreendem a matéria-prima básica a execução dos sistemas computac
 
 ## Variáveis
 
+Para que um código possa ser executado por um processador, é necessário que ele seja alocado pelo sistema operacional na memória RAM. Um código em momento de execução é chamado de **processo**. A alocação, organização e execução de processos em um sistema computacional é uma das tarefas do sistema operacional.
+
+![Memória RAM com demonstração de espaço para código e espaço para variáveis](./img/variaveis_01_processos.png)
+
+Quando falamos sobre variáveis, começamos a observar que estes são espaços na memória RAM em que os dados serão armazenados. Tanto o código como as variáveis são armazenados na memória RAM para serem executados pelo processador.
+
+![Memória RAM com demonstração de espaço para código e espaço para variáveis](./img/variaveis_02_texto-e-dados.png)
+
+No desenvolvimento de algoritmos, há a necessidade de identificar uma característica nos dados. Em específico, se tais dados são **constantes** ou **variáveis** no decorrer da execução do algoritmo.
+
+Um valor **variável** é aquele que pode ser modificado no decorrer da execução do algoritmo.
+ 
+**Exemplos**
+- Valores indicados pelo usuário
+    - Os valores para A e B são 15 e 50
+    - O lado do quadrado
+- Resultados intermediários de operações matemáticas
+- Estado de alguma operação
+    - A janela está aberta
+    - A janela está fechada
+
 ### Identificadores
 
-### Declaração
+Um **identificador** é um nome, que corresponde a um dado a ser utilizado no algoritmo. Podemos dizer que um identificado é o **nome da variável**.
+
+![Memória RAM com indicação de onde as variáveis são armazenadas e seus identificadores](./img/variaveis_03_identificadores.png)
+
+**Exemplos**
+- Calcule a área do quadrado que possui lado de tamanho **l**.
+- Calcule quantos dias de vida tem uma pessoa com **x** anos. Considere que um ano possui sempre 365 dias.
+
+Para criar um identificador, algumas regras devem sempre ser seguidas.
+- Sempre deve começar com caractere alfabético (a-z, A-Z).
+- Podem ser seguidos por um ou mais caracteres alfabéticos, numéricos (0-9) ou _underscore_ ( \_ ).
+- Caracteres especiais não podem ser utilizados.
+
+**Exemplos**
+- Gama
+- X
+- notas
+- soma
+- Soma
+- SoMA_Total
+
+**Exercício**
+- Identifique se os identificadores a seguir são válidos ou inválidos
+
+    - 2tempos
+
+    - verdadeiro-ou-falso
+
+    - janela_aberta
+
+    - nome
+
+    - Tamanho do lado
+
+    - area
+
+    - SomaTotal
+
+    - media/2
+
+#### Convenções
+
+### Declaração de variáveis
+
+Quando falamos de dispositivos computacionais, as variáveis correspondem a uma área do dispositivo responsável pelo armazenamento de informações, a **memória**.
+
+Podemos imaginar a memória como sendo um grande armário, que possui um grande número de gavetas. Cada uma das gavetas pode possui um rótulo (identificador) e dentro de cada gaveta pode ser armazenado um dado.
+
+É fundamental que o **tipo de dado** de cada **variável** seja observado e utilizado sempre de maneira correta.
+
+**Exercício**  
+- Identifique se o tipo de dado de cada variável está correto ou incorreto.
+
+    - inteiro: endereço
+
+    - inteiro: nro_gatos
+
+    - inteiro: qtde_itens
+
+    - real: soma_total
+
+    - inteiro: soma_total
+
+    - caractere: idade
+
+    - lógico: idade
+
+**Exercício**  
+- Identifique se o tipo de dado de cada variável está correto ou incorreto.
+
+    - inteiro: idade
+
+    - real: nome
+
+    - lógico: janela_aberta
+
+    - real: peso
+
+    - real: tamanho
 
 ## Tipos de dados
 
