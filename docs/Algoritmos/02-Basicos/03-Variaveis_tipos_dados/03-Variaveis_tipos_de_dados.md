@@ -2,7 +2,7 @@
 
 Aqui abordaremos as maneiras de organizar e utilizar a memória internamente ao algoritmo. Já tivemos uma noção inicial do seu uso em entrada e saída de dados, e agora os observaremos esse ponto mais a fundo.
 
-Os dados compreendem a matéria-prima básica a execução dos sistemas computacionais. Com eles podemos processá-los, transformálos, armazená-los e apresentá-los, ou seja, as tarefas que um computador é capaz de realizar. Com isto, é de fundamental importância compreender seu funcionamento dentro dos algoritmos.
+Os dados fazem parte da matéria-prima básica na execução dos sistemas computacionais. Com eles podemos processá-los, transformálos, armazená-los e apresentá-los, ou seja, as tarefas que um computador é capaz de realizar. Com isto, é de fundamental importância compreender seu funcionamento dentro dos algoritmos.
 
 :::info Informação
 **Dado** e **informação** são conceitos distintos. Uma informação é um dado com valor. Por exemplo quando observamos a data 19 de abril, temos um dado. Ao sabermos que este é o dia do índio, temos uma informação.
@@ -16,6 +16,8 @@ Para que um código possa ser executado por um processador, é necessário que e
 
 Quando falamos sobre variáveis, começamos a observar que estes são espaços na memória RAM em que os dados serão armazenados. Tanto o código como as variáveis são armazenados na memória RAM para serem executados pelo processador.
 
+Podemos imaginar a memória como sendo um grande armário, que possui um grande número de gavetas. Dentro de cada uma das gavetas pode ser armazenado um dado.
+
 ![Memória RAM com demonstração de espaço para código e espaço para variáveis](./img/variaveis_02_texto-e-dados.png)
 
 No desenvolvimento de algoritmos, há a necessidade de identificar uma característica nos dados. Em específico, se tais dados são **constantes** ou **variáveis** no decorrer da execução do algoritmo.
@@ -27,24 +29,23 @@ Um valor **variável** é aquele que pode ser modificado no decorrer da execuç�
     - Os valores para A e B são 15 e 50
     - O lado do quadrado
 - Resultados intermediários de operações matemáticas
-- Estado de alguma operação
+- Estado de alguma operação ou ação
     - A janela está aberta
     - A janela está fechada
 
-### Identificadores
+### Identificadores de variáveis
 
-Um **identificador** é um nome, que corresponde a um dado a ser utilizado no algoritmo. Podemos dizer que um identificado é o **nome da variável**.
+Um **identificador** é um nome, que corresponde a um dado a ser utilizado no algoritmo. comumente dizemos que um identificador é o **nome da variável**. A escolha do identificador deve sempre ser de acordo com a função da variável no algoritmo, de forma a facilitar o melhor entendimento do código.
 
-![Memória RAM com indicação de onde as variáveis são armazenadas e seus identificadores](./img/variaveis_03_identificadores.png)
+Em nossa analogia de gavetas, podemos imaginar que o identificado é um rótulo em cada gaveta, que descreve o que nela contém.
 
-**Exemplos**
-- Calcule a área do quadrado que possui lado de tamanho **l**.
-- Calcule quantos dias de vida tem uma pessoa com **x** anos. Considere que um ano possui sempre 365 dias.
+![Memória RAM com indicação das variáveis e seus identificadores](./img/variaveis_03_identificadores.png)
 
-Para criar um identificador, algumas regras devem sempre ser seguidas.
-- Sempre deve começar com caractere alfabético (a-z, A-Z).
-- Podem ser seguidos por um ou mais caracteres alfabéticos, numéricos (0-9) ou _underscore_ ( \_ ).
-- Caracteres especiais não podem ser utilizados.
+Para criar um identificador, algumas regras devem sempre ser seguidas:
+1. Sempre deve começar com caractere alfabético (a-z, A-Z).
+1. Podem ser seguidos por um ou mais caracteres alfabéticos, numéricos (0-9) ou _underscore_ ( \_ ).
+1. Caracteres especiais não podem ser utilizados;
+1. Não podem ser utilizadas palavras reservadas da linguagem. A lista de palavras reservadas é específica de cada linguagem. 
 
 **Exemplos**
 - Gama
@@ -58,30 +59,93 @@ Para criar um identificador, algumas regras devem sempre ser seguidas.
 - Identifique se os identificadores a seguir são válidos ou inválidos
 
     - 2tempos
-
     - verdadeiro-ou-falso
-
     - janela_aberta
-
     - nome
-
     - Tamanho do lado
-
     - area
-
     - SomaTotal
-
     - media/2
 
 #### Convenções
 
+Boa parte dos programadores seguem alguma convenção ao definir os identificadores, para que o código seja mais uniforme. Estas práticas costumam facilitar o entendimento do código.
+
+Algumas convenções para identificadores são:
+
+- ***camelCase*** : palavras são escritas juntas sem espaço, e cada palavra inicia com uma letra maiúscula. Exemplos:
+    - idDoUsuario
+    - idadePessoa
+    - nomeFuncionario
+- ***snake_case*** : palavras são separadas por *underline* (_) entre elas. Exemplos:
+    - id_do_usuario
+    - idade_pessoa
+    - nome_funcionario
+- ***PascalCase*** : semelhante ao *camelCase*, porém a letra inicial também é maiúscula. Exemplos:
+    - IdDoUsuario
+    - IdadePessoa
+    - NomeFuncionario
+- ***UPPER_CASE*** : todas as letras em maiúsculas, separadas por *underline*. É amplamente utilizada para a definição de constantes (veremos adiante). Exemplos:
+    - ID_DO_USUARIO
+    - IDADE_PESSOA
+    - NOME_FUNCIONARIO
+
+Não existe uma maneira correta de definir os identificadores, porém estas são utilizadas cotidianamente.
+
 ### Declaração de variáveis
 
-Quando falamos de dispositivos computacionais, as variáveis correspondem a uma área do dispositivo responsável pelo armazenamento de informações, a **memória**.
-
-Podemos imaginar a memória como sendo um grande armário, que possui um grande número de gavetas. Cada uma das gavetas pode possui um rótulo (identificador) e dentro de cada gaveta pode ser armazenado um dado.
+Já vimos que quando falamos de dispositivos computacionais, as variáveis correspondem a uma área na **memória** para o armazenamento de dados.
 
 É fundamental que o **tipo de dado** de cada **variável** seja observado e utilizado sempre de maneira correta.
+
+Antes de fazer o uso da variável, precisamos declará-la. A declaração da variável serve para informar ao sistema operacional que o algoritmo precisa de memória para armazenar dados para que possa ser executado.
+
+Comumente, colocamos a declaração de variáveis no início do algoritmo.
+
+:::info Informação
+Algumas linguagens de programação requerem que a declaração de variáveis seja realizada explicitamente no início do código, ocasionando em erros caso isto não aconteça.
+:::
+
+Na declaração das variáveis é necessário informar qual tipo de dado poderá ser armazenado naquela variável.
+
+**Exemplo**
+- declaração de uma variável chamada `idade`, que armazenará valores do tipo inteiro.
+
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  ```c
+  //variáveis
+  inteiro: idade;
+  ```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  ```javascript
+  //variáveis
+  int idade;
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python
+  #variáveis
+  idade : int
+  ```
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  ```c
+  printf("Olá Mundo")
+  ```
+
+  </TabItem>
+
+</Tabs>
 
 **Exercício**  
 - Identifique se o tipo de dado de cada variável está correto ou incorreto.
