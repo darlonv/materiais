@@ -1,6 +1,8 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
+<!-- marp-header -->
+
 # Funções de entrada e saída
 
 <!-- marp header -->
@@ -59,7 +61,7 @@ Para tal, basta incluir no início do código a linha
 
 </Tabs>
 
-**Exemplos**  
+**Exemplo**  
 - Para apresentar na tela a mensagem `Olá Mundo`:  
 
 
