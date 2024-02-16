@@ -1,3 +1,6 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Variáveis e tipos de dados
 
 Aqui abordaremos as maneiras de organizar e utilizar a memória internamente ao algoritmo. Já tivemos uma noção inicial do seu uso em entrada e saída de dados, e agora os observaremos esse ponto mais a fundo.
@@ -35,7 +38,7 @@ Um valor **variável** é aquele que pode ser modificado no decorrer da execuç�
 
 ### Identificadores de variáveis
 
-Um **identificador** é um nome, que corresponde a um dado a ser utilizado no algoritmo. comumente dizemos que um identificador é o **nome da variável**. A escolha do identificador deve sempre ser de acordo com a função da variável no algoritmo, de forma a facilitar o melhor entendimento do código.
+Um **identificador** de uma variável é um nome, que corresponde a um dado a ser utilizado no algoritmo. comumente dizemos que um identificador é o **nome da variável**. A escolha do identificador deve sempre ser de acordo com a função da variável no algoritmo, de forma a facilitar o melhor entendimento do código.
 
 Em nossa analogia de gavetas, podemos imaginar que o identificado é um rótulo em cada gaveta, que descreve o que nela contém.
 
@@ -130,9 +133,48 @@ Na declaração das variáveis é necessário informar qual tipo de dado poderá
   </TabItem>
   <TabItem value="python" label="Python">
 
+:::info Informação
+Em Python, a declaração de variáveis antes de sua utilização não é obrigatória. A memória necessária para a variável é solicitada durante a execução do programa.
+:::
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  ```c
+  //variáveis
+  int idade;
+  ```
+
+  </TabItem>
+
+</Tabs>
+
+#### Atribuição
+
+Dados podem ser atribuídos a variáveis, bem como utilizados em outras partes de um algoritmo. Para atribuir um valor a uma variável, utilizamos um **operador de atribuição**. Este operador é dependente da linguagem que estiver sendo utilizada.
+
+O operador de atribuição é:
+
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  ```c
+  ←
+  ```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  ```javascript
+  =
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
   ```python
-  #variáveis
-  idade : int
+  =
   ```
 
   </TabItem>
@@ -140,12 +182,644 @@ Na declaração das variáveis é necessário informar qual tipo de dado poderá
   <TabItem value="c" label="C">
 
   ```c
-  printf("Olá Mundo")
+  =
   ```
 
   </TabItem>
 
 </Tabs>
+
+**Exemplo**
+- Uma variável do tipo inteiro chamada `distancia` é criada, e o valor 2000 é atribuído a ela.
+
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  ```c
+  //variáveis
+  inteiro: distancia;
+
+  distancia ← 2000; //lê-se "distancia recebe o valor 20000"
+  ```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  ```javascript
+  //variáveis
+  int distancia;
+
+  distancia = 2000; //lê-se "distancia recebe o valor 20000"
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python
+  distancia = 2000 #lê-se "distancia recebe o valor 20000"
+  ```
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  ```c
+  //variáveis
+  int distancia;
+
+  distancia = 2000; //lê-se "distancia recebe o valor 20000"
+  ```
+
+  </TabItem>
+
+</Tabs>
+
+Após atribuir o valor à variável, este valor fica armazenado na memória RAM no espaço reservado para a execução da aplicação.
+
+![Memória RAM com a memória preenchida com o valor 2000 no espaço reservado para a variável distancia](./img/variaveis_04_atribuicao.png)
+
+#### Substituições
+
+O valor presente em uma variável sempre será o último valor que for atribuído a ela. O valor anterior é perdido.
+
+**Exemplo**
+
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  ```c
+  //variáveis
+  inteiro: distancia;
+
+  distancia ← 2000; 
+  distancia ← 1500; //o valor anterior (2000) é perdido
+
+  escreva("A distância apresentada foi de ", distancia, " metros.");
+  ```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  ```javascript
+  //variáveis
+  int distancia;
+
+  distancia = 2000; 
+  distancia = 1500; //o valor anterior (2000) é perdido
+
+  System.out.println("A distância apresentada foi de " + distancia + " metros.");
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python
+  #variáveis
+  distancia = 2000
+  distancia = 1500 #o valor anterior (2000) é perdido
+
+  print(f"A distância apresentada foi de {distancia} metros.")
+  ```
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  ```c
+  //variáveis
+  int distancia;
+
+  distancia = 2000; 
+  distancia = 1500; //o valor anterior (2000) é perdido
+
+  printf("%s %d %s\n", "A distância apresentada foi de", distancia, "metros.");
+  ```
+
+  </TabItem>
+
+</Tabs>
+
+Saída na tela:
+```
+1500
+```
+
+**Exercício**
+- Observe o código abaixo, e diga qual será a saída apresentada pelo algoritmo.
+
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  ```c
+  //variáveis
+  inteiro: distancia;
+
+  distancia ← 2000; 
+  escreva("A distância inicial foi de ", distancia, " metros.");
+
+  distancia ← 1500; 
+  escreva("A distância final foi de ", distancia, " metros.");
+  ```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  ```javascript
+  //variáveis
+  int distancia;
+
+  distancia = 2000; 
+  System.out.println("A distância inicial foi de " + distancia + " metros.");
+
+  distancia = 1500; 
+  System.out.println("A distância final foi de " + distancia + " metros.");
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python
+  #variáveis
+  distancia = 2000
+  print(f"A distância inicial foi de {distancia} metros.")
+
+  distancia = 1500 
+  print(f"A distância final foi de {distancia} metros.")
+  ```
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  ```c
+  //variáveis
+  int distancia;
+
+  distancia = 2000; 
+  printf("%s %d %s\n", "A distância inicial foi de", distancia, "metros.");
+
+  distancia = 1500;
+  printf("%s %d %s\n", "A distância final foi de", distancia, "metros.");
+  ```
+
+  </TabItem>
+
+</Tabs>
+
+
+## Tipos de dados
+
+Um tipo de dado pode ser criado a partir de outros tipos de dados. Os tipos de dados iniciais já presentes em uma linguagem de programação são chamados de **tipos primitivos de dados**. Aqui observaremos os tipos de dados **inteiro**, **real**, **caractere** e **lógico**.
+
+### Inteiro
+
+Um **inteiro** é uma informação numérica, que compreende valores que correspondem ao conjunto dos números inteiros (positivos, nulo e negativos)
+
+**Exemplo**  
+- O Campus possui 4 construções;
+- Estão construindo 22 casas novas no bairro vizinho;
+- O cachorro tem 8 anos de idade. 
+
+#### Declaração de uma variável do tipo de dado inteiro
+
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  ```c
+  inteiro: <identificador>;
+  ```
+
+  **Exemplo**
+
+  ```c
+  //variáveis
+  inteiro: quantidade_de_caixas;
+  inteiro: numero_de_itens_por_caixa;
+
+  leia(quantidade_de_caixas); //recebe dados da entrada padrão
+  numero_de_itens_por_caixa ← 50; //atribuição
+
+  escreva("Existem ", quantidade_de_caixas, " com ", numero_de_itens_por_caixa, " itens em cada uma."); //envia dados à saída padrão
+  ```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  ```javascript
+  int <identificador>;
+  ```
+
+  **Exemplo**
+
+  ```javascript
+  //variáveis
+  int quantidade_de_caixas;
+  int numero_de_itens_por_caixa;
+  Scanner entrada;
+
+  entrada = new Scanner(System.in);
+
+  quantidade_de_caixas = entrada.nextInt(); //recebe dados da entrada padrão
+  numero_de_itens_por_caixa = 50; //atribuição
+
+  System.out.println("Existem " + quantidade_de_caixas + " com " + numero_de_itens_por_caixa + " itens em cada uma."); //envia dados à saída padrão
+  ```
+  
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python
+  <identificador> = <valor inteiro>
+  ```
+
+  **Exemplo**
+
+  ```python
+  quantidade_de_caixas = (int) input() #recebe dados da entrada padrão
+  numero_de_itens_por_caixa = 50 #atribuição
+
+  print("Existem {quantidade_de_caixas}  com {numero_de_itens_por_caixa} itens em cada uma.") #envia dados à saída padrão
+  ```
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  ```c
+  int <identificador>;
+  ```
+
+  **Exemplo**
+
+  ```c
+  //variáveis
+  int quantidade_de_caixas;
+  int numero_de_itens_por_caixa;
+
+  scanf("%d", &quantidade_de_caixas); //recebe dados da entrada padrão. Observe o uso do &
+  numero_de_itens_por_caixa = 50; //atribuição
+
+  printf("%s %d %s %d %s\n" , "Existem", quantidade_de_caixas, "com", numero_de_itens_por_caixa, "itens em cada uma.");//envia dados à saída padrão
+  ```
+
+:::note Observação
+Nas funções `scanf` e `printf` um valor inteiro é reconhecido utilizando `%d` na cadeia de formatação.
+:::
+
+  </TabItem>
+
+</Tabs>
+
+### Real
+
+O tipo de dado **real** é aquele que possui um valor que está compreendido no conjunto dos números reais. São abordados os números negativos, positivos e nulo, considerando as casas decimais.
+
+**Exemplo**  
+- A distância do portão até a sala é de 25,7 metros.
+- O saldo bancário é de R\$ 357,32.
+- O saldo bancário é de R\$ -169,20.
+
+#### Declaração
+
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  ```c
+  real: <identificador>;
+  ```
+
+  **Exemplo**
+
+  ```c
+  //variáveis
+  real: peso_da_caixa;
+  real: custo_da_caixa;
+
+  leia(peso_da_caixa); //recebe dados da entrada padrão
+  custo_da_caixa ← 10.50; //atribuição
+
+  escreva("Uma caixa pesa ", peso_da_caixa, " e seu custo é de R$ ", custo_da_caixa, "."); //envia dados à saída padrão
+  ```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  ```javascript
+  float <identificador>;
+  ```
+
+  **Exemplo**
+
+  ```javascript
+  //variáveis
+  float peso_da_caixa;
+  float custo_da_caixa;
+  Scanner entrada;
+
+  entrada = new Scanner(System.in);
+
+  peso_da_caixa = entrada.nextFloat(); //recebe dados da entrada padrão
+  custo_da_caixa = 10.50; //atribuição
+
+  System.out.println("Uma caixa pesa " + peso_da_caixa + " e seu custo é de R$ " + custo_da_caixa + "."); //envia dados à saída padrão
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python
+  <identificador> = <valor real>
+  ```
+
+  **Exemplo**
+
+  ```python
+  peso_da_caixa = (float) input(); #recebe dados da entrada padrão
+  custo_da_caixa = 10.50; #atribuição
+
+  printf(f"Uma caixa pesa {peso_da_caixa} e seu custo é de R$ {custo_da_caixa}."); //envia dados à saída padrão
+  ```
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  ```c
+  float <identificador>;
+  ```
+
+  **Exemplo**
+
+  ```c
+  //variáveis
+  float peso_da_caixa;
+  float custo_da_caixa;
+
+  scanf("%f", &peso_da_caixa); //recebe dados da entrada padrão. Observe o uso do &
+  custo_da_caixa = 10.50; //atribuição
+
+  printf("%s %f %s %f.\n","Uma caixa pesa", peso_da_caixa, "e seu custo é de R$", custo_da_caixa); //envia dados à saída padrão
+  ```
+
+:::note Observação
+Nas funções `scanf` e `printf` um valor real é reconhecido utilizando `%f` na cadeia de formatação.
+:::
+
+  </TabItem>
+
+</Tabs>
+
+### Lógico
+
+Um dado do tipo **lógico** é aquele em que dois valores podem ser asssumidos: verdadeiro ou falso.
+
+**Exemplo**
+- A janela está aberta.
+- O carro está ligado.
+- A bicicleta está parada.
+
+
+#### Declaração
+
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  ```c
+  logico: <identificador>;
+  ```
+
+  Os possíveis valores lógicos são `true` (verdadeiro) e `false` (falso).
+
+  **Exemplo**
+
+  ```c
+  //variáveis
+  logico: caixa_vazia;
+  logico: caixa_nova;
+
+  leia(caixa_vazia); //recebe dados da entrada padrão
+  caixa_nova ← falso; //atribuição
+
+  escreva("A caixa está vazia? ", caixa_vazia); //envia dados à saída padrão
+  escreva("A caixa é nova? ", caixa_nova);  //envia dados à saída padrão
+  ```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  ```javascript
+  boolean <identificador>;
+  ```
+
+  **Exemplo**
+
+  ```javascript
+  //variáveis
+  boolean caixa_vazia;
+  boolean caixa_nova;
+  Scanner entrada;
+
+  entrada = new Scanner(System.in);
+
+  caixa_vazia = entrada.nextBoolean(); //recebe dados da entrada padrão
+  caixa_nova = false; //atribuição
+
+  System.out.println("A caixa está vazia? " + caixa_vazia); //envia dados à saída padrão
+  System.out.println("A caixa é nova? " + caixa_nova);  //envia dados à saída padrão
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python
+  <identificador> = <valor lógico>
+  ```
+
+  Os possíveis valores lógicos são `True` (verdadeiro) e `False` (falso).
+
+  **Exemplo**
+
+  ```python
+  caixa_vazia = (bool) input(); #recebe dados da entrada padrão
+  caixa_nova = False; #atribuição
+
+  print(f"A caixa está vazia? {caixa_vazia}"); #envia dados à saída padrão
+  print(f"A caixa é nova? {caixa_nova}");  #envia dados à saída padrão
+  ```
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+:::caution Atenção
+Em C não há um tipo de lógico definido nativamente. Podemos utilizar o tipo `bool` importando a biblioteca `stdbool`.
+:::
+
+  ```c
+  #include <stdbool.h>
+
+  bool <identificador>;
+  int <identificador>;
+  ```
+
+  **Exemplo**
+  ```c
+  #include <stdbool.h> //necessário para ter o tipo bool
+  //variáveis
+  bool caixa_vazia; //tipo lógico utilizando bool
+  int caixa_nova;  //tipo lógico utilizando int
+
+  scanf("%d", &caixa_vazia);//recebe dados da entrada padrão. Atenção ao uso do &
+  caixa_nova = 0; //atribuição
+
+  printf("%s %d", "A caixa está vazia? ", caixa_vazia); //envia dados à saída padrão
+  printf("%s %d", "A caixa é nova? ", caixa_nova);      //envia dados à saída padrão
+  ```
+
+:::note Observação
+O tipo de dado `bool` opera da mesma maneira que um dado do tipo inteiro em que:
+- o valor 0 é entendido como falso, e
+- qualquer valor diferente de 0 é entendido como verdadeiro.
+:::
+
+:::note Observação
+Como o `bool` funciona como um inteiro, nas funções `scanf` e `printf` seu  é reconhecido utilizando `%d` na cadeia de formatação. Valores falsos serão apresentados como 0 e verdadeiros como 1.
+:::
+
+  </TabItem>
+
+</Tabs>
+
+### Caractere
+
+Os dado do tipo **caractere** são aqueles que pertencem ao conjunto de valores alfanuméricos (0-9), alfabéticos (a-z, A-Z) e especiais (\!\@\#\$\%\*+-/, dentre outros).
+
+**Exemplo**  
+- O professor disse: "Não use o celular durante a aula!".
+- Ao final do jornal, ele sempre fala "Boa noite".
+- O nome do presidente do clube é "Celso da Silva".
+
+### Declaração
+
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  ```c
+  caractere: <identificador>;
+  ```
+
+  **Exemplo**
+
+  ```c
+  //variáveis
+  caractere: conteudo_caixa;
+  caractere: destino_caixa;
+  caractere: categoria_produto; //A, B, ou C 
+  caractere: tipo_produto; //X, Y ou Z
+
+  leia(conteudo); //recebe dados da entrada padrão
+  destino ← "São Paulo"; //atribuição
+
+  escreva("Contéudo da caixa: ", caixa_conteudo); //envia dados à saída padrão
+  escreva("Destino da carga: " , caixa_destino);  //envia dados à saída padrão
+
+  leia(categoria_produto); //recebe dados da entrada padrão
+  tipo_produto ← "Y"; //atribuição
+  ```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  ```javascript
+  String <identificador>; //////////CONTINUAR AQUI
+  char <identificador>;
+  ```
+
+  **Exemplo**
+
+  ```javascript
+  //variáveis
+  boolean caixa_vazia;
+  boolean caixa_nova;
+  Scanner entrada;
+
+  entrada = new Scanner(System.in);
+
+  caixa_vazia = entrada.nextBoolean(); //recebe dados da entrada padrão
+  caixa_nova = false; //atribuição
+
+  System.out.println("A caixa está vazia? " + caixa_vazia); //envia dados à saída padrão
+  System.out.println("A caixa é nova? " + caixa_nova);  //envia dados à saída padrão
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python
+  <identificador> = <valor lógico>
+  ```
+
+  Os possíveis valores lógicos são `True` (verdadeiro) e `False` (falso).
+
+  **Exemplo**
+
+  ```python
+  caixa_vazia = (bool) input(); #recebe dados da entrada padrão
+  caixa_nova = False; #atribuição
+
+  print(f"A caixa está vazia? {caixa_vazia}"); #envia dados à saída padrão
+  print(f"A caixa é nova? {caixa_nova}");  #envia dados à saída padrão
+  ```
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+:::caution Atenção
+Em C não há um tipo de lógico definido nativamente. Podemos utilizar o tipo `bool` importando a biblioteca `stdbool`.
+:::
+
+  ```c
+  #include <stdbool.h>
+
+  bool <identificador>;
+  int <identificador>;
+  ```
+
+  **Exemplo**
+  ```c
+  #include <stdbool.h> //necessário para ter o tipo bool
+  //variáveis
+  bool caixa_vazia; //tipo lógico utilizando bool
+  int caixa_nova;  //tipo lógico utilizando int
+
+  scanf("%d", &caixa_vazia);//recebe dados da entrada padrão. Atenção ao uso do &
+  caixa_nova = 0; //atribuição
+
+  printf("%s %d", "A caixa está vazia? ", caixa_vazia); //envia dados à saída padrão
+  printf("%s %d", "A caixa é nova? ", caixa_nova);      //envia dados à saída padrão
+  ```
+
+:::note Observação
+O tipo de dado `bool` opera da mesma maneira que um dado do tipo inteiro em que:
+- o valor 0 é entendido como falso, e
+- qualquer valor diferente de 0 é entendido como verdadeiro.
+:::
+
+:::note Observação
+Como o `bool` funciona como um inteiro, nas funções `scanf` e `printf` seu  é reconhecido utilizando `%d` na cadeia de formatação. Valores falsos serão apresentados como 0 e verdadeiros como 1.
+:::
+
+  </TabItem>
+
+</Tabs>
+
+
+
+---------
+
+
 
 **Exercício**  
 - Identifique se o tipo de dado de cada variável está correto ou incorreto.
@@ -177,70 +851,6 @@ Na declaração das variáveis é necessário informar qual tipo de dado poderá
 
     - real: tamanho
 
-## Tipos de dados
-
-Um tipo de dado pode ser criado a partir de outros tipos de dados. Os tipos de dados iniciais já presentes em uma linguagem de programação são chamados de **tipos primitivos de dados**. Aqui observaremos os tipos de dados **inteiro**, **real**, **caractere** e **lógico**.
-
-### Inteiro
-
-### Real
-
-### Lógico
-
-### Caractere
-
-
-
-
-
-## Inteiro
-
-Um **inteiro** é uma informação numérica, que compreende valores que correspondem ao conjunto dos números inteiros (positivos, nulo e negativos)
-
-**Exemplo**  
-- O Campus possui 4 construções;
-- Estão construindo 22 casas novas no bairro vizinho;
-- O cachorro tem 8 anos de idade.
-
-**Observação**  
-Nas linguagens de programação, é comum observarmos o tipo inteiro como **int**.
-
-## Real
-
-O tipo de dado **real** é aquele que possui um valor que está compreendido no conjunto dos números reais. São abordados os números negativos, positivos e nulo, considerando as casas decimais.
-
-**Exemplo**  
-- A distância do portão até a sala é de 25,7 metros.
-- O saldo bancário é de R\$ 357,32.
-- O saldo bancário é de R\$ -169,20.
-
-**Observação**  
-Nas linguagens de programação, é comum observarmos o tipo real como **float** ou **double**.
-
-## Caractere
-
-Os dado do tipo **caractere** são aqueles que pertencem ao conjunto de valores alfanuméricos (0-9), alfabéticos (a-z, A-Z) e especiais (\!\@\#\$\%\*+-/, dentre outros).
-
-**Exemplo**  
-- O professor disse: "Não use o celular durante a aula!".
-- Ao final do jornal, ele sempre fala "Boa noite".
-- O nome do presidente do clube é "Celso da Silva".
-
-**Observação**  
-Nas linguagens de programação, é comum observarmos o tipo caractere como **string** (ou str).
-
-## Lógico
-
-Um dado do tipo **lógico** é aquele em que dois valores podem ser asssumidos: verdadeiro ou falso.
-
-**Exemplo**  
-- A janela está aberta.
-- O carro está ligado.
-- A bicicleta está parada.
-
-**Observação**  
-Nas linguagens de programação, é comum observarmos o tipo lógico como **bool** (ou boolean).
-
 **Exercícios**  
 Observe qual é o tipo de dado em cada situação ([FORBELLONE, pg. 20](https://plataforma.bvirtual.com.br/Leitor/Publicacao/200078/pdf/44)):
 
@@ -253,6 +863,8 @@ Observe qual é o tipo de dado em cada situação ([FORBELLONE, pg. 20](https://
 - Astrogilda mandou pintar em um lote de 10 camisetas: "Preserve o meio ambiente", e ficou devendo R\$ 150,00 para a estamparia Pinte e Borde a ser pago em 3 parcelas.
 
 - Felisberto recebeu sua 18ª medalha por ter alcançado a marca de 578,3 segundos nos 100 metros rasos.
+
+
 
 ## Referências
 - [FORBELLONE, André Luiz Villar; EBERSPÄTCHER, Henri Frederico. Lógica de programação: A construção de algoritmoss e estruturas de dados com aplicações em Python. 4.ed. São Paulo: Pearson; Porto Alegre: Bookman, 2022](https://plataforma.bvirtual.com.br/Leitor/Publicacao/200078/pdf)
