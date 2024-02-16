@@ -74,8 +74,107 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
   </TabItem>
 </Tabs>
 
+## Ambiente de desenvolvimento e execução
+
+A maneira para executar um código que foi desenvolvido utilizando uma linguagem de programação específica, depende das ferramentas utilizadas e do ambiente de desenvolvimento. Neste material, levaremos em conta que o ambiente de desenvolvimento e execução é o Sistema Operacional Linux (Ubuntu) e ambiente de desenvolvimento VSCode com as extensões específicas para a linguagem.
+
+
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  Extensões VSCode necessárias:
+  <ul>
+    <li><a>Não são necessárias extensões.</a></li>
+  </ul>
+
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  - Ferramentas necessárias:
+    - Compilador Java
+    - JVM
+  - Extensões VSCode necessárias:
+    - [Extension Pack for Java (vscjava.vscode-java-pack)](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+  - Para compilar e executar:
+
+  ```bash
+  javac <nome do arquivo, com .java> #para compilar
+  java <nome do arquivo, sem .java> #para executar
+  ```
+
+    **Exemplo**
+    - Compilando e executando o arquivo `Hello.java`
+    ```bash
+    javac Hello.java
+    java Hello
+    ```
+
+
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  - Ferramentas necessárias:
+    - Python 3
+  - Extensões VSCode necessárias:
+    - [Python (ms-python.python)](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+
+  - Para executar:
+
+  ```bash
+  python3 <nome do arquivo, com .py>
+  ```
+
+    **Exemplo**
+    - Executando o arquivo `hello.py`  
+    
+    ```bash
+    python3 hello.py
+    ```
+
+
+
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  - Ferramentas necessárias:
+    - Compilador GCC
+  - Extensões VSCode necessárias:
+  <ul>
+    <li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools">C/C++ (ms-vscode.cpptools)</a></li>
+  </ul>
+
+  - Para compilar e executar:
+
+  ```bash
+  gcc <nome do arquivo, com .c> -o <nome do executável> #para compilar
+  ./<nome do executável> #para executar
+  ```
+
+    **Exemplo**
+    - Compilando e executando o arquivo `hello.c`  
+    
+    ```bash
+    gcc hello.c -o hello
+    ./hello
+    ```
+
+
+  </TabItem>
+
+</Tabs>
+
 ## Referências
-- [FORBELLONE, André Luiz Villar; EBERSPÄTCHER, Henri Frederico. Lógica de programação: A construção de algoritmoss e estruturas de dados com aplicações em Python. 4.ed. São Paulo: Pearson; Porto Alegre: Bookman, 2022](https://plataforma.bvirtual.com.br/Leitor/Publicacao/200078/pdf)
+
+### Outros materiais
+- [Visual Studio Code](https://code.visualstudio.com)
+- [Ubuntu](https://ubuntu.com/download)
+- [VSCode Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+- [VSCode Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [VSCode C/C++ Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 
 ## Apresentações
 - [HTML](pathname:///slides/Algoritmos/02-Basicos/02-Estrutura_basica.html)
