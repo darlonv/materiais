@@ -1,5 +1,15 @@
 import re
 
+def marp_remove_imports(data):
+
+    for it in re.finditer(r'^.*?\#', data, re.DOTALL):
+        text_imports = it.group()
+
+    # data = re.sub(r'^.*?\#', 'zzzz', data, re.DOTALL)
+    # print(text_imports)
+    data = data.replace(text_imports, '#')
+
+    return data
 
 def marp_filtra_linguagem(data, language, language_label):
     substituir = []
@@ -46,9 +56,15 @@ file = open(filename)
 data = file.read()
 file.close()
 
+
+#Remove imports
+data = marp_remove_imports(data)
+
 # Filtra pela linguagem
-# print(data)
-data = marp_filtra_linguagem(data, linguagem, linguagem_label)
+# data = marp_filtra_linguagem(data, linguagem, linguagem_label)
+
+#Inclui cabeçalho
+# data = f'{marp_header}\n\n{data}'
 
 
 # Salva em novo arquivo
