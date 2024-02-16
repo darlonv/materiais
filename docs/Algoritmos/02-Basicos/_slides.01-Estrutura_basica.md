@@ -6,19 +6,18 @@ backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ---
 
-# Algoritmos e Estruturas de Dados
-## Estrutura básica
+# Estrutura básica
 
 ---
-
-## Estrutura básica
 
 A estrutura básica de um algoritmo consiste na delimitação inicial para que um **código** seja executado. Este espaço é importante para para delimitar e informar ao computador qual código deve ser executado inicialmente.
 
 ---
 
-#### Pseudocódigo
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
+  Pseudocódigo
   ```c
   início
 
@@ -32,12 +31,16 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
 
   fim.
   ```
+  </TabItem>
+
 ---
 
-#### Java
+  <TabItem value="java" label="Java">
 
+  Java
   ```javascript
   public class Main{
+
     public static void main(String args){
 
         //o código deverá ser inserido após { e antes de }.
@@ -50,11 +53,13 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
   }
   ```
 
+  </TabItem>
+
 ---
 
-#### Python
+  <TabItem value="python" label="Python">
 
-
+  Python
   ```python
   if __name__ == "main":
     #o código deverá ser inserido com uma tabulação
@@ -65,9 +70,103 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
     #  não são executadas
   ```
 
+  </TabItem>
+
 ---
 
-## Referências
-- [FORBELLONE, André Luiz Villar; EBERSPÄTCHER, Henri Frederico. Lógica de programação: A construção de algoritmoss e estruturas de dados com aplicações em Python. 4.ed. São Paulo: Pearson; Porto Alegre: Bookman, 2022](https://plataforma.bvirtual.com.br/Leitor/Publicacao/200078/pdf)
+  <TabItem value="c" label="C">
+
+  C
+  ```c
+  #include<stdio.h>
+  
+  int main(void){
+
+    //o código deverá ser inserido após { e antes de }.
+    //linhas que se iniciam 
+    //  com // são consideradas comentários, e 
+    //  não são executadas
+
+    return 0;
+  }
+  ```
+
+  </TabItem>
+
+---
+
+</Tabs>
+
+## Ambiente
+
+A maneira para executar um código que foi desenvolvido utilizando uma linguagem de programação específica, depende das ferramentas utilizadas e do ambiente de desenvolvimento. Neste material, levaremos em conta que o ambiente de desenvolvimento e execução é o Sistema Operacional Linux (Ubuntu) e ambiente de desenvolvimento VSCode com as extensões específicas para a linguagem.
+
+---
+## Execução
+
+  Para compilar e executar código Java
+
+  ```bash
+  javac <nome do arquivo, com .java> #para compilar
+  java <nome do arquivo, sem .java> #para executar
+  ```
+---
+
+  **Exemplo**
+  - Compilando e executando o arquivo `Hello.java`
+  ```bash
+  javac Hello.java
+  java Hello
+  ```
+
+---
+
+  - Para executar código Python
+
+  ```bash
+  python3 <nome do arquivo, com .py>
+  ```
+
+--- 
+
+  **Exemplo**
+  - Executando o arquivo `hello.py`  
+  
+  ```bash
+  python3 hello.py
+  ```
+
+---
+
+  - Para compilar e executar código C:
+
+  ```bash
+  gcc <nome do arquivo, com .c> -o <nome do executável> #para compilar
+  ./<nome do executável> #para executar
+  ```
+
+---
+
+  **Exemplo**
+  - Compilando e executando o arquivo `hello.c`  
+  
+  ```bash
+  gcc hello.c -o hello
+  ./hello
+  ```
+
+
+  </TabItem>
+
+</Tabs>
+
+---
+
+### Links
+- [Visual Studio Code](https://code.visualstudio.com)
+- [Ubuntu](https://ubuntu.com/download)
+- [VSCode Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack)
+- [VSCode Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+- [VSCode C/C++ Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 
 ---

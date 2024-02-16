@@ -3,6 +3,14 @@ import TabItem from '@theme/TabItem';
 
 # Funções de entrada e saída
 
+<!-- marp header -->
+<!-- marp title -->
+
+<!-- marp hide -->
+<!-- marp /hide -->
+
+<!-- marp --- -->
+
 As funções de entrada e saída realizam a conexão do algoritmo com o ambiente externo, recebendo e enviando dados.
 
 ## Saída de dados
@@ -88,7 +96,7 @@ Para tal, basta incluir no início do código a linha
 
 Saída na tela:
 ```
-50
+Olá Mundo
 ```
 
 :::caution Atenção
@@ -144,7 +152,7 @@ Perceba que aqui estamos observando apenas a função de saída. Para que ela po
 
 Saída na tela:
 ```
-50
+Olá Mundo
 ```
 
 :::
@@ -188,6 +196,9 @@ Saída na tela:
 ```
 Bom dia, José
 ```
+
+**Exercício**
+- Desenvolva um algoritmo que apresenta seu nome na saída padrão.
 
 - Para apresentar um valor específico:
 
