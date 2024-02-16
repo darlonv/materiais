@@ -6,16 +6,16 @@ backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ---
 
-# Estrutura básica
+# Algoritmos e Estruturas de Dados
+## Estrutura básica
 
 ---
+
+# Estrutura básica
 
 A estrutura básica de um algoritmo consiste na delimitação inicial para que um **código** seja executado. Este espaço é importante para para delimitar e informar ao computador qual código deve ser executado inicialmente.
 
 ---
-
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
   Pseudocódigo
   ```c
@@ -31,11 +31,8 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
 
   fim.
   ```
-  </TabItem>
 
 ---
-
-  <TabItem value="java" label="Java">
 
   Java
   ```javascript
@@ -53,11 +50,9 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
   }
   ```
 
-  </TabItem>
 
 ---
 
-  <TabItem value="python" label="Python">
 
   Python
   ```python
@@ -70,11 +65,7 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
     #  não são executadas
   ```
 
-  </TabItem>
-
 ---
-
-  <TabItem value="c" label="C">
 
   C
   ```c
@@ -91,11 +82,8 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
   }
   ```
 
-  </TabItem>
-
 ---
 
-</Tabs>
 
 ## Ambiente
 
@@ -154,11 +142,6 @@ A maneira para executar um código que foi desenvolvido utilizando uma linguagem
   gcc hello.c -o hello
   ./hello
   ```
-
-
-  </TabItem>
-
-</Tabs>
 
 ---
 

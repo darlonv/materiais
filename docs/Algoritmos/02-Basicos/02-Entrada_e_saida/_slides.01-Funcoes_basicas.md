@@ -12,6 +12,7 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ---
 
+# Modelo de caixa-preta
 Para que exista a interação do algoritmo desenvolvido com agentes externos a ele como o usuário, monitor, teclado, internet, mouse, arquivos, etc., é necessário que algumas funções específicas sejam utilizadas.
 
 ---
@@ -44,4 +45,3 @@ A entrada de dados consiste nas informações a serem trabalhadas, e a saída co
 [WIKIPEDIA. Caixa-preta (teoria dos sistemas)](https://pt.wikipedia.org/wiki/Caixa_preta_(teoria_dos_sistemas))
 
 ----
-

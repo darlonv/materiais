@@ -177,5 +177,5 @@ A maneira para executar um código que foi desenvolvido utilizando uma linguagem
 - [VSCode C/C++ Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 
 ## Apresentações
-- [HTML](pathname:///slides/Algoritmos/02-Basicos/02-Estrutura_basica.html)
-- [PDF](pathname:///slides/Algoritmos/02-Basicos/02-Estrutura_basica.pdf)
+- [HTML](pathname:///slides/Algoritmos/02-Basicos/01-Estrutura_basica.html)
+- [PDF](pathname:///slides/Algoritmos/02-Basicos/01-Estrutura_basica.pdf)

@@ -28,3 +28,7 @@ A entrada de dados consiste nas informações a serem trabalhadas, e a saída co
 [WIKIPEDIA. Caixa-preta (teoria dos sistemas)](https://pt.wikipedia.org/wiki/Caixa_preta_(teoria_dos_sistemas))
 
 ### Outros materiais
+
+## Apresentações
+- [HTML](pathname:///slides/Algoritmos/02-Basicos/02-Entrada_e_saida/01-Funcoes_basicas.html)
+- [PDF](pathname:///slides/Algoritmos/02-Basicos/02-Entrada_e_saida/01-Funcoes_basicas.pdf)

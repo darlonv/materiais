@@ -11,6 +11,8 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 
 ---
 
+# Funções de entrada e saída
+
 As funções de entrada e saída realizam a conexão do algoritmo com o ambiente externo, recebendo e enviando dados.
 
 ---

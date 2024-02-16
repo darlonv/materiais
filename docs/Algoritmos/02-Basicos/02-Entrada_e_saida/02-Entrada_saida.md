@@ -858,3 +858,6 @@ print(f"Boa noite, {nome}")
 
 3. Faça um algoritmo que pergunta ao usuário a sua idade, e em seguida informa a mensagem "Você tem `X` anos", substituindo `X` pela idade digitada.
 
+## Apresentações
+- [HTML](pathname:///slides/Algoritmos/02-Basicos/02-Entrada_e_saida/02-Entrada_saida.html)
+- [PDF](pathname:///slides/Algoritmos/02-Basicos/02-Entrada_e_saida/02-Entrada_saida.pdf)
