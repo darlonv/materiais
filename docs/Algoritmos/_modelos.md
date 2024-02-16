@@ -82,3 +82,13 @@ import TabItem from '@theme/TabItem';
 --------------------
 
 </details>
+
+
+## Cabeçalho para slides MARP
+---
+marp: true
+theme: gaia
+_class: lead
+backgroundColor: #fff
+backgroundImage: url('https://marp.app/assets/hero-background.svg')
+---
