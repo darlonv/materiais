@@ -1,10 +1,30 @@
 import re
 
+slide_break = '\n---\n'
+
 def marp_adminitions_slides(data):
     data_new = ''
 
     for linha in data.split('\n'):
         if ':::' in linha:
+            linha_strip = linha.strip()
+            if linha_strip == ':::':
+                # admonition fechando
+                data_new += slide_break + '\n'
+            else:
+                # admonition abrindo
+                pos = linha_strip.find(' ')
+                if pos >=0 :
+                    data_new += slide_break + '\n'
+                    data_new += f'### {linha[pos+1:]}' + '\n'
+                else:
+                    data_new += slide_break + '\n'
+                    data_new += f'### {linha[3:]}' + '\n'
+
+
+        else:
+            data_new += linha + '\n'
+
             
 
     return data_new
@@ -67,7 +87,7 @@ def marp_separa_topicos_slides(data):
             '**Exemplo**' in linha or \
             '**Exercício**' in linha or \
             '**Exercícios**' in linha: 
-                print(linha)
+                # print(linha)
                 # print(m.group())
                 data_new += token_slide
 
