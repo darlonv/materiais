@@ -1,7 +1,47 @@
 import re
 
+#cabeçalho marp
+marp_header = '''---
+marp: true
+theme: gaia
+_class: lead
+backgroundColor: #fff
+backgroundImage: url('https://marp.app/assets/hero-background.svg')
+---
+'''
+
+#Tags
+#início da região a ocultar no slides
+marp_tag_hide_ini = '<!-- marp hide -->'
+#fim da região a ocultar no slides
+marp_tag_hide_end = '<!-- marp /hide -->'
+
 #código a ser utilizado na quebra de slides
 slide_break = '\n---\n'
+
+# Linguagens a serem extraídas
+# linguagens = ["java", "python", "c"]
+# linguagens_labels = ["Java", "Python", "C"]
+linguagens = ["java"]
+linguagens_labels = ["Java"]
+
+# Título prinicpal do slide
+titulo_principal = "Algoritmos e Estruturas de Dados"
+
+
+def marp_remove_trechos_marcados(data):
+    data_new = data
+    
+    #procura por quebras de slides sem conteúdo entre eles
+    trechos_ocultar = re.findall(f'{marp_tag_hide_ini}.*?{marp_tag_hide_end}', data, re.DOTALL)
+
+    print(trechos_ocultar)
+
+    #substitui as ocorrencias por uma única quebra de slides
+    for trecho_ocultar in trechos_ocultar:
+        data_new = data_new.replace(trecho_ocultar, '\n')
+
+    return data_new
 
 def marp_remove_slides_vazios(data):
     data_new = data
@@ -61,7 +101,7 @@ def marp_quebra_slides(data):
 
 
 
-def marp_get_slide_inicial(data, titulo):
+def marp_get_slide_inicial(data, titulo, linguagem_label):
     
     subtitulo = ''
     slide = ''
@@ -78,6 +118,7 @@ def marp_get_slide_inicial(data, titulo):
     slide += f'\n'
     slide += f'# {titulo}\n'
     slide += f'## {subtitulo}\n'
+    slide += f'### {linguagem_label}\n'
 
     return slide
 
@@ -121,7 +162,7 @@ def marp_separa_topicos_slides(data):
 
     return data_new
 
-def marp_prepara_cabecalho(data,titulo, header):
+def marp_prepara_cabecalho(data,titulo, header, linguagem_label):
     data_new = ''
     tag_header = '<!-- marp-header -->'
 
@@ -130,7 +171,7 @@ def marp_prepara_cabecalho(data,titulo, header):
     data_new += f'{header}\n'
 
     #prepara o slide inicial
-    slide_inicial = marp_get_slide_inicial(data,titulo)
+    slide_inicial = marp_get_slide_inicial(data,titulo, linguagem_label)
     data_new += slide_inicial
 
     for linha in data.split('\n'):
@@ -143,6 +184,7 @@ def marp_prepara_cabecalho(data,titulo, header):
 
     return data_new
 
+# language_label: texto a ser colocado antes de cada trecho de código
 def marp_filtra_linguagem(data, language, language_label):
     substituir = []
 
@@ -172,45 +214,50 @@ def marp_filtra_linguagem(data, language, language_label):
     return data
 
 
-# Linguagem a ser extraída
-linguagem = "java"
-linguagem_label = "Java"
-titulo_principal = "Algoritmos e Estruturas de Dados"
+
 
 # Carrega o cabeçalho
-file = open("./marp_header.txt")
-marp_header = file.read()
-file.close()
+# file = open("./marp_header.txt")
+# marp_header = file.read()
+# file.close()
 
 # Carrega o arquivo
 filename = "02-Entrada_saida.md"
 file = open(filename)
-texto = file.read()
+texto_original = file.read()
 file.close()
 
-#Prepara cada tópico e subtópico como um slide
-texto = marp_separa_topicos_slides(texto)
+for linguagem, linguagem_label in zip(linguagens, linguagens_labels):
+    texto = texto_original
+    
+    #Prepara cada tópico e subtópico como um slide
+    texto = marp_separa_topicos_slides(texto)
 
-# Prepara o cabecalho
-texto = marp_prepara_cabecalho(texto,titulo_principal, marp_header)
+    # Prepara o cabecalho
+    texto = marp_prepara_cabecalho(texto,titulo_principal, marp_header, linguagem_label)
 
-# Filtra pela linguagem
-texto = marp_filtra_linguagem(texto, linguagem, linguagem_label)
+    # Filtra pela linguagem
+    #   "": sem texto antes do trecho de código
+    texto = marp_filtra_linguagem(texto, linguagem, "")
 
-# Inclui quebra de slides onde sinalizado
-texto = marp_quebra_slides(texto)
+    # Inclui quebra de slides onde sinalizado
+    texto = marp_quebra_slides(texto)
 
-# Coloca admonitions em um único slide
-texto = marp_adminitions_slides(texto)
+    # Coloca admonitions em um único slide
+    texto = marp_adminitions_slides(texto)
 
-# Verifica se há slides sem conteúdo
-texto = marp_remove_slides_vazios(texto)
+    # Verifica se há slides sem conteúdo
+    texto = marp_remove_slides_vazios(texto)
 
+    # Remove múltiplas linhas vazias
+    # texto = marp_remove_linhas_vazias(texto)
 
+    # Remove trechos marcados para ocultar
+    # 
+    texto = marp_remove_trechos_marcados(texto)
 
-
-# Salva em novo arquivo
-filename_out = f"_slides.{filename}.{linguagem}.md"
-file = open(filename_out, 'w')
-file.write(texto)
-file.close()
+    # Salva em novo arquivo
+    filename_out = f"_slides.{filename}.{linguagem}.md"
+    file = open(filename_out, 'w')
+    file.write(texto)
+    file.close()
