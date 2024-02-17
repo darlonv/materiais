@@ -1,4 +1,5 @@
 import re
+import sys
 
 #cabeçalho marp
 marp_header = '''---
@@ -25,14 +26,17 @@ marp_tag_hide_end = '<!-- marp /hide -->'
 slide_break = '\n---\n'
 
 # Linguagens a serem extraídas
-# linguagens = ["java", "python", "c"]
-# linguagens_labels = ["Java", "Python", "C"]
-linguagens = ["java"]
-linguagens_labels = ["Java"]
+linguagens = ["pseudocodigo","java", "python", "c"]
+linguagens_labels = ["Pseudocódigo","Java", "Python", "C"]
+# linguagens = ["java"]
+# linguagens_labels = ["Java"]
 
 # Título prinicpal do slide
 titulo_principal = "Algoritmos e Estruturas de Dados"
 
+def marp_inclui_slide_branco_final(data):
+    data+= slide_break
+    return data
 
 def marp_remove_trechos_marcados(data):
     data_new = data
@@ -216,7 +220,14 @@ def marp_filtra_linguagem(data, language, language_label):
     # print(data)
     return data
 
+def carrega_arquivo(filename):
+    # Carrega o arquivo
+    # filename = "02-Entrada_saida.md"
+    file = open(filename)
+    data = file.read()
+    file.close()
 
+    return data
 
 
 # Carrega o cabeçalho
@@ -224,43 +235,54 @@ def marp_filtra_linguagem(data, language, language_label):
 # marp_header = file.read()
 # file.close()
 
-# Carrega o arquivo
-filename = "02-Entrada_saida.md"
-file = open(filename)
-texto_original = file.read()
-file.close()
 
-for linguagem, linguagem_label in zip(linguagens, linguagens_labels):
-    texto = texto_original
-    
-    #Prepara cada tópico e subtópico como um slide
-    texto = marp_separa_topicos_slides(texto)
+# print(sys.argv)
 
-    # Prepara o cabecalho
-    texto = marp_prepara_cabecalho(texto,titulo_principal, marp_header, linguagem_label)
+# arquivos = ["01-Estrutura_basica.md"]
 
-    # Filtra pela linguagem
-    #   "": sem texto antes do trecho de código
-    texto = marp_filtra_linguagem(texto, linguagem, "")
+if len(sys.argv)>1:
+# if True:
+    for filename in sys.argv[1:]:
+    # for filename in arquivos:
+        print(f'Processando {filename}...')
 
-    # Inclui quebra de slides onde sinalizado
-    texto = marp_quebra_slides(texto)
+        texto_original = carrega_arquivo(filename)
 
-    # Coloca admonitions em um único slide
-    texto = marp_adminitions_slides(texto)
+        for linguagem, linguagem_label in zip(linguagens, linguagens_labels):
+            texto = texto_original
+            
+            #Prepara cada tópico e subtópico como um slide
+            texto = marp_separa_topicos_slides(texto)
 
-    # Verifica se há slides sem conteúdo
-    texto = marp_remove_slides_vazios(texto)
+            # Prepara o cabecalho
+            texto = marp_prepara_cabecalho(texto,titulo_principal, marp_header, linguagem_label)
 
-    # Remove múltiplas linhas vazias
-    # texto = marp_remove_linhas_vazias(texto)
+            # Filtra pela linguagem
+            #   "": sem texto antes do trecho de código
+            texto = marp_filtra_linguagem(texto, linguagem, "")
 
-    # Remove trechos marcados para ocultar
-    # 
-    texto = marp_remove_trechos_marcados(texto)
+            # Inclui quebra de slides onde sinalizado
+            texto = marp_quebra_slides(texto)
 
-    # Salva em novo arquivo
-    filename_out = f"_slides.{filename}.{linguagem}.md"
-    file = open(filename_out, 'w')
-    file.write(texto)
-    file.close()
+            # Coloca admonitions em um único slide
+            texto = marp_adminitions_slides(texto)
+
+            # Verifica se há slides sem conteúdo
+            texto = marp_remove_slides_vazios(texto)
+
+
+            # Remove trechos marcados para ocultar
+            # 
+            texto = marp_remove_trechos_marcados(texto)
+
+            # Inclui slide em branco no final
+            texto = marp_inclui_slide_branco_final(texto)
+
+            # Salva em novo arquivo
+            filename_out = f"_slides.{filename}.{linguagem}.md"
+            file = open(filename_out, 'w')
+            file.write(texto)
+            file.close()
+
+else:
+    print("Argumento faltando: arquivo a ser convertido")
