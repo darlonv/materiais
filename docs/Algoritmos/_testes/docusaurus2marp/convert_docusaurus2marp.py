@@ -1,9 +1,27 @@
 import re
 
+#código a ser utilizado na quebra de slides
 slide_break = '\n---\n'
+
+def marp_remove_slides_vazios(data):
+    data_new = data
+    
+
+    #procura por quebras de slides sem conteúdo entre eles
+    slides_vazios = re.findall(r'---[ \t\n]*---', data, re.DOTALL)
+
+    #substitui as ocorrencias por uma única quebra de slides
+    for slide_vazio in slides_vazios:
+        data_new = data_new.replace(slide_vazio, slide_break)
+            
+    return data_new
 
 def marp_adminitions_slides(data):
     data_new = ''
+
+    #texto a ser incluído antes e depois do título da admonition
+    title_pre = '**'
+    title_pos = '**'
 
     for linha in data.split('\n'):
         if ':::' in linha:
@@ -16,10 +34,10 @@ def marp_adminitions_slides(data):
                 pos = linha_strip.find(' ')
                 if pos >=0 :
                     data_new += slide_break + '\n'
-                    data_new += f'### {linha[pos+1:]}' + '\n'
+                    data_new += f'{title_pre}{linha[pos+1:]}{title_pos}' + '\n'
                 else:
                     data_new += slide_break + '\n'
-                    data_new += f'### {linha[3:]}' + '\n'
+                    data_new += f'{title_pre}{linha[3:]}{title_pos}' + '\n'
 
 
         else:
@@ -78,9 +96,12 @@ def marp_separa_topicos_slides(data):
         # print(linhas)
         # match_codigo = re.match(r'^```.*$', linha)
 
+        #verifica se está em uma área de código
         if '```' in linha:
             codigo_dentro = not codigo_dentro
 
+        #se não estiver em uma área de código, 
+        #  verifica se deve haver quebra de slide
         if not codigo_dentro:
             m = re.match(r'^#{1,3} [^#]*$', linha)
             if m or \
@@ -180,8 +201,10 @@ texto = marp_filtra_linguagem(texto, linguagem, linguagem_label)
 texto = marp_quebra_slides(texto)
 
 # Coloca admonitions em um único slide
-
 texto = marp_adminitions_slides(texto)
+
+# Verifica se há slides sem conteúdo
+texto = marp_remove_slides_vazios(texto)
 
 
 
