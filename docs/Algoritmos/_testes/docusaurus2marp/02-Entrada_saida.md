@@ -5,15 +5,10 @@ import TabItem from '@theme/TabItem';
 
 # Funções de entrada e saída
 
-<!-- marp header -->
-<!-- marp title -->
-
-<!-- marp hide -->
-<!-- marp /hide -->
-
-<!-- marp --- -->
 
 As funções de entrada e saída realizam a conexão do algoritmo com o ambiente externo, recebendo e enviando dados.
+
+
 
 ## Saída de dados
 
