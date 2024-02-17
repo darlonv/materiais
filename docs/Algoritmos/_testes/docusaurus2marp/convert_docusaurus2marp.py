@@ -11,10 +11,15 @@ backgroundImage: url('https://marp.app/assets/hero-background.svg')
 '''
 
 #Tags
+#quebra de slide
+marp_tag_slide_break = '<!-- marp --- -->'
+marp_tag_slide_header = '<!-- marp-header -->'
 #início da região a ocultar no slides
 marp_tag_hide_ini = '<!-- marp hide -->'
 #fim da região a ocultar no slides
 marp_tag_hide_end = '<!-- marp /hide -->'
+
+
 
 #código a ser utilizado na quebra de slides
 slide_break = '\n---\n'
@@ -34,8 +39,6 @@ def marp_remove_trechos_marcados(data):
     
     #procura por quebras de slides sem conteúdo entre eles
     trechos_ocultar = re.findall(f'{marp_tag_hide_ini}.*?{marp_tag_hide_end}', data, re.DOTALL)
-
-    print(trechos_ocultar)
 
     #substitui as ocorrencias por uma única quebra de slides
     for trecho_ocultar in trechos_ocultar:
@@ -90,9 +93,9 @@ def marp_adminitions_slides(data):
 def marp_quebra_slides(data):
     data_new = ''
     slide_break = '\n---\n'
-    tag_marp_slide_break = '<!-- marp --- -->'
+    
     for linha in data.split('\n'):
-        if tag_marp_slide_break in linha:
+        if marp_tag_slide_break in linha:
             data_new += slide_break + '\n'
         else:
             data_new += linha + '\n'
@@ -164,7 +167,7 @@ def marp_separa_topicos_slides(data):
 
 def marp_prepara_cabecalho(data,titulo, header, linguagem_label):
     data_new = ''
-    tag_header = '<!-- marp-header -->'
+    # tag_header = '<!-- marp-header -->'
 
     copiar_linha = False
 
@@ -175,7 +178,7 @@ def marp_prepara_cabecalho(data,titulo, header, linguagem_label):
     data_new += slide_inicial
 
     for linha in data.split('\n'):
-        if tag_header in linha:
+        if marp_tag_slide_header in linha:
             copiar_linha = True
             continue
         
