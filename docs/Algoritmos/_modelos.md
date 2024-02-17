@@ -93,5 +93,9 @@ backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ---
 
+Tags dos slides Marp
 
 <!-- marp-header -->
+<!-- marp --- -->
+<!-- marp hide -->
+<!-- marp /hide -->
