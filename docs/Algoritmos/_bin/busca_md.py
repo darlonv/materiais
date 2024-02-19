@@ -9,7 +9,7 @@ import shutil
 
 import convert_docusaurus2marp
 
-OUTPUT_DIR_SLIDES = "../../static/slides/Algoritmozz"
+OUTPUT_DIR_SLIDES = "../../static/slides/Algoritmos"
 
 FILES_HASH = './files_hash.json'
 
@@ -33,7 +33,7 @@ def load_files_hash():
 
 def save_files_hash(files_hash):
     with open(FILES_HASH, 'w') as json_file:
-        json.dump(files_hash, json_file)
+        json.dump(files_hash, json_file, indent=4)
 
 
 def get_file_hash(filename):
