@@ -27,7 +27,7 @@ def load_files_hash():
         with open(FILES_HASH) as json_file:
             return json.load(json_file)
     else:
-        print('Hash de arquivos não existe. Atualizando todos os arquivos...')
+        print('Hash de arquivos não encontrado. Atualizando todos os arquivos...')
     return dict()
 
 
