@@ -19,6 +19,12 @@ marp_tag_slide_header = '<!-- marp-header -->'
 marp_tag_hide_ini = '<!-- marp hide -->'
 # fim da região a ocultar no slides
 marp_tag_hide_end = '<!-- marp /hide -->'
+# início da região em que estão os links para os slides
+marp_tag_slides_ini = '<!-- marp slides -->'
+# fim da região em que estão os links para os slides
+marp_tag_slides_end = '<!-- marp /slides -->'
+# marca o local para onde colocar os slides
+marp_tag_slides_link = '<!-- marp slides-link -->'
 
 
 # código a ser utilizado na quebra de slides
@@ -39,10 +45,25 @@ def marp_inclui_slide_branco_final(data):
     return data
 
 
+def marp_remove_area_slides(data):
+    data_new = data
+
+    # procura pelas tags de remoção
+    trechos_ocultar = re.findall(
+        f'{marp_tag_slides_ini}.*?{marp_tag_slides_end}', data, re.DOTALL)
+
+    # substitui as ocorrencias por uma única quebra de slides
+    for trecho_ocultar in trechos_ocultar:
+        data_new = data_new.replace(
+            trecho_ocultar, f'\n{marp_tag_slides_link}\n')
+
+    return data_new
+
+
 def marp_remove_trechos_marcados(data):
     data_new = data
 
-    # procura por quebras de slides sem conteúdo entre eles
+    # procura pelas tags de remoção
     trechos_ocultar = re.findall(
         f'{marp_tag_hide_ini}.*?{marp_tag_hide_end}', data, re.DOTALL)
 
@@ -260,6 +281,9 @@ def converte_arquivos(arquivos):
 
         for linguagem, linguagem_label in zip(linguagens, linguagens_labels):
             texto = texto_original
+
+            # Remove a área de slides, caso haja
+            texto = marp_remove_area_slides(texto)
 
             # Prepara cada tópico e subtópico como um slide
             texto = marp_separa_topicos_slides(texto)
