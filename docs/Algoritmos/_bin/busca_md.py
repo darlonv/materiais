@@ -1,22 +1,130 @@
 import os
+import sys
 import re
+import json
+import hashlib
+
+import subprocess
+import shutil
 
 import convert_docusaurus2marp
 
-# print(os.listdir())
+OUTPUT_DIR_SLIDES = "../../static/slides/Algoritmozz"
 
-re_filename_markdown = re.compile(r'^[^_].*\.md$')
+FILES_HASH = './files_hash.json'
 
-for (dirpath, dirnames, filenames) in os.walk('.'):
-    if '/_' not in dirpath:
-        # print(dirpath)
-        # print(dirnames)
-        # print(filenames)
+# subprocess.run("ls", shell=True, executable="/bin/bash")
+# subprocess.run("docker run hello-world", shell=True, executable="/bin/bash")
 
-        for filename in filenames:
-            if re_filename_markdown.match(filename) and not filename.endswith('.slides.md'):
+# Variáveis globais
+# Hashes dos arquivos
+files_hash = None
+
+
+def load_files_hash():
+    if os.path.isfile(FILES_HASH):
+        print('Hash de arquivos carregado.')
+        with open(FILES_HASH) as json_file:
+            return json.load(json_file)
+    else:
+        print('Hash de arquivos não existe. Atualizando todos os arquivos...')
+    return dict()
+
+
+def save_files_hash(files_hash):
+    with open(FILES_HASH, 'w') as json_file:
+        json.dump(files_hash, json_file)
+
+
+def get_file_hash(filename):
+    with open(filename, 'rb') as file:
+        content = file.read()
+
+        hash = hashlib.md5(content).hexdigest()
+        return hash
+
+
+def file_need_update(filename):
+    # Calcula o hash do arquivo
+    hash = get_file_hash(filename)
+
+    # Verifica se o arquivo está na lista de hash
+    if filename not in files_hash:
+        # inclui na lista de hashes
+        files_hash[filename] = hash
+        return True
+
+    if files_hash[filename] != hash:
+        # atualiza o hash na lista de hashes
+        files_hash[filename] = hash
+        return True
+
+
+if __name__ == '__main__':
+
+    # Carrega hash de arquivos
+    files_hash = load_files_hash()
+
+    re_filename_markdown = re.compile(r'^[^_].*\.md$')
+
+    for (dirpath, dirnames, filenames) in os.walk('.'):
+        if '/_' not in dirpath:
+            # print(dirpath)
+            # print(dirnames)
+            # print(filenames)
+
+            for filename in filenames:
                 filepath = f'{dirpath}/{filename}'
-                print(filepath)
-                # convert_docusaurus2marp.printa_arquivos([filepath])
-                convert_docusaurus2marp.converte_arquivos([filepath])
-                exit(2)
+                if re_filename_markdown.match(filename):
+                    # Verifica se não é um arquivo de slides
+                    if not filename.endswith('.slides.md'):
+
+                        # Verifica se o arquivo foi modificado
+                        if file_need_update(filepath):
+                            # Converte markdown para marp
+
+                            print('==========', filepath)
+                            # continue
+                            # convert_docusaurus2marp.printa_arquivos([filepath])
+                            # convert_docusaurus2marp.converte_arquivos([filepath])
+
+                            # Convertendo arquivos para slides marp
+                            local_files = os.listdir()
+                            for local_file in local_files:
+                                if local_file.endswith('.slides.md'):
+                                    print(f'---> {local_file}')
+                                    docker_marp_command = f'echo OS não reconhecido.'
+                                    if sys.platform == 'linux':
+                                        docker_marp_command = 'docker run --rm -v ${PWD}:/home/marp/app/ -e MARP_USER="$(id -u):$(id -g)" -e LANG=$LANG marpteam/marp-cli ' + \
+                                            f'{local_file}'
+                                    if sys.platform == 'darwin':
+                                        docker_marp_command = 'docker run --rm -v ${PWD}:/home/marp/app/ -e LANG=$LANG marpteam/marp-cli ' + \
+                                            f'{local_file}'
+                                    # Gera slide html
+                                    subprocess.run(
+                                        docker_marp_command, shell=True, executable="/bin/bash")
+                                    # Gera slide pdf
+                                    subprocess.run(
+                                        f'{docker_marp_command} --pdf', shell=True, executable="/bin/bash")
+
+                                    # Remove o arquivo de slides marp
+                                    print(local_file, 'xxxxxxxxxxx')
+                                    os.remove(local_file)
+
+                                    # Movendo slide gerado para diretório static
+                                    # Verifica se o diretório de saída já existe
+                                    output_slides_path = f'{OUTPUT_DIR_SLIDES}/{dirpath}'
+                                    os.makedirs(output_slides_path,
+                                                exist_ok=True)
+                                    slides_files = os.listdir()
+                                    for slide_file in slides_files:
+                                        if slide_file.endswith(".slides.html") or slide_file.endswith(".slides.pdf"):
+
+                                            os.rename(
+                                                slide_file, f'{output_slides_path}/{slide_file}')
+
+                        else:
+                            print(f'Arquivo {filename} atualizado..')
+
+    # Atualiza hash de arquivos
+    save_files_hash(files_hash)
