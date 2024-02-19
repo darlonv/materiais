@@ -59,6 +59,8 @@ def file_need_update(filename):
         files_hash[filename] = hash
         return True
 
+    return False
+
 
 if __name__ == '__main__':
 
@@ -69,7 +71,7 @@ if __name__ == '__main__':
 
     for (dirpath, dirnames, filenames) in os.walk('.'):
         if '/_' not in dirpath:
-            # print(dirpath)
+            print('DIRPATH: ', dirpath)
             # print(dirnames)
             # print(filenames)
 
@@ -82,49 +84,57 @@ if __name__ == '__main__':
                         # Verifica se o arquivo foi modificado
                         if file_need_update(filepath):
                             # Converte markdown para marp
-
-                            print('==========', filepath)
-                            # continue
-                            # convert_docusaurus2marp.printa_arquivos([filepath])
-                            # convert_docusaurus2marp.converte_arquivos([filepath])
+                            convert_docusaurus2marp.converte_arquivos(
+                                [filepath])
 
                             # Convertendo arquivos para slides marp
-                            local_files = os.listdir()
+                            local_files = os.listdir(dirpath)
                             for local_file in local_files:
                                 if local_file.endswith('.slides.md'):
                                     print(f'---> {local_file}')
                                     docker_marp_command = f'echo OS não reconhecido.'
                                     if sys.platform == 'linux':
-                                        docker_marp_command = 'docker run --rm -v ${PWD}:/home/marp/app/ -e MARP_USER="$(id -u):$(id -g)" -e LANG=$LANG marpteam/marp-cli ' + \
-                                            f'{local_file}'
+                                        # marp_command = 'docker run --rm -v ${PWD}/' + dirpath + ':/home/marp/app/ -e MARP_USER="$(id -u):$(id -g)" -e LANG=$LANG marpteam/marp-cli ' + f'{local_file}'
+                                        marp_command = f'marp {dirpath}/{local_file}'
+
+                                        # Gera slide html
+                                        subprocess.run(
+                                            marp_command, shell=True, executable="/bin/bash")
+                                        # Gera slide pdf
+                                        marp_command = f'marp --pdf {dirpath}/{local_file}'
+                                        subprocess.run(
+                                            f'{marp_command}', shell=True, executable="/bin/bash")
+
                                     if sys.platform == 'darwin':
-                                        docker_marp_command = 'docker run --rm -v ${PWD}:/home/marp/app/ -e LANG=$LANG marpteam/marp-cli ' + \
+                                        marp_command = 'docker run --rm -v ${PWD}/' + dirpath + ':/home/marp/app/ -e LANG=$LANG marpteam/marp-cli ' + \
                                             f'{local_file}'
                                     # Gera slide html
-                                    subprocess.run(
-                                        docker_marp_command, shell=True, executable="/bin/bash")
+                                    # subprocess.run(
+                                        # marp_command, shell=True, executable="/bin/bash")
                                     # Gera slide pdf
-                                    subprocess.run(
-                                        f'{docker_marp_command} --pdf', shell=True, executable="/bin/bash")
-
-                                    # Remove o arquivo de slides marp
-                                    print(local_file, 'xxxxxxxxxxx')
-                                    os.remove(local_file)
+                                    # subprocess.run(
+                                    # f'{marp_command} --pdf', shell=True, executable="/bin/bash")
 
                                     # Movendo slide gerado para diretório static
                                     # Verifica se o diretório de saída já existe
                                     output_slides_path = f'{OUTPUT_DIR_SLIDES}/{dirpath}'
                                     os.makedirs(output_slides_path,
                                                 exist_ok=True)
-                                    slides_files = os.listdir()
+                                    slides_files = os.listdir(dirpath)
                                     for slide_file in slides_files:
                                         if slide_file.endswith(".slides.html") or slide_file.endswith(".slides.pdf"):
 
+                                            print(
+                                                f'Renomeando: {dirpath}/{slide_file} -> {f"{output_slides_path}/{slide_file}"}')
                                             os.rename(
-                                                slide_file, f'{output_slides_path}/{slide_file}')
+                                                f'{dirpath}/{slide_file}', f'{output_slides_path}/{slide_file}')
+
+                                    # Remove o arquivo de slides marp
+                                    print('Removendo local file:', local_file)
+                                    os.remove(f'{dirpath}/{local_file}')
 
                         else:
-                            print(f'Arquivo {filename} atualizado..')
+                            print(f'Arquivo {filename} não modificado.')
 
     # Atualiza hash de arquivos
     save_files_hash(files_hash)
