@@ -173,11 +173,13 @@ def marp_separa_topicos_slides(data):
         # se não estiver em uma área de código,
         #  verifica se deve haver quebra de slide
         if not codigo_dentro:
-            m = re.match(r'^#{1,3} [^#]*$', linha)
+            m = re.match(r'^#{1,3} [^#]*$', linha.strip())
             if m or \
                 '**Exemplo**' in linha or \
                 '**Exercício**' in linha or \
-                    '**Exercícios**' in linha:
+                '**Exercícios**' in linha or \
+                '**Atividade**' in linha or \
+                    '**Atividades**' in linha:
                 # print(linha)
                 # print(m.group())
                 data_new += token_slide
