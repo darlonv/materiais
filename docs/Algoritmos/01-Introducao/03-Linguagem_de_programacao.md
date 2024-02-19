@@ -1,4 +1,3 @@
-<!-- marp-header -->
 # Linguagem de programação
 
 Uma **linguagem de programação** é um conjunto de funções específicas e bem definidas, com as quais é possível desenvolver um **algoritmo**.
@@ -35,9 +34,9 @@ Resolva o problema da Torre de Hanói, considerando **4 discos**.
 ![Torre de Hanói](https://upload.wikimedia.org/wikipedia/commons/0/07/Tower_of_Hanoi.jpeg)  
 Imagem: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Linalg_towers_of_hanoi_1.png)  
 
-<!-- marp slides -->
+<!-- marp hide -->
 ## Apresentações
 - [HTML](pathname:///slides/Algoritmos/01-Introducao/03-Linguagem_de_programacao.html)
 - [PDF](pathname:///slides/Algoritmos/01-Introducao/03-Linguagem_de_programacao.pdf)
-<!-- marp /slides --> 
+<!-- marp /hide --> 
 
