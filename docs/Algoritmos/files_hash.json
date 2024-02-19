@@ -1,9 +1,10 @@
 {
-    "./00-intro.md": "41a7025e0309ba6e41f633a7dd5d7fbf",
-    "./02-Basicos/01-Estrutura_basica.md": "9c7a3d4fa527a7233dcf7f20f308b0b0",
-    "./02-Basicos/02-Entrada_e_saida/02-Entrada_saida.md": "0b8428723326ba2a048cde5d9d4c2707",
-    "./02-Basicos/02-Entrada_e_saida/01-Modelo_caixa_preta.md": "4eb216b037762d259c465b530d1500cc",
+    "./99-apresentacoes.md": "ada8d54e23356e6a66eef9d2c18d06b5",
+    "./00-intro.md": "f8fd403a39a110db63491e0b5d70c8e7",
+    "./02-Basicos/01-Estrutura_basica.md": "204d139b8f2edec4c91252e8ab852fe4",
+    "./02-Basicos/02-Entrada_e_saida/02-Entrada_saida.md": "9e9cd1ba29a3425754515c8229a7dbdd",
+    "./02-Basicos/02-Entrada_e_saida/01-Modelo_caixa_preta.md": "66b1e8a35112bfeef79d1138d99b1723",
     "./01-Introducao/01-introducao.md": "748f1944763e668c1fdf48a5133c27f6",
-    "./01-Introducao/02-Logica_de_programacao.md": "f681a87b96aa87f3110d240bd59a9ac9",
-    "./01-Introducao/03-Linguagem_de_programacao.md": "4bd3ab42f0b2c723da930ec1b978db92"
+    "./01-Introducao/02-Logica_de_programacao.md": "614865263637f6e581f2246eb94d1839",
+    "./01-Introducao/03-Linguagem_de_programacao.md": "c1270580909ccbb570b8037fd62fbe01"
 }
