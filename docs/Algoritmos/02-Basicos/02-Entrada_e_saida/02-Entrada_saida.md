@@ -38,14 +38,14 @@ A saída de dados que utilizaremos aqui é a tela. Para mostrar uma mensagem na 
   printf();
   ```
 
-  :::caution Atenção
-  Para que a função de saída `printf()` possa ser utilizada é necessário importar a biblioteca de entrada e saída padrão.
+:::caution Atenção
+Para que a função de saída `printf()` possa ser utilizada é necessário importar a biblioteca de entrada e saída padrão.
 
-  Para tal, basta incluir no início do código a linha
-  ```c
-  #include <stdio.h>
-  ```
-  :::
+Para tal, basta incluir no início do código a linha
+```c
+#include <stdio.h>
+```
+:::
 
   </TabItem>
 
