@@ -1,16 +1,68 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import TOCInline from '@theme/TOCInline';
+
 # Apresentações
 
 - Apresentação da disciplina [PDF](./slides/_000-intro.slides.pdf)
 
-## Java
+<Tabs groupId='language'>
+<TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
-### Introdução
+## Introdução
+- Lógica de programação [PDF](pathname:///slides/Algoritmos/01-Introducao/02-Logica_de_programacao.md.pseudocodigo.slides.pdf)
+- Linguagem de programação [PDF](pathname:///slides/Algoritmos/01-Introducao/03-Linguagem_de_programacao.md.pseudocodigo.slides.pdf)
+
+### Elementos básicos
+- Estrutura básica [PDF](pathname:///slides/Algoritmos/02-Basicos/01-Estrutura_basica.md.pseudocodigo.slides.pdf)
+
+#### Entrada e saída
+- Modelo de caixa-preta [PDF](pathname:///slides/Algoritmos/02-Basicos/02-Entrada_e_saida/01-Modelo_caixa_preta.md.pseudocodigo.slides.pdf)
+- Entrada e saída [PDF](pathname:///slides/Algoritmos/02-Basicos/02-Entrada_e_saida/02-Entrada_saida.md.pseudocodigo.slides.pdf)
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+## Introdução
 - Lógica de programação [PDF](pathname:///slides/Algoritmos/01-Introducao/02-Logica_de_programacao.md.java.slides.pdf)
 - Linguagem de programação [PDF](pathname:///slides/Algoritmos/01-Introducao/03-Linguagem_de_programacao.md.java.slides.pdf)
 
-#### Elementos básicos
+### Elementos básicos
 - Estrutura básica [PDF](pathname:///slides/Algoritmos/02-Basicos/01-Estrutura_basica.md.java.slides.pdf)
 
-##### Entrada e saída
+#### Entrada e saída
 - Modelo de caixa-preta [PDF](pathname:///slides/Algoritmos/02-Basicos/02-Entrada_e_saida/01-Modelo_caixa_preta.md.java.slides.pdf)
 - Entrada e saída [PDF](pathname:///slides/Algoritmos/02-Basicos/02-Entrada_e_saida/02-Entrada_saida.md.java.slides.pdf)
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+## Introdução
+- Lógica de programação [PDF](pathname:///slides/Algoritmos/01-Introducao/02-Logica_de_programacao.md.python.slides.pdf)
+- Linguagem de programação [PDF](pathname:///slides/Algoritmos/01-Introducao/03-Linguagem_de_programacao.md.python.slides.pdf)
+
+### Elementos básicos
+- Estrutura básica [PDF](pathname:///slides/Algoritmos/02-Basicos/01-Estrutura_basica.md.python.slides.pdf)
+
+#### Entrada e saída
+- Modelo de caixa-preta [PDF](pathname:///slides/Algoritmos/02-Basicos/02-Entrada_e_saida/01-Modelo_caixa_preta.md.python.slides.pdf)
+- Entrada e saída [PDF](pathname:///slides/Algoritmos/02-Basicos/02-Entrada_e_saida/02-Entrada_saida.md.python.slides.pdf)
+
+</TabItem>
+
+<TabItem value="c" label="C">
+
+## Introdução
+- Lógica de programação [PDF](pathname:///slides/Algoritmos/01-Introducao/02-Logica_de_programacao.md.c.slides.pdf)
+- Linguagem de programação [PDF](pathname:///slides/Algoritmos/01-Introducao/03-Linguagem_de_programacao.md.c.slides.pdf)
+
+### Elementos básicos
+- Estrutura básica [PDF](pathname:///slides/Algoritmos/02-Basicos/01-Estrutura_basica.md.c.slides.pdf)
+
+#### Entrada e saída
+- Modelo de caixa-preta [PDF](pathname:///slides/Algoritmos/02-Basicos/02-Entrada_e_saida/01-Modelo_caixa_preta.md.c.slides.pdf)
+- Entrada e saída [PDF](pathname:///slides/Algoritmos/02-Basicos/02-Entrada_e_saida/02-Entrada_saida.md.c.slides.pdf)
+
+</TabItem>
+
+</Tabs>
