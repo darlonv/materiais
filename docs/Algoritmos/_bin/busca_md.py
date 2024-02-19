@@ -21,6 +21,11 @@ FILES_HASH = './files_hash.json'
 files_hash = None
 
 
+# Flags
+SLIDES_PDF = True
+SLIDES_HTML = False
+
+
 def load_files_hash():
     if os.path.isfile(FILES_HASH):
         print('Hash de arquivos carregado.')
@@ -95,19 +100,21 @@ if __name__ == '__main__':
                                     docker_marp_command = f'echo OS não reconhecido.'
                                     if sys.platform == 'linux':
                                         # marp_command = 'docker run --rm -v ${PWD}/' + dirpath + ':/home/marp/app/ -e MARP_USER="$(id -u):$(id -g)" -e LANG=$LANG marpteam/marp-cli ' + f'{local_file}'
-                                        marp_command = f'marp {dirpath}/{local_file}'
 
-                                        # Gera slide html
-                                        subprocess.run(
-                                            marp_command, shell=True, executable="/bin/bash")
+                                        # Gera slide html - marp não gera link para as figuras locais
+                                        # if SLIDES_HTML:
+                                        #     marp_command = f'marp {dirpath}/{local_file}'
+                                        #     subprocess.run(
+                                        #         marp_command, shell=True, executable="/bin/bash")
                                         # Gera slide pdf
-                                        marp_command = f'marp --pdf {dirpath}/{local_file}'
-                                        subprocess.run(
-                                            f'{marp_command}', shell=True, executable="/bin/bash")
+                                        if SLIDES_PDF:
+                                            marp_command = f'marp --pdf --allow-local-files {dirpath}/{local_file}'
+                                            subprocess.run(
+                                                f'{marp_command}', shell=True, executable="/bin/bash")
 
-                                    if sys.platform == 'darwin':
-                                        marp_command = 'docker run --rm -v ${PWD}/' + dirpath + ':/home/marp/app/ -e LANG=$LANG marpteam/marp-cli ' + \
-                                            f'{local_file}'
+                                    # if sys.platform == 'darwin':
+                                        # marp_command = 'docker run --rm -v ${PWD}/' + dirpath + ':/home/marp/app/ -e LANG=$LANG marpteam/marp-cli ' + \
+                                        # f'{local_file}'
                                     # Gera slide html
                                     # subprocess.run(
                                         # marp_command, shell=True, executable="/bin/bash")
