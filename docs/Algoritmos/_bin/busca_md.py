@@ -130,7 +130,8 @@ if __name__ == '__main__':
                                                 f'{dirpath}/{slide_file}', f'{output_slides_path}/{slide_file}')
 
                                     # Remove o arquivo de slides marp
-                                    print('Removendo local file:', local_file)
+                                    print('Removendo local file:',
+                                          f'{dirpath}/{local_file}')
                                     os.remove(f'{dirpath}/{local_file}')
 
                         else:
