@@ -1,7 +1,8 @@
 ---
 sidebar_position: 1
 ---
-<!-- marp-header -->
+
+
 # Algoritmos e Estruturas de Dados
 
 <!-- marp slides -->

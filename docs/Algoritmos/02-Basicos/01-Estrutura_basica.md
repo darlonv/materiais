@@ -5,6 +5,7 @@ import TabItem from '@theme/TabItem';
 
 A estrutura básica de um algoritmo consiste na delimitação inicial para que um **código** seja executado. Este espaço é importante para para delimitar e informar ao computador qual código deve ser executado inicialmente.
 
+<!-- marp --- -->
 
 <Tabs groupId='language'>
   <TabItem value="pseudocodigo" label="Pseudocódigo" default>
@@ -78,6 +79,7 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
 
 A maneira para executar um código que foi desenvolvido utilizando uma linguagem de programação específica, depende das ferramentas utilizadas e do ambiente de desenvolvimento. Neste material, levaremos em conta que o ambiente de desenvolvimento e execução é o Sistema Operacional Linux (Ubuntu) e ambiente de desenvolvimento VSCode com as extensões específicas para a linguagem.
 
+<!-- marp --- -->
 
 <Tabs groupId='language'>
   <TabItem value="pseudocodigo" label="Pseudocódigo" default>
@@ -103,12 +105,15 @@ A maneira para executar um código que foi desenvolvido utilizando uma linguagem
   java <nome do arquivo, sem .java> #para executar
   ```
 
-    **Exemplo**
-    - Compilando e executando o arquivo `Hello.java`
-    ```bash
-    javac Hello.java
-    java Hello
-    ```
+
+**Exemplo**
+
+- Compilando e executando o arquivo `Hello.java`
+
+```bash
+javac Hello.java
+java Hello
+```
 
 
 
@@ -176,6 +181,10 @@ A maneira para executar um código que foi desenvolvido utilizando uma linguagem
 - [VSCode Python Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 - [VSCode C/C++ Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 
+<!-- marp hide -->
+
 ## Apresentações
 - [HTML](pathname:///slides/Algoritmos/02-Basicos/01-Estrutura_basica.html)
 - [PDF](pathname:///slides/Algoritmos/02-Basicos/01-Estrutura_basica.pdf)
+
+<!-- marp /hide -->
