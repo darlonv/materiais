@@ -28,13 +28,13 @@ marp_tag_slides_link = '<!-- marp slides-link -->'
 
 
 # código a ser utilizado na quebra de slides
-slide_break = '\n---\n'
+slide_break = '\n---\n\n'
 
 # Linguagens a serem extraídas
 linguagens = ["pseudocodigo", "java", "python", "c"]
 linguagens_labels = ["Pseudocódigo", "Java", "Python", "C"]
-# linguagens = ["java"]
-# linguagens_labels = ["Java"]
+linguagens = ["java"]
+linguagens_labels = ["Java"]
 
 # Título prinicpal do slide
 titulo_principal = "Algoritmos e Estruturas de Dados"
@@ -201,19 +201,51 @@ def marp_prepara_cabecalho(data, titulo, header, linguagem_label):
 
     data_new += f'{header}\n'
 
+    # conteudo = re.search(r'#.*', data, re.DOTALL).group()
+
+    # print('+', conteudo.group(), '+')
+
     # prepara o slide inicial
     slide_inicial = marp_get_slide_inicial(data, titulo, linguagem_label)
     data_new += slide_inicial
+    data_new += slide_break
 
-    for linha in data.split('\n'):
-        if marp_tag_slide_header in linha:
-            copiar_linha = True
-            continue
+    # incluir o conteúdo dos slides
+    data_new += re.search(r'#.*', data, re.DOTALL).group()
 
-        if copiar_linha:
-            data_new += f'{linha}\n'
+    # for linha in data.split('\n'):
+    #     if marp_tag_slide_header in linha:
+    #         copiar_linha = True
+    #         continue
+
+    #     if copiar_linha:
+    #         data_new += f'{linha}\n'
 
     return data_new
+
+# language_label: texto a ser colocado antes de cada trecho de código
+
+# def marp_prepara_cabecalho(data, titulo, header, linguagem_label):
+#     data_new = ''
+#     # tag_header = '<!-- marp-header -->'
+
+#     copiar_linha = False
+
+#     data_new += f'{header}\n'
+
+#     # prepara o slide inicial
+#     slide_inicial = marp_get_slide_inicial(data, titulo, linguagem_label)
+#     data_new += slide_inicial
+
+#     for linha in data.split('\n'):
+#         if marp_tag_slide_header in linha:
+#             copiar_linha = True
+#             continue
+
+#         if copiar_linha:
+#             data_new += f'{linha}\n'
+
+#     return data_new
 
 # language_label: texto a ser colocado antes de cada trecho de código
 
@@ -285,7 +317,7 @@ def converte_arquivos(arquivos):
             texto = texto_original
 
             # Remove a área de slides, caso haja
-            texto = marp_remove_area_slides(texto)
+            # texto = marp_remove_area_slides(texto)
 
             # Prepara cada tópico e subtópico como um slide
             texto = marp_separa_topicos_slides(texto)
@@ -319,6 +351,8 @@ def converte_arquivos(arquivos):
             file = open(filename_out, 'w')
             file.write(texto)
             file.close()
+
+            # print(texto)
 
 
 if __name__ == '__main__':
