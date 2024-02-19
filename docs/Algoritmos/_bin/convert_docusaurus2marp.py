@@ -33,8 +33,8 @@ slide_break = '\n---\n\n'
 # Linguagens a serem extraídas
 linguagens = ["pseudocodigo", "java", "python", "c"]
 linguagens_labels = ["Pseudocódigo", "Java", "Python", "C"]
-linguagens = ["java"]
-linguagens_labels = ["Java"]
+# linguagens = ["java"]
+# linguagens_labels = ["Java"]
 
 # Título prinicpal do slide
 titulo_principal = "Algoritmos e Estruturas de Dados"
