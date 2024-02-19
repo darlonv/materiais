@@ -1,8 +1,8 @@
 # Apresentações
 
+- Apresentação da disciplina [PDF](./slides/_000-intro.slides.pdf)
 
 ## Java
-- Introdução [PDF](pathname:///slides/Algoritmos/00-intro.md.java.slides.pdf)
 
 ### Introdução
 - Lógica de programação [PDF](pathname:///slides/Algoritmos/01-Introducao/02-Logica_de_programacao.md.java.slides.pdf)
