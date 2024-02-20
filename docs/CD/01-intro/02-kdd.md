@@ -1,6 +1,6 @@
 # Descoberta de Conhecimento em Bases de Dados
 
-A Descoberta de Conhecimento em Bases de Dados (KDD, do inglês *Knowledge Discovery on Databases*) é uma metodologia para extração de informações a partir de bases de dados. 
+A Descoberta de Conhecimento em Bases de Dados (KDD, do inglês *Knowledge Discovery on Databases*) ([FAYYAD et al 1996](https://onlinelibrary.wiley.com/doi/pdf/10.1609/aimag.v17i3.1230)) é uma metodologia para extração de informações a partir de bases de dados. 
 
 <!-- marp --- -->
 
@@ -18,7 +18,7 @@ Nesta primeira fase do processo são selecionados os dados relevantes para a an�
 
 <!-- marp --- -->
 
-Aqui são definidos os conjuntos de dados contendo as possíveis variáveis (atributos) e registros (instâncias) que serão objeto de análise. Muitas vezes, este processo é realizado por um especialista da área de domínio dos dados [FERREIRA et al, 2018](https://abepro.org.br/biblioteca/TN_STO_263_509_36492.pdf). Podem ser envolvidas  consultas em bancos de dados, filtragem de dados com base em certos atributos ou características, ou outra técnica de seleção apropriada
+Aqui são definidos os conjuntos de dados contendo as possíveis variáveis (atributos) e registros (instâncias) que serão objeto de análise. Muitas vezes, este processo é realizado por um especialista da área de domínio dos dados ([FERREIRA et al, 2018](https://abepro.org.br/biblioteca/TN_STO_263_509_36492.pdf)). Podem ser envolvidas  consultas em bancos de dados, filtragem de dados com base em certos atributos ou características, ou outra técnica de seleção apropriada
 
 
 
