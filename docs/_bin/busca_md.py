@@ -156,7 +156,7 @@ def main():
                                         # Gera slide pdf
                                         if configs['generate']['PDF']:
                                             if configs["use_docker"]:
-                                                marp_command = 'docker run --rm -v ${PWD}/' + dirpath + ':/home/marp/app/ -e LANG=$LANG marpteam/marp-cli ' + f'{local_file} --pdf'
+                                                marp_command = 'docker run --rm -v ${PWD}/' + dirpath + ':/home/marp/app/ -e LANG=$LANG marpteam/marp-cli ' + f'{local_file} --pdf --allow-local-files'
                                                 subprocess.run(marp_command, shell=True, executable="/bin/bash")
                                             else:
                                                 pass
