@@ -8,6 +8,7 @@
         "PDF": true,
         "HTML": false
     },
+    "use_docker": true,
     "marp-header": {
         "marp": "true",
         "theme": "gaia",
