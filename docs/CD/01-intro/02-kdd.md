@@ -8,7 +8,7 @@ O KDD é um processo interdisciplinar que envolve conhecimentos e técnicas de d
 
 ## Fases do processo
 
-![](https://www.researchgate.net/profile/Marcos-De-Oliveira-3/publication/308995146/figure/fig1/AS:416089625382912@1476214905424/Figura-1-Processo-de-KDD-O-processo-de-KDD-consiste-em-uma-sequencia-de-etapas-que-devem.png)
+![Fases do processo KDD](./images/processo_kdd.png)
 
 Imagem: [Fayyad et Al, 1996 via Lira et al, 2016](https://www.researchgate.net/publication/308995146_Utilizando_Mineracao_de_Dados_e_Sistemas_Multiagentes_na_Analise_da_Evasao_em_Educacao_a_Distancia_por_meio_do_Perfil_dos_Alunos)
 
