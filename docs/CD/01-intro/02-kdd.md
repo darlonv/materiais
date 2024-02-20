@@ -116,7 +116,6 @@ Esta técnica é usada quando as categorias têm uma ordem natural entre elas. N
 Esta etapa consiste em aplicar algoritmos de mineração de dados para descobrir padrões e relações presentes nos dados. Os algoritmos são executados com dados preparados nas fases anteriores para extrair padrões, relações e informações úteis. Essa fase é central no processo de descoberta de conhecimento, visto que novos dados e informações são obtidos.
 
 
-
 #### Tarefas na Mineração de Dados
 
 Nesta fase, diferentes algoritmos podem ser aplicados, de acordo com os dados disponíveis e o objeto de estudo. A organização destes algoritmos podem ser abordados de maneira preditiva ou descritiva.
@@ -179,12 +178,10 @@ Os resultados da análise são comunicados às partes interessadas de maneira cl
 
 Esta é a fase final, em que trata utilização dos resultados obtidos. Nesta, o conhecimento descoberto é interpretado, validado e utilizado para tomar decisões informadas e gerar valor em um contexto específico.
 
-
-
-
-
-
 ## Referências
+
+FACELI, Katti et al. Inteligência artificial: Uma abordagem de aprendizado de máquina. 2. ed.
+São Paulo: LTC, 2021. 304 p. ISBN 978-8521637349.
 
 [FAYYAD, U.; PIATETSKY-SHAPIRO, G.; SMITH P. From Data Mining to Knowledge Discovery in Databases. AI Magazine. Vol. 17, n. 3. 1996](https://onlinelibrary.wiley.com/doi/pdf/10.1609/aimag.v17i3.1230)
 
