@@ -12,6 +12,7 @@ import convert_docusaurus2marp
 OUTPUT_DIR_SLIDES = f"../../static/slides/{os.getcwd().split('/')[-1]}"
 
 FILES_HASH = './files_hash.json'
+config_file = '_slides_.json'
 
 # subprocess.run("ls", shell=True, executable="/bin/bash")
 # subprocess.run("docker run hello-world", shell=True, executable="/bin/bash")
@@ -22,8 +23,27 @@ files_hash = None
 
 
 # Flags
-SLIDES_PDF = True
-SLIDES_HTML = False
+default_generate_pdf = True
+default_generate_html = False
+
+
+def default_configs():
+    configs = dict()
+
+    configs['generate'] = {'PDF': default_generate_pdf,
+                           'HTML': default_generate_html}
+
+    return configs
+
+
+def carrega_configs(config_file):
+    if os.path.isfile(config_file):
+        print('Arquivo de configurações carregado.')
+        with open(config_file) as json_file:
+            configs = json.load(json_file)
+            return configs
+
+    return default_configs()
 
 
 def load_files_hash():

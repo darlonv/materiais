@@ -1,8 +1,12 @@
 import re
 import sys
+import os
+import json
 
-# cabeçalho marp
-marp_header = '''---
+config_file = "_slides_.json"
+
+# Default configs
+default_header = '''---
 marp: true
 theme: gaia
 _class: lead
@@ -10,6 +14,12 @@ backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 ---
 '''
+
+default_title = "Material"
+default_generate_pdf = True
+default_generate_html = False
+
+default_languages = {"java": "Java", "python": "Python"}
 
 # Tags
 # quebra de slide
@@ -31,13 +41,10 @@ marp_tag_slides_link = '<!-- marp slides-link -->'
 slide_break = '\n---\n\n'
 
 # Linguagens a serem extraídas
-linguagens = ["pseudocodigo", "java", "python", "c"]
-linguagens_labels = ["Pseudocódigo", "Java", "Python", "C"]
+# linguagens = ["pseudocodigo", "java", "python", "c"]
+# linguagens_labels = ["Pseudocódigo", "Java", "Python", "C"]
 # linguagens = ["java"]
 # linguagens_labels = ["Java"]
-
-# Título prinicpal do slide
-titulo_principal = "Algoritmos e Estruturas de Dados"
 
 
 def marp_inclui_slide_branco_final(data):
@@ -150,8 +157,8 @@ def marp_get_slide_inicial(data, titulo, linguagem_label):
     return slide
 
 
-def marp_inclui_cabecalho(data):
-    data = f'{marp_header}\n\n{data}'
+def marp_inclui_cabecalho(data, configs):
+    data = f'{configs['marp-header']}\n\n{data}'
 
 
 def marp_separa_topicos_slides(data):
@@ -223,32 +230,6 @@ def marp_prepara_cabecalho(data, titulo, header, linguagem_label):
 
     return data_new
 
-# language_label: texto a ser colocado antes de cada trecho de código
-
-# def marp_prepara_cabecalho(data, titulo, header, linguagem_label):
-#     data_new = ''
-#     # tag_header = '<!-- marp-header -->'
-
-#     copiar_linha = False
-
-#     data_new += f'{header}\n'
-
-#     # prepara o slide inicial
-#     slide_inicial = marp_get_slide_inicial(data, titulo, linguagem_label)
-#     data_new += slide_inicial
-
-#     for linha in data.split('\n'):
-#         if marp_tag_slide_header in linha:
-#             copiar_linha = True
-#             continue
-
-#         if copiar_linha:
-#             data_new += f'{linha}\n'
-
-#     return data_new
-
-# language_label: texto a ser colocado antes de cada trecho de código
-
 
 def marp_filtra_linguagem(data, language, language_label):
     substituir = []
@@ -304,7 +285,46 @@ def printa_arquivos(arquivos):
         print(f'+++ {arquivo} +++')
 
 
+def default_configs():
+    configs = dict()
+
+    # cabeçalho marp
+    configs['marp-header'] = default_header
+
+    # Título prinicpal do slide
+    configs['main_title'] = default_title
+
+    configs['generate'] = {'PDF': default_generate_pdf,
+                           'HTML': default_generate_html}
+
+    configs['languages'] = default_languages
+
+    return configs
+
+
+def prepara_header_str(marp_header):
+    marp_header_str = '---\n'
+    for item in marp_header:
+        marp_header_str += f'{item}: {marp_header[item]}\n'
+    marp_header_str = '---\n'
+    return marp_header_str
+
+
+def carrega_configs(config_file):
+    if os.path.isfile(config_file):
+        print('Hash de arquivos carregado.')
+        with open(config_file) as json_file:
+            configs = json.load(json_file)
+            configs['marp-header'] = prepara_header_str(configs['marp-header'])
+            return configs
+
+    return default_configs()
+
+
 def converte_arquivos(arquivos):
+
+    # Carrega configurações
+    configs = carrega_configs(config_file)
 
     # if True:
     for filename in arquivos:
@@ -313,7 +333,7 @@ def converte_arquivos(arquivos):
 
         texto_original = carrega_arquivo(filename)
 
-        for linguagem, linguagem_label in zip(linguagens, linguagens_labels):
+        for linguagem, linguagem_label in zip(configs['languages'].items):
             texto = texto_original
 
             # Remove a área de slides, caso haja
@@ -324,7 +344,7 @@ def converte_arquivos(arquivos):
 
             # Prepara o cabecalho
             texto = marp_prepara_cabecalho(
-                texto, titulo_principal, marp_header, linguagem_label)
+                texto, configs['main_title'], configs['marp_header'], linguagem_label)
 
             # Filtra pela linguagem
             #   "": sem texto antes do trecho de código
