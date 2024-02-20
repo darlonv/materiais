@@ -1,0 +1,28 @@
+{
+    "main_title": "Ciência de Dados",
+    "languages": {
+        "c": "C",
+        "java": "Java"
+    },
+    "generate": {
+        "PDF": true,
+        "HTML": false
+    },
+    "header": [
+        {
+            "marp": "true"
+        },
+        {
+            "theme": "gaia"
+        },
+        {
+            "_class": "lead"
+        },
+        {
+            "backgroundColor": "#fff"
+        },
+        {
+            "backgroundImage": "url('https: //marp.app/assets/hero-background.svg')"
+        }
+    ]
+}
