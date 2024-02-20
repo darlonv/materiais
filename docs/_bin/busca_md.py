@@ -94,7 +94,11 @@ def main():
     configs = carrega_configs(config_file)
 
     # Carrega hash de arquivos
+    global files_hash
     files_hash = load_files_hash()
+    
+    # print(configs)
+    # print(files_hash)
 
     re_filename_markdown = re.compile(r'^[^_].*\.md$')
 
@@ -148,13 +152,12 @@ def main():
                                                 marp_command = f'marp --allow-local-files {dirpath}/{local_file}'
                                                 subprocess.run(
                                                     f'{marp_command}', shell=True, executable="/bin/bash")
-
                                     if sys.platform == 'darwin':
                                         # Gera slide pdf
                                         if configs['generate']['PDF']:
                                             if configs["use_docker"]:
-                                                pass
-                                                marp_command = 'docker run --rm -v ${PWD}/' + dirpath + ':/home/marp/app/ -e LANG=$LANG marpteam/marp-cli ' + f'{local_file}'
+                                                marp_command = 'docker run --rm -v ${PWD}/' + dirpath + ':/home/marp/app/ -e LANG=$LANG marpteam/marp-cli ' + f'{local_file} --pdf'
+                                                subprocess.run(marp_command, shell=True, executable="/bin/bash")
                                             else:
                                                 pass
 
