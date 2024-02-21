@@ -10,7 +10,7 @@ Um endereço IP (*Internet Protocol* - Protocolo de Internet) é um identificado
 
 Existem dois tipos principais de endereços IP: IPv4 (Internet Protocol version 4) e IPv6 (Internet Protocol version 6).
 
-Os endereços IP podem ser atribuídos dinamicamente por meio de um servidor DHCP (*Dynamic Host Configuration Protocol*) ou podem ser configurados estática e manualmente.
+Os endereços IP podem ser atribuídos dinamicamente por meio de um servidor DHCP (*Dynamic Host Configuration Protocol*) ou podem ser configurados de maneira estática e manual.
 
 ### IPv4
 
