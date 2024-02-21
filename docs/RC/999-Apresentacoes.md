@@ -1,0 +1,8 @@
+
+# Apresentações
+
+- Apresentação da disciplina [PDF](./slides/_00-intro.slides.pdf)
+
+## Introdução
+
+- Redes de Computadores [PDF](pathname:///slides/RC/01-Introducao/01-Redes.md.slides.pdf)
