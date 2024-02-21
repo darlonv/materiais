@@ -1,0 +1,16 @@
+{
+    "main_title": "Redes de Computadores",
+    "languages": {
+        "": ""
+    },
+    "generate": {
+        "PDF": true,
+        "HTML": false
+    },
+    "marp-header": {
+        "marp": "true",
+        "_class": "lead",
+        "backgroundColor": "#fff",
+        "backgroundImage": "url('https: //marp.app/assets/hero-background.svg')"
+    }
+}
