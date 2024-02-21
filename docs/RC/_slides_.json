@@ -7,7 +7,8 @@
         "PDF": true,
         "HTML": false
     },
-    "marp-header": {
+    "use_docker": true,
+    "marp_header": {
         "marp": "true",
         "_class": "lead",
         "backgroundColor": "#fff",
