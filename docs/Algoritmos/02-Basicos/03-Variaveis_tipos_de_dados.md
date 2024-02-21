@@ -20,7 +20,9 @@ Para que um código possa ser executado por um processador, é necessário que e
 ![Memória RAM com demonstração de espaço para código e espaço para variáveis](./img/variaveis_01_processos.png)
 
 Quando falamos sobre variáveis, começamos a observar que estes são espaços na memória RAM em que os dados serão armazenados. Tanto o código como as variáveis são armazenados na memória RAM para serem executados pelo processador.
+
 <!-- marp --- -->
+
 Podemos imaginar a memória como sendo um grande armário, que possui um grande número de gavetas. Dentro de cada uma das gavetas pode ser armazenado um dado.
 
 ![Memória RAM com demonstração de espaço para código e espaço para variáveis](./img/variaveis_02_texto-e-dados.png)
@@ -31,7 +33,8 @@ No desenvolvimento de algoritmos, há a necessidade de identificar uma caracter�
 
 Um valor **variável** é aquele que pode ser modificado no decorrer da execução do algoritmo.
  
- <!-- marp --- -->
+<!-- marp --- -->
+ 
 **Exemplos**
 - Valores indicados pelo usuário
     - Os valores para A e B são 15 e 50
