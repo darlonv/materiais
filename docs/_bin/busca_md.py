@@ -70,6 +70,7 @@ def get_file_hash(filename):
 
 
 def file_need_update(filename):
+    
     # Calcula o hash do arquivo
     hash = get_file_hash(filename)
 
@@ -87,10 +88,17 @@ def file_need_update(filename):
     return False
 
 
-if __name__ == '__main__':
+def main():
+
+    # Carrega as configurações
+    configs = carrega_configs(config_file)
 
     # Carrega hash de arquivos
+    global files_hash
     files_hash = load_files_hash()
+    
+    # print(configs)
+    # print(files_hash)
 
     re_filename_markdown = re.compile(r'^[^_].*\.md$')
 
@@ -127,15 +135,40 @@ if __name__ == '__main__':
                                         #     subprocess.run(
                                         #         marp_command, shell=True, executable="/bin/bash")
                                         # Gera slide pdf
-                                        if SLIDES_PDF:
-                                            marp_command = f'marp --pdf --allow-local-files {dirpath}/{local_file}'
-                                            subprocess.run(
-                                                f'{marp_command}', shell=True, executable="/bin/bash")
+                                        if configs['generate']['PDF']:
+                                            if configs["use_docker"]:
+                                                pass
+                                                # marp_command = 'docker run --rm -v ${PWD}/' + dirpath + ':/home/marp/app/ -e LANG=$LANG marpteam/marp-cli ' + \
+                                            else:
+                                                marp_command = f'marp --pdf --allow-local-files {dirpath}/{local_file}'
+                                                subprocess.run(
+                                                    f'{marp_command}', shell=True, executable="/bin/bash")
+                                                
+                                        if configs['generate']['HTML']:
+                                            if configs["use_docker"]:
+                                                pass
+                                                # marp_command = 'docker run --rm -v ${PWD}/' + dirpath + ':/home/marp/app/ -e LANG=$LANG marpteam/marp-cli ' + \
+                                            else:
+                                                marp_command = f'marp --allow-local-files {dirpath}/{local_file}'
+                                                subprocess.run(
+                                                    f'{marp_command}', shell=True, executable="/bin/bash")
+                                    if sys.platform == 'darwin':
+                                        # Gera slide pdf
+                                        if configs['generate']['PDF']:
+                                            if configs["use_docker"]:
+                                                marp_command = 'docker run --rm -v ${PWD}/' + dirpath + ':/home/marp/app/ -e LANG=$LANG marpteam/marp-cli ' + f'{local_file} --pdf --allow-local-files'
+                                                subprocess.run(marp_command, shell=True, executable="/bin/bash")
+                                            else:
+                                                pass
 
-                                    # if sys.platform == 'darwin':
-                                        # marp_command = 'docker run --rm -v ${PWD}/' + dirpath + ':/home/marp/app/ -e LANG=$LANG marpteam/marp-cli ' + \
-                                        # f'{local_file}'
-                                    # Gera slide html
+                                        # Gera slide html
+                                        if configs['generate']['HTML']:
+                                            if configs["use_docker"]:
+                                                pass
+                                                # marp_command = 'docker run --rm -v ${PWD}/' + dirpath + ':/home/marp/app/ -e LANG=$LANG marpteam/marp-cli ' + \
+                                            else:
+                                                pass
+                                            
                                     # subprocess.run(
                                         # marp_command, shell=True, executable="/bin/bash")
                                     # Gera slide pdf
@@ -166,3 +199,6 @@ if __name__ == '__main__':
 
     # Atualiza hash de arquivos
     save_files_hash(files_hash)
+
+if __name__ == '__main__':
+    main()

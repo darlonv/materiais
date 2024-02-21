@@ -1,6 +1,6 @@
 # Descoberta de Conhecimento em Bases de Dados
 
-A Descoberta de Conhecimento em Bases de Dados (KDD, do inglês *Knowledge Discovery on Databases*) é uma metodologia para extração de informações a partir de bases de dados. 
+A Descoberta de Conhecimento em Bases de Dados (KDD, do inglês *Knowledge Discovery on Databases*) ([FAYYAD et al 1996](https://onlinelibrary.wiley.com/doi/pdf/10.1609/aimag.v17i3.1230)) é uma metodologia para extração de informações a partir de bases de dados. 
 
 <!-- marp --- -->
 
@@ -8,7 +8,7 @@ O KDD é um processo interdisciplinar que envolve conhecimentos e técnicas de d
 
 ## Fases do processo
 
-![](https://www.researchgate.net/profile/Marcos-De-Oliveira-3/publication/308995146/figure/fig1/AS:416089625382912@1476214905424/Figura-1-Processo-de-KDD-O-processo-de-KDD-consiste-em-uma-sequencia-de-etapas-que-devem.png)
+![Fases do processo KDD](./images/processo_kdd.png)
 
 Imagem: [Fayyad et Al, 1996 via Lira et al, 2016](https://www.researchgate.net/publication/308995146_Utilizando_Mineracao_de_Dados_e_Sistemas_Multiagentes_na_Analise_da_Evasao_em_Educacao_a_Distancia_por_meio_do_Perfil_dos_Alunos)
 
@@ -18,7 +18,7 @@ Nesta primeira fase do processo são selecionados os dados relevantes para a an�
 
 <!-- marp --- -->
 
-Aqui são definidos os conjuntos de dados contendo as possíveis variáveis (atributos) e registros (instâncias) que serão objeto de análise. Muitas vezes, este processo é realizado por um especialista da área de domínio dos dados [FERREIRA et al, 2018](https://abepro.org.br/biblioteca/TN_STO_263_509_36492.pdf). Podem ser envolvidas  consultas em bancos de dados, filtragem de dados com base em certos atributos ou características, ou outra técnica de seleção apropriada
+Aqui são definidos os conjuntos de dados contendo as possíveis variáveis (atributos) e registros (instâncias) que serão objeto de análise. Muitas vezes, este processo é realizado por um especialista da área de domínio dos dados ([FERREIRA et al, 2018](https://abepro.org.br/biblioteca/TN_STO_263_509_36492.pdf)). Podem ser envolvidas  consultas em bancos de dados, filtragem de dados com base em certos atributos ou características, ou outra técnica de seleção apropriada
 
 
 
