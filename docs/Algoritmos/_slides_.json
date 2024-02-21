@@ -1,0 +1,17 @@
+{
+    "main_title": "Algoritmos e Estruturas de Dados",
+    "languages": {
+        "java": "Java"
+    },
+    "generate": {
+        "PDF": true,
+        "HTML": false
+    },
+    "use_docker": true,
+    "marp_header": {
+        "marp": "true",
+        "_class": "lead",
+        "backgroundColor": "#fff",
+        "backgroundImage": "url('https: //marp.app/assets/hero-background.svg')"
+    }
+}
