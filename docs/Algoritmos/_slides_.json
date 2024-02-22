@@ -1,7 +1,7 @@
 {
-    "main_title": "Redes de Computadores",
+    "main_title": "Algoritmos e Estruturas de Dados",
     "languages": {
-        "": ""
+        "java": "Java"
     },
     "generate": {
         "PDF": true,

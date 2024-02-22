@@ -8,7 +8,11 @@ O endereçamento nas redes de computadores serve para identificar de forma únic
 
 Um endereço IP (*Internet Protocol* - Protocolo de Internet) é um identificador numérico atribuído a cada dispositivo em uma rede que utiliza o protocolo de Internet para comunicação. Ele permite que os dispositivos se comuniquem entre si em uma rede, identificando de forma exclusiva a localização de cada dispositivo. 
 
+<!-- marp --- -->
+
 Existem dois tipos principais de endereços IP: IPv4 (Internet Protocol version 4) e IPv6 (Internet Protocol version 6).
+
+<!-- marp --- -->
 
 Os endereços IP podem ser atribuídos dinamicamente por meio de um servidor DHCP (*Dynamic Host Configuration Protocol*) ou podem ser configurados de maneira estática e manual.
 
@@ -21,10 +25,10 @@ Um endereço IPv4 é composto por 32 bits divididos em quatro grupos de 8 bits c
 
 | Decimal | Binário      |
 |---------|--------------|
-| `192`     | `11000000`     |
-| `168`     | `10101000`     |
-| `0`       | `00000000`     |
-| `1`       | `00000001`     |
+| `192`   | `11000000`   |
+| `168`   | `10101000`   |
+| `0`     | `00000000`   |
+| `1`     | `00000001`   |
 
 **Exemplo**
 - Endereços IPv4
@@ -39,8 +43,11 @@ Um endereço IPv4 é composto por 32 bits divididos em quatro grupos de 8 bits c
     - `100.64.0.1`
     - `192.88.99.1`
 
+<!-- marp --- -->
+
 Os endereços IPv4 são limitados em número devido à sua estrutura de 32 bits, resultando em cerca de 4,3 bilhões de possíveis endereços únicos.
 
+<!-- marp --- -->
 **Exercício**
 - Indique se os endereços abaixo são representações corretas ou incorretas de endereços IPv4:
     - `192.168.1.1`
@@ -98,7 +105,11 @@ Um endereço IPv6 é composto por 128 bits, o que permite uma quantidade muito m
 2001:0db8:85a3:0000:0000:8a2e:0370:7334
 ```
 
-Onde cada grupo de quatro dígitos hexadecimais representa 16 bits. O IPv6 também permite algumas simplificações, como remover zeros à esquerda em cada grupo e substituir sequências de zeros consecutivos por `::`. Por exemplo, o endereço acima pode ser simplificado para:
+Onde cada grupo de quatro dígitos hexadecimais representa 16 bits. 
+
+<!-- marp --- -->
+
+O IPv6 também permite algumas simplificações, como remover zeros à esquerda em cada grupo e substituir sequências de zeros consecutivos por `::`. Por exemplo, o endereço acima pode ser simplificado para:
 
 ```
 2001:db8:85a3::8a2e:370:7334
@@ -121,10 +132,15 @@ Onde cada grupo de quatro dígitos hexadecimais representa 16 bits. O IPv6 tamb�
 
 As portas são essenciais para o funcionamento da comunicação entre diferentes serviços e aplicativos em uma rede de computadores. Elas ajudam a garantir que os dados sejam direcionados corretamente para os processos e serviços apropriados em um dispositivo de rede.
 
+<!-- marp --- -->
 
 Em redes de computadores, uma **porta** é um mecanismo usado para identificar processos e serviços em um dispositivo de rede. Elas possibilitam que vários serviços e aplicações possam operar em um mesmo dispositivo, sendo acessados de forma distinta.
 
+<!-- marp --- -->
+
 Cada porta é associada a um número de 16 bits (variando de `0` a `65535`) e é usado para direcionar o tráfego de dados para um serviço específico ou processo em um computador ou outro dispositivo de rede. Quando um dispositivo envia dados para outro dispositivo em uma rede, ele especifica não apenas o endereço IP do destino, mas também a porta à qual deseja se conectar.
+
+<!-- marp --- -->
 
 Por exemplo, quando você acessa um site através de um navegador da web, o navegador estabelece uma conexão com o servidor web do site usando a porta padrão para HTTP, que é a porta 80. Da mesma forma, serviços como e-mail, FTP, SSH, entre outros, têm portas específicas associadas a eles.
 
@@ -133,6 +149,8 @@ Por exemplo, quando você acessa um site através de um navegador da web, o nave
 
 O endereço MAC (*Media Access Control* - Controle de Acesso à Mídia) é uma identificação única e fixa atribuída a cada placa de rede de um dispositivo, utilizada para comunicação em uma rede local (LAN).
 
+<!-- marp --- -->
+
 Sua representação consiste em seis pares de caracteres separados por dois pontos, hífens ou nada. Cada par de caracteres representa um byte (8 bits) do endereço MAC.
 
 **Exemplo**
@@ -140,6 +158,8 @@ Sua representação consiste em seis pares de caracteres separados por dois pont
     - `01:23:45:67:89:ab`
     - `01-23-45-67-89-ab`
     - `0123456789ab`
+
+<!-- marp --- -->
 
 É um identificador exclusivo atribuído a cada interface de rede de um dispositivo de rede. Essa identificação é gravada na placa de rede durante a fabricação e não pode ser alterada, sendo única para cada dispositivo.
 

@@ -15,17 +15,25 @@ Os dados fazem parte da matéria-prima básica na execução dos sistemas comput
 
 Para que um código possa ser executado por um processador, é necessário que ele seja alocado pelo sistema operacional na memória RAM. Um código em momento de execução é chamado de **processo**. A alocação, organização e execução de processos em um sistema computacional é uma das tarefas do sistema operacional.
 
+<!-- marp --- -->
+
 ![Memória RAM com demonstração de espaço para código e espaço para variáveis](./img/variaveis_01_processos.png)
 
 Quando falamos sobre variáveis, começamos a observar que estes são espaços na memória RAM em que os dados serão armazenados. Tanto o código como as variáveis são armazenados na memória RAM para serem executados pelo processador.
+
+<!-- marp --- -->
 
 Podemos imaginar a memória como sendo um grande armário, que possui um grande número de gavetas. Dentro de cada uma das gavetas pode ser armazenado um dado.
 
 ![Memória RAM com demonstração de espaço para código e espaço para variáveis](./img/variaveis_02_texto-e-dados.png)
 
-No desenvolvimento de algoritmos, há a necessidade de identificar uma característica nos dados. Em específico, se tais dados são **constantes** ou **variáveis** no decorrer da execução do algoritmo.
+<!-- marp --- -->
+
+No desenvolvimento de algoritmos, há a necessidade de identificar uma característica nos dados. Em específico, se tais dados são **constantes** ou **variáveis** no decorrer da execução do algoritmo. 
 
 Um valor **variável** é aquele que pode ser modificado no decorrer da execução do algoritmo.
+ 
+<!-- marp --- -->
  
 **Exemplos**
 - Valores indicados pelo usuário
@@ -40,9 +48,12 @@ Um valor **variável** é aquele que pode ser modificado no decorrer da execuç�
 
 Um **identificador** de uma variável é um nome, que corresponde a um dado a ser utilizado no algoritmo. comumente dizemos que um identificador é o **nome da variável**. A escolha do identificador deve sempre ser de acordo com a função da variável no algoritmo, de forma a facilitar o melhor entendimento do código.
 
+<!-- marp --- -->
 Em nossa analogia de gavetas, podemos imaginar que o identificado é um rótulo em cada gaveta, que descreve o que nela contém.
 
 ![Memória RAM com indicação das variáveis e seus identificadores](./img/variaveis_03_identificadores.png)
+
+<!-- marp --- -->
 
 Para criar um identificador, algumas regras devem sempre ser seguidas:
 1. Sempre deve começar com caractere alfabético (a-z, A-Z).
@@ -50,6 +61,7 @@ Para criar um identificador, algumas regras devem sempre ser seguidas:
 1. Caracteres especiais não podem ser utilizados;
 1. Não podem ser utilizadas palavras reservadas da linguagem. A lista de palavras reservadas é específica de cada linguagem. 
 
+<!-- marp --- -->
 **Exemplos**
 - Gama
 - X
@@ -74,6 +86,8 @@ Para criar um identificador, algumas regras devem sempre ser seguidas:
 
 Boa parte dos programadores seguem alguma convenção ao definir os identificadores, para que o código seja mais uniforme. Estas práticas costumam facilitar o entendimento do código.
 
+<!-- marp --- -->
+
 Algumas convenções para identificadores são:
 
 - ***camelCase*** : palavras são escritas juntas sem espaço, e cada palavra inicia com uma letra maiúscula. Exemplos:
@@ -84,6 +98,9 @@ Algumas convenções para identificadores são:
     - id_do_usuario
     - idade_pessoa
     - nome_funcionario
+
+<!-- marp --- -->
+
 - ***PascalCase*** : semelhante ao *camelCase*, porém a letra inicial também é maiúscula. Exemplos:
     - IdDoUsuario
     - IdadePessoa
@@ -869,7 +886,3 @@ Observe qual é o tipo de dado em cada situação ([FORBELLONE, pg. 20](https://
 ## Referências
 - [FORBELLONE, André Luiz Villar; EBERSPÄTCHER, Henri Frederico. Lógica de programação: A construção de algoritmoss e estruturas de dados com aplicações em Python. 4.ed. São Paulo: Pearson; Porto Alegre: Bookman, 2022](https://plataforma.bvirtual.com.br/Leitor/Publicacao/200078/pdf)
 
- 
-## Apresentações
-- [HTML](pathname:///slides/Algoritmos/02-Basicos/04-Tipos_primitivos_de_dados.html)
-- [PDF](pathname:///slides/Algoritmos/02-Basicos/04-Tipos_primitivos_de_dados.pdf)
