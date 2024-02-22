@@ -45,7 +45,7 @@ Ao executar o comando ping, você geralmente especifica o endereço IP ou o nome
 
 A ferramenta traceroute (também conhecida como tracert em sistemas Windows), é uma utilidade de linha de comando que é usada para rastrear a rota que os pacotes de dados levam de um computador para outro em uma rede IP, como a Internet. Ele mostra todas as etapas (ou "saltos") que os pacotes de dados fazem ao viajar de um host para outro, exibindo o tempo de resposta (em milissegundos) de cada salto.
 
-A principal finalidade do traceroute é ajudar a diagnosticar problemas de conectividade e latência na rede. Ele pode identificar quais roteadores estão envolvidos na rota de comunicação entre dois dispositivos, bem como destacar quaisquer pontos de falha ou congestionamento ao longo do caminho
+A principal finalidade do traceroute é ajudar a diagnosticar problemas de conectividade e latência na rede. Ele pode identificar quais roteadores estão envolvidos na rota de comunicação entre dois dispositivos, bem como destacar quaisquer pontos de falha ou congestionamento ao longo do caminho.
 
 **Exemplo**
 
