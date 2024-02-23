@@ -46,7 +46,7 @@ Um valor **variável** é aquele que pode ser modificado no decorrer da execuç�
 
 ### Identificadores de variáveis
 
-Um **identificador** de uma variável é um nome, que corresponde a um dado a ser utilizado no algoritmo. comumente dizemos que um identificador é o **nome da variável**. A escolha do identificador deve sempre ser de acordo com a função da variável no algoritmo, de forma a facilitar o melhor entendimento do código.
+Um **identificador** de uma variável é um nome, que corresponde a um dado a ser utilizado no algoritmo. Comumente dizemos que um identificador é o **nome da variável**. A escolha do identificador deve sempre ser de acordo com a função da variável no algoritmo, de forma a facilitar o entendimento do código.
 
 <!-- marp --- -->
 Em nossa analogia de gavetas, podemos imaginar que o identificado é um rótulo em cada gaveta, que descreve o que nela contém.
