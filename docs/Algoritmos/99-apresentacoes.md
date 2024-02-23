@@ -39,6 +39,8 @@ import TOCInline from '@theme/TOCInline';
 
 
 - Variáveis e tipos de dados [PDF](pathname:///slides/Algoritmos/02-Basicos/03-Variaveis_tipos_de_dados.md.java.slides.pdf)
+- Expressões [PDF](pathname:///slides/Algoritmos/02-Basicos/07-Expressoes.md.java.slides.pdf)
+- Expressões (Exercícios) [PDF](pathname:///slides/Algoritmos/02-Basicos/Exercicios/07-Expressoes-exercicios.md.java.slides.pdf)
 
 </TabItem>
 <TabItem value="python" label="Python">
