@@ -1,13 +1,16 @@
 {
     "main_title": "Algoritmos e Estruturas de Dados",
     "languages": {
-        "java": "Java"
+        "java": "Java",
+        "pseudocodigo": "Pseudocódigo",
+        "python": "Python",
+        "c": "C"
     },
     "generate": {
         "PDF": true,
         "HTML": false
     },
-    "use_docker": true,
+    "use_docker": false,
     "marp_header": {
         "marp": "true",
         "_class": "lead",
