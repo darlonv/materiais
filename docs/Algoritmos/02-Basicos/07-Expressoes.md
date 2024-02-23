@@ -7,7 +7,8 @@ Uma expressão é uma combinação de elementos, que podem ser valores, variáve
 ## Variáveis
 Como visto anteriormente, variáveis são localizações na memória que armazenam dados.
 
-Para associar um valor a uma variável utiliza-se o operador **←** ao lado direito da variável.
+Para associar um valor a uma variável utiliza-se um **operador de atribuição** ao lado direito da variável à qual desejamos atribuir o valor.
+
 
 **Exemplo**  
 
@@ -35,14 +36,15 @@ Para associar um valor a uma variável utiliza-se o operador **←** ao lado dir
   Um exemplo de expressão é
 
   ```js
-  soma = 5 + 4
+  soma = 5 + 4 ;
   ```
 
   em que:
   - `5` e `4` são valores, 
   - `+` é um operador aritmético, 
-  - `=` é o operador de atribuição, e
-  - `soma` é uma variável.  
+  - `=` é o operador de atribuição,
+  - `soma` é uma variável, e
+  - `;` indica o final da instrução.  
 
   Podemos ler a expressão como *"soma **recebe** cinco mais quatro"*.
   
@@ -53,7 +55,7 @@ Para associar um valor a uma variável utiliza-se o operador **←** ao lado dir
   Um exemplo de expressão é
 
   ```python
-  soma = 5 + 4
+  soma = 5 + 4 
   ```
 
   em que:
@@ -64,6 +66,25 @@ Para associar um valor a uma variável utiliza-se o operador **←** ao lado dir
 
   Podemos ler a expressão como *"soma **recebe** cinco mais quatro"*.
 
+
+  </TabItem>
+  <TabItem value="c" label="C">
+
+  Um exemplo de expressão é
+
+  ```c
+  soma = 5 + 4 ;
+  ```
+
+  em que:
+  - `5` e `4` são valores, 
+  - `+` é um operador aritmético, 
+  - `=` é o operador de atribuição,
+  - `soma` é uma variável, e
+  - `;` indica o final da instrução.  
+
+  Podemos ler a expressão como *"soma **recebe** cinco mais quatro"*.
+  
 
   </TabItem>
 </Tabs>
@@ -83,7 +104,7 @@ Como dito anteriormente, a atribuição é o operador que determina a passagem d
   <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
   |Operador|Função|
-  |--------|------|
+  |----|----|
   |`←`|atribuição|
 
   **Exemplo**  
@@ -97,14 +118,14 @@ Como dito anteriormente, a atribuição é o operador que determina a passagem d
   <TabItem value="java" label="Java">
 
   |Operador|Função|
-  |--------|------|
+  |----|----|
   |`=`|atribuição|
 
   **Exemplo**  
-  - `lado = 8`
-  - `distancia = 49.6`
-  - `nome = "Adalberto"`
-  - `custo = 5.50`
+  - `lado = 8 ;`
+  - `distancia = 49.6 ;`
+  - `nome = "Adalberto" ;`
+  - `custo = 5.50 ;`
 
 
 
@@ -122,9 +143,25 @@ Como dito anteriormente, a atribuição é o operador que determina a passagem d
   - `custo = 5.50`
 
 </TabItem>
+<TabItem value="c" label="C">
+
+  |Operador|Função|
+  |--------|------|
+  |`=`|atribuição|
+
+  **Exemplo**  
+  - `lado = 8 ;`
+  - `distancia = 49.6 ;`
+  - `nome = "Adalberto" ;`
+  - `custo = 5.50 ;`
+
+
+
+  </TabItem>
 </Tabs>
 
 
+<!-- marp --- -->
 
 ### Aritméticos
 São aqueles utilizados para a execução de operações matemáticas, como adição, multiplicação, subtração, divisão, potenciação, etc.
@@ -167,16 +204,19 @@ escreva(valor_f);
   </TabItem>
   <TabItem value="java" label="Java">
 
-  |Operador|Função|Exemplo|
-  |----|----------| ----------|
-  |`+` | adição | `5+2 = 7` |
-  |`-` | subtração | `5-2 = 3` |
-  |`*` | multiplicação | `3*6 = 18` |
-  |`/` | divisão | `10/2 = 5.0` |
-  |`pot(x,y)` | potência. $x^y$ | `pot(5,2) = 25` |
-  |`rad(x)` | raiz quadrada. $\sqrt{x}$ | `rad(16) = 4` |
-  |`mod(x,y)` | resto da divisão inteira. | `mod(20,6) = 2` |
-  |`div(x,y)` | quociente da divisão inteira.| `div(20,6) = 3` |
+|Operador|Função|Exemplo|
+|-----|-----|-----|
+|`+` | adição | `5+2 = 7` |
+|`-` | subtração | `5-2 = 3` |
+|`*` | multiplicação | `3*6 = 18` |
+|`/` | divisão | `10/2 = 5.0` |
+|`Math.pow(x,y)` | potência. $x^y$ | `Math.pow(5,2) = 25` |
+|`Math.sqrt(x)` | raiz quadrada. $\sqrt{x}$ | `Math.sqrt(16) = 4` |
+|`x%y` | resto da divisão inteira. | `20%6 = 2` |
+|`x/y` | quociente da divisão inteira.| `(int) 20/6 = 3` |
+
+
+<!-- marp --- -->
 
   **Exemplos**
   ```js
@@ -197,6 +237,7 @@ escreva(valor_f);
   System.out.println(valor_f); //1.6666666
   valor_i = 25%11;
   System.out.println(valor_i); //3
+  
   ```
 
   </TabItem>
@@ -238,6 +279,48 @@ escreva(valor_f);
   ```
 
   </TabItem>
+  <TabItem value="c" label="C">
+
+  |Operador|Função|Exemplo|Biblioteca|
+  |-----------|------------------------------|-----------------|----------|
+  |`+`        | adição                       | `5+2 = 7`       |          |
+  |`-`        | subtração                    | `5-2 = 3`       |          |
+  |`*`        | multiplicação                | `3*6 = 18`      |          |
+  |`/`        | divisão                      | `10/2 = 5.0`    |          |
+  |`pow(x,y)` | potência. $x^y$              | `pow(5,2) = 25` | `math.h` |
+  |`sqrt(x)`  | raiz quadrada. $\sqrt{x}$    | `sqrt(16) = 4`  | `math.h` |
+  |`x % y`    | resto da divisão inteira.    | `20%6 = 2`      |          |
+  |`div(x,y)` | quociente da divisão inteira.| `div(20,6) = 3` |          |
+
+  **Exemplos**
+  ```js
+  #import <math.h> //Necessário para as funções pow e sqrt
+  int valor_i;
+  float valor_f;
+
+  valor_i = 5+10;
+  printf("%d\n", valor_i); //15
+  valor_i = 8-4;
+  printf("%d\n", valor_i); //4
+  valor_i = 6*4;
+  printf("%d\n", valor_i); //24
+  valor_i = 10/2;
+  printf("%d\n", valor_i); //5
+  valor_f = 10/2;
+  printf("%f\n", valor_f); //5.000000  - Atenção ao %f
+  valor_f = (float) 10/6;
+  printf("%f\n", valor_f); //1.666667 - Atenção ao %f
+  valor_i = 25%11;
+  printf("%d\n", valor_i); //3
+  valor_f = pow(4,3);
+  printf("%f\n", valor_f); //64.000000
+  valor_f = sqrt(16);
+  printf("%f\n", valor_f); //4.000000
+
+  printf("%f - %d - %d\n", 10/3, (int) 10/3, 10/3); //4.000000
+  ```
+
+  </TabItem>
 </Tabs>
 
 
@@ -248,29 +331,7 @@ escreva(valor_f);
 ### Relacionais
 São operadores de comparação entre valores. As expressões realizadas com estes operadores retornam um resultado do tipo lógico, `verdadeiro` ou `falso` ([FORBELLONE 2022, p.27](https://plataforma.bvirtual.com.br/Leitor/Publicacao/200078/pdf/51)).
 
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
-
-  ```
-  escreva("Olá Mundo");
-  ```
-
-  </TabItem>
-  <TabItem value="java" label="Java">
-
-  ```js
-  System.out.println("Olá Mundo");
-  ```
-
-  </TabItem>
-  <TabItem value="python" label="Python">
-
-  ```python
-  print("Olá Mundo")
-  ```
-
-  </TabItem>
-</Tabs>
+<!-- marp --- -->
 
 <Tabs groupId='language'>
   <TabItem value="pseudocodigo" label="Pseudocódigo" default>
@@ -283,6 +344,8 @@ São operadores de comparação entre valores. As expressões realizadas com est
 |`<>` |diferente|
 |`>=` |maior ou igual| 
 |`<=` |menor ou igual| 
+
+<!-- marp --- -->
 
 **Exemplos**  
 ```
@@ -311,6 +374,8 @@ escreva(12<>12); //falso
 |`!=` |diferente|
 |`>=` |maior ou igual| 
 |`<=` |menor ou igual| 
+
+<!-- marp --- -->
 
 **Exemplos**  
 ```js
@@ -365,6 +430,7 @@ print(12!=12) #False
 
 Os operadores lógicos são utilizados para a composição de expressões lógicas. As possibilidades de resultados de expressões lógicas considerando as entradas são chamadas de Tabelas-Verdade. São elas:
 
+<!-- marp --- -->
 
 #### Conjunção 
 
@@ -377,6 +443,8 @@ A conjunção corresponde ao **e** lógico. Possui resultado verdadeiro apenas q
 |F|V|F|
 |F|F|F|
 
+<!-- marp --- -->
+
 #### Disjunção
 
 A disjunção corresponde ao **ou** lógico. É falso apenas quando ambas as entradas são falsas. Basta apenas um dos dos operandos serem verdadeiros para resultar em verdadeiro.
@@ -388,6 +456,7 @@ A disjunção corresponde ao **ou** lógico. É falso apenas quando ambas as ent
 |F|V|V|
 |F|F|F|
 
+<!-- marp --- -->
 
 #### Negação
 
@@ -398,14 +467,16 @@ A negação corresponde ao **não** lógico. Consiste na inversão lógica do va
 |V|F|
 |F|V|
 
+<!-- marp --- -->
 
 Em resumo, para os operadores lógicos temos:
+
 
 <Tabs groupId='language'>
   <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
 |Operador|Função|
-|--------|------|
+|---|---|
 |`e`  |**e** lógico (conjunção) |
 |`ou` |**ou** lógico (disjunção)|
 |`não`|**não** lógico (negação) |
@@ -413,11 +484,14 @@ Em resumo, para os operadores lógicos temos:
   </TabItem>
   <TabItem value="java" label="Java">
 
-|Operador|Função|
-|--------|------|
-|`&&`|**e** lógico (conjunção)|
-| <code> &#124;&#124; </code> |**ou** lógico (disjunção)|
-|`!`|**não** lógico (negação)|
+
+
+  |Operador|Função|
+  |---|---|
+  |`&&`|**e** lógico (conjunção)|
+  | <code> &#124;&#124; </code> |**ou** lógico (disjunção)|
+  |`!`|**não** lógico (negação)|
+
 
   </TabItem>
   <TabItem value="python" label="Python">
@@ -480,12 +554,13 @@ Em resumo, para os operadores lógicos temos:
 ## Prioridade entre operadores
 As prioridades definem quais operadores serão executados primeiro. Caso possuam a mesma prioridade, a expressão será executada da esquerda para a direita.
 
+<!-- marp --- -->
 
 <Tabs groupId='language'>
   <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
 |Tipo|Símbolo|
-|----|-------|
+|----|----|
 |parênteses mais internos|`(` `)`|
 |potência, raiz| `pot` `rad`|
 |multiplicação, divisão|`*` `/` `div` `mod`|
@@ -501,7 +576,7 @@ Adaptado de [FORBELLONE 2022, p.30](https://plataforma.bvirtual.com.br/Leitor/Pu
   <TabItem value="java" label="Java">
 
 |Tipo|Símbolo|
-|----|-------|
+|----|----|
 |Operadores pós-fixados <br /> operadores pré-fixados <br />  *cast*|`x++`  `x--` <br /> `++x` `+x` `-x` `~x` `!x` <br /> `(type) x`|
 multiplicação, divisão| `*` `/` `%`|
 |adição, subtração|`+` `-`|
@@ -536,7 +611,8 @@ Adaptado de [PYTHON SOFTWARE FOUNDATION. Expressions - Python 3 documentation](h
 </Tabs>
 
 
+<!-- marp hide -->
 
 Além destes, existem também outros operadores. Estão aqui listados apenas alguns que são importantes neste momento do aprendizado.
 
-
+<!-- marp /hide -->
