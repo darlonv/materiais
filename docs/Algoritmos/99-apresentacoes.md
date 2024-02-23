@@ -20,6 +20,9 @@ import TOCInline from '@theme/TOCInline';
 - Modelo de caixa-preta [PDF](pathname:///slides/Algoritmos/02-Basicos/02-Entrada_e_saida/01-Modelo_caixa_preta.md.pseudocodigo.slides.pdf)
 - Entrada e saída [PDF](pathname:///slides/Algoritmos/02-Basicos/02-Entrada_e_saida/02-Entrada_saida.md.pseudocodigo.slides.pdf)
 
+
+- Variáveis e tipos de dados [PDF](pathname:///slides/Algoritmos/02-Basicos/03-Variaveis_tipos_de_dados.md.pseudocodigo.slides.pdf)
+
 </TabItem>
 <TabItem value="java" label="Java">
 
@@ -50,6 +53,7 @@ import TOCInline from '@theme/TOCInline';
 #### Entrada e saída
 - Modelo de caixa-preta [PDF](pathname:///slides/Algoritmos/02-Basicos/02-Entrada_e_saida/01-Modelo_caixa_preta.md.python.slides.pdf)
 - Entrada e saída [PDF](pathname:///slides/Algoritmos/02-Basicos/02-Entrada_e_saida/02-Entrada_saida.md.python.slides.pdf)
+
 
 - Variáveis e tipos de dados [PDF](pathname:///slides/Algoritmos/02-Basicos/03-Variaveis_tipos_de_dados.md.python.slides.pdf)
 
