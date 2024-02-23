@@ -82,6 +82,9 @@ Para criar um identificador, algumas regras devem sempre ser seguidas:
     - SomaTotal
     - media/2
 
+
+<!-- marp --- -->
+
 #### Convenções
 
 Boa parte dos programadores seguem alguma convenção ao definir os identificadores, para que o código seja mais uniforme. Estas práticas costumam facilitar o entendimento do código.
@@ -749,7 +752,7 @@ Os dado do tipo **caractere** são aqueles que pertencem ao conjunto de valores 
   <TabItem value="java" label="Java">
 
   ```javascript
-  String <identificador>; //////////CONTINUAR AQUI
+  String <identificador>;
   char <identificador>;
   ```
 
@@ -833,8 +836,11 @@ Como o `bool` funciona como um inteiro, nas funções `scanf` e `printf` seu  é
 </Tabs>
 
 
+<!-- marp hide -->
 
 ---------
+
+<!-- marp /hide -->
 
 
 
