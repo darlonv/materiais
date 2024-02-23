@@ -1,5 +1,5 @@
 {
-    "./99-apresentacoes.md": "cbe1e2235b26c460b65bed87085194db",
+    "./99-apresentacoes.md": "fd324768ae464ab2b3d04e3d676d7857",
     "./00-intro.md": "f8fd403a39a110db63491e0b5d70c8e7",
     "./02-Basicos/01-Estrutura_basica.md": "204d139b8f2edec4c91252e8ab852fe4",
     "./02-Basicos/02-Entrada_e_saida/02-Entrada_saida.md": "9e9cd1ba29a3425754515c8229a7dbdd",
@@ -7,5 +7,7 @@
     "./01-Introducao/01-introducao.md": "748f1944763e668c1fdf48a5133c27f6",
     "./01-Introducao/02-Logica_de_programacao.md": "614865263637f6e581f2246eb94d1839",
     "./01-Introducao/03-Linguagem_de_programacao.md": "c1270580909ccbb570b8037fd62fbe01",
-    "./02-Basicos/03-Variaveis_tipos_de_dados.md": "d559d2354e7f0f4682c933dc27507f99"
+    "./02-Basicos/03-Variaveis_tipos_de_dados.md": "5f260a3c35643ba37c414055c9ec5281",
+    "./02-Basicos/07-Expressoes.md": "17bb090a5e24149360d4df1d86aff9f1",
+    "./02-Basicos/Exercicios/07-Expressoes-exercicios.md": "15e1e2c5a6ac62bb999e005e32f5e79e"
 }
