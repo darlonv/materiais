@@ -16,5 +16,9 @@
     - Semelhante ao Jupyter
     - *Cloud* do Google
     - Projetos no Google Drive
+    - Leitura e escrita de arquivos na nuvem
+        - Download e upload
+        - Montagem de diretórios do Google Drive
+        
 
 
