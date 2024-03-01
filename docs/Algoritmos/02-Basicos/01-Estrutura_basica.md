@@ -30,7 +30,7 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
   ```javascript
   public class Main{
 
-    public static void main(String args){
+    public static void main(String[] args){
 
         //o código deverá ser inserido após { e antes de }.
         //linhas que se iniciam 
