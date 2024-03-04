@@ -238,8 +238,8 @@ expressões abaixo:
 
   `(R >=5) || (T > Z) && (X - Y + R > 3 * Z)`  
   `(T + 3 >= 4) && !(3 * R/2 < S * 3)`  
-  `(X == 2) || (Y = 1) && ((Z == 0) || (R > 3) && (S < 10))`  
-  `(R != S) || !(sqrt(R) < sqrt(X)) && (8327 * X * S * Z == 0)` 
+  `(X == 2) || (Y == 1) && ((Z == 0) || (R > 3) && (S < 10))`  
+  `(R != S) || !(Math.sqrt(R) < Math.sqrt(X)) && (8327 * X * S * Z == 0)` 
 
   </TabItem>
   <TabItem value="python" label="Python">
@@ -280,7 +280,7 @@ expressões abaixo:
   `26.0 / 6.0 / 2.0`  
   `7 % 4 - 8 / (3 + 1)`  
   `(5 != 2) || !(7 > 4) && (4 <= PI)`  
-  `((18 / 3) == 5) && sqrt(100) == 11`  
+  `((18 / 3) == 5) && Math.sqrt(100) == 11`  
   `(12 >= 5 * 2) && (4 * 5 > 24 / 6)`  
   `(2 >= 5) && !(6 <= 2 * 3) || (10 != 10)`  
 
@@ -418,38 +418,186 @@ lógico Verdadeiro (V), observar os resultados obtidos das expressões lógicas 
 1. Considerando A e C variáveis inteiras, contendo os valores, 1 e 8 e, B como uma variável real, com
 o valor 4.5; e TESTE variável lógica contendo o valor verdadeiro (V), determinar os resultados
 obtidos da avaliação das seguintes expressões:
-   1. `A = = 1 && TESTE`
-   1. `A + C = = sqrt(81) || TESTE != F`
-   1. `!TESTE || C % 2 = = 0.5`
-   1. `C < 10 || TESTE`
-   1. `TESTE && !TESTE`
-   1. `pow(A, 2) + sqrt(A + C) = = 3 && (A + B > 13)`
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  `A == 1 e TESTE`  
+  `A + C == rad(81) ou TESTE != falso`  
+  `não TESTE ou C % 2 == 0.5`  
+  `C < 10 ou TESTE`  
+  `TESTE e não TESTE`  
+  `pot(A, 2) + rad(A + C) == 3 e (A + B > 13)` 
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  `A == 1 && TESTE`  
+  `A + C == Math.sqrt(81) || TESTE != false`  
+  `!TESTE || C % 2 == 0.5`  
+  `C < 10 || TESTE`  
+  `TESTE && !TESTE`  
+  `Math.pow(A, 2) + Math.sqrt(A + C) == 3 && (A + B > 13)`  
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  `A == 1 and TESTE`  
+  `A + C == sqrt(81) or TESTE != False`  
+  `not TESTE or C % 2 == 0.5`  
+  `C < 10 or TESTE`  
+  `TESTE and not TESTE`  
+  `pow(A, 2) + sqrt(A + C) == 3 and (A + B > 13)`  
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  `A == 1 && TESTE`  
+  `A + C == sqrt(81) || TESTE != 0`  
+  `!TESTE || C % 2 == 0.5`  
+  `C < 10 || TESTE`  
+  `TESTE && !TESTE`  
+  `pow(A, 2) + sqrt(A + C) == 3 && (A + B > 13)`  
+
+  </TabItem>
+</Tabs>
 
 1. Determine os resultados na avaliação das expressões lógicas seguintes, sabendo que A, B, C
 contêm, respectivamente, 2, 7, 3.5, e que existe uma variável lógica L cujo valor é F.
-   1. `B = = A * C && (L || V)`
-   1. `B > A || B = = pow(A, A)`
-   1. `L && (int) B / A >= C || !(A <=C)`
-   1. `!L || V && sqrt(A + B) >= C`
-   1. `B / A = = C || B / A != C`
-   1. `L || pow(B, A) <= C * 10 + A * B`
-   1. `!V || pow(3, 2) / 3 < 15 - 35 % 7`
-   1. `!(5 != 10 / 2) || V && 2 - 5 > 5 - 2 || V`
-   1. `pow(2, 4) != 4 + 2 || 2 + 3 * 5 / 3 % 5 > 0`
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  `B == A * C e (L or verdadeiro)`  
+  `B > A ou B == pot(A, A)`  
+  `L e B / A >= C ou não(A <=C)`  
+  `não L ou verdadeiro e rad(A + B) >= C`  
+  `B / A == C ou B / A != C`  
+  `L ou pot(B, A) <= C * 10 + A * B`  
+  `não verdadeiro ou pot(3, 2) / 3 < 15 - 35 % 7`  
+  `não (5 != 10 / 2) or 1 e 2 - 5 > 5 - 2 ou verdadeiro`  
+  `pot(2, 4) != 4 + 2 or 2 + 3 * 5 / 3 % 5 > 0`
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  `B == A * C && (L || true)`  
+  `B > A || B == Math.pow(A, A)`  
+  `L && (int) B / A >= C || !(A <=C)`  
+  `!L || true && Math.sqrt(A + B) >= C`  
+  `B / A == C || B / A != C`  
+  `L || Math.pow(B, A) <= C * 10 + A * B`  
+  `!true || Math.pow(3, 2) / 3 < 15 - 35 % 7`  
+  `!(5 != 10 / 2) || true && 2 - 5 > 5 - 2 || true`  
+  `Math.pow(2, 4) != 4 + 2 || 2 + 3 * 5 / 3 % 5 > 0` 
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  `B == A * C and (L or True)`  
+  `B > A or B == pow(A, A)`  
+  `L and B / A >= C or not(A <=C)`  
+  `not L or True and sqrt(A + B) >= C`  
+  `B / A == C or B / A != C`  
+  `L or pow(B, A) <= C * 10 + A * B`  
+  `not True or pow(3, 2) / 3 < 15 - 35 % 7`  
+  `not (5 != 10 / 2) or True and 2 - 5 > 5 - 2 or True`  
+  `pow(2, 4) != 4 + 2 or 2 + 3 * 5 / 3 % 5 > 0` 
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  `B == A * C && (L || true)`  
+  `B > A || B == pow(A, A)`  
+  `L && (int) B / A >= C || !(A <=C)`  
+  `!L || true && sqrt(A + B) >= C`  
+  `B / A == C || B / A != C`  
+  `L || pow(B, A) <= C * 10 + A * B`  
+  `!true || pow(3, 2) / 3 < 15 - 35 % 7`  
+  `!(5 != 10 / 2) || true && 2 - 5 > 5 - 2 || true`  
+  `pow(2, 4) != 4 + 2 || 2 + 3 * 5 / 3 % 5 > 0`  
+
+  </TabItem>
+</Tabs>
 
 1. Sabendo que A = 5, B = 4, C = 3 e D = 6, informe se as expressões abaixo são verdadeiras ou
 falsas.
-   1. `(A > C) && (C <= D)`
-   1. `(A + B) > 10 || (A + B) = (C + D)`
-   1. `(A - C) = 0 || !(D >= 99) && (B + 2) = 6`
-   1. `(A >= C) && (B >= C)`
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  `(A > C) e (C <= D)`  
+  `(A + B) > 10 ou (A + B) == (C + D)`  
+  `(A - C) == 0 ou não (D >= 99) e (B + 2) == 6`  
+  `(A >= C) e (B >= C)` 
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  `(A > C) && (C <= D)`  
+  `(A + B) > 10 || (A + B) == (C + D)`  
+  `(A - C) == 0 || !(D >= 99) && (B + 2) == 6`  
+  `(A >= C) && (B >= C)` 
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  `(A > C) and (C <= D)`  
+  `(A + B) > 10 or (A + B) == (C + D)`  
+  `(A - C) == 0 or not (D >= 99) and (B + 2) == 6`  
+  `(A >= C) and (B >= C)`  
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  `(A > C) && (C <= D)`  
+  `(A + B) > 10 || (A + B) == (C + D))`  
+  `(A - C) == 0 || !(D >= 99) && (B + 2) == 6)`  
+  `(A >= C) && (B >= C))`  
+
+  </TabItem>
+</Tabs>
 
 1. Sabendo que A = 3, B = 7 e C = 4, informe se as expressões abaixo são verdadeiras ou falsas.
-   1. `(A + C) > B`
-   1. `B >= (A + 2)`
-   1. `C = (B - A)`
-   1. `(B + A) <= C`
-   1. `(C + A) > B`
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  `(A + C) > B`  
+  `B >= (A + 2)`  
+  `C == (B - A)`  
+  `(B + A) <= C`  
+  `(C + A) > B`  
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  `(A + C) > B`  
+  `B >= (A + 2)`  
+  `C == (B - A)`  
+  `(B + A) <= C`  
+  `(C + A) > B`  
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  `(A + C) > B`  
+  `B >= (A + 2)`  
+  `C == (B - A)`  
+  `(B + A) <= C`  
+  `(C + A) > B`  
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  `(A + C) > B`  
+  `B >= (A + 2)`  
+  `C == (B - A)`  
+  `(B + A) <= C`  
+  `(C + A) > B`  
+
+  </TabItem>
+</Tabs>
 
 <!-- marp hide -->
 
