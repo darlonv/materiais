@@ -132,6 +132,93 @@ $$
 1. Uma revendedora de carros usados paga a seus funcionários vendedores um salário fixo por mês, mais  uma  comissão  fixa  de 5% sobre o valor de todos os carros vendidos pelo funcionário. Escreva um algoritmo que receba como entrada o valor total de suas vendas e seu salário fixo, e em seguida calcula e apresenta o salário final do vendedor.  
   (Adaptado de CARVALHO, 2007).
 
+1. Suponha que A, B e C são variáveis de tipo inteiro, com valores iguais a 5, 10 e -8, respectivamente, e uma variável real D, com valor de 1.5. Quais serão os resultados das expressões aritméticas a seguir?
+    1. `2 * A % 3 - C`
+    1. `(sqrt(-2 * C) / 4)`
+    1. `((20 / 3) / 3) + pow(2, 8) / 2`
+    1. `(30 % 4 * pow(3, 3)) * (-1)`
+    1. `pow(-C, 2) + (D * 10) / A`
+    1. `sqrt(pow(A, B/A)) + C * D`
+1. Sendo P, Q e R variáveis de tipo inteiro, com valores iguais a 2, 3 e 12, respectivamente, e
+uma variável real S, com valor de 4.5, quais os valores fornecidos por cada uma das expressões
+aritméticas abaixo?
+   1. `(int)(100 * Q) / P + R`
+   1. `S % (P - 1) - Q * R`
+   1. `P * R % 5 - Q / 2`
+   1. `1 + sqrt( pow(P, 3) + 3 * R + 5)`
+   1. `1 + (int)((R + P) / pow (Q, 2))`
+   1. `sqrt(sqrt(16)) * pow(2, 3)`
+
+1. Considere as seguintes atribuições, R = 2, S = 5, T = -1, X = - 3, Y = -1 e Z = 0, resolver as
+expressões abaixo:
+   1. `(R >=5) || (T > Z) && (X - Y + R > 3 * Z)`
+   1. `(T + 3 >= 4) && !(3 * R/2 < S * 3)`
+   1. `(X == 2) || (Y = 1) && ((Z == 0) || (R > 3) && (S < 10)`
+   1. `(R != S) || !(sqrt(R) < sqrt(X)) && (8327 * X * S * Z == 0)`
+
+1. Resolva as expressões abaixo, destacando o resultado final:
+   1. `(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`
+   1. `26 / 6 / 2 - (127 / 7) % 5`
+   1. `7 % 4 - 8 / (3 + 1)`
+   1. `(5 != 2) || !(7 > 4) && (4 <= pi)`
+   1. `((18 / 3) == 5) && sqrt(100) == 11`
+   1. `(12 >= 5*2) && (4 * 5 > 24 / 6)`
+   1. `(2 >= 5) && !(6 <= 2 * 3) || (10 != 10)`
+
+1. Resolva as expressões a seguir, quanto a seu valor lógico.
+   1. `2 * 4 == 24 / 3`
+   1. `15 % 4 < 19 % 6`
+   1. `(int)(3 * 5) / 4 <= pow(3, 2) / 0,5`
+   1. `2 + 8 % 7 >= 3 * 6 - 15`
+
+1. Resolva as expressões a seguir, quanto a seu valor lógico.
+   1. `2 < 5 || 15 / 3 = = 5`
+   1. `F || (int) 20 / (18 / 3) != (int)(21 / 3) / 2`
+
+1. Considerando as variáveis numéricas X, Y e Z, contendo os valores 2, 5 e 9, respectivamente, a
+variável literal NOME, contendo o literal "MARIA"; e a variável lógica SIM, contendo o valor
+lógico Verdadeiro (V), observar os resultados obtidos das expressões lógicas a seguir.
+   1. `X + Y > Z && NOME = = "MARIA"`
+   1. `SIM || Y >= X`
+   1. `!SIM && (int) Z / Y + 1 = = X`
+   1. `NOME=="JORGE"&& SIM || pow(X, 2) < Z + 10`
+
+1. Considerando A e C variáveis inteiras, contendo os valores, 1 e 8 e, B como uma variável real, com
+o valor 4.5; e TESTE variável lógica contendo o valor verdadeiro (V), determinar os resultados
+obtidos da avaliação das seguintes expressões:
+   1. `A = = 1 && TESTE`
+   1. `A + C = = sqrt(81) || TESTE != F`
+   1. `!TESTE || C % 2 = = 0.5`
+   1. `C < 10 || TESTE`
+   1. `TESTE && !TESTE`
+   1. `pow(A, 2) + sqrt(A + C) = = 3 && (A + B > 13)`
+
+1. Determine os resultados na avaliação das expressões lógicas seguintes, sabendo que A, B, C
+contêm, respectivamente, 2, 7, 3.5, e que existe uma variável lógica L cujo valor é F.
+   1. `B = = A * C && (L || V)`
+   1. `B > A || B = = pow(A, A)`
+   1. `L && (int) B / A >= C || !(A <=C)`
+   1. `!L || V && sqrt(A + B) >= C`
+   1. `B / A = = C || B / A != C`
+   1. `L || pow(B, A) <= C * 10 + A * B`
+   1. `!V || pow(3, 2) / 3 < 15 - 35 % 7`
+   1. `!(5 != 10 / 2) || V && 2 - 5 > 5 - 2 || V`
+   1. `pow(2, 4) != 4 + 2 || 2 + 3 * 5 / 3 % 5 > 0`
+
+1. Sabendo que A = 5, B = 4, C = 3 e D = 6, informe se as expressões abaixo são verdadeiras ou
+falsas.
+   1. `(A > C) && (C <= D)`
+   1. `(A + B) > 10 || (A + B) = (C + D)`
+   1. `(A - C) = 0 || !(D >= 99) && (B + 2) = 6`
+   1. `(A >= C) && (B >= C)`
+
+1. Sabendo que A = 3, B = 7 e C = 4, informe se as expressões abaixo são verdadeiras ou falsas.
+   1. `(A + C) > B`
+   1. `B >= (A + 2)`
+   1. `C = (B - A)`
+   1. `(B + A) <= C`
+   1. `(C + A) > B`
+
 <!-- marp hide -->
 
 ## Exercícios externos
