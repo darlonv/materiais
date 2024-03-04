@@ -132,56 +132,288 @@ $$
 1. Uma revendedora de carros usados paga a seus funcionários vendedores um salário fixo por mês, mais  uma  comissão  fixa  de 5% sobre o valor de todos os carros vendidos pelo funcionário. Escreva um algoritmo que receba como entrada o valor total de suas vendas e seu salário fixo, e em seguida calcula e apresenta o salário final do vendedor.  
   (Adaptado de CARVALHO, 2007).
 
-1. Suponha que A, B e C são variáveis de tipo inteiro, com valores iguais a 5, 10 e -8, respectivamente, e uma variável real D, com valor de 1.5. Quais serão os resultados das expressões aritméticas a seguir?
-    1. `2 * A % 3 - C`
-    1. `(sqrt(-2 * C) / 4)`
-    1. `((20 / 3) / 3) + pow(2, 8) / 2`
-    1. `(30 % 4 * pow(3, 3)) * (-1)`
-    1. `pow(-C, 2) + (D * 10) / A`
-    1. `sqrt(pow(A, B/A)) + C * D`
+1. Suponha que `A`, `B` e `C` são variáveis de tipo inteiro, com valores iguais a $5$, $10$ e $-8$, respectivamente, e uma variável real `D`, com valor de $1.5$. Quais serão os resultados das expressões aritméticas a seguir?  
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  `2 * A % 3 - C`  
+  `(sqrt(-2 * C) / 4)`  
+  `((20 / 3) / 3) + pow(2, 8) / 2`  
+  `(30 % 4 * pow(3, 3)) * (-1)`  
+  `pow(-C, 2) + (D * 10) / A`  
+  `sqrt(pow(A, B/A)) + C * D`  
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  `2 * A % 3 - C`  
+  `Math.sqrt(-2 * C) / 4`  
+  `((20 / 3) / 3) + Math.pow(2, 8) / 2`  
+  `(30 % 4 * Math.pow(3, 3)) * (-1)`  
+  `Math.pow(-C, 2) + (D * 10) / A`  
+  `Math.sqrt(Math.pow(A, B/A)) + C * D`  
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  `2 * A % 3 - C`  
+  `sqrt(-2 * C) / 4`  
+  `((20 / 3) / 3) + 2**8 / 2`  
+  `(30 % 4 * 3**3) * (-1)`  
+  `-C**2 + (D * 10) / A`  
+  `sqrt(A**(B/A)) + C * D`  
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  `2 * A % 3 - C`  
+  `sqrt(-2 * C) / 4`  
+  `((20.0 / 3) / 3) + 2**8 / 2`  
+  `(30 % 4 * 3**3) * (-1)`  
+  `pow(-C, 2) + (d * 10) / A`  
+  `sqrt(pow(A, B / A)) + C * D`  
+
+  </TabItem>
+</Tabs>
 1. Sendo P, Q e R variáveis de tipo inteiro, com valores iguais a 2, 3 e 12, respectivamente, e
 uma variável real S, com valor de 4.5, quais os valores fornecidos por cada uma das expressões
 aritméticas abaixo?
-   1. `(int)(100 * Q) / P + R`
-   1. `S % (P - 1) - Q * R`
-   1. `P * R % 5 - Q / 2`
-   1. `1 + sqrt( pow(P, 3) + 3 * R + 5)`
-   1. `1 + (int)((R + P) / pow (Q, 2))`
-   1. `sqrt(sqrt(16)) * pow(2, 3)`
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  `((100 * Q) / P + R)`  
+  `S % (P - 1) - Q * R`  
+  `(P * R) % 5 - Q / 2`  
+  `1 + rad( pot(P, 3) + 3 * R + 5)`  
+  `1 + ((R + P) / pot (Q, 2))`  
+  `rad(rad(16)) * pot(2, 3)` 
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  `(int) ((100 * Q) / P + R)`  
+  `(int) S % (P - 1) - Q * R`  
+  `(P * R) % 5 - Q / 2`  
+  `1 + Math.sqrt( Math.pow(P, 3) + 3 * R + 5)`  
+  `1 + (int)((R + P) / Math.pow (Q, 2))`  
+  `Math.sqrt(Math.sqrt(16)) * Math.pow(2, 3)` 
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  `(int) ((100 * Q) / P + R)`  
+  `(int) S % (P - 1) - Q * R`  
+  `(P * R) % 5 - Q / 2`  
+  `1 + sqrt( P**3 + 3 * R + 5)`  
+  `1 + (int)((R + P) / Q**2)`  
+  `sqrt(sqrt(16)) * 2**3` 
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  `(int) ((100 * Q) / P + R)`  
+  `(int) S % (P - 1) - Q * R`  
+  `(P * R) % 5 - Q / 2`  
+  `1 + sqrt( pow(P, 3) + 3 * R + 5)`  
+  `1 + (int)((R + P) / pow (Q, 2))`  
+  `sqrt(sqrt(16)) * pow(2, 3)`  
+
+  </TabItem>
+</Tabs>
 
 1. Considere as seguintes atribuições, R = 2, S = 5, T = -1, X = - 3, Y = -1 e Z = 0, resolver as
 expressões abaixo:
-   1. `(R >=5) || (T > Z) && (X - Y + R > 3 * Z)`
-   1. `(T + 3 >= 4) && !(3 * R/2 < S * 3)`
-   1. `(X == 2) || (Y = 1) && ((Z == 0) || (R > 3) && (S < 10)`
-   1. `(R != S) || !(sqrt(R) < sqrt(X)) && (8327 * X * S * Z == 0)`
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
-1. Resolva as expressões abaixo, destacando o resultado final:
-   1. `(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`
-   1. `26 / 6 / 2 - (127 / 7) % 5`
-   1. `7 % 4 - 8 / (3 + 1)`
-   1. `(5 != 2) || !(7 > 4) && (4 <= pi)`
-   1. `((18 / 3) == 5) && sqrt(100) == 11`
-   1. `(12 >= 5*2) && (4 * 5 > 24 / 6)`
-   1. `(2 >= 5) && !(6 <= 2 * 3) || (10 != 10)`
+  `(R >=5) ou (T > Z) e (X - Y + R > 3 * Z)`  
+  `(T + 3 >= 4) e !(3 * R/2 < S * 3)`  
+  `(X == 2) ou (Y = 1) e ((Z == 0) ou (R > 3) e (S < 10))`  
+  `(R != S) ou !(sqrt(R) < sqrt(X)) e (8327 * X * S * Z == 0)` 
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  `(R >=5) || (T > Z) && (X - Y + R > 3 * Z)`  
+  `(T + 3 >= 4) && !(3 * R/2 < S * 3)`  
+  `(X == 2) || (Y = 1) && ((Z == 0) || (R > 3) && (S < 10))`  
+  `(R != S) || !(sqrt(R) < sqrt(X)) && (8327 * X * S * Z == 0)` 
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  `(R >=5) or (T > Z) and (X - Y + R > 3 * Z)`  
+  `(T + 3 >= 4) and not(3 * R/2 < S * 3)`  
+  `(X == 2) or (Y == 1) and ((Z == 0) or (R > 3) and (S < 10))`  
+  `(R != S) or not sqrt(R) < sqrt(X) and (8327 * X * S * Z == 0)`  
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  `(R >=5) || (T > Z) && (X - Y + R > 3 * Z)`  
+  `(T + 3 >= 4) && !(3 * R/2 < S * 3)`  
+  `(X == 2) || (Y = 1) && ((Z == 0) || (R > 3) && (S < 10))`  
+  `(R != S) || !(sqrt(R) < sqrt(X)) && (8327 * X * S * Z == 0)`  
+
+  </TabItem>
+</Tabs>
+
+1. Resolva as expressões abaixo, apresentando o resultado final. Considere o valor de `PI` como $3,14$:
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  `(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`  
+  `26.0 / 6.0 / 2.0`  
+  `7 % 4 - 8 / (3 + 1)`  
+  `(5 != 2) ou não(7 > 4) e (4 <= PI)`  
+  `((18 / 3) == 5) e sqrt(100) == 11`  
+  `(12 >= 5 * 2) e (4 * 5 > 24 / 6)`  
+  `(2 >= 5) e não(6 <= 2 * 3) ou (10 != 10)`  
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  `(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`  
+  `26.0 / 6.0 / 2.0`  
+  `7 % 4 - 8 / (3 + 1)`  
+  `(5 != 2) || !(7 > 4) && (4 <= PI)`  
+  `((18 / 3) == 5) && sqrt(100) == 11`  
+  `(12 >= 5 * 2) && (4 * 5 > 24 / 6)`  
+  `(2 >= 5) && !(6 <= 2 * 3) || (10 != 10)`  
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  `(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`  
+  `26.0 / 6.0 / 2.0`  
+  `7 % 4 - 8 / (3 + 1)`  
+  `(5 != 2) or not(7 > 4) and (4 <= PI)`  
+  `((18 / 3) == 5) and sqrt(100) == 11`  
+  `(12 >= 5 * 2) and (4 * 5 > 24 / 6)`  
+  `(2 >= 5) and not(6 <= 2 * 3) or (10 != 10)`   
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  `(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`  
+  `26.0 / 6.0 / 2.0`  
+  `7 % 4 - 8 / (3 + 1)`  
+  `(5 != 2) || !(7 > 4) && (4 <= PI)`  
+  `((18 / 3) == 5) && sqrt(100) == 11`  
+  `(12 >= 5 * 2) && (4 * 5 > 24 / 6)`  
+  `(2 >= 5) && !(6 <= 2 * 3) || (10 != 10)`  
+
+  </TabItem>
+</Tabs>
 
 1. Resolva as expressões a seguir, quanto a seu valor lógico.
-   1. `2 * 4 == 24 / 3`
-   1. `15 % 4 < 19 % 6`
-   1. `(int)(3 * 5) / 4 <= pow(3, 2) / 0,5`
-   1. `2 + 8 % 7 >= 3 * 6 - 15`
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  `2 * 4 == 24 / 3`  
+  `15 % 4 < 19 % 6`  
+  `3 * 5 <= pot(3, 2) / 0.5`  
+  `2 + 8 % 7 >= 3 * 6 - 15`  
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  `2 * 4 == 24 / 3`  
+  `15 % 4 < 19 % 6`  
+  `3 * 5 <= Math.pow(3, 2) / 0.5`  
+  `2 + 8 % 7 >= 3 * 6 - 15`   
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  `2 * 4 == 24 / 3`  
+  `15 % 4 < 19 % 6`  
+  `3 * 5 <= 3**2 / 0.5`  
+  `2 + 8 % 7 >= 3 * 6 - 15`   
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  `2 * 4 == 24 / 3`  
+  `15 % 4 < 19 % 6`  
+  `3 * 5 <= pow(3, 2) / 0.5`  
+  `2 + 8 % 7 >= 3 * 6 - 15`  
+
+  </TabItem>
+</Tabs>
 
 1. Resolva as expressões a seguir, quanto a seu valor lógico.
-   1. `2 < 5 || 15 / 3 = = 5`
-   1. `F || (int) 20 / (18 / 3) != (int)(21 / 3) / 2`
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  `2 < 5 ou 15 / 3 == 5`  
+  `falso ou 20 / (18 / 3) != (21 / 3) / 2`  
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  `2 < 5 || 15 / 3 == 5`  
+  `false || 20.0 / (18.0 / 3) != (21.0 / 3) / 2`  
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  `2 < 5 or 15 / 3 == 5`  
+  `False or 20 / (18 / 3) != (21 / 3) / 2`   
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  `2 < 5 || 15 / 3 == 5`  
+  `0 || 20.0 / (18.0 / 3) != (21.0 / 3) / 2`  
+
+  </TabItem>
+</Tabs>
 
 1. Considerando as variáveis numéricas X, Y e Z, contendo os valores 2, 5 e 9, respectivamente, a
 variável literal NOME, contendo o literal "MARIA"; e a variável lógica SIM, contendo o valor
 lógico Verdadeiro (V), observar os resultados obtidos das expressões lógicas a seguir.
-   1. `X + Y > Z && NOME = = "MARIA"`
-   1. `SIM || Y >= X`
-   1. `!SIM && (int) Z / Y + 1 = = X`
-   1. `NOME=="JORGE"&& SIM || pow(X, 2) < Z + 10`
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  `X + Y > Z e NOME=="MARIA"`  
+  `SIM e Y >= X`  
+  `não SIM e Z / Y + 1 == X`  
+  `NOME=="JORGE" e SIM ou X**2 < Z + 10`  
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  `X + Y > Z && NOME=="MARIA"`  
+  `SIM || Y >= X`  
+  `!SIM && Z / Y + 1 == X`  
+  `NOME=="JORGE" && SIM || Math.pow(X, 2) < Z + 10` 
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  `X + Y > Z and NOME=="MARIA"`  
+  `SIM or Y >= X`  
+  `not SIM and Z / Y + 1 == X`  
+  `NOME=="JORGE" and SIM or X**2 < Z + 10`  
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  `X + Y > Z && strcmp(NOME,"MARIA")`  
+  `SIM || Y >= X`  
+  `!SIM && (int) Z / Y + 1 == X`  
+  `strcmp(NOME,"JORGE") && SIM || pow(X, 2) < Z + 10`  
+
+  </TabItem>
+</Tabs>
 
 1. Considerando A e C variáveis inteiras, contendo os valores, 1 e 8 e, B como uma variável real, com
 o valor 4.5; e TESTE variável lógica contendo o valor verdadeiro (V), determinar os resultados

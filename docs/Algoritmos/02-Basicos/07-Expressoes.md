@@ -250,7 +250,7 @@ escreva(valor_f);
   |`*` | multiplicação | `3*6 = 18` |
   |`/` | divisão | `11/2 = 5.5` |
   |`**` | potência. $x^y$ | `5**2 = 25` |
-  |`sqrt(x)` | raiz quadrada. $\sqrt{x}$ (`from math import sqrt`) | `sqrt(16) = 4.0` |
+  |`sqrt(x)` | raiz quadrada.<br/>$\sqrt{x}$<br/>(`from math import sqrt`) | `sqrt(16) = 4.0` |
   |`%` | resto da divisão inteira. | `20%6 = 2` |
   |`//` | quociente da divisão inteira.| `20//6 = 3` |
   
