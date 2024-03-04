@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
+#include <stdbool.h>
 
 int main(void)
 {
@@ -66,14 +67,64 @@ int main(void)
     ////////////////////////////
     // printf("%d\n", );
 
-    int X = 2, Y = 5, Z = 9;
-    char NOME[] = "MARIA";
-    int SIM = 1;
+    // int X = 2, Y = 5, Z = 9;
+    // char NOME[] = "MARIA";
+    // int SIM = 1;
 
-    printf("%d\n", X + Y > Z && strcmp(NOME,"MARIA"));
-    printf("%d\n", SIM || Y >= X);
-    printf("%d\n", !SIM && Z / Y + 1 == X);
-    printf("%d\n", strcmp(NOME,"JORGE") && SIM || pow(X, 2) < Z + 10);
+    // printf("%d\n", X + Y > Z && strcmp(NOME,"MARIA"));
+    // printf("%d\n", SIM || Y >= X);
+    // printf("%d\n", !SIM && Z / Y + 1 == X);
+    // printf("%d\n", strcmp(NOME,"JORGE") && SIM || pow(X, 2) < Z + 10);
+
+    ////////////////////////////
+    // printf("%d\n", );
+
+    // int A = 1, C = 8;
+    // float B = 4.5;
+    // int TESTE = 1;
+
+    // printf("%d\n", A == 1 && TESTE);
+    // printf("%d\n", A + C == sqrt(81) || TESTE != 0);
+    // printf("%d\n", !TESTE || C % 2 == 0.5);
+    // printf("%d\n", C < 10 || TESTE);
+    // printf("%d\n", TESTE && !TESTE);
+    // printf("%d\n", pow(A, 2) + sqrt(A + C) == 3 && (A + B > 13));
+
+    ////////////////////////////
+    // printf("%d\n", );
+    // int A = 2, B = 7;
+    // float C = 3.5;
+    // bool L = false;
+
+    // printf("%d\n", B == A * C && (L || true));
+    // printf("%d\n", B > A || B == pow(A, A));
+    // printf("%d\n", L && B / A >= C || !(A <= C));
+    // printf("%d\n", !L || true && sqrt(A + B) >= C);
+    // printf("%d\n", B / A == C || B / A != C);
+    // printf("%d\n", L || pow(B, A) <= C * 10 + A * B);
+    // printf("%d\n", !true || pow(3, 2) / 3 < 15 - 35 % 7);
+    // printf("%d\n", !(5 != 10 / 2) || true && 2 - 5 > 5 - 2 || true);
+    // printf("%d\n", pow(2, 4) != 4 + 2 || 2 + 3 * 5 / 3 % 5 > 0);
+
+
+    ////////////////////////////
+    // printf("%d\n", );
+
+    // int A=5, B=4, C=3, D=6;
+
+    // printf("%d\n", (A > C) && (C <= D));
+    // printf("%d\n", (A + B) > 10 || (A + B) == (C + D));
+    // printf("%d\n", (A - C) == 0 || !(D >= 99) && (B + 2) == 6);
+    // printf("%d\n", (A >= C) && (B >= C));
+
+    int A=3, B=7, C=4;
+
+    printf("%d\n", (A + C) > B);
+    printf("%d\n", B >= (A + 2));
+    printf("%d\n", C == (B - A));
+    printf("%d\n", (B + A) <= C);
+    printf("%d\n", (C + A) > B);
+
 
     return 0;
 }
