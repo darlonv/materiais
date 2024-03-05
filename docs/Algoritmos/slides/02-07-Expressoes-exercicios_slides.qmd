@@ -1,6 +1,7 @@
 ---
 title: "Expressões"
-author: "Algoritmos e Estruturas de Dados"
+subtitle: "Algoritmos e Estruturas de Dados"
+author: "Prof. Darlon Vasata"
 format: beamer
 ---
 
@@ -86,7 +87,8 @@ print(f'O sucessor de {valor} é {sucessor}', )
 
 ---
 
-1. Faça um programa que pergunta o nome do usuário, e em seguida mostra a frase "Boa tarde" seguida do nome do usuário.  
+## Exercício 1
+Faça um programa que pergunta o nome do usuário, e em seguida mostra a frase "Boa tarde" seguida do nome do usuário.  
 
 ---
 
@@ -100,6 +102,7 @@ print(f'O sucessor de {valor} é {sucessor}', )
 ---
 
 1. Pergunte um número ao usuário, e em seguida mostre a raiz quadrada e a raiz cúbica desse número.
+
 ---
 
 1. Escreva um programa que pergunte a quantidade de km percorridos por um carro alugado pelo usuário, assim como a quantidade de dias pelos quais o carro foi alugado. Calcule o preço a pagar, sabendo que o carro custa R\$ 60,00 por dia e R\$ 0,15 por km rodado.  
@@ -113,6 +116,7 @@ $$
 p = 2(b+h)
 a = bh
 $$  
+
 ---
 
 1. Pergunte ao usuário o valor do raio ($r$) de um círculo, e em seguida mostre o perímetro ($p$) e a área ($a$) desse círculo.
@@ -120,6 +124,7 @@ $$
 p = 2\pi r
 a = \pi r^2
 $$
+
 ---
 
 1. Faça  um  algoritmo  que  leia  três  notas ($N_1$, $N_2$ e $N_3$)  de  um  aluno,  calcule  e  escreva  a  média  final  deste  aluno. Considerar que a média ($M$) é ponderada e que o peso das notas é 2, 3 e 5. A equação para o cálculo da média final é: 
@@ -127,14 +132,17 @@ $$
 M = \frac{N_1 \times 2 + N_2 \times 3 + N_3 \times 5}{2+3+5}
 $$  
 (Fonte: CARVALHO, 2007)
+
 ---
 
 1. Faça um programa que solicite o preço de uma mercadoria e o percentual de desconto. Exiba o valor do desconto e o preço a pagar.  
 (Fonte: MENEZES 2019, pg. 72)
+
 ---
 
 1. Faça um programa que calcule o aumento de um salário. Ele deve solicitar o valor do salário e a porcentagem de aumento. Exiba o valor do aumento e do novo salário.  
 (Fonte: MENEZES 2019, pg. 72)
+
 ---
 
 1. Peça ao usuário que informe o valor de um boleto, o percentual de juros cobrado e o número de dias em atraso. O programa deve calcular o valor total a ser pago, utilizando a fórmula  
@@ -142,18 +150,22 @@ $$
 Total = Valor + Valor \times \frac{Juros}{100} \times Dias
 $$  
 (Adaptado de LOPES, 2011)
+
 ---
 
 1. Considere que houve uma eleição, na qual três candidatos concorreram ($C_a$, $C_b$ e $C_c$). O usuário deve informar quantos votos cada candidato recebeu e quantidade de votos brancos e nulos. O programa deve calcular e mostrar a quantidade total de eleitores, o percentual de votos que cada candidato recebeu, o percentual de votos brancos e o percentual de votos nulos. O cálculo dos percentuais é dado em relação ao total de votos da eleição.  
 (Adaptado de LOPES, 2011)
+
 ---
 
 1. O  custo  de  um  carro  novo  ao  consumidor  é  a  soma  do  custo  de  fábrica  com a  porcentagem  do distribuidor e dos impostos (aplicados ao custo de fábrica). Supondo que o percentual do distribuidor seja  de  28%  e  os  impostos  de  45%,  desenvolva  um  algoritmo que receba como entrada o valor do custo  de  fábrica  de  um  carro, e partir de disso calcule e mostre o custo final do carro ao consumidor.  
 (Adaptado de CARVALHO, 2007)
+
 ---
 
 1. Uma revendedora de carros usados paga a seus funcionários vendedores um salário fixo por mês, mais  uma  comissão  fixa  de 5% sobre o valor de todos os carros vendidos pelo funcionário. Escreva um algoritmo que receba como entrada o valor total de suas vendas e seu salário fixo, e em seguida calcula e apresenta o salário final do vendedor.  
   (Adaptado de CARVALHO, 2007).
+  
 ---
 
 1. Suponha que `A`, `B` e `C` são variáveis de tipo inteiro, com valores iguais a $5$, $10$ e $-8$, respectivamente, e uma variável real `D`, com valor de $1.5$. Quais serão os resultados das expressões aritméticas a seguir?  
@@ -198,6 +210,7 @@ $$
   `sqrt(pow(A, B / A)) + C * D`  
 
 :::
+
 ---
 
 1. Sendo P, Q e R variáveis de tipo inteiro, com valores iguais a 2, 3 e 12, respectivamente, e
@@ -284,6 +297,7 @@ expressões abaixo:
   `(R != S) || !(sqrt(R) < sqrt(X)) && (8327 * X * S * Z == 0)`  
 
 :::
+
 ---
 
 1. Resolva as expressões abaixo, apresentando o resultado final. Considere o valor de `PI` como $3,14$:
