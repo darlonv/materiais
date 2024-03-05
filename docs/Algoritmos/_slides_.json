@@ -7,7 +7,7 @@
         "PDF": true,
         "HTML": false
     },
-    "use_docker": true,
+    "use_docker": false,
     "marp_header": {
         "marp": "true",
         "_class": "lead",

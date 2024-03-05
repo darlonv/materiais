@@ -192,8 +192,8 @@ aritméticas abaixo?
   </TabItem>
   <TabItem value="java" label="Java">
 
-  `(int) ((100 * Q) / P + R)`  
-  `(int) S % (P - 1) - Q * R`  
+  `((100 * Q) / P + R)`  
+  `S % (P - 1) - Q * R`  
   `(P * R) % 5 - Q / 2`  
   `1 + Math.sqrt( Math.pow(P, 3) + 3 * R + 5)`  
   `1 + (int)((R + P) / Math.pow (Q, 2))`  
@@ -202,22 +202,22 @@ aritméticas abaixo?
   </TabItem>
   <TabItem value="python" label="Python">
 
-  `(int) ((100 * Q) / P + R)`  
-  `(int) S % (P - 1) - Q * R`  
+  `((100 * Q) / P + R)`  
+  `S % (P - 1) - Q * R`  
   `(P * R) % 5 - Q / 2`  
   `1 + sqrt( P**3 + 3 * R + 5)`  
-  `1 + (int)((R + P) / Q**2)`  
+  `1 + ((R + P) / Q**2)`  
   `sqrt(sqrt(16)) * 2**3` 
 
   </TabItem>
 
   <TabItem value="c" label="C">
 
-  `(int) ((100 * Q) / P + R)`  
-  `(int) S % (P - 1) - Q * R`  
+  `((100 * Q) / P + R)`  
+  `S % (P - 1) - Q * R`  
   `(P * R) % 5 - Q / 2`  
   `1 + sqrt( pow(P, 3) + 3 * R + 5)`  
-  `1 + (int)((R + P) / pow (Q, 2))`  
+  `1 + ((R + P) / pow (Q, 2))`  
   `sqrt(sqrt(16)) * pow(2, 3)`  
 
   </TabItem>
