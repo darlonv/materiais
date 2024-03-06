@@ -599,6 +599,8 @@ falsas.
   </TabItem>
 </Tabs>
 
+1. Desenvolva um algoritmo que recebe como entrada informações da hora e minuto inicial e final da partida de um determinado jogo. Com esses dados, informe a duração total do jogo, em horas e minutos (Obs: Para simplificação do problema, você pode considerar que o jogo sempre começa e termina no mesmo dia).
+
 <!-- marp hide -->
 
 ## Exercícios externos
