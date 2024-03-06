@@ -15,4 +15,21 @@ Os modelos em camadas servem para definir responsabilidades para os diferentes a
 
 ## OSI
 
+![](./images/camadas.svg)
+
+O Modelo OSI é composto por sete camadas distintas, numeradas de 1 a 7, que abrangem todas as etapas da comunicação em rede. Essas camadas são:
+
+- Camada de **Aplicação**: Fornece serviços de comunicação de alto nível para aplicativos.
+- Camada de **Apresentação**: Responsável pela tradução e formatação dos dados para que possam ser interpretados corretamente pelos aplicativos.
+- Camada de **Sessão**: Gerencia as sessões de comunicação entre aplicativos.
+- Camada de **Transporte**: Garante a entrega confiável e ordenada de dados entre sistemas finais.
+- Camada de **Rede**: Gerencia o roteamento de pacotes entre diferentes redes.
+- Camada de **Enlace** de Dados: Responsável pela detecção e correção de erros na transmissão de dados.
+- Camada **Física**: Lida com a transmissão de bits por meio de meios físicos.
+
+
+
+
+
+
 ## TCP/IP
