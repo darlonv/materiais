@@ -13,7 +13,7 @@ Nesta versão, temos uma aplicação simples cliente/servidor, em que o cliente 
 <Tabs groupId='cliente-servidor'>
 <TabItem value="cliente" label="Cliente">
 
-- `sockets_client.py`
+- `sockets_client_v1.py`
 
 ```python
 import socket
@@ -50,7 +50,7 @@ client.close()
 </TabItem>
 <TabItem value="servidor" label="Servidor">
 
-- `sockets_server.py`:
+- `sockets_server_v1.py`:
 
 ```python
 #Biblioteca sockets
@@ -115,7 +115,7 @@ Nesta versão, temos uma aplicação cliente/servidor, em que o cliente envia um
 <Tabs groupId='cliente-servidor'>
 <TabItem value="cliente" label="Cliente">
 
-- `sockets_client.py`
+- `sockets_client_v2.py`
 
 ```python
 import socket
@@ -152,7 +152,7 @@ client.close()
 </TabItem>
 <TabItem value="servidor" label="Servidor">
 
-- `sockets_server.py`:
+- `sockets_server_v2.py`:
 
 ```python
 #Biblioteca sockets
@@ -200,3 +200,9 @@ while True:
 </TabItem>
 
 </Tabs>
+
+## App v3
+
+Nesta versão, temos uma aplicação cliente/servidor, em que o cliente envia uma mensagem ao servidor e o servidor responde com outra mensagem. 
+- Cliente: envia uma mensagem ao servidor
+- Servidor: responde uma mensagem ao cliente. Após responder, aguarda por uma nova conexão. Caso a porta não esteja liberada, servidor aguarda até que a porta esteja disponível, por um número limitado de vezes.
