@@ -15,7 +15,14 @@ Os modelos em camadas servem para definir responsabilidades para os diferentes a
 
 ## OSI
 
-![](./images/camadas.svg)
+
+<div style={{textAlign: 'center'}}>
+
+![Camadas do modelo OSI. Cada camada está dentro de um retângulo, onde estão organizados verticalmente. 7 camadas, do topo para baixo: aplicação, apresentação, sessão, transporte, rede. enlace e física.](./images/01-osi.png)
+
+</div>
+
+Figura: Camadas do modelo OSI.
 
 O Modelo OSI é composto por sete camadas distintas, numeradas de 1 a 7, que abrangem todas as etapas da comunicação em rede. Essas camadas são:
 
