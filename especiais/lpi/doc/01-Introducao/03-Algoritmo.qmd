@@ -10,7 +10,7 @@ Junto à idéia de algoritmo vem a noção de **ordem**, na execução dos passo
 <details>
   <summary>Resposta</summary>
 
-```bash showLineNumbers
+```bash
 pegar uma escada
 colocar a escada abaixo da lâmpada
 pegar uma lâmpada nova
@@ -23,9 +23,9 @@ colocar a lâmpada nova
 
 **Exercício**
 
-Abaixo há um algoritmo para trocar uma lâmpada.
-- Ele resolve o problema?
-- O que há de errado?
+- Abaixo há um algoritmo para trocar uma lâmpada.  
+  - Ele resolve o problema?  
+  - O que há de errado?
 
 ```
 colocar a escada abaixo da lâmpada

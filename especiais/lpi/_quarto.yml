@@ -10,6 +10,8 @@ book:
     - doc/01-Introducao/01-intro.qmd
     - doc/01-Introducao/02-Logica_de_programacao.qmd
     - doc/01-Introducao/03-Algoritmo.qmd
+    - doc/01-Introducao/04-Linguagem_de_programacao.qmd
+    - doc/02-Basicos/02-Entrada_saida.qmd
     - summary.qmd
     - references.qmd
 
