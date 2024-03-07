@@ -36,9 +36,10 @@ colocar a lâmpada nova
 pegar uma lâmpada nova
 ```
 
-```{dropdown} Resposta
-A ordem está incorreta. O algoritmo não resolve o problema, visto que não irá executar corretamente.
-```
+<details>
+  <summary>Resposta</summary>
+A ordem está incorreta. Desta forma, o algoritmo não resolve o problema.
+</details>
 
 **Exercícios**
 

@@ -22,11 +22,11 @@
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "2  Summary",
+    "title": "4  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Summary</span>"
     ]
   },
   {
@@ -84,7 +84,7 @@
     "href": "doc/01-Introducao/03-Algoritmo.html",
     "title": "3  Algoritmo",
     "section": "",
-    "text": "Um algoritmo é uma sequência de passos organizada, de maneira que a execução dos passos possibilita atingir um objetivo.\nJunto à idéia de algoritmo vem a noção de ordem, na execução dos passos.\nExemplo - Como faríamos para trocar uma lâmpada?\n\n\nResposta\n\nbash showLineNumbers pegar uma escada colocar a escada abaixo da lâmpada pegar uma lâmpada nova subir na escada retirar a lâmpada velha colocar a lâmpada nova\n\nExercício\nAbaixo há um algoritmo para trocar uma lâmpada. - Ele resolve o problema? - O que há de errado?\ncolocar a escada abaixo da lâmpada\npegar uma escada\nretirar a lâmpada velha\nsubir na escada\ncolocar a lâmpada nova\npegar uma lâmpada nova\nwukppdhvhw Resposta A ordem está incorreta. O algoritmo não resolve o problema, visto que não irá executar corretamente.\nExercícios\n\nDesenvolva um algoritmo para fazer gelo.\nDesenvolva um algoritmo para fazer café.\nDesenvolva um algoritmo para trocar o pneu de um carro.",
+    "text": "Um algoritmo é uma sequência de passos organizada, de maneira que a execução dos passos possibilita atingir um objetivo.\nJunto à idéia de algoritmo vem a noção de ordem, na execução dos passos.\nExemplo - Como faríamos para trocar uma lâmpada?\n\n\nResposta\n\nbash showLineNumbers pegar uma escada colocar a escada abaixo da lâmpada pegar uma lâmpada nova subir na escada retirar a lâmpada velha colocar a lâmpada nova\n\nExercício\nAbaixo há um algoritmo para trocar uma lâmpada. - Ele resolve o problema? - O que há de errado?\ncolocar a escada abaixo da lâmpada\npegar uma escada\nretirar a lâmpada velha\nsubir na escada\ncolocar a lâmpada nova\npegar uma lâmpada nova\n\n\nResposta\n\nA ordem está incorreta. Desta forma, o algoritmo não resolve o problema.\n\nExercícios\n\nDesenvolva um algoritmo para fazer gelo.\nDesenvolva um algoritmo para fazer café.\nDesenvolva um algoritmo para trocar o pneu de um carro.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Algoritmo</span>"
     ]
