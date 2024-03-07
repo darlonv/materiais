@@ -1,0 +1,92 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lpi",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "crumbs": [
+      "Preface"
+    ]
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introdução",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "2  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "References"
+    ]
+  },
+  {
+    "objectID": "00-intro.html",
+    "href": "00-intro.html",
+    "title": "1  Introdução",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "doc/01-Introducao/01-intro.html",
+    "href": "doc/01-Introducao/01-intro.html",
+    "title": "1  Introdução",
+    "section": "",
+    "text": "Material desenvolvido como apoio para a unidade curricular de Linguagem de Programação I.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introdução</span>"
+    ]
+  },
+  {
+    "objectID": "doc/01-Introducao/02-Logica_de_programacao.html",
+    "href": "doc/01-Introducao/02-Logica_de_programacao.html",
+    "title": "2  Lógica de programação",
+    "section": "",
+    "text": "O quê é a lógica?\nEstuda a “correção do raciocínio”, tem em vista a “ordem da razão”\n(Forbellone, 2006, pg 1).\nExemplos\nTodo mamífero é um animal.\nTodo cavalo é um mamífero.\nPortanto, Todo cavalo é um animal\n(Forbellone, 2006, pg 1)\nParaná um estado do Brasil.\nTodos os cascavelenses são paranaenses.\nLogo, todos os cascavelenses são brasileiros.\nA Lógica de programação consiste na ordem da razão e organização de processos de raciocínio e simbolização formais na programação de sistemas computacionais.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lógica de programação</span>"
+    ]
+  },
+  {
+    "objectID": "doc/01-Introducao/02-Logica_de_programacao.html#algoritmo",
+    "href": "doc/01-Introducao/02-Logica_de_programacao.html#algoritmo",
+    "title": "2  Lógica de programação",
+    "section": "",
+    "text": "Resposta\n\nbash showLineNumbers pegar uma escada colocar a escada abaixo da lâmpada pegar uma lâmpada nova subir na escada retirar a lâmpada velha colocar a lâmpada nova\n\nflowchart TD;\n  inicio(Início)\n  processamento[\"Pegar uma escada\"&lt;br&gt;colocar a escada abaixo da lampada&lt;br&gt;pegar uma lampada nova&lt;br&gt;subir na escada&lt;br&gt;retirar a lampada velha&lt;br&gt;colocar a lampada nova]\n  fim(Fim)\n  inicio --&gt; processamento\n  processamento --&gt;fim\n\n\ncolocar a escada abaixo da lâmpada\npegar uma escada\nretirar a lâmpada velha\nsubir na escada\ncolocar a lâmpada nova\npegar uma lâmpada nova\n\n\n\n\n\n\nDesenvolva um algoritmo para fazer café.\nDesenvolva um algoritmo para fazer um omelete.\nDesenvolva um algoritmo para trocar o pneu de um carro.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lógica de programação</span>"
+    ]
+  },
+  {
+    "objectID": "doc/01-Introducao/03-Algoritmo.html",
+    "href": "doc/01-Introducao/03-Algoritmo.html",
+    "title": "3  Algoritmo",
+    "section": "",
+    "text": "Um algoritmo é uma sequência de passos organizada, de maneira que a execução dos passos possibilita atingir um objetivo.\nJunto à idéia de algoritmo vem a noção de ordem, na execução dos passos.\nExemplo - Como faríamos para trocar uma lâmpada?\n\n\nResposta\n\nbash showLineNumbers pegar uma escada colocar a escada abaixo da lâmpada pegar uma lâmpada nova subir na escada retirar a lâmpada velha colocar a lâmpada nova\n\nExercício\nAbaixo há um algoritmo para trocar uma lâmpada. - Ele resolve o problema? - O que há de errado?\ncolocar a escada abaixo da lâmpada\npegar uma escada\nretirar a lâmpada velha\nsubir na escada\ncolocar a lâmpada nova\npegar uma lâmpada nova\nwukppdhvhw Resposta A ordem está incorreta. O algoritmo não resolve o problema, visto que não irá executar corretamente.\nExercícios\n\nDesenvolva um algoritmo para fazer gelo.\nDesenvolva um algoritmo para fazer café.\nDesenvolva um algoritmo para trocar o pneu de um carro.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Algoritmo</span>"
+    ]
+  }
+]

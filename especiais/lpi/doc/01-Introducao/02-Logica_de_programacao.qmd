@@ -1,0 +1,23 @@
+# Lógica de programação
+
+O quê é a lógica?
+
+Estuda a "correção do raciocínio", tem em vista a "ordem da razão"  
+(Forbellone, 2006, pg 1).
+
+**Exemplos**
+```
+Todo mamífero é um animal.
+Todo cavalo é um mamífero.
+Portanto, Todo cavalo é um animal
+```
+(Forbellone, 2006, pg 1)
+
+```
+Paraná um estado do Brasil.
+Todos os cascavelenses são paranaenses.
+Logo, todos os cascavelenses são brasileiros.
+```
+
+A Lógica de programação consiste na ordem da razão e organização de processos de raciocínio e simbolização formais na programação de sistemas computacionais.
+

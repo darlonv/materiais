@@ -1,0 +1,25 @@
+project:
+  type: book
+
+book:
+  title: "Lpi"
+  author: "Norah Jones"
+  date: "07/03/2024"
+  chapters:
+    - index.qmd
+    - doc/01-Introducao/01-intro.qmd
+    - doc/01-Introducao/02-Logica_de_programacao.qmd
+    - doc/01-Introducao/03-Algoritmo.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+
+
