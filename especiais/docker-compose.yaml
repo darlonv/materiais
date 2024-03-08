@@ -24,3 +24,13 @@ services:
     working_dir: /data
     #render 2x, in case of terminating existing servers
     command: quarto render ${PROJECT} && quarto render ${PROJECT}
+
+  slides:
+    image: darlon/quarto-full
+    container_name: quarto_slides
+    profiles: [ 'render', 'pdf' ]
+    volumes:
+      - ./${PROJECT}/doc/slides:/data
+    working_dir: /data
+    #render 2x, in case of terminating existing servers
+    command: ./gen_slides.sh

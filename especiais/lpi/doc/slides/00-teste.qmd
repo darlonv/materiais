@@ -1,0 +1,31 @@
+---
+title: "Teste"
+author: "John Doe"
+format: revealjs
+---
+
+# Teste
+
+Teste de profiles
+
+antes testes
+
+---
+
+::: {.content-visible when-profile="java"}
+This content will only appear in the java version.
+:::
+
+::: {.content-visible when-profile="python"}
+This content will only appear in the python version.
+:::
+
+::: {.content-visible when-profile="c"}
+This content will only appear in the c version.
+:::
+
+---
+
+depois testes
+
+---
