@@ -1,0 +1,13 @@
+# FROM analythium/r2u-quarto:20.04
+FROM ubuntu
+RUN apt update 
+RUN apt -y install wget
+
+#Quarto for linux
+RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.551/quarto-1.4.551-linux-amd64.deb
+RUN apt -y install ./quarto-1.4.551-linux-amd64.deb
+
+#arm
+#RUN wget https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.551/quarto-1.4.551-linux-arm64.deb
+#RUN apt -y install ./quarto-1.4.551-linux-arm64.deb
+
