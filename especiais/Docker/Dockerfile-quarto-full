@@ -1,0 +1,14 @@
+# FROM analythium/r2u-quarto:20.04
+FROM darlon/quarto
+RUN apt -y install ./quarto-1.4.551-linux-amd64.deb
+RUN apt -y install texlive-xetex
+RUN apt -y install texlive-fonts-extra
+RUN apt -y install texlive-fonts-recommended
+RUN apt -y install lmodern
+
+# RUN  apt -y install texlive-latex-extra
+# RUN  apt -y install texlive-latex-recommended
+
+#Pdf com tinytex. problema: updates a cada uso
+# RUN quarto install tool tinytex
+# RUN quarto update tinytex

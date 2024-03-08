@@ -24,6 +24,6 @@ Elabore um algoritmo que mova três discos de uma Torre de Hanói, que consiste 
 -  Utilize a função `movimentar(de, para)`, que movimenta o disco que está no topo da haste `de` e o coloca no topo da haste `para`. Apenas o disco que está no topo da haste de origem é movimentado.  
 
 
-![Torre de Hanói 3 discos](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Linalg_towers_of_hanoi_1.png/800px-Linalg_towers_of_hanoi_1.png)  
-Imagem: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Linalg_towers_of_hanoi_1.png)  
+<!-- ![Torre de Hanói 3 discos](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Linalg_towers_of_hanoi_1.png/800px-Linalg_towers_of_hanoi_1.png)   -->
+<!-- Imagem: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Linalg_towers_of_hanoi_1.png)   -->
 

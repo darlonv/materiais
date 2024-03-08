@@ -1,0 +1,11 @@
+# Teste
+
+Teste de profiles
+
+antes testes
+
+::: {.content-visible when-profile="java"}
+This content will only appear in the java version.
+:::
+
+depois testes

@@ -19,17 +19,10 @@ book:
     - part: "Introdução"
       chapters:
         - doc/01-Introducao/00-teste.qmd
-        - doc/01-Introducao/01-intro.qmd
-        - doc/01-Introducao/02-Logica_de_programacao.qmd
-        - doc/01-Introducao/03-Algoritmo.qmd
-        - doc/01-Introducao/04-Linguagem_de_programacao.qmd
-            
-    - summary.qmd
-    # - references.qmd
 
   
 
-bibliography: references.bib
+# bibliography: references.bib
 
 format:
   html:

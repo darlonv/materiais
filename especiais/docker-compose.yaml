@@ -1,0 +1,26 @@
+version: '3'
+services:
+
+  #quarto preview
+  preview:
+    # image: analythium/r2u-quarto:20.04
+    image: darlon/quarto
+    container_name: quarto_preview
+    # profiles: [ 'init', 'all' ]
+    volumes:
+      - ./:/data
+    ports:
+      - 4200:4200
+    working_dir: /data
+    command: quarto preview ${PROJECT}
+
+  #quarto render
+  render:
+    image: darlon/quarto-full
+    container_name: quarto_render
+    profiles: [ 'render', 'pdf' ]
+    volumes:
+      - ./:/data
+    working_dir: /data
+    #render 2x, in case of terminating existing servers
+    command: quarto render ${PROJECT} && quarto render ${PROJECT}
