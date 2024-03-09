@@ -10,7 +10,7 @@ LANGUAGE=("pseudocodigo" "java" "python" "c")
 echo ${FORMAT_PDF[@]}
 echo ${FORMAT_HTML[@]}
 
-for file in *.qmd
+for file in $(cat render_slides.txt)
 do
     for format in ${FORMAT_PDF[@]}
     do
@@ -25,10 +25,7 @@ do
             mv ${file%qmd}pdf "${format}/${language}/"
         done
     done
-done
-
-for file in *.qmd
-do
+    
     for format in ${FORMAT_HTML[@]}
     do
         # echo ${format}
