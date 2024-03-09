@@ -28,7 +28,7 @@ services:
   slides:
     image: darlon/quarto-full
     container_name: quarto_slides
-    profiles: [ 'render', 'pdf' ]
+    profiles: [ 'render', 'slides' ]
     volumes:
       - ./${PROJECT}/doc/slides:/data
     working_dir: /data
