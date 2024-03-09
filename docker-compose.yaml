@@ -25,7 +25,7 @@ services:
   build:
     image: node:19-slim
     container_name: materiais-build
-    profiles: ['build']
+    profiles: [ 'build' ]
     volumes:
       - ./:/src
     working_dir: /src
@@ -56,3 +56,13 @@ services:
   #   volumes:
   #     - /var/run/docker.sock:/var/run/docker.sock
   #     - ./portainer:/data 
+
+  slides-algoritmos:
+    image: darlon/quarto-full
+    container_name: quarto_slides_algoritmos
+    profiles: [ 'render', 'slides' ]
+    volumes:
+      - ./docs/Algoritmos/slides:/data
+    working_dir: /data
+    #render 2x, in case of terminating existing servers
+    command: ./gen_slides.sh
