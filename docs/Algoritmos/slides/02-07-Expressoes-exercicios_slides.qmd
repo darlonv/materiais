@@ -14,11 +14,11 @@ format:
 1. Faça um programa que pergunta um número ao usuário, e em seguida mostra o antecessor e o sucessor desse número.  
 
 <details>
-  <summary>Resposta</summary>
+<summary>Resposta</summary>
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
-  ```c
+```c
 inicio;
 //variaveis
 inteiro valor;
@@ -37,12 +37,12 @@ escreva("O antecessor de ", valor, " é: ", antecessor);
 escreva("O sucessor de ", valor, " é:", sucessor);
 
 fim;
-  ```
+```
 :::
 
 ::: {.content-visible when-profile="java"}
 
-  ```c
+```c
 //Variáveis
 int valor;
 int antecessor, sucessor;
@@ -61,13 +61,13 @@ sucessor = valor +1;
 //Saída
 System.out.printf("O antecessor de %d é %d\n", valor, antecessor);
 System.out.printf("O sucessor de %d é %d\n", valor, sucessor);
-  ```
+```
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-  ```python
+```python
 #Entrada
 print('Digite um número')
 valor = input()
@@ -80,7 +80,7 @@ sucessor = valor +1
 #Saída
 print(f'O antecessor de {valor} é {antecessor}', )
 print(f'O sucessor de {valor} é {sucessor}', )
-  ```
+```
 
 
 :::
@@ -90,8 +90,7 @@ print(f'O sucessor de {valor} é {sucessor}', )
 
 ---
 
-## Exercício 1
-Faça um programa que pergunta o nome do usuário, e em seguida mostra a frase "Boa tarde" seguida do nome do usuário.  
+1. Faça um programa que pergunta o nome do usuário, e em seguida mostra a frase "Boa tarde" seguida do nome do usuário.  
 
 ---
 
@@ -113,8 +112,6 @@ Faça um programa que pergunta o nome do usuário, e em seguida mostra a frase "
 (Fonte: MENEZES 2019, pg. 72)
 
 ---
-
-# formula
 
 1. Escreva um programa para ler as dimensões de um retângulo, com o tamanho da base ($b$) e da altura ($h$). Calcule o mostre o perímetro ($p$) e área ($a$) desse retângulo.  
 
@@ -171,54 +168,54 @@ $$
 ---
 
 1. Uma revendedora de carros usados paga a seus funcionários vendedores um salário fixo por mês, mais  uma  comissão  fixa  de 5% sobre o valor de todos os carros vendidos pelo funcionário. Escreva um algoritmo que receba como entrada o valor total de suas vendas e seu salário fixo, e em seguida calcula e apresenta o salário final do vendedor.  
-  (Adaptado de CARVALHO, 2007).
-  
+(Adaptado de CARVALHO, 2007).
+
 ---
 
 1. Suponha que `A`, `B` e `C` são variáveis de tipo inteiro, com valores iguais a $5$, $10$ e $-8$, respectivamente, e uma variável real `D`, com valor de $1.5$. Quais serão os resultados das expressões aritméticas a seguir?  
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
-  `2 * A % 3 - C`  
-  `(sqrt(-2 * C) / 4)`  
-  `((20 / 3) / 3) + pow(2, 8) / 2`  
-  `(30 % 4 * pow(3, 3)) * (-1)`  
-  `pow(-C, 2) + (D * 10) / A`  
-  `sqrt(pow(A, B/A)) + C * D`  
+`2 * A % 3 - C`  
+`(sqrt(-2 * C) / 4)`  
+`((20 / 3) / 3) + pow(2, 8) / 2`  
+`(30 % 4 * pow(3, 3)) * (-1)`  
+`pow(-C, 2) + (D * 10) / A`  
+`sqrt(pow(A, B/A)) + C * D`  
 
 :::
 
 ::: {.content-visible when-profile="java"}
 
-  `2 * A % 3 - C`  
-  `Math.sqrt(-2 * C) / 4`  
-  `((20 / 3) / 3) + Math.pow(2, 8) / 2`  
-  `(30 % 4 * Math.pow(3, 3)) * (-1)`  
-  `Math.pow(-C, 2) + (D * 10) / A`  
-  `Math.sqrt(Math.pow(A, B/A)) + C * D`  
+`2 * A % 3 - C`  
+`Math.sqrt(-2 * C) / 4`  
+`((20 / 3) / 3) + Math.pow(2, 8) / 2`  
+`(30 % 4 * Math.pow(3, 3)) * (-1)`  
+`Math.pow(-C, 2) + (D * 10) / A`  
+`Math.sqrt(Math.pow(A, B/A)) + C * D`  
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-  `2 * A % 3 - C`  
-  `sqrt(-2 * C) / 4`  
-  `((20 / 3) / 3) + 2**8 / 2`  
-  `(30 % 4 * 3**3) * (-1)`  
-  `-C**2 + (D * 10) / A`  
-  `sqrt(A**(B/A)) + C * D`  
+`2 * A % 3 - C`  
+`sqrt(-2 * C) / 4`  
+`((20 / 3) / 3) + 2**8 / 2`  
+`(30 % 4 * 3**3) * (-1)`  
+`-C**2 + (D * 10) / A`  
+`sqrt(A**(B/A)) + C * D`  
 
 
 :::
 
 ::: {.content-visible when-profile="c"}
 
-  `2 * A % 3 - C`  
-  `sqrt(-2 * C) / 4`  
-  `((20.0 / 3) / 3) + 2**8 / 2`  
-  `(30 % 4 * 3**3) * (-1)`  
-  `pow(-C, 2) + (d * 10) / A`  
-  `sqrt(pow(A, B / A)) + C * D`  
+`2 * A % 3 - C`  
+`sqrt(-2 * C) / 4`  
+`((20.0 / 3) / 3) + 2**8 / 2`  
+`(30 % 4 * 3**3) * (-1)`  
+`pow(-C, 2) + (d * 10) / A`  
+`sqrt(pow(A, B / A)) + C * D`  
 
 :::
 
@@ -231,44 +228,44 @@ aritméticas abaixo?
 ::: {.content-visible when-profile="pseudocodigo"}
 
 
-  `((100 * Q) / P + R)`  
-  `S % (P - 1) - Q * R`  
-  `(P * R) % 5 - Q / 2`  
-  `1 + rad( pot(P, 3) + 3 * R + 5)`  
-  `1 + ((R + P) / pot (Q, 2))`  
-  `rad(rad(16)) * pot(2, 3)` 
+`((100 * Q) / P + R)`  
+`S % (P - 1) - Q * R`  
+`(P * R) % 5 - Q / 2`  
+`1 + rad( pot(P, 3) + 3 * R + 5)`  
+`1 + ((R + P) / pot (Q, 2))`  
+`rad(rad(16)) * pot(2, 3)` 
 
 :::
 
 ::: {.content-visible when-profile="java"}
 
-  `((100 * Q) / P + R)`  
-  `S % (P - 1) - Q * R`  
-  `(P * R) % 5 - Q / 2`  
-  `1 + Math.sqrt( Math.pow(P, 3) + 3 * R + 5)`  
-  `1 + (int)((R + P) / Math.pow (Q, 2))`  
-  `Math.sqrt(Math.sqrt(16)) * Math.pow(2, 3)` 
+`((100 * Q) / P + R)`  
+`S % (P - 1) - Q * R`  
+`(P * R) % 5 - Q / 2`  
+`1 + Math.sqrt( Math.pow(P, 3) + 3 * R + 5)`  
+`1 + (int)((R + P) / Math.pow (Q, 2))`  
+`Math.sqrt(Math.sqrt(16)) * Math.pow(2, 3)` 
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-  `((100 * Q) / P + R)`  
-  `S % (P - 1) - Q * R`  
-  `(P * R) % 5 - Q / 2`  
-  `1 + sqrt( P**3 + 3 * R + 5)`  
-  `1 + ((R + P) / Q**2)`  
-  `sqrt(sqrt(16)) * 2**3` 
+`((100 * Q) / P + R)`  
+`S % (P - 1) - Q * R`  
+`(P * R) % 5 - Q / 2`  
+`1 + sqrt( P**3 + 3 * R + 5)`  
+`1 + ((R + P) / Q**2)`  
+`sqrt(sqrt(16)) * 2**3` 
 :::
 
 ::: {.content-visible when-profile="c"}
 
-  `((100 * Q) / P + R)`  
-  `S % (P - 1) - Q * R`  
-  `(P * R) % 5 - Q / 2`  
-  `1 + sqrt( pow(P, 3) + 3 * R + 5)`  
-  `1 + ((R + P) / pow (Q, 2))`  
-  `sqrt(sqrt(16)) * pow(2, 3)`  
+`((100 * Q) / P + R)`  
+`S % (P - 1) - Q * R`  
+`(P * R) % 5 - Q / 2`  
+`1 + sqrt( pow(P, 3) + 3 * R + 5)`  
+`1 + ((R + P) / pow (Q, 2))`  
+`sqrt(sqrt(16)) * pow(2, 3)`  
 
 :::
 
@@ -281,37 +278,37 @@ expressões abaixo:
 
 ### Pseudocódigo
 
-  `(R >=5) ou (T > Z) e (X - Y + R > 3 * Z)`  
-  `(T + 3 >= 4) e !(3 * R/2 < S * 3)`  
-  `(X == 2) ou (Y = 1) e ((Z == 0) ou (R > 3) e (S < 10))`  
-  `(R != S) ou !(sqrt(R) < sqrt(X)) e (8327 * X * S * Z == 0)` 
+`(R >=5) ou (T > Z) e (X - Y + R > 3 * Z)`  
+`(T + 3 >= 4) e !(3 * R/2 < S * 3)`  
+`(X == 2) ou (Y = 1) e ((Z == 0) ou (R > 3) e (S < 10))`  
+`(R != S) ou !(sqrt(R) < sqrt(X)) e (8327 * X * S * Z == 0)` 
 
 :::
 
 ::: {.content-visible when-profile="java"}
 
-  `(R >=5) || (T > Z) && (X - Y + R > 3 * Z)`  
-  `(T + 3 >= 4) && !(3 * R/2 < S * 3)`  
-  `(X == 2) || (Y == 1) && ((Z == 0) || (R > 3) && (S < 10))`  
-  `(R != S) || !(Math.sqrt(R) < Math.sqrt(X)) && (8327 * X * S * Z == 0)` 
+`(R >=5) || (T > Z) && (X - Y + R > 3 * Z)`  
+`(T + 3 >= 4) && !(3 * R/2 < S * 3)`  
+`(X == 2) || (Y == 1) && ((Z == 0) || (R > 3) && (S < 10))`  
+`(R != S) || !(Math.sqrt(R) < Math.sqrt(X)) && (8327 * X * S * Z == 0)` 
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-  `(R >=5) or (T > Z) and (X - Y + R > 3 * Z)`  
-  `(T + 3 >= 4) and not(3 * R/2 < S * 3)`  
-  `(X == 2) or (Y == 1) and ((Z == 0) or (R > 3) and (S < 10))`  
-  `(R != S) or not sqrt(R) < sqrt(X) and (8327 * X * S * Z == 0)`  
+`(R >=5) or (T > Z) and (X - Y + R > 3 * Z)`  
+`(T + 3 >= 4) and not(3 * R/2 < S * 3)`  
+`(X == 2) or (Y == 1) and ((Z == 0) or (R > 3) and (S < 10))`  
+`(R != S) or not sqrt(R) < sqrt(X) and (8327 * X * S * Z == 0)`  
 
 :::
 
 ::: {.content-visible when-profile="c"}
 
-  `(R >=5) || (T > Z) && (X - Y + R > 3 * Z)`  
-  `(T + 3 >= 4) && !(3 * R/2 < S * 3)`  
-  `(X == 2) || (Y = 1) && ((Z == 0) || (R > 3) && (S < 10))`  
-  `(R != S) || !(sqrt(R) < sqrt(X)) && (8327 * X * S * Z == 0)`  
+`(R >=5) || (T > Z) && (X - Y + R > 3 * Z)`  
+`(T + 3 >= 4) && !(3 * R/2 < S * 3)`  
+`(X == 2) || (Y = 1) && ((Z == 0) || (R > 3) && (S < 10))`  
+`(R != S) || !(sqrt(R) < sqrt(X)) && (8327 * X * S * Z == 0)`  
 
 :::
 
@@ -322,49 +319,49 @@ expressões abaixo:
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
-  `(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`  
-  `26.0 / 6.0 / 2.0`  
-  `7 % 4 - 8 / (3 + 1)`  
-  `(5 != 2) ou não(7 > 4) e (4 <= PI)`  
-  `((18 / 3) == 5) e sqrt(100) == 11`  
-  `(12 >= 5 * 2) e (4 * 5 > 24 / 6)`  
-  `(2 >= 5) e não(6 <= 2 * 3) ou (10 != 10)`  
+`(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`  
+`26.0 / 6.0 / 2.0`  
+`7 % 4 - 8 / (3 + 1)`  
+`(5 != 2) ou não(7 > 4) e (4 <= PI)`  
+`((18 / 3) == 5) e sqrt(100) == 11`  
+`(12 >= 5 * 2) e (4 * 5 > 24 / 6)`  
+`(2 >= 5) e não(6 <= 2 * 3) ou (10 != 10)`  
 
 :::
 
 ::: {.content-visible when-profile="java"}
 
-  `(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`  
-  `26.0 / 6.0 / 2.0`  
-  `7 % 4 - 8 / (3 + 1)`  
-  `(5 != 2) || !(7 > 4) && (4 <= PI)`  
-  `((18 / 3) == 5) && Math.sqrt(100) == 11`  
-  `(12 >= 5 * 2) && (4 * 5 > 24 / 6)`  
-  `(2 >= 5) && !(6 <= 2 * 3) || (10 != 10)`  
+`(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`  
+`26.0 / 6.0 / 2.0`  
+`7 % 4 - 8 / (3 + 1)`  
+`(5 != 2) || !(7 > 4) && (4 <= PI)`  
+`((18 / 3) == 5) && Math.sqrt(100) == 11`  
+`(12 >= 5 * 2) && (4 * 5 > 24 / 6)`  
+`(2 >= 5) && !(6 <= 2 * 3) || (10 != 10)`  
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-  `(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`  
-  `26.0 / 6.0 / 2.0`  
-  `7 % 4 - 8 / (3 + 1)`  
-  `(5 != 2) or not(7 > 4) and (4 <= PI)`  
-  `((18 / 3) == 5) and sqrt(100) == 11`  
-  `(12 >= 5 * 2) and (4 * 5 > 24 / 6)`  
-  `(2 >= 5) and not(6 <= 2 * 3) or (10 != 10)`   
+`(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`  
+`26.0 / 6.0 / 2.0`  
+`7 % 4 - 8 / (3 + 1)`  
+`(5 != 2) or not(7 > 4) and (4 <= PI)`  
+`((18 / 3) == 5) and sqrt(100) == 11`  
+`(12 >= 5 * 2) and (4 * 5 > 24 / 6)`  
+`(2 >= 5) and not(6 <= 2 * 3) or (10 != 10)`   
 
 :::
 
 ::: {.content-visible when-profile="c"}
 
-  `(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`  
-  `26.0 / 6.0 / 2.0`  
-  `7 % 4 - 8 / (3 + 1)`  
-  `(5 != 2) || !(7 > 4) && (4 <= PI)`  
-  `((18 / 3) == 5) && sqrt(100) == 11`  
-  `(12 >= 5 * 2) && (4 * 5 > 24 / 6)`  
-  `(2 >= 5) && !(6 <= 2 * 3) || (10 != 10)`  
+`(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`  
+`26.0 / 6.0 / 2.0`  
+`7 % 4 - 8 / (3 + 1)`  
+`(5 != 2) || !(7 > 4) && (4 <= PI)`  
+`((18 / 3) == 5) && sqrt(100) == 11`  
+`(12 >= 5 * 2) && (4 * 5 > 24 / 6)`  
+`(2 >= 5) && !(6 <= 2 * 3) || (10 != 10)`  
 
 :::
 
@@ -374,37 +371,37 @@ expressões abaixo:
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
-  `2 * 4 == 24 / 3`  
-  `15 % 4 < 19 % 6`  
-  `3 * 5 <= pot(3, 2) / 0.5`  
-  `2 + 8 % 7 >= 3 * 6 - 15`  
+`2 * 4 == 24 / 3`  
+`15 % 4 < 19 % 6`  
+`3 * 5 <= pot(3, 2) / 0.5`  
+`2 + 8 % 7 >= 3 * 6 - 15`  
 
 :::
 
 ::: {.content-visible when-profile="java"}
 
-  `2 * 4 == 24 / 3`  
-  `15 % 4 < 19 % 6`  
-  `3 * 5 <= Math.pow(3, 2) / 0.5`  
-  `2 + 8 % 7 >= 3 * 6 - 15`   
+`2 * 4 == 24 / 3`  
+`15 % 4 < 19 % 6`  
+`3 * 5 <= Math.pow(3, 2) / 0.5`  
+`2 + 8 % 7 >= 3 * 6 - 15`   
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-  `2 * 4 == 24 / 3`  
-  `15 % 4 < 19 % 6`  
-  `3 * 5 <= 3**2 / 0.5`  
-  `2 + 8 % 7 >= 3 * 6 - 15`   
+`2 * 4 == 24 / 3`  
+`15 % 4 < 19 % 6`  
+`3 * 5 <= 3**2 / 0.5`  
+`2 + 8 % 7 >= 3 * 6 - 15`   
 
 :::
 
 ::: {.content-visible when-profile="c"}
 
-  `2 * 4 == 24 / 3`  
-  `15 % 4 < 19 % 6`  
-  `3 * 5 <= pow(3, 2) / 0.5`  
-  `2 + 8 % 7 >= 3 * 6 - 15`  
+`2 * 4 == 24 / 3`  
+`15 % 4 < 19 % 6`  
+`3 * 5 <= pow(3, 2) / 0.5`  
+`2 + 8 % 7 >= 3 * 6 - 15`  
 
 :::
 
@@ -414,29 +411,29 @@ expressões abaixo:
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
-  `2 < 5 ou 15 / 3 == 5`  
-  `falso ou 20 / (18 / 3) != (21 / 3) / 2`  
+`2 < 5 ou 15 / 3 == 5`  
+`falso ou 20 / (18 / 3) != (21 / 3) / 2`  
 
 :::
 
 ::: {.content-visible when-profile="java"}
 
-  `2 < 5 || 15 / 3 == 5`  
-  `false || 20.0 / (18.0 / 3) != (21.0 / 3) / 2`  
+`2 < 5 || 15 / 3 == 5`  
+`false || 20.0 / (18.0 / 3) != (21.0 / 3) / 2`  
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-  `2 < 5 or 15 / 3 == 5`  
-  `False or 20 / (18 / 3) != (21 / 3) / 2`   
+`2 < 5 or 15 / 3 == 5`  
+`False or 20 / (18 / 3) != (21 / 3) / 2`   
 
 :::
 
 ::: {.content-visible when-profile="c"}
 
-  `2 < 5 || 15 / 3 == 5`  
-  `0 || 20.0 / (18.0 / 3) != (21.0 / 3) / 2`  
+`2 < 5 || 15 / 3 == 5`  
+`0 || 20.0 / (18.0 / 3) != (21.0 / 3) / 2`  
 
 :::
 
@@ -448,37 +445,37 @@ lógico Verdadeiro (V), observar os resultados obtidos das expressões lógicas 
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
-  `X + Y > Z e NOME=="MARIA"`  
-  `SIM e Y >= X`  
-  `não SIM e Z / Y + 1 == X`  
-  `NOME=="JORGE" e SIM ou X**2 < Z + 10`  
+`X + Y > Z e NOME=="MARIA"`  
+`SIM e Y >= X`  
+`não SIM e Z / Y + 1 == X`  
+`NOME=="JORGE" e SIM ou X**2 < Z + 10`  
 
 :::
 
 ::: {.content-visible when-profile="java"}
 
-  `X + Y > Z && NOME=="MARIA"`  
-  `SIM || Y >= X`  
-  `!SIM && Z / Y + 1 == X`  
-  `NOME=="JORGE" && SIM || Math.pow(X, 2) < Z + 10` 
+`X + Y > Z && NOME=="MARIA"`  
+`SIM || Y >= X`  
+`!SIM && Z / Y + 1 == X`  
+`NOME=="JORGE" && SIM || Math.pow(X, 2) < Z + 10` 
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-  `X + Y > Z and NOME=="MARIA"`  
-  `SIM or Y >= X`  
-  `not SIM and Z / Y + 1 == X`  
-  `NOME=="JORGE" and SIM or X**2 < Z + 10`  
+`X + Y > Z and NOME=="MARIA"`  
+`SIM or Y >= X`  
+`not SIM and Z / Y + 1 == X`  
+`NOME=="JORGE" and SIM or X**2 < Z + 10`  
 
 :::
 
 ::: {.content-visible when-profile="c"}
 
-  `X + Y > Z && strcmp(NOME,"MARIA")`  
-  `SIM || Y >= X`  
-  `!SIM && (int) Z / Y + 1 == X`  
-  `strcmp(NOME,"JORGE") && SIM || pow(X, 2) < Z + 10`  
+`X + Y > Z && strcmp(NOME,"MARIA")`  
+`SIM || Y >= X`  
+`!SIM && (int) Z / Y + 1 == X`  
+`strcmp(NOME,"JORGE") && SIM || pow(X, 2) < Z + 10`  
 
 :::
 
@@ -490,45 +487,45 @@ obtidos da avaliação das seguintes expressões:
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
-  `A == 1 e TESTE`  
-  `A + C == rad(81) ou TESTE != falso`  
-  `não TESTE ou C % 2 == 0.5`  
-  `C < 10 ou TESTE`  
-  `TESTE e não TESTE`  
-  `pot(A, 2) + rad(A + C) == 3 e (A + B > 13)` 
+`A == 1 e TESTE`  
+`A + C == rad(81) ou TESTE != falso`  
+`não TESTE ou C % 2 == 0.5`  
+`C < 10 ou TESTE`  
+`TESTE e não TESTE`  
+`pot(A, 2) + rad(A + C) == 3 e (A + B > 13)` 
 
 :::
 
 ::: {.content-visible when-profile="java"}
 
-  `A == 1 && TESTE`  
-  `A + C == Math.sqrt(81) || TESTE != false`  
-  `!TESTE || C % 2 == 0.5`  
-  `C < 10 || TESTE`  
-  `TESTE && !TESTE`  
-  `Math.pow(A, 2) + Math.sqrt(A + C) == 3 && (A + B > 13)`  
+`A == 1 && TESTE`  
+`A + C == Math.sqrt(81) || TESTE != false`  
+`!TESTE || C % 2 == 0.5`  
+`C < 10 || TESTE`  
+`TESTE && !TESTE`  
+`Math.pow(A, 2) + Math.sqrt(A + C) == 3 && (A + B > 13)`  
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-  `A == 1 and TESTE`  
-  `A + C == sqrt(81) or TESTE != False`  
-  `not TESTE or C % 2 == 0.5`  
-  `C < 10 or TESTE`  
-  `TESTE and not TESTE`  
-  `pow(A, 2) + sqrt(A + C) == 3 and (A + B > 13)`  
+`A == 1 and TESTE`  
+`A + C == sqrt(81) or TESTE != False`  
+`not TESTE or C % 2 == 0.5`  
+`C < 10 or TESTE`  
+`TESTE and not TESTE`  
+`pow(A, 2) + sqrt(A + C) == 3 and (A + B > 13)`  
 
 :::
 
 ::: {.content-visible when-profile="c"}
 
-  `A == 1 && TESTE`  
-  `A + C == sqrt(81) || TESTE != 0`  
-  `!TESTE || C % 2 == 0.5`  
-  `C < 10 || TESTE`  
-  `TESTE && !TESTE`  
-  `pow(A, 2) + sqrt(A + C) == 3 && (A + B > 13)`  
+`A == 1 && TESTE`  
+`A + C == sqrt(81) || TESTE != 0`  
+`!TESTE || C % 2 == 0.5`  
+`C < 10 || TESTE`  
+`TESTE && !TESTE`  
+`pow(A, 2) + sqrt(A + C) == 3 && (A + B > 13)`  
 
 :::
 
@@ -540,57 +537,57 @@ contêm, respectivamente, 2, 7, 3.5, e que existe uma variável lógica L cujo v
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
-  `B == A * C e (L or verdadeiro)`  
-  `B > A ou B == pot(A, A)`  
-  `L e B / A >= C ou não(A <=C)`  
-  `não L ou verdadeiro e rad(A + B) >= C`  
-  `B / A == C ou B / A != C`  
-  `L ou pot(B, A) <= C * 10 + A * B`  
-  `não verdadeiro ou pot(3, 2) / 3 < 15 - 35 % 7`  
-  `não (5 != 10 / 2) or 1 e 2 - 5 > 5 - 2 ou verdadeiro`  
-  `pot(2, 4) != 4 + 2 or 2 + 3 * 5 / 3 % 5 > 0`
+`B == A * C e (L or verdadeiro)`  
+`B > A ou B == pot(A, A)`  
+`L e B / A >= C ou não(A <=C)`  
+`não L ou verdadeiro e rad(A + B) >= C`  
+`B / A == C ou B / A != C`  
+`L ou pot(B, A) <= C * 10 + A * B`  
+`não verdadeiro ou pot(3, 2) / 3 < 15 - 35 % 7`  
+`não (5 != 10 / 2) or 1 e 2 - 5 > 5 - 2 ou verdadeiro`  
+`pot(2, 4) != 4 + 2 or 2 + 3 * 5 / 3 % 5 > 0`
 
 :::
 
 ::: {.content-visible when-profile="java"}
 
-  `B == A * C && (L || true)`  
-  `B > A || B == Math.pow(A, A)`  
-  `L && (int) B / A >= C || !(A <=C)`  
-  `!L || true && Math.sqrt(A + B) >= C`  
-  `B / A == C || B / A != C`  
-  `L || Math.pow(B, A) <= C * 10 + A * B`  
-  `!true || Math.pow(3, 2) / 3 < 15 - 35 % 7`  
-  `!(5 != 10 / 2) || true && 2 - 5 > 5 - 2 || true`  
-  `Math.pow(2, 4) != 4 + 2 || 2 + 3 * 5 / 3 % 5 > 0` 
+`B == A * C && (L || true)`  
+`B > A || B == Math.pow(A, A)`  
+`L && (int) B / A >= C || !(A <=C)`  
+`!L || true && Math.sqrt(A + B) >= C`  
+`B / A == C || B / A != C`  
+`L || Math.pow(B, A) <= C * 10 + A * B`  
+`!true || Math.pow(3, 2) / 3 < 15 - 35 % 7`  
+`!(5 != 10 / 2) || true && 2 - 5 > 5 - 2 || true`  
+`Math.pow(2, 4) != 4 + 2 || 2 + 3 * 5 / 3 % 5 > 0` 
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-  `B == A * C and (L or True)`  
-  `B > A or B == pow(A, A)`  
-  `L and B / A >= C or not(A <=C)`  
-  `not L or True and sqrt(A + B) >= C`  
-  `B / A == C or B / A != C`  
-  `L or pow(B, A) <= C * 10 + A * B`  
-  `not True or pow(3, 2) / 3 < 15 - 35 % 7`  
-  `not (5 != 10 / 2) or True and 2 - 5 > 5 - 2 or True`  
-  `pow(2, 4) != 4 + 2 or 2 + 3 * 5 / 3 % 5 > 0` 
+`B == A * C and (L or True)`  
+`B > A or B == pow(A, A)`  
+`L and B / A >= C or not(A <=C)`  
+`not L or True and sqrt(A + B) >= C`  
+`B / A == C or B / A != C`  
+`L or pow(B, A) <= C * 10 + A * B`  
+`not True or pow(3, 2) / 3 < 15 - 35 % 7`  
+`not (5 != 10 / 2) or True and 2 - 5 > 5 - 2 or True`  
+`pow(2, 4) != 4 + 2 or 2 + 3 * 5 / 3 % 5 > 0` 
 
 :::
 
 ::: {.content-visible when-profile="c"}
 
-  `B == A * C && (L || true)`  
-  `B > A || B == pow(A, A)`  
-  `L && (int) B / A >= C || !(A <=C)`  
-  `!L || true && sqrt(A + B) >= C`  
-  `B / A == C || B / A != C`  
-  `L || pow(B, A) <= C * 10 + A * B`  
-  `!true || pow(3, 2) / 3 < 15 - 35 % 7`  
-  `!(5 != 10 / 2) || true && 2 - 5 > 5 - 2 || true`  
-  `pow(2, 4) != 4 + 2 || 2 + 3 * 5 / 3 % 5 > 0`  
+`B == A * C && (L || true)`  
+`B > A || B == pow(A, A)`  
+`L && (int) B / A >= C || !(A <=C)`  
+`!L || true && sqrt(A + B) >= C`  
+`B / A == C || B / A != C`  
+`L || pow(B, A) <= C * 10 + A * B`  
+`!true || pow(3, 2) / 3 < 15 - 35 % 7`  
+`!(5 != 10 / 2) || true && 2 - 5 > 5 - 2 || true`  
+`pow(2, 4) != 4 + 2 || 2 + 3 * 5 / 3 % 5 > 0`  
 
 :::
 
@@ -602,37 +599,37 @@ falsas.
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
-  `(A > C) e (C <= D)`  
-  `(A + B) > 10 ou (A + B) == (C + D)`  
-  `(A - C) == 0 ou não (D >= 99) e (B + 2) == 6`  
-  `(A >= C) e (B >= C)` 
+`(A > C) e (C <= D)`  
+`(A + B) > 10 ou (A + B) == (C + D)`  
+`(A - C) == 0 ou não (D >= 99) e (B + 2) == 6`  
+`(A >= C) e (B >= C)` 
 
 :::
 
 ::: {.content-visible when-profile="java"}
 
-  `(A > C) && (C <= D)`  
-  `(A + B) > 10 || (A + B) == (C + D)`  
-  `(A - C) == 0 || !(D >= 99) && (B + 2) == 6`  
-  `(A >= C) && (B >= C)` 
+`(A > C) && (C <= D)`  
+`(A + B) > 10 || (A + B) == (C + D)`  
+`(A - C) == 0 || !(D >= 99) && (B + 2) == 6`  
+`(A >= C) && (B >= C)` 
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-  `(A > C) and (C <= D)`  
-  `(A + B) > 10 or (A + B) == (C + D)`  
-  `(A - C) == 0 or not (D >= 99) and (B + 2) == 6`  
-  `(A >= C) and (B >= C)`  
+`(A > C) and (C <= D)`  
+`(A + B) > 10 or (A + B) == (C + D)`  
+`(A - C) == 0 or not (D >= 99) and (B + 2) == 6`  
+`(A >= C) and (B >= C)`  
 
 :::
 
 ::: {.content-visible when-profile="c"}
 
-  `(A > C) && (C <= D)`  
-  `(A + B) > 10 || (A + B) == (C + D))`  
-  `(A - C) == 0 || !(D >= 99) && (B + 2) == 6)`  
-  `(A >= C) && (B >= C))`  
+`(A > C) && (C <= D)`  
+`(A + B) > 10 || (A + B) == (C + D))`  
+`(A - C) == 0 || !(D >= 99) && (B + 2) == 6)`  
+`(A >= C) && (B >= C))`  
 
 :::
 
@@ -642,41 +639,41 @@ falsas.
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
-  `(A + C) > B`  
-  `B >= (A + 2)`  
-  `C == (B - A)`  
-  `(B + A) <= C`  
-  `(C + A) > B`  
+`(A + C) > B`  
+`B >= (A + 2)`  
+`C == (B - A)`  
+`(B + A) <= C`  
+`(C + A) > B`  
 
 :::
 
 ::: {.content-visible when-profile="java"}
 
-  `(A + C) > B`  
-  `B >= (A + 2)`  
-  `C == (B - A)`  
-  `(B + A) <= C`  
-  `(C + A) > B`  
+`(A + C) > B`  
+`B >= (A + 2)`  
+`C == (B - A)`  
+`(B + A) <= C`  
+`(C + A) > B`  
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-  `(A + C) > B`  
-  `B >= (A + 2)`  
-  `C == (B - A)`  
-  `(B + A) <= C`  
-  `(C + A) > B`  
+`(A + C) > B`  
+`B >= (A + 2)`  
+`C == (B - A)`  
+`(B + A) <= C`  
+`(C + A) > B`  
 
 :::
 
 ::: {.content-visible when-profile="c"}
 
-  `(A + C) > B`  
-  `B >= (A + 2)`  
-  `C == (B - A)`  
-  `(B + A) <= C`  
-  `(C + A) > B`  
+`(A + C) > B`  
+`B >= (A + 2)`  
+`C == (B - A)`  
+`(B + A) <= C`  
+`(C + A) > B`  
 
 :::
 
@@ -714,5 +711,5 @@ MENEZES, N. N. C. Introdução à programação com Python: algoritmos e lógica
 [CARVALHO, F.P. Lógica de programação - Algoritmos: Notas de aula. FIT. Taquara, 2007 ](https://fit.faccat.br/~fpereira/apostilas/exerc_resp_alg_mar2007.pdf)  
 [LOPES, A. Algoritmos: Notas de aula. Mossoró: IFRN, 2011](http://docente.ifrn.edu.br/abrahaolopes/semestre-2012.1/1.2411.1v-fundamentos-de-logica-e-algoritmos/lista-de-exercicios-2-operadores-matematicos/at_download/file)
 
-  
+
 ---
