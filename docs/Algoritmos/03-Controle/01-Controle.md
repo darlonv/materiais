@@ -8,7 +8,7 @@ Até agora, elaboramos nossos algorimos de forma que todas as instruções prese
 
 É necessário que possamos desenvolver algoritmos que possuam uma melhor capacidade de resolução de problemas. Para várias situações é necessário que determinadas partes do algoritmo sejam executadas e determinadas partes não. Ou até mesmo, que algumas partes sejam executadas mais do que uma vez.  
 
-Às estruturas que definem qual trecho será ou não executado, ou se será executado várias vezes, são definidas como **estruturas de controle**. Destas, as principais são estruturas de **condição** e de **repetição**.
+As estruturas que definem qual trecho será ou não executado, ou se será executado várias vezes, são definidas como **estruturas de controle**. Destas, as principais são estruturas de **seleção** e de **repetição**.
 
 
 
