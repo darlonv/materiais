@@ -595,6 +595,208 @@ falsas.
   </TabItem>
 </Tabs>
 
+
+1. Elabore um programa que leia a altura de um andar do prédio e quantos andares o prédio possui. Calcule e mostre a altura do prédio.
+
+1. Desenvolva um programa que leia um valor. Em seguida, deve ser mostrada a parte inteira da raiz quadrada do número lido.
+
+1. Faça um programa que calcule a médio do peso de uma família que possui 5 pessoas.
+
+### Testes de mesa
+
+1. Analise os valores que estão armazenados em cada uma das variáveis, após a execução de cada instrução. Prencha com "?" nos lugares em que o valor da variável não é conhecido.
+
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+```c
+```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+```javascript
+public class Main{
+  public static void main () {
+                          //  a   |    b   |    c   |    x   |
+      float a , b ;       //      |        |        |        | 
+      int c , x ;         //      |        |        |        | 
+      a = 6.0;            //      |        |        |        | 
+      b = a / 2;          //      |        |        |        | 
+      c = 11;             //      |        |        |        | 
+      x = (int) c / 4;    //      |        |        |        | 
+      c = c % 2;          //      |        |        |        | 
+      b = 5.4;            //      |        |        |        | 
+      c = c + 1;          //      |        |        |        | 
+      a = b + 2;          //      |        |        |        | 
+  }
+}
+``` 
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+```python
+if __name__ == "__main__":
+                        #  a   |    b   |    c   |    x   |
+    a = 6.0             #      |        |        |        | 
+    b = a / 2           #      |        |        |        | 
+    c = 11              #      |        |        |        | 
+    x = int(c/4)        #      |        |        |        | 
+    c = c % 2           #      |        |        |        | 
+    b = 5.4             #      |        |        |        | 
+    c = c + 1           #      |        |        |        | 
+    a = b + 2           #      |        |        |        | 
+
+``` 
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+```c
+# include < stdio .h > 
+
+int main () {           //   a  |    b   |    c   |    x   |
+    float a , b ;       //      |        |        |        | 
+    int c , x ;         //      |        |        |        | 
+    a = 6.0;            //      |        |        |        | 
+    b = a / 2;          //      |        |        |        | 
+    c = 11;             //      |        |        |        | 
+    x = ( int ) c / 4;  //      |        |        |        | 
+    c = c % 2;          //      |        |        |        | 
+    b = 5.4;            //      |        |        |        | 
+    c = c + 1;          //      |        |        |        | 
+    a = b + 2;          //      |        |        |        | 
+
+    return 0;
+}
+``` 
+
+  </TabItem>
+</Tabs>
+
+1. Indique os valores armazenados em cada variável, após executar cada uma das instruções
+
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+```c
+```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+```javascript
+public class Main{
+  public static void main () {
+                        //   q  |    w   |    r   |    ex  |
+    float q, w, r ;     //      |        |        |        | 
+    int ex ;            //      |        |        |        | 
+    q = 10;             //      |        |        |        | 
+    q = 10 + 30;        //      |        |        |        | 
+    w = -1;             //      |        |        |        | 
+    w = w + q;          //      |        |        |        | 
+    q = q % w;          //      |        |        |        | 
+    ex = 2 * q / w;     //      |        |        |        | 
+    r = 0;              //      |        |        |        | 
+    r = r + 1;          //      |        |        |        | 
+    r = r + 1;          //      |        |        |        | 
+
+  }
+}
+``` 
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+```python
+if __name__ == "__main__":
+                        #   q  |    w   |    r   |    ex  |
+    q = 10;             #      |        |        |        | 
+    q = 10 + 30;        #      |        |        |        | 
+    w = -1;             #      |        |        |        | 
+    w = w + q;          #      |        |        |        | 
+    q = q % w;          #      |        |        |        | 
+    ex = 2 * q / w;     #      |        |        |        | 
+    r = 0;              #      |        |        |        | 
+    r = r + 1;          #      |        |        |        | 
+    r = r + 1;          #      |        |        |        | 
+``` 
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+```c
+# include < stdio .h > 
+
+int main () {           //   q  |    w   |    r   |    ex  |
+    float q, w, r ;     //      |        |        |        | 
+    int ex ;            //      |        |        |        | 
+    q = 10;             //      |        |        |        | 
+    q = 10 + 30;        //      |        |        |        | 
+    w = -1;             //      |        |        |        | 
+    w = w + q;          //      |        |        |        | 
+    q = q % w;          //      |        |        |        | 
+    ex = 2 * q / w;     //      |        |        |        | 
+    r = 0;              //      |        |        |        | 
+    r = r + 1;          //      |        |        |        | 
+    r = r + 1;          //      |        |        |        | 
+
+    return 0;
+}
+``` 
+
+  </TabItem>
+</Tabs>
+
+### Matemática
+
+1. Elabore um programa para calcular o valor de $y$ em uma equação e segundo grau. O usuário deve informar quais são os valores para $a$, $b$, $c$ e $x$. Uma equação de segundo grau é definida pela fórmula:
+$$
+y = ax^2 + bx + c
+$$
+
+1. Desenvolva um programa para calcular as raízes de uma equação de segundo grau. As raízes de uma equação do segundo grau podem ser obtidas por meio da fórmula de [Bháskara](https://pt.wikipedia.org/wiki/Bhaskara_II):
+$$
+x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+$$
+
+1. Faça um algoritmo para calcular a distância entre dois pontos $A$ e $B$ em um plano cartesiano. O ponto $A$ possui as coordenadas $(x_1, y_1)$ e o ponto $B$ possui as coordenadas $(x_1, y_2)$. A distância $d$ entre os pontos $A$ e $B$ é dada pela seguinte fórmula:
+$$
+d = \sqrt{(x_2-x_2)^2+(y_2-y_2)^2}
+$$
+
+1. A partir de um ângulo expresso em graus ($\degree$), converta o valor do ângulo de graus para radianos ($rad$). Sabe-se que $\pi\ rad = 180\degree$ ([Vídeo: Convertendo de graus para radianos](https://www.youtube.com/watch?v=41S62_F5fl8)).
+
+1. Calcule as médias definidas a seguir para os valores reais $a$, $b$, $c$ e $d$, e o inteiro $n=4$ .
+  - Média Aritmética:
+    $$
+    m_a = \frac{a+b+c+d}{n}
+    $$
+  - Média Harmônica:
+    $$
+    m_h = \frac{n}{\frac{1}{a}+\frac{1}{b}+\frac{1}{c}+\frac{1}{d}}
+    $$
+  - Média Geométrica:
+    $$
+    m_g = \sqrt[n]{a*b*c*d}
+    $$
+  - Média Quadrática:
+    $$
+    m_q = \sqrt{\frac{a^2+b^2+c^2+d^2}{n}}
+    $$
+1. Desenvolva um programa para converter o valor de uma temperatura em graus Celsius ($C$) para graus Fahrenheit ($F$). Para essa conversão, temos a seguinte fórmula:
+$$
+F = \frac{9}{5}*C + 32
+$$
+
+1. Elabore um algorimo para converter o valor de uma temperatura expressa em graus Celsius ($C$) para Kelvin ($K$). Para tal, utilize a seguinte fórmula:
+$$
+K = C + 273.15
+$$
+
 ## Desafios
 
 1. Desenvolva um algoritmo que recebe como entrada informações da hora e minuto inicial e final da partida de um determinado jogo. Com esses dados, informe a duração total do jogo, em horas e minutos (Obs: Para simplificação do problema, você pode considerar que o jogo sempre começa e termina no mesmo dia).
