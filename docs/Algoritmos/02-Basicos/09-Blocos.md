@@ -94,3 +94,214 @@ Em Python, os blocos são definidos pela indentação do código, ou seja, pelo 
 </Tabs>
 
 A ideia é que os blocos agrupem determinadas tarefas dentro do código.
+
+## Organizando a leitura de dados
+
+A modularização consiste em **reaproveitar** código repetitivos, e será discutida em detalhes posteriormente quando abordarmos os **procedientos** e as **funções**. Porém, já podemos realizar uma breve introdução e utilizá-la, com a finalidade de organizar nosso código.
+
+Podemos separar regiões do nosso código que sabemos que sempre serão repetidas. Por exemplo, para leitura de dados.
+
+
+**Exemplo**
+- Leitura de um valor inteiro, organizado em módulo
+
+<Tabs groupId='language'>
+  <TabItem value="portugol" label="Portugol" default>
+
+  ```c showLineNumbers
+ 
+  ```
+
+ </TabItem>
+  <TabItem value="java" label="Java">
+
+   ```javascript showLineNumbers
+  import java.util.Scanner;
+  public class Main{
+
+    final static entrada;
+
+    //Módulo para abrir a entrada
+    public static void entradaAbrir(){
+      entrada = new Scanner(System.in);
+    }
+
+    //Módulo para fechar a entrada
+    public static void entradaFechar(){
+      entrada.close();
+    }
+
+    //Módulo para ler um valor inteiro
+    public static int lerInt(){
+      return entrada.nextInt();
+    }
+
+    public static void main(String[] args){
+      //variáveis
+      int valor;
+
+      //Executa o módulo que abre a entrada
+      entradaAbrir();
+
+      //Executa o módulo que realiza a leitura de um valor inteiro
+      valor = lerInt();
+
+      //Executa o módulo que fecha a entrada
+      entradaFechar();
+    }
+  }
+  ```
+
+
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python showLineNumbers
+  #Módulo para ler um valor inteiro
+  def lerInt():
+    return int(input())
+
+  if __name__ == "__main__":
+
+    #Executa o módulo que realiza a leitura de um valor inteiro
+    valor = lerInt()
+    
+  ```
+
+
+  </TabItem>
+  <TabItem value="c" label="C">
+
+```c showLineNumbers
+#include <stdio.h>
+
+//Módulo para ler um valor inteiro
+int lerInt(void){
+  int valor_lido;
+  scanf(&valor_lido);
+  return valor_lido;
+}
+
+int main(){
+  int valor;
+
+  //Executa o módulo que realiza a leitura de um valor inteiro
+  valor = lerInt();
+}
+```
+
+  
+  </TabItem>
+</Tabs>
+
+Esta prática ainda pode ser melhorada. Quando for realizada a leitura de um valor, podemos programar para que uma mensagem seja mostrada antes que o valor seja digitado.
+
+<Tabs groupId='language'>
+  <TabItem value="portugol" label="Portugol" default>
+
+  ```c showLineNumbers
+ 
+  ```
+
+ </TabItem>
+  <TabItem value="java" label="Java">
+
+   ```javascript showLineNumbers
+  import java.util.Scanner;
+  public class Main{
+
+    final static entrada;
+
+    //Módulo para abrir a entrada
+    public static void entradaAbrir(){
+      entrada = new Scanner(System.in);
+    }
+
+    //Módulo para fechar a entrada
+    public static void entradaFechar(){
+      entrada.close();
+    }
+
+    //Módulo para ler um valor inteiro
+    public static int lerInt(){
+      return entrada.nextInt();
+    }
+
+    //Módulo para ler um valor inteiro e mostrar uma mensagem
+    public static int lerInt(String mensagem){
+      //mostra a mensagem
+      System.out.println(mensagem);
+      //lê o valor e o retorna para que seja atribuído à variável
+      return entrada.nextInt();
+    }
+
+    public static void main(String[] args){
+      //variáveis
+      int valor;
+
+      //Executa o módulo que abre a entrada
+      entradaAbrir();
+
+      //Executa o módulo que realiza a leitura de um valor inteiro
+      valor = lerInt("Entre com um número inteiro:");
+
+      //Executa o módulo que fecha a entrada
+      entradaFechar();
+    }
+  }
+  ```
+
+
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python showLineNumbers
+  #Módulo para ler um valor inteiro e mostrar uma mensagem
+  def lerInt(mensagem=""):
+    return int(input(mensagem))
+
+  if __name__ == "__main__":
+
+    #Executa o módulo que realiza a leitura de um valor inteiro
+    valor = lerInt("Entre com um número inteiro: ")
+    
+  ```
+
+
+  </TabItem>
+  <TabItem value="c" label="C">
+
+```c showLineNumbers
+#include <stdio.h>
+
+//Módulo para ler um valor inteiro
+int lerInt(void){
+  int valor_lido;
+  scanf(&valor_lido);
+  return valor_lido;
+}
+//Módulo para ler um valor inteiro e mostrar uma mensagem
+int lerIntMsg(char[] mensagem){
+  int valor_lido;
+  //mostra a mensagem
+  printf("%s\n", mensagem);
+  //lê o valor
+  scanf(&valor_lido);
+  //retorna o valor para que seja atribuído à variável
+  return valor_lido;
+}
+
+int main(){
+  int valor;
+
+  //Executa o módulo que realiza a leitura de um valor inteiro
+  valor = lerInt("Entre com um número inteiro: ");
+}
+```
+
+  
+  </TabItem>
+</Tabs>
+
