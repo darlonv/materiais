@@ -316,9 +316,9 @@ Vamos partir do seguinte exemplo:
   valor = int(input("Valor: "))
 
   #processamento e saída
-  if x%2==0:        #<-- Verifica se o valor é par
+  if valor % 2==0:        #<-- Verifica se o valor é par
     print("Par")
-  if x%2!=0:        #<-- Verifica se o valor é par
+  if valor % 2!=0:        #<-- Verifica se o valor é par
     print("Ímpar")
   ```
 
