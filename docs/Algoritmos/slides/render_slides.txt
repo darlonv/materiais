@@ -1,2 +1,2 @@
-02-07-Expressoes-exercicios_slides.qmd
+02-Basicos_09-Blocos_slides.qmd
 
