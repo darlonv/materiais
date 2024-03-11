@@ -1,5 +1,5 @@
 ---
-title: "Seleção"
+title: "Seleção - Exercícios"
 subtitle: "Algoritmos e Estruturas de Dados"
 author: "Prof. Darlon Vasata"
 bibliography: references.bib
@@ -18,10 +18,9 @@ format:
 
 # Seleção
 
-- Escreva um programa que verifique a validade de uma senha fornecida pelo usuário. A senha válida é o código `4a5r9j03`. Devem ser apresentado na tela a seguinte mensagem:
+1. Escreva um programa que verifique a validade de uma senha fornecida pelo usuário. A senha válida é o código `4a5r9j03`. Devem ser apresentado na tela a seguinte mensagem:
   - *"ACESSO PERMITIDO"* caso a senha seja válida.  
   - *"ACESSO BLOQUEADO"* caso a senha seja inválida.
-  1. Resolva também este problema utilizando fluxograma
 
 <details>
   <summary>Resposta</summary>
