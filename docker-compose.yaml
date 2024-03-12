@@ -62,7 +62,7 @@ services:
     container_name: quarto_slides_algoritmos
     profiles: [ 'render', 'slides' ]
     volumes:
-      - ./docs/Algoritmos/slides:/data
+      - ./static/slides/Algoritmos/quarto:/data
     working_dir: /data
     #render 2x, in case of terminating existing servers
     command: ./gen_slides.sh
