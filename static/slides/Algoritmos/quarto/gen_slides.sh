@@ -3,7 +3,8 @@
 FORMAT_PDF_SLIDES=("beamer")
 FORMAT_PDF=("pdf")
 FORMAT_HTML=("revealjs")
-LANGUAGE=("pseudocodigo" "java" "python" "c")
+# LANGUAGE=("pseudocodigo" "java" "python" "c")
+LANGUAGE=("java")
 
 # FORMAT=("revealjs")
 # LANGUAGE=("java")
