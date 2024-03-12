@@ -26,7 +26,6 @@
 
 12. Elaborar um **procedimento** para ler um número inteiro e imprima a soma do dobro do sucessor com o dobro do seu antecessor.
 
-
 14. Elaborar uma **função** para calcular a quantidade de azulejos que são necessários para cobrir uma determinada parede. Desenvolva um procedimento para apresentar o resultado.
 
 18. Elaborar uma **função** que receba três números inteiros como parâmetro, representando horas, minutos e segundos de um determinado tempo percorrido. Converta esse tempo percorrido em segundos.
