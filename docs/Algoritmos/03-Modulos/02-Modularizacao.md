@@ -224,7 +224,7 @@ public static void main(String[] args){
     
     //variáveis
     int idade_p1, idade_p2, idade_p3;
-    real idade_media;
+    float idade_media;
 
     //entrada
     entradaAbrir();
