@@ -234,25 +234,25 @@ $$
     $$
     k = m ∗ 3.6
     $$
-    Onde:
-    k é km/h.
-    m é m/s.
+    Onde:  
+    $k$ : km/h  
+    $m$ : m/s
 
 50. Elaborar uma **função** para converter um distância em milhas para quilômetros, utilizando a seguinte fórmula de conversão:
     $$
     K = 1.61 ∗ M
     $$
-    Onde:
-    k é km.
-    m é Milhas.
+    Onde:  
+    $k$ : km  
+    $m$ : milhas
 
 51. Elaborar uma **função** para converter um distância em quilômetros para milhas, utilizando a seguinte fórmula de conversão:
     $$
     k =1.61 * m
     $$
-    Onde:
-    k é km.
-    m é Milhas.
+    Onde:  
+    $k$ : km  
+    $m$ : milhas
 
 52. Elaborar funções para o cálculo de:
     $$
