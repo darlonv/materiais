@@ -17,7 +17,19 @@ format:
 
 Uma das grandes dificuldades presentes no desenvolvimento de algoritmos é como lidar com a complexidade dos problemas. Problemas grandes ou repetitivos podem ser decompostos em pequenos problemas, com partes exclusivas para a resolução de determinadas partes do problema.
 
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
+
 A decomposição de códigos implica na construção de módulos, que podem ser chamados durante a execução do algoritmo.
+
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
 
 # Modularização
 
@@ -27,19 +39,35 @@ A construção de um **módulo** trata do desenvolvimento de um sub-algoritmo, e
 
 É uma boa prática utilizar **verbos no infinitivo** nos nomes das funções e procedimentos, denotando as ações que são realizadas no módulo. Exemplos: somarValores, calcularMedia, preencherFormulario, apresentarValores, lerInteiro, lerReal, entradaAbrir, entradaFechar, etc.
 
+::: {.content-visible when-profile="slides"}
 
+---
+
+:::
 
 ## Procedimentos
 
 Um procedimento é um conjunto de linhas de um algoritmo que são agrupados, e quando o procedimento é chamado, todas as linhas são executadas.
 
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
+
 **Exemplo**  
 Tome como exemplo um sistema em que no início do algoritmo é mostrado um cabeçalho e ao final é mostrado um rodapé, estes compostos por uma sequência de `"="`. O algoritmo consiste em perguntar o nome do usuário e apresentar seu nome na tela, junto com a mensagem "Boa noite".
 
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
+
 Uma forma de solução para o problema seria:
 
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+::: {.content-visible when-profile="pseudocodigo"}
 
 ``` c
 inicio
@@ -63,8 +91,8 @@ escreva("==========");
 fim.
 ```
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+::: {.content-visible when-profile="java"}
 
 ``` javascript
 pubic static void Main(String[] args){
@@ -88,8 +116,9 @@ pubic static void Main(String[] args){
 }
 ```
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
 ``` python
 # highlight-next-line
@@ -101,13 +130,24 @@ print("##########")
 
 ```
 
-  </TabItem>
-</Tabs>
+:::
+
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
 
 No exemplo observe que há linha que se repete. Esta linha (ou mais que uma linha) poderia ser parte de um procedimento.
 
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
+
+
+::: {.content-visible when-profile="pseudocodigo"}
 
 ``` c
 inicio
@@ -136,8 +176,9 @@ inicio
 fim.
 ```
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
 ``` javascript
 
@@ -169,8 +210,9 @@ pubic static void Main(String[] args){
 
 ```
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
 ``` python
 
@@ -184,8 +226,13 @@ linhas()
 
 ```
 
-  </TabItem>
-</Tabs>
+:::
+
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
 
 **Atividade**
 - O que deveria ser feito para modificar o cabeçalho, utilizando `*`?
@@ -200,16 +247,34 @@ As principais vantagens da modularização são:
 
 :::
 
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
+
 ## Funções
 
 Os procedimentos consistem na mera execução das linhas de código que estão contidas neles. Já as funções podem **retornar** um valor, ou seja, trazer um valor que foi calculado ou obtido dentro delas para dentro do algoritmo.
+
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
 
 **Exemplo**  
 
 Considere um algoritmo que pergunta a três pessoas sua idade, calcula e *retorna* a idade média entre essas pessoas:
 
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
+
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   ``` c
   inicio
@@ -234,8 +299,9 @@ Considere um algoritmo que pergunta a três pessoas sua idade, calcula e *retorn
   fim.
   ```
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   ``` javascript
 public static void main(String[] args){
@@ -261,8 +327,9 @@ public static void main(String[] args){
 }
   ```
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   ```python
   idade_p1 = int(input("Idade da primeira pessoa: "))
@@ -274,13 +341,23 @@ public static void main(String[] args){
  print(f"A idade média é de {idade_media}")
   ```
 
-  </TabItem>
-</Tabs>
+:::
+
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
 
 Poderia ser desenvolvida uma função que obtém as entradas e calcula e retorna a idade média.
 
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   ``` c
   inicio
@@ -319,8 +396,9 @@ Poderia ser desenvolvida uma função que obtém as entradas e calcula e retorna
   fim.
   ```
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   ``` javascript
 static Scanner entrada = new Scanner(System.in);
@@ -364,8 +442,9 @@ public static void main(String[] args){
 Java é uma linguagem de programação **orientada a objetos**. Aqui desenvolvemos uma função, porém no contexto de orientação a objetos esta atividade é chamada de **método**. Por ora utilizaremos o termo função e método como sinônimos, porém tenha em mente que estes possuem funcionalidades distintas, e suas diferenças e características serão abordadas futuramente.
 
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   ```python
   def idadeMediaTresPessoas():
@@ -380,10 +459,21 @@ Java é uma linguagem de programação **orientada a objetos**. Aqui desenvolvem
  print(f"A idade média é de {idade_media}")
   ```
 
-  </TabItem>
-</Tabs>
+:::
+
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
 
 Observe que nas funções existe o **retorno** do valor calculado. Essa é uma das principais características das funções.
+
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
 
 
 **Exercício**  
@@ -393,6 +483,11 @@ $$
 imc = \frac{peso}{altura^2}
 $$
 
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
 
 # Parâmetros
 
@@ -400,11 +495,17 @@ Uma das possibilidades com os procedimentos e as funções é a passagem de par�
 
 O uso dos parâmetros permite que o conteúdo da função seja realizado de acordo com os conteúdos das variáveis a ela passados.
 
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
+
 **Exemplo**
 - Desenvolva uma função que retorna verdadeiro se o valor passado por parâmetro for par.
 
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   ```c
   inicio
@@ -435,8 +536,9 @@ O uso dos parâmetros permite que o conteúdo da função seja realizado de acor
   fim.
   ```
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   ```javascript
     //módulos
@@ -468,8 +570,9 @@ O uso dos parâmetros permite que o conteúdo da função seja realizado de acor
     }
   ```
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   ```python
     #módulos
@@ -489,15 +592,24 @@ O uso dos parâmetros permite que o conteúdo da função seja realizado de acor
         print(f"{x} é ímpar.");
   ```
 
-  </TabItem>
-</Tabs>
+:::
 
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
 
 **Exemplo**
 - Desenvolva uma função que retorna a soma de todos os números ímpares em um intervalo.
 
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   ```c
   inicio
@@ -542,8 +654,9 @@ O uso dos parâmetros permite que o conteúdo da função seja realizado de acor
   fim.
   ```
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   ```javascript
     //módulos
@@ -586,8 +699,9 @@ O uso dos parâmetros permite que o conteúdo da função seja realizado de acor
   fim.
   ```
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   ```python
     #módulos
@@ -620,8 +734,13 @@ O uso dos parâmetros permite que o conteúdo da função seja realizado de acor
     prinf(f"A soma dos valores ímpares no intervalo [{ini},{fim}] é {soma}")
   ```
 
-  </TabItem>
-</Tabs>
+:::
+
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
 
 **Exercícios**  
 - Desenvolva funções que realizem os seguinte cálculos:
@@ -631,46 +750,64 @@ O uso dos parâmetros permite que o conteúdo da função seja realizado de acor
     - O Mínimo Múltiplo Comum (MMC) entre dois valores;
     - O Máximo Divisor Comum (MDC) entre dois valores.
 
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
 
 # Escopo de variáveis
 
 Chamamos de **escopo** ao espaço em que determinada variável pode ser utilizada. Comumente, o escopo pode ser **local** ou **global**.
 
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
+
 ## Variáveis locais
 
 Uma variável é considerada **local** quando esta existe apenas em um módulo específico.
 
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
+
 **Exemplo**
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
-  ```c
-  inicio
-    modulo media3Valores(inteiro: a, real: b, real: c)
-        //variáveis
-        inteiro soma;
-        real media;
+::: {.content-visible when-profile="pseudocodigo"}
 
-        //processamento
-        soma = a+b+c;
-        media = soma/3;
+```c
+inicio
+modulo media3Valores(inteiro: a, real: b, real: c)
+    //variáveis
+    inteiro soma;
+    real media;
 
-        //retorno
-        retorne media;
-    fimmodulo;
+    //processamento
+    soma = a+b+c;
+    media = soma/3;
 
-    //variáveis e entrada
-    inteiro: x, y, z;
-    escreva("Entre com três valores: ");
-    leia(x); leia(y); leia(z);
+    //retorno
+    retorne media;
+fimmodulo;
 
-    escreva("A média é ", media3Valores(x,y,z))
+//variáveis e entrada
+inteiro: x, y, z;
+escreva("Entre com três valores: ");
+leia(x); leia(y); leia(z);
 
-  fim.
-  ```
+escreva("A média é ", media3Valores(x,y,z))
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+fim.
+```
+
+:::
+
+::: {.content-visible when-profile="java"}
 
   ```javascript
   public static float media3Valores(int a, int b, int c){
@@ -698,35 +835,47 @@ Uma variável é considerada **local** quando esta existe apenas em um módulo e
   }
   ```
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
 
-  ```python
-    def media3Valores(a, b, c)
-        #processamento
-        soma = a+b+c
-        media = soma/3
+::: {.content-visible when-profile="python"}
 
-        #retorno
-        return media
+```python
+def media3Valores(a, b, c)
+    #processamento
+    soma = a+b+c
+    media = soma/3
 
-    #variáveis e entrada
-    print("Entre com três valores: ")
-    x, y, z = int(input()), int(input()), int(input())
+    #retorno
+    return media
 
-    print("A média é ", media3Valores(x,y,z))
-  ```
+#variáveis e entrada
+print("Entre com três valores: ")
+x, y, z = int(input()), int(input()), int(input())
 
-  </TabItem>
-</Tabs>
+print("A média é ", media3Valores(x,y,z))
+```
+
+:::
+
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
 
 Observe que as variáveis `a`, `b`, `c`, `soma` e `media` existem **apenas** dentro do módulo `media3valores`. Com isto, dizemos que o **escopo** destas variáveis é **local** à função `media3Valores`.
 
 Acessar estas variáveis fora de seu escopo ocasiona em um erro.
 
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
+
 **Exemplo**
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   ```c
   inicio
@@ -757,8 +906,9 @@ Acessar estas variáveis fora de seu escopo ocasiona em um erro.
   fim.
   ```
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   ```javascript
   public static float media3Valores(int a, int b, int c){
@@ -790,21 +940,22 @@ Acessar estas variáveis fora de seu escopo ocasiona em um erro.
   }
   ```
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   ```python
   print("Olá Mundo")
   ```
 
-  </TabItem>
-</Tabs>
+:::
+
 
 Em escopos diferentes, variáveis locais podem utilizar os mesmos nomes. Como estão em escopos diferentes são **variáveis diferentes**.
 
 **Exemplo**
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   ```c
   inicio
@@ -826,8 +977,9 @@ Em escopos diferentes, variáveis locais podem utilizar os mesmos nomes. Como es
   fim.
   ```
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   ```javascript
     public static void mostraValorMaisDez(int x){
@@ -848,8 +1000,9 @@ Em escopos diferentes, variáveis locais podem utilizar os mesmos nomes. Como es
     }
   ```
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   ```python
     def mostraValorMaisDez(x):
@@ -864,9 +1017,13 @@ Em escopos diferentes, variáveis locais podem utilizar os mesmos nomes. Como es
     print("V fora do módulo:", v) #mostra o valor 10. O valor original foi mantido.
   ```
 
-  </TabItem>
-</Tabs>
+:::
 
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
 
 ## Variáveis globais
 
@@ -874,26 +1031,34 @@ Aa variáveis **globais** são aquelas que podem ser acessadas por todos, e port
 
 Para definir uma variável como global, basta declará-la fora do módulo.
 
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   ```c
   escreva("Olá Mundo");
   ```
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   ```javascript
   System.out.println("Olá Mundo");
   ```
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   ```python
   print("Olá Mundo")
   ```
 
-  </TabItem>
-</Tabs>
+:::
+
+::: {.content-visible when-profile="slides"}
+
+---
+
+:::
+
