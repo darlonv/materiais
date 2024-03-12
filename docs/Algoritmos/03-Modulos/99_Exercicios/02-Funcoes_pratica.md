@@ -104,9 +104,9 @@
     $$
     A_{cilindro} = 2 \pi r^2 + 2 \pi r h
     $$
-    onde:  
-    $r$ : raio, e
-    $h$ : altura.  
+    Onde:  
+    $r$ : raio, e  
+    $h$ : altura  
 
     Sabe-se que o galão de 3.6 litros de tinta custa R$59.00 e que cada litro de tinta pinta três metros quadrado em média. Para que se obtenha uma pintura de qualidade são necessárias duas demãos.
 
