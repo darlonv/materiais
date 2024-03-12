@@ -7,6 +7,10 @@ A construção de um **módulo** trata do desenvolvimento de um sub-algoritmo, e
 
 É comum a categorização de módulos em **procedimentos** e **funções**. Nos procedimentos, há a mera execução de trechos de código, enquanto nas funções um valor é **retornado** na linha de código que executou a chamada à determinada função.
 
+É uma boa prática utilizar **verbos no infinitivo** nos nomes das funções e procedimentos, denotando as ações que são realizadas no módulo. Exemplos: somarValores, calcularMedia, preencherFormulario, apresentarValores, lerInteiro, lerReal, entradaAbrir, entradaFechar, etc.
+
+
+
 ## Procedimentos
 
 Um procedimento é um conjunto de linhas de um algoritmo que são agrupados, e quando o procedimento é chamado, todas as linhas são executadas.
