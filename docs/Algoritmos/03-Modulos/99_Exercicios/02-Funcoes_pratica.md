@@ -89,63 +89,13 @@
 
 37. A energia ($E$) é obtida através da equação $E = mc^2$ , onde E é energia, m é a massa e c é a velocidade da luz. Elaborar um programa com uma função que, mediante a entrada de $m$ calcule e escreva $E$. Observação: $c$ é uma constante com valor de $300000000 Km/s$.
 
-38. Elaborar uma **função** e um programa principal para realizar o cálculo do volume de uma esfera. Sendo que o raio é passado por parâmetro.
-    $$
-    v_{esfera} = \frac{4}{3}*\pi*r^3
-    $$
-    Onde:  
-    $r$: raio da esfera
-
 39. Considerando o fato de que um byte tem 8 bits, que um kilobyte (KB) tem 1024 bytes e que um megabyte (MB) tem 1024 KB, escrever uma **função** para, dada a capacidade de armazenamento de uma máquina qualquer (em MB), calcular e escrever o número bits existentes.
 
 40. A empresa LLC produz camisetas e a sua produção semanal máxima é de 10.000 unidades, que são exportadas para todo o planeta. Essa produção acontece quando não há queda de energia durante a semana. A cada queda de energia a produção cai em 5%, pois é necessário um determinado tempo para que as máquinas voltem a funcionar. Desenvolva um programa e **funções** para estimar a produção mensal da empresa, considerando a quantidade de quedas de energia informadas.
 
-41. Elaborar funções para o cálculo de:
-    $$
-    v = ri
-    $$
-    $$
-    p=vi
-    $$
-    $$
-    i=\frac{q}{t}
-    $$
-    $$
-    p=ri^2
-    $$
-    $$
-    p=\frac{v^2}{r}
-    $$
-    Onde:  
-    $v$ : tensão  
-    $i$ : corrente elétrica   
-    $r$ : resistência elétrica  
-    $p$ : potência  
-    $t$ : tempo  
-    $q$ : carga elétrica  
-    $w$ : potência
-
 42. Considerando que para um consórcio, sabe-se o número total de prestações, a quantidade de prestações pagas e o valor atual das prestações. Elaborar uma **função** para determinar o total pago pelo consorciado e o saldo devedor.
 
 43. O custo ao consumidor de um carro novo é a soma do custo de fábrica com a percentagem de lucro do revendedor e com o custo dos impostos (aplicados ao custo de fábrica). Suponha que a percentagem do revendedor seja 25% e que os impostos custam 45% do custo de fábrica. Elabore uma **função** para determinar o preço final do automóvel (custo ao consumidor).
-
-44. Elabore um programa que calcule as médias definidas a seguir para os valores reais $a$, $b$, $c$ e $d$, e o inteiro $n=4$ .
-  - Média Aritmética:
-    $$
-    m_a = \frac{a+b+c+d}{n}
-    $$
-  - Média Harmônica:
-    $$
-    m_h = \frac{n}{\frac{1}{a}+\frac{1}{b}+\frac{1}{c}+\frac{1}{d}}
-    $$
-  - Média Geométrica:
-    $$
-    m_g = \sqrt[n]{a*b*c*d}
-    $$
-  - Média Quadrática:
-    $$
-    m_q = \sqrt{\frac{a^2+b^2+c^2+d^2}{n}}
-    $$
 
 45. Efetue o cálculo da quantidade de litros de combustível gastos em uma viagem, recebendo o rendimento (r) do automóvel que faz por litro (km/l). Para obter o cálculo, o usuário deverá fornecer o tempo gasto na viagem e a velocidade média durante a mesma. Desta maneira, será possível obter a distância percorrida ($d$) com a fórmula:
     $$
@@ -182,7 +132,7 @@
     s = \frac{a+b+c}{2}
     $$
 
-    (ii) uma função apra calcular o valor de $s$.
+    (ii) uma função para calcular o valor de $s$.
 
 49. Uma empresa produz três tipos de peças mecânicas: parafusos, porcas e arruelas. Tem-se os preços unitários de cada tipo de peça e sabe-se que sobre esses preços incidem descontos de 10% para porcas, 20% para parafusos e 30% para arruelas. Elaborar uma **função** que calcule o valor total da compra de um cliente. Deve ser mostrado o nome do cliente, o número de cada tipo de peça que comprou, o total de desconto e o total gasto na compra.
 
@@ -201,7 +151,7 @@
 
 ## Matemática
 
-13. Elaborar uma **função** para calcular a área A de um triângulo dada a fórmula:
+40. Elaborar uma **função** para calcular a área A de um triângulo dada a fórmula:
 
     $$
     A_{tri} = \frac{b*h}{2}
@@ -275,4 +225,54 @@ $$
     Onde:
     $C$ é a temperatura em Celsius.
     $K$ é a temperatura em Kelvin.
+
+38. Elaborar uma **função** e um programa principal para realizar o cálculo do volume de uma esfera. Sendo que o raio é passado por parâmetro.
+    $$
+    v_{esfera} = \frac{4}{3}*\pi*r^3
+    $$
+    Onde:  
+    $r$: raio da esfera
+
+41. Elaborar funções para o cálculo de:
+    $$
+    v = ri
+    $$
+    $$
+    p=vi
+    $$
+    $$
+    i=\frac{q}{t}
+    $$
+    $$
+    p=ri^2
+    $$
+    $$
+    p=\frac{v^2}{r}
+    $$
+    Onde:  
+    $v$ : tensão  
+    $i$ : corrente elétrica   
+    $r$ : resistência elétrica  
+    $p$ : potência  
+    $t$ : tempo  
+    $q$ : carga elétrica  
+    $w$ : potência
+
+44. Elabore um programa que calcule as médias definidas a seguir para os valores reais $a$, $b$, $c$ e $d$, e o inteiro $n=4$ .
+  - Média Aritmética:
+    $$
+    m_a = \frac{a+b+c+d}{n}
+    $$
+  - Média Harmônica:
+    $$
+    m_h = \frac{n}{\frac{1}{a}+\frac{1}{b}+\frac{1}{c}+\frac{1}{d}}
+    $$
+  - Média Geométrica:
+    $$
+    m_g = \sqrt[n]{a*b*c*d}
+    $$
+  - Média Quadrática:
+    $$
+    m_q = \sqrt{\frac{a^2+b^2+c^2+d^2}{n}}
+    $$
 
