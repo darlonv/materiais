@@ -47,12 +47,26 @@ class Tipos {
         double var_double;
 
         // Decimais
-        var_float = 10100f;  // f ou F para float
+        var_float = 10100f; // f ou F para float
         var_double = 10100d; // d ou D para double
 
         System.out.println("Valores em decimal: ");
         System.out.println("    10100f  : " + var_float);
         System.out.println("    10100d  : " + var_double);
+
+    }
+
+    public static void mostrarLiteraisRealHexadecimal() {
+        float var_float;
+        double var_double;
+
+        // Hexadecimal
+        var_float = 0x10.0P2f; // 0x10 * 2^2 = 16 * 4 = 64
+        var_double = 0x10.0P3d; // 0x10 * 2^3 = 16 * 8 = 128
+
+        System.out.println("Valores em hexadecimal: ");
+        System.out.println("    0x10.0P2f  : " + var_float);
+        System.out.println("    0x10.0P3d  : " + var_double);
 
     }
 
@@ -171,5 +185,6 @@ class Tipos {
         mostrarLiteraisInteiroHexadecimal();
         mostrarLiteraisInteiroBinario();
         mostrarLiteraisRealDecimal();
+        mostrarLiteraisRealHexadecimal();
     }
 }

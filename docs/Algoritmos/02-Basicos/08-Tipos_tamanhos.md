@@ -1,17 +1,14 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Literais, tipos e tamanhos
+# Tipos, tamanhos e literais
 
 
 As diferentes linguagens de programação podem possuir em sua implementação vários tipos de dados primitivos, e os valores que podem ser armazenados em variáveis de cada tipo depende da quantidade de memória que cada tipo utiliza.
 
-## Literais
 
 
-
-## Casting
-
+## Tipos
 
 <Tabs groupId='language'>
 <TabItem value="pseudocodigo" label="Pseudocódigo" default>
@@ -293,6 +290,280 @@ printf("Olá Mundo")
 
 Para os valores reais, quando um valor é pequeno o suficiente que não pode ser armazenado dizemos que houve um **underflow**. 
 
+## Literais
+
+Chamamos de literais aos valores informados diretamente no código, de maneira explícita. 
+
+### inteiro
+
+#### Decimal
+
+<Tabs groupId='language'>
+<TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+```c
+escreva("Olá Mundo");
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```javascript
+ public static void mostrarLiteraisInteiroDecimal() {
+    int var_int;
+    long var_long;
+
+    // Decimal
+    var_int = 10100;
+    var_long = 10100l; // l ou L para long
+
+    System.out.println("Valores em decimal: ");
+    System.out.println("    10100  : " + var_int);
+    System.out.println("    10100  : " + var_long);
+
+    }
+```
+
+Saída:
+```
+Valores em decimal: 
+    10100  : 10100
+    10100  : 10100
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+print("Olá Mundo")
+```
+
+</TabItem>
+
+<TabItem value="c" label="C">
+
+```c
+printf("Olá Mundo")
+```
+
+</TabItem>
+
+</Tabs>
+
+#### Hexadecimal
+
+<Tabs groupId='language'>
+<TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+```c
+escreva("Olá Mundo");
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```javascript
+public static void mostrarLiteraisInteiroHexadecimal() {
+    int var_int;
+    long var_long;
+
+    // Hexadecimal
+    var_int = 0x10100;
+    var_long = 0x10100l; // l ou L para long
+
+    System.out.println("Valores em hexadecimal: ");
+    System.out.println("    0x10100  : " + var_int);
+    System.out.println("    0x10100  : " + var_long);
+
+}
+```
+Saída:
+```
+Valores em hexadecimal: 
+    0x10100  : 65792
+    0x10100  : 65792
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+print("Olá Mundo")
+```
+
+</TabItem>
+
+<TabItem value="c" label="C">
+
+```c
+printf("Olá Mundo")
+```
+
+</TabItem>
+
+</Tabs>
+
+#### Binário
+
+<Tabs groupId='language'>
+<TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+```c
+escreva("Olá Mundo");
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```javascript
+public static void mostrarLiteraisInteiroBinario() {
+    int var_int;
+    long var_long;
+
+    // Binário
+    var_int = 0b10100;
+    var_long = 0b10100l; // l ou L para long
+
+    System.out.println("Valores em binário: ");
+    System.out.println("    0b10100  : " + var_int);
+    System.out.println("    0b10100  : " + var_long);
+
+    }
+```
+Saída:
+```
+Valores em binário: 
+    0b10100  : 20
+    0b10100  : 20
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+print("Olá Mundo")
+```
+
+</TabItem>
+
+<TabItem value="c" label="C">
+
+```c
+printf("Olá Mundo")
+```
+
+</TabItem>
+
+</Tabs>
+
+### real
+
+#### Decimal
+
+<Tabs groupId='language'>
+<TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+```c
+escreva("Olá Mundo");
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```javascript
+public static void mostrarLiteraisRealDecimal() {
+    float var_float;
+    double var_double;
+
+    // Decimais
+    var_float = 10100f;  // f ou F para float
+    var_double = 10100d; // d ou D para double
+
+    System.out.println("Valores em decimal: ");
+    System.out.println("    10100f  : " + var_float);
+    System.out.println("    10100d  : " + var_double);
+
+}
+```
+Saída:
+```
+Valores em decimal: 
+    10100f  : 10100.0
+    10100d  : 10100.0
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+print("Olá Mundo")
+```
+
+</TabItem>
+
+<TabItem value="c" label="C">
+
+```c
+printf("Olá Mundo")
+```
+
+</TabItem>
+
+</Tabs>
+
+#### Hexadecimal
+
+<Tabs groupId='language'>
+<TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+```c
+escreva("Olá Mundo");
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```javascript
+public static void mostrarLiteraisRealHexadecimal() {
+    float var_float;
+    double var_double;
+
+    // Hexadecimal
+    // 0x <val hex> p <exp de 2>
+    var_float = 0x10.0P2f; // 0x10.0 * 2^2 = 16 * 4 = 64
+    var_double = 0x10.0P3d; // 0x10.0 * 2^3 = 16 * 8 = 128
+
+    System.out.println("Valores em hexadecimal: ");
+    System.out.println("    0x10.0P2f  : " + var_float);
+    System.out.println("    0x10.0P3d  : " + var_double);
+
+}
+```
+Saída:
+```
+Valores em hexadecimal: 
+    0x1p1f  : 64.0
+    0x1p1f  : 128.0
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+print("Olá Mundo")
+```
+
+</TabItem>
+
+<TabItem value="c" label="C">
+
+```c
+printf("Olá Mundo")
+```
+
+</TabItem>
+
+</Tabs>
 
 ## Referências
 
