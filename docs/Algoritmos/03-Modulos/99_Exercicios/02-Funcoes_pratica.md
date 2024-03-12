@@ -30,50 +30,42 @@
 
 14. Elaborar uma **função** que receba três números inteiros como parâmetro, representando horas, minutos e segundos de um determinado tempo percorrido. Converta esse tempo percorrido em segundos.
 
-15. Elaborar uma **função** para converter uma velocidade em km/h (quilômetros por hora) para m/s (metros por segundos), utilizando a seguinte fórmula de conversão:
-    $$
-    m = \frac{k}{3.6}
-    $$
-    Onde:
-    $k$ é km/h.
-    $m$ é m/s.
-
 ## Exercícios
 
-16. Considerando as seguintes informações de um automóvel: marca, quilometragem inicial, quilometragem final, litros consumidos e capacidade do tanque de combustível. Elaborar um programa e funções que emita um relatório na tela contendo os dados informado e qual o consumo do automóvel em km/litros e qual a sua autonomia (km/tanque).
+15. Considerando as seguintes informações de um automóvel: marca, quilometragem inicial, quilometragem final, litros consumidos e capacidade do tanque de combustível. Elaborar um programa e funções que emita um relatório na tela contendo os dados informado e qual o consumo do automóvel em km/litros e qual a sua autonomia (km/tanque).
 
-17. Elaborar uma **função** para calcula o valor a ser pago pelos passageiros pelo excesso de bagagem. Considerando que até 25kg o valor é R$2.50 e o excedente custa R$0.75 por quilo. Por fim, exiba o peso total, o peso excedente e o valor a ser pago pelo passageiro.
+16. Elaborar uma **função** para calcula o valor a ser pago pelos passageiros pelo excesso de bagagem. Considerando que até 25kg o valor é R$2.50 e o excedente custa R$0.75 por quilo. Por fim, exiba o peso total, o peso excedente e o valor a ser pago pelo passageiro.
 
-18. Elaborar uma **função** para calcular o alcance de um projétil, dada a velocidade inicial $v_0$ e o ângulo $\theta$ entre o cano do canhão e o solo. A fórmula a ser utilizada é:
+17. Elaborar uma **função** para calcular o alcance de um projétil, dada a velocidade inicial $v_0$ e o ângulo $\theta$ entre o cano do canhão e o solo. A fórmula a ser utilizada é:
     $$
     S = \frac{v_0^2}{g}\sin{2\theta}
     $$
 
-19. Desenvolva **funções** que, mediante a leitura de uma distância (em Km), do período de tempo (em hora) utilizado para percorrê-lo e da quantidade de combustível (em litros) utilizada, calcule a velocidade média(em Km/h) e o consumo médio do automóvel (em Km/l).
-20. Uma pessoa comprou quatro artigos em uma loja. Para cada artigo, tem-se nome, preço e percentual de desconto. Elaborar um programa e **funções** para imprimir nome, preço e preço comdesconto de cada artigo. Imprimir também o total a pagar.
+18. Desenvolva **funções** que, mediante a leitura de uma distância (em Km), do período de tempo (em hora) utilizado para percorrê-lo e da quantidade de combustível (em litros) utilizada, calcule a velocidade média(em Km/h) e o consumo médio do automóvel (em Km/l).
+19. Uma pessoa comprou quatro artigos em uma loja. Para cada artigo, tem-se nome, preço e percentual de desconto. Elaborar um programa e **funções** para imprimir nome, preço e preço comdesconto de cada artigo. Imprimir também o total a pagar.
 
-21. Elaborar **funções** para determinar o salário líquido de um funcionário, assumindo que sobre seu salário bruto incide um desconto de 8.5% para a previdência, um desconto de 26.6% do imposto de renda. O algoritmo deve mostrar o nome do funcionário, o seu salário bruto, desconto previdência, imposto de renda e salário líquido. OBS.: Uma **função** para desconto da previdência, uma para calcular o imposto de renda e outra para calcular o salário líquido.
+20. Elaborar **funções** para determinar o salário líquido de um funcionário, assumindo que sobre seu salário bruto incide um desconto de 8.5% para a previdência, um desconto de 26.6% do imposto de renda. O algoritmo deve mostrar o nome do funcionário, o seu salário bruto, desconto previdência, imposto de renda e salário líquido. OBS.: Uma **função** para desconto da previdência, uma para calcular o imposto de renda e outra para calcular o salário líquido.
 
-22. Suponha que você foi ao supermercado e comprou:
+21. Suponha que você foi ao supermercado e comprou:
     - N quilos de café, cujo custo unitário é Q;
     - L Litros de leite, com custo unitário de P;
     - B quilos de banana, com custo unitário de T.  
 
     Elabore um programa e funções que imprima: nome do produto, total gasto com cada produto e o total gasto no mercado.
 
-23. Elaborar uma **função** que leia os preços de três produtos com o valor atual e de um ano atrás. Tendo como base a variação dos preços dessas mercadorias, desenvolva outra **função** para calcular a taxa de inflação do período.
+22. Elaborar uma **função** que leia os preços de três produtos com o valor atual e de um ano atrás. Tendo como base a variação dos preços dessas mercadorias, desenvolva outra **função** para calcular a taxa de inflação do período.
 
-24. A energia ($E$) é obtida através da equação $E = mc^2$ , onde E é energia, m é a massa e c é a velocidade da luz. Elaborar um programa com uma função que, mediante a entrada de $m$ calcule e escreva $E$. Observação: $c$ é uma constante com valor de $300000000 Km/s$.
+23. A energia ($E$) é obtida através da equação $E = mc^2$ , onde E é energia, m é a massa e c é a velocidade da luz. Elaborar um programa com uma função que, mediante a entrada de $m$ calcule e escreva $E$. Observação: $c$ é uma constante com valor de $300000000 Km/s$.
 
-25. Considerando o fato de que um byte tem 8 bits, que um kilobyte (KB) tem 1024 bytes e que um megabyte (MB) tem 1024 KB, escrever uma **função** para, dada a capacidade de armazenamento de uma máquina qualquer (em MB), calcular e escrever o número bits existentes.
+24. Considerando o fato de que um byte tem 8 bits, que um kilobyte (KB) tem 1024 bytes e que um megabyte (MB) tem 1024 KB, escrever uma **função** para, dada a capacidade de armazenamento de uma máquina qualquer (em MB), calcular e escrever o número bits existentes.
 
-26. A empresa LLC produz camisetas e a sua produção semanal máxima é de 10.000 unidades, que são exportadas para todo o planeta. Essa produção acontece quando não há queda de energia durante a semana. A cada queda de energia a produção cai em 5%, pois é necessário um determinado tempo para que as máquinas voltem a funcionar. Desenvolva um programa e **funções** para estimar a produção mensal da empresa, considerando a quantidade de quedas de energia informadas.
+25. A empresa LLC produz camisetas e a sua produção semanal máxima é de 10.000 unidades, que são exportadas para todo o planeta. Essa produção acontece quando não há queda de energia durante a semana. A cada queda de energia a produção cai em 5%, pois é necessário um determinado tempo para que as máquinas voltem a funcionar. Desenvolva um programa e **funções** para estimar a produção mensal da empresa, considerando a quantidade de quedas de energia informadas.
 
-27. Considerando que para um consórcio, sabe-se o número total de prestações, a quantidade de prestações pagas e o valor atual das prestações. Elaborar uma **função** para determinar o total pago pelo consorciado e o saldo devedor.
+26. Considerando que para um consórcio, sabe-se o número total de prestações, a quantidade de prestações pagas e o valor atual das prestações. Elaborar uma **função** para determinar o total pago pelo consorciado e o saldo devedor.
 
-28. O custo ao consumidor de um carro novo é a soma do custo de fábrica com a percentagem de lucro do revendedor e com o custo dos impostos (aplicados ao custo de fábrica). Suponha que a percentagem do revendedor seja 25% e que os impostos custam 45% do custo de fábrica. Elabore uma **função** para determinar o preço final do automóvel (custo ao consumidor).
+27. O custo ao consumidor de um carro novo é a soma do custo de fábrica com a percentagem de lucro do revendedor e com o custo dos impostos (aplicados ao custo de fábrica). Suponha que a percentagem do revendedor seja 25% e que os impostos custam 45% do custo de fábrica. Elabore uma **função** para determinar o preço final do automóvel (custo ao consumidor).
 
-29. Efetue o cálculo da quantidade de litros de combustível gastos em uma viagem, recebendo o rendimento (r) do automóvel que faz por litro (km/l). Para obter o cálculo, o usuário deverá fornecer o tempo gasto na viagem e a velocidade média durante a mesma. Desta maneira, será possível obter a distância percorrida ($d$) com a fórmula:
+28. Efetue o cálculo da quantidade de litros de combustível gastos em uma viagem, recebendo o rendimento (r) do automóvel que faz por litro (km/l). Para obter o cálculo, o usuário deverá fornecer o tempo gasto na viagem e a velocidade média durante a mesma. Desta maneira, será possível obter a distância percorrida ($d$) com a fórmula:
     $$
     d = t ∗ v
     $$
@@ -92,15 +84,15 @@
     
     O programa deverá apresentar os valores da velocidade média, do tempo gasto na viagem, da distância percorrida e da quantidade de litros utilizados na viagem, todos as operações devem ser implementadas por **funções**. Utilize passagem por referência.
 
-30. Uma sorveteria vende três tipos de picolés. Sabendo-se que o picolé tipo 1 é vendido por R$ 4.50, o picolé do tipo 2 é vendido por R$6.00 e o picolé do tipo 3 vale apenas R$1.50. Elaborar uma **função** para calcular e outra para exibir o valor vendido de cada tipo de picolé no mês e o valor total arrecadado pela sorveteria.
+29. Uma sorveteria vende três tipos de picolés. Sabendo-se que o picolé tipo 1 é vendido por R$ 4.50, o picolé do tipo 2 é vendido por R$6.00 e o picolé do tipo 3 vale apenas R$1.50. Elaborar uma **função** para calcular e outra para exibir o valor vendido de cada tipo de picolé no mês e o valor total arrecadado pela sorveteria.
 
-31. A revendedora de carros Tio Chico Ltda paga para seus colaboradores dois salários mínimos fixos, além disso, paga uma comissão fixa de R$750.00 por carro vendido e mais 5% do valor do valor de suas vendas mensais. Sabendo disto, elabore um programa com **funções** para calcular o valor total do salário de cada vendedor.
+30. A revendedora de carros Tio Chico Ltda paga para seus colaboradores dois salários mínimos fixos, além disso, paga uma comissão fixa de R$750.00 por carro vendido e mais 5% do valor do valor de suas vendas mensais. Sabendo disto, elabore um programa com **funções** para calcular o valor total do salário de cada vendedor.
 
-32. Uma empresa produz três tipos de peças mecânicas: parafusos, porcas e arruelas. Tem-se os preços unitários de cada tipo de peça e sabe-se que sobre esses preços incidem descontos de 10% para porcas, 20% para parafusos e 30% para arruelas. Elaborar uma **função** que calcule o valor total da compra de um cliente. Deve ser mostrado o nome do cliente, o número de cada tipo de peça que comprou, o total de desconto e o total gasto na compra.
+31. Uma empresa produz três tipos de peças mecânicas: parafusos, porcas e arruelas. Tem-se os preços unitários de cada tipo de peça e sabe-se que sobre esses preços incidem descontos de 10% para porcas, 20% para parafusos e 30% para arruelas. Elaborar uma **função** que calcule o valor total da compra de um cliente. Deve ser mostrado o nome do cliente, o número de cada tipo de peça que comprou, o total de desconto e o total gasto na compra.
 
-33. O governo estadual forneceu $R\$10000000.00$ para a construção de casas populares, para isso contratou-se a construtora Camaleão SA. Cada casa custa o equivalente a 150 salários mínimos. Elaborar um programa e **funções** para ler o valor do salário mínimo e calcule a quantidade de casas possíveis de ser construídas, exibindo um relatório do tipo orçamento.
+32. O governo estadual forneceu $R\$10000000.00$ para a construção de casas populares, para isso contratou-se a construtora Camaleão SA. Cada casa custa o equivalente a 150 salários mínimos. Elaborar um programa e **funções** para ler o valor do salário mínimo e calcule a quantidade de casas possíveis de ser construídas, exibindo um relatório do tipo orçamento.
 
-34. Elaborar uma **função** que calcule a quantidade de galões de tinta necessária, bem como o seu custo para pintar um tanque de combustível em formato cilíndrico. A área a ser pintada é calculada pela fórmula:
+33. Elaborar uma **função** que calcule a quantidade de galões de tinta necessária, bem como o seu custo para pintar um tanque de combustível em formato cilíndrico. A área a ser pintada é calculada pela fórmula:
     $$
     A_{cilindro} = 2 \pi r^2 + 2 \pi r h
     $$
@@ -113,9 +105,9 @@
 
 ## Matemática
 
-35. Elabore uma **função** chamada divisor, que recebe como entrada dois valores, $x$ e $y$. A função deve retornar verdadeiro caso $x$ seja um divisor de $y$.
+34. Elabore uma **função** chamada divisor, que recebe como entrada dois valores, $x$ e $y$. A função deve retornar verdadeiro caso $x$ seja um divisor de $y$.
 
-36. Elaborar duas **funções** para (i) calcular a área de um triângulo pela fórmula de Heirão:
+35. Elaborar duas **funções** para (i) calcular a área de um triângulo pela fórmula de Heirão:
     $$
     k = \sqrt{s(s-a)(s-b)(s-c)}
     $$
@@ -129,7 +121,7 @@
 
     (ii) uma função para calcular o valor de $s$.
 
-37. Elaborar uma **função** para calcular a área A de um triângulo dada a fórmula:
+36. Elaborar uma **função** para calcular a área A de um triângulo dada a fórmula:
 
     $$
     A_{tri} = \frac{b*h}{2}
@@ -139,14 +131,14 @@
     $b$ = base  
     $h$ = altura
 
-38. Elaborar uma **função** para calcular a área de uma circunferência dada a fórmula:
+37. Elaborar uma **função** para calcular a área de uma circunferência dada a fórmula:
     $$
     A_{circ} = \pi * r^2
     $$
     Onde:  
     $r$ = raio  
 
-39. Elaborar uma **função** para calcular as raízes de uma equação de segundo grau. Uma equação de segundo grau é representada pela seguinte fórmula geral:
+38. Elaborar uma **função** para calcular as raízes de uma equação de segundo grau. Uma equação de segundo grau é representada pela seguinte fórmula geral:
     $$
     ax^2 + bx +c = 0
     $$
@@ -156,22 +148,22 @@
     x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
     $$
 
-40. Faça uma **função** para calcular a distância entre dois pontos $A$ e $B$ em um plano cartesiano. O ponto $A$ possui as coordenadas $(x_1, y_1)$ e o ponto $B$ possui as coordenadas $(x_1, y_2)$. A distância $d$ entre os pontos $A$ e $B$ é dada pela seguinte fórmula:
+39. Faça uma **função** para calcular a distância entre dois pontos $A$ e $B$ em um plano cartesiano. O ponto $A$ possui as coordenadas $(x_1, y_1)$ e o ponto $B$ possui as coordenadas $(x_1, y_2)$. A distância $d$ entre os pontos $A$ e $B$ é dada pela seguinte fórmula:
 $$
 d = \sqrt{(x_2-x_2)^2+(y_2-y_2)^2}
 $$
 
-41. Elaborar uma **função** que receba b e c representando os catetos de um triângulos. Essa **função** deve retornar o valor da hipotenusa $a$ que pode ser obtido pela seguinte fórmula:
+40. Elaborar uma **função** que receba b e c representando os catetos de um triângulos. Essa **função** deve retornar o valor da hipotenusa $a$ que pode ser obtido pela seguinte fórmula:
     $$
     a = \sqrt{b^2 + c^2}
     $$
 
-42. Elaborar uma **função** que calcula o volume $v$ de um cilindro circular. Desenvolva essa **função** passando por parâmetro a altura $h$ e o raio $r$ do cilindro. O volume pode ser calculado por meio da seguinte fórmula:
+41. Elaborar uma **função** que calcula o volume $v$ de um cilindro circular. Desenvolva essa **função** passando por parâmetro a altura $h$ e o raio $r$ do cilindro. O volume pode ser calculado por meio da seguinte fórmula:
     $$
     V_{cilindro} = \pi * r^2 * h
     $$
 
-43. Elaborar uma **função** para converter uma temperatura em graus Celsius para graus Fahrenheit, utilizando a seguinte fórmula:
+42. Elaborar uma **função** para converter uma temperatura em graus Celsius para graus Fahrenheit, utilizando a seguinte fórmula:
     $$
     F = \frac{9}{5} * C + 32
     $$
@@ -179,7 +171,7 @@ $$
     $C$ é a temperatura em Celsius.
     $F$ é a temperatura em Fahrenheit.
 
-44. Elaborar uma **função** para converter uma temperatura em graus Fahrenheit para graus Celsius, utilizando a seguinte fórmula:
+43. Elaborar uma **função** para converter uma temperatura em graus Fahrenheit para graus Celsius, utilizando a seguinte fórmula:
     $$
     C = \frac{5}{9} * (F-32)
     $$
@@ -187,7 +179,7 @@ $$
     $C$ é a temperatura em Celsius.
     $F$ é a temperatura em Fahrenheit.
 
-45. Elaborar uma **função** para converter uma temperatura em Kelvin para graus Celsius, utilizando a seguinte fórmula:
+44. Elaborar uma **função** para converter uma temperatura em Kelvin para graus Celsius, utilizando a seguinte fórmula:
     $$
     C = K − 273.15
     $$
@@ -195,7 +187,7 @@ $$
     $C$ é a temperatura em Celsius.
     $K$ é a temperatura em Kelvin.
 
-46. Elaborar uma **função** para converter uma temperatura em graus Celsius para Kelvin, utilizando a seguinte fórmula:
+45. Elaborar uma **função** para converter uma temperatura em graus Celsius para Kelvin, utilizando a seguinte fórmula:
     $$
     K = C + 273.15
     $$
@@ -204,14 +196,14 @@ $$
     $C$ é a temperatura em Celsius.
     $K$ é a temperatura em Kelvin.
 
-47. Elaborar uma **função** e um programa principal para realizar o cálculo do volume de uma esfera. Sendo que o raio é passado por parâmetro.
+46. Elaborar uma **função** e um programa principal para realizar o cálculo do volume de uma esfera. Sendo que o raio é passado por parâmetro.
     $$
     v_{esfera} = \frac{4}{3}*\pi*r^3
     $$
     Onde:  
     $r$: raio da esfera
 
-48. Elabore um programa que calcule as médias definidas a seguir para os valores reais $a$, $b$, $c$ e $d$, e o inteiro $n=4$ .
+47. Elabore um programa que calcule as médias definidas a seguir para os valores reais $a$, $b$, $c$ e $d$, e o inteiro $n=4$ .
   - Média Aritmética:
     $$
     m_a = \frac{a+b+c+d}{n}
@@ -230,6 +222,14 @@ $$
     $$
 
 ## Física
+48. Elaborar uma **função** para converter uma velocidade em km/h (quilômetros por hora) para m/s (metros por segundos), utilizando a seguinte fórmula de conversão:
+    $$
+    m = \frac{k}{3.6}
+    $$
+    Onde: 
+    $k$ : km/h, e
+    $m$ : m/s.
+
 49. Elaborar uma **função** para converter uma velocidade em m/s (metros por segundo) para km/h (quilômetros por hora), utilizando a seguinte fórmula de conversão:
     $$
     k = m ∗ 3.6
