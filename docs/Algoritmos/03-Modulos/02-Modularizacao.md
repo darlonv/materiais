@@ -53,20 +53,20 @@ pubic static void Main(String[] args){
 
     //variáveis
     String nome;
-    Scanner entrada = new Scanner(System.in);
 
     // highlight-next-line
     System.out.println("##########");
 
     //entrada e saída
+    entradaAbrir();
     System.out.println("Nome: ");
     nome = entrada.next();
     System.out.printf("Boa noite, %s\n", nome);
+    entradaFechar();
 
     // highlight-next-line
     System.out.println("##########");
 
-    scanner.close();
 }
 ```
 
@@ -95,7 +95,7 @@ No exemplo observe que há linha que se repete. Esta linha (ou mais que uma linh
 inicio
     //módulos
     // highlight-start
-    modulo linhas
+    modulo mostrarLinhas
         escreva("==========")
     fimmodulo.
     // highlight-end
@@ -105,7 +105,7 @@ inicio
 
     //cabecalho
     // highlight-next-line
-    linhas();   
+    mostrarLinhas();   
 
     //Entrada e saída
     escreva("Nome: ");
@@ -114,7 +114,7 @@ inicio
 
     //rodapé
     // highlight-next-line
-    linhas();
+    mostrarLinhas();
 fim.
 ```
 
@@ -124,7 +124,7 @@ fim.
 ``` javascript
 
 // highlight-start
-public static void linhas(){
+public static void mostrarLinhas(){
     System.out.println("##########");
 }
 // highlight-end
@@ -133,20 +133,20 @@ pubic static void Main(String[] args){
 
     //variáveis
     String nome;
-    Scanner entrada = new Scanner(System.in);
 
     // highlight-next-line
-    linhas();
+    mostrarLinhas();
 
     //entrada e saída
+    entradaAbrir();
     System.out.println("Nome: ");
     nome = entrada.next();
     System.out.printf("Boa noite, %s\n", nome);
+    entradaFechar();
 
     // highlight-next-line
-    linhas();
+    mostrarLinhas();
 
-    scanner.close();
 }
 
 ```
@@ -156,13 +156,13 @@ pubic static void Main(String[] args){
 
 ``` python
 
-def linhas():
+def mostrarLinhas():
     print("##########")
 
-linhas()
+mostrarLinhas()
 nome = input("Nome: ")
 print(f"Boa noite, {nome}")
-linhas()
+mostrarLinhas()
 
 ```
 
@@ -178,7 +178,7 @@ linhas()
 As principais vantagens da modularização são:
 - O mesmo trecho de código pode ser executado mais de uma vez, diminuindo a quantidade de código escrito;
 - Caso seja necessário atualizar esse trecho de código, este é modificado em apenas um lugar, a atualização será válida para todo o algoritmo;
-- O teste de código fica mais simplificado, dado que é possível testar trechos de código;
+- O teste de código fica mais simplificado, dado que é possível testar trechos isolados de código;
 
 :::
 
@@ -225,15 +225,16 @@ public static void main(String[] args){
     //variáveis
     int idade_p1, idade_p2, idade_p3;
     real idade_media;
-    Scanner entrada = new Scanner(System.in);
 
     //entrada
+    entradaAbrir();
     System.out.println("Idade da primeira pessoa: ");
     idade_p1 = entrada.nextInt();
     System.out.println("Idade da segunda pessoa: ");
     idade_p2 = entrada.nextInt();
     System.out.println("Idade da terceira pessoa: ");
     idade_p3 = entrada.nextInt();
+    entradaFechar();
 
     //processamento
     idade_media = (idade_p1 + idade_p2 + idade_p3)/3;
@@ -305,7 +306,6 @@ Poderia ser desenvolvida uma função que obtém as entradas e calcula e retorna
   <TabItem value="java" label="Java">
 
   ``` javascript
-static Scanner entrada = new Scanner(System.in);
 
 public static void idadeMediaTresPessoas(){
     //variáveis
@@ -313,12 +313,14 @@ public static void idadeMediaTresPessoas(){
     real media_idade;
     
     //entrada
+    entradaAbrir();
     System.out.println("Idade da primeira pessoa: ");
     idade_p1 = entrada.nextInt();
     System.out.println("Idade da segunda pessoa: ");
     idade_p2 = entrada.nextInt();
     System.out.println("Idade da terceira pessoa: ");
     idade_p3 = entrada.nextInt();
+    entradaFechar();
     
     //processamento
     media_idade = (idade_p1 + idade_p2 + idade_p3)/3;
