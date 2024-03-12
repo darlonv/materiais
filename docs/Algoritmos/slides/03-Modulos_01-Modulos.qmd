@@ -589,7 +589,7 @@ O uso dos parâmetros permite que o conteúdo da função seja realizado de acor
 :::
 
 **Atividade**
-- Desenvolva uma função que informa se um número é ímpar.
+- Desenvolva uma função que retorna se um número é ímpar.
 - Desenvolva uma função que calcula a soma entre dois números.
 - Desenvolva uma função que calcula a soma entre três números.
 
