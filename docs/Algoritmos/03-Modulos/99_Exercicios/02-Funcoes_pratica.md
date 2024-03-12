@@ -1,39 +1,35 @@
-# Funções
+# Procedimentos e funções
 
 ## Prática
 
 1. Elaborar um programa que leia um valor inteiro e passe para uma **função** que irá adicionar $5$ ao valor, retorne ao programa e escreva o resultado da soma.
 
-2. Elaborar um programa que leia 2 valores inteiros e uma **função** para realizar a soma destes. Desenvolva também outra **função** responsável pela apresentação do resultado.
+2. Elaborar um programa que leia 2 valores inteiros e uma **função** para realizar a soma destes. Desenvolva também um procedimento responsável pela apresentação do resultado.
 
 3. Elaborar um programa que leia 2 valores inteiros e uma **função** que mostre a diferença entre eles.
 
-4. Elaborar um programa que leia um número inteiro e passe para uma **função** que é responsável por imprimi-lo.
+4. Elaborar uma função que leia um número inteiro e passe para um procedimento que é responsável por imprimi-lo.
 
 5. Elaborar um programa que leia a altura dos andares de um prédio e o número de andares, e uma **função** para calcular a altura do prédio.
 
-6. Elaborar um programa que leia o comprimento, a altura e a espessura de um sólido cúbico e desenvolva uma **função** para imprimir o volume do sólido.
+6. Elaborar um programa que leia o comprimento, a altura e a espessura de um sólido cúbico. Com isso desenvolva uma **função** para calcular o volume do sólido e um procedimento para apresentar o volume do sólido.
 
-7. Elaborar um programa que solicita ao usuário para digitar três números, em seguida uma **função** para calcular a soma deles e imprimir.
+7. Elaborar um programa que solicita ao usuário para digitar três números, em seguida uma **função** para calcular a soma deles um procedimento para imprimir.
 
-8. Elaborar um programa que leia um número real. Além disso, desenvolva uma **função** para calcular e imprimir o resultado do quadrado desse número.
+8. Elaborar um programa que leia um número real. Além disso, desenvolva uma **função** para calcular o resultado do quadrado desse número, e um procedimento para imprimir o resultado.
 
-9. Elaborar um programa que leia um número real. Além disso, desenvolva uma **função** para calcular e imprimir a quinta parte deste número.
+9. Elaborar um programa que leia um número real. Além disso, desenvolva uma **função** para calcular um procedimento para imprimir a quinta parte deste número.
 
-10. Elaborar **funções** para receber um valor em real e a cotação em dólares. Em seguida, imprima o valor final, após o câmbio do dinheiro.
+10. Elaborar **funções** para receber um valor em real e a cotação em dólares. Em seguida, imprima o valor final, após o câmbio do dinheiro, em um procedimento separado..
 
-11. Elaborar uma **função** que leia um número inteiro e imprima o seu antecessor e o seu sucessor.
+11. Elaborar um **procedimento** que leia um número inteiro e imprima o seu antecessor e o seu sucessor.
 
-12. Elaborar uma **função** para ler um número inteiro e imprima a soma do dobro do sucessor com o dobro do seu antecessor.
+12. Elaborar um **procedimento** para ler um número inteiro e imprima a soma do dobro do sucessor com o dobro do seu antecessor.
 
 
-14. Elaborar uma **função** para calcular a quantidade de azulejos que são necessários para cobrir uma determinada parede.
+14. Elaborar uma **função** para calcular a quantidade de azulejos que são necessários para cobrir uma determinada parede. Desenvolva um procedimento para apresentar o resultado.
 
 18. Elaborar uma **função** que receba três números inteiros como parâmetro, representando horas, minutos e segundos de um determinado tempo percorrido. Converta esse tempo percorrido em segundos.
-
-25. Considerando as seguintes informações de um automóvel: marca, quilometragem inicial, quilometragem final, litros consumidos e capacidade do tanque de combustível. Elaborar um programa e funções que emita um relatório na tela contendo os dados informado e qual o consumo do automóvel em km/litros e qual a sua autonomia (km/tanque).
-
-26. Elaborar uma **função** para calcula o valor a ser pago pelos passageiros pelo excesso de bagagem. Considerando que até 25kg o valor é R$2.50 e o excedente custa R$0.75 por quilo. Por fim, exiba o peso total, o peso excedente e o valor a ser pago pelo passageiro. Utilize passagem por referência.
 
 27. Elaborar uma **função** para converter uma velocidade em km/h (quilômetros por hora) para m/s (metros por segundos), utilizando a seguinte fórmula de conversão:
     $$
@@ -43,29 +39,11 @@
     $k$ é km/h.
     $m$ é m/s.
 
-28. Elaborar uma **função** para converter uma velocidade em m/s (metros por segundos) para km/h (quilômetros por hora), utilizando a seguinte fórmula de conversão:
-    $$
-    k = m ∗ 3.6
-    $$
-    Onde:
-    k é km/h.
-    m é m/s.
+## Exercícios
 
-29. Elaborar uma **função** para converter um distância em milhas para quilômetros, utilizando a seguinte fórmula de conversão:
-    $$
-    K = 1.61 ∗ M
-    $$
-    Onde:
-    k é km.
-    m é Milhas.
+17. Considerando as seguintes informações de um automóvel: marca, quilometragem inicial, quilometragem final, litros consumidos e capacidade do tanque de combustível. Elaborar um programa e funções que emita um relatório na tela contendo os dados informado e qual o consumo do automóvel em km/litros e qual a sua autonomia (km/tanque).
 
-30. Elaborar uma **função** para converter um distância em quilômetros para milhas, utilizando a seguinte fórmula de conversão:
-    $$
-    k =1.61 * m
-    $$
-    Onde:
-    k é km.
-    m é Milhas.
+26. Elaborar uma **função** para calcula o valor a ser pago pelos passageiros pelo excesso de bagagem. Considerando que até 25kg o valor é R$2.50 e o excedente custa R$0.75 por quilo. Por fim, exiba o peso total, o peso excedente e o valor a ser pago pelo passageiro.
 
 31. Elaborar uma **função** para calcular o alcance de um projétil, dada a velocidade inicial $v_0$ e o ângulo $\theta$ entre o cano do canhão e o solo. A fórmula a ser utilizada é:
     $$
@@ -120,21 +98,7 @@
 
 47. A revendedora de carros Tio Chico Ltda paga para seus colaboradores dois salários mínimos fixos, além disso, paga uma comissão fixa de R$750.00 por carro vendido e mais 5% do valor do valor de suas vendas mensais. Sabendo disto, elabore um programa com **funções** para calcular o valor total do salário de cada vendedor.
 
-48. Elaborar duas **funções** para (i) calcular a área de um triângulo pela fórmula de Heirão:
-    $$
-    k = \sqrt{s(s-a)(s-b)(s-c)}
-    $$
-    Onde:  
-    $k$ : área do triângulo  
-    $a$, $b$ e $c$ são lados do triângulo, e
-    $s$ é o semiperímetro, calculado pela fórmula  
-    $$
-    s = \frac{a+b+c}{2}
-    $$
-
-    (ii) uma função para calcular o valor de $s$.
-
-49. Uma empresa produz três tipos de peças mecânicas: parafusos, porcas e arruelas. Tem-se os preços unitários de cada tipo de peça e sabe-se que sobre esses preços incidem descontos de 10% para porcas, 20% para parafusos e 30% para arruelas. Elaborar uma **função** que calcule o valor total da compra de um cliente. Deve ser mostrado o nome do cliente, o número de cada tipo de peça que comprou, o total de desconto e o total gasto na compra.
+37. Uma empresa produz três tipos de peças mecânicas: parafusos, porcas e arruelas. Tem-se os preços unitários de cada tipo de peça e sabe-se que sobre esses preços incidem descontos de 10% para porcas, 20% para parafusos e 30% para arruelas. Elaborar uma **função** que calcule o valor total da compra de um cliente. Deve ser mostrado o nome do cliente, o número de cada tipo de peça que comprou, o total de desconto e o total gasto na compra.
 
 50. O governo estadual forneceu $R\$10000000.00$ para a construção de casas populares, para isso contratou-se a construtora Camaleão SA. Cada casa custa o equivalente a 150 salários mínimos. Elaborar um programa e **funções** para ler o valor do salário mínimo e calcule a quantidade de casas possíveis de ser construídas, exibindo um relatório do tipo orçamento.
 
@@ -150,6 +114,22 @@
 
 
 ## Matemática
+
+36. Elabore uma **função** chamada divisor, que recebe como entrada dois valores, $x$ e $y$. A função deve retornar verdadeiro caso $x$ seja um divisor de $y$.
+
+48. Elaborar duas **funções** para (i) calcular a área de um triângulo pela fórmula de Heirão:
+    $$
+    k = \sqrt{s(s-a)(s-b)(s-c)}
+    $$
+    Onde:  
+    $k$ : área do triângulo  
+    $a$, $b$ e $c$ são lados do triângulo, e
+    $s$ é o semiperímetro, calculado pela fórmula  
+    $$
+    s = \frac{a+b+c}{2}
+    $$
+
+    (ii) uma função para calcular o valor de $s$.
 
 40. Elaborar uma **função** para calcular a área A de um triângulo dada a fórmula:
 
@@ -233,6 +213,49 @@ $$
     Onde:  
     $r$: raio da esfera
 
+44. Elabore um programa que calcule as médias definidas a seguir para os valores reais $a$, $b$, $c$ e $d$, e o inteiro $n=4$ .
+  - Média Aritmética:
+    $$
+    m_a = \frac{a+b+c+d}{n}
+    $$
+  - Média Harmônica:
+    $$
+    m_h = \frac{n}{\frac{1}{a}+\frac{1}{b}+\frac{1}{c}+\frac{1}{d}}
+    $$
+  - Média Geométrica:
+    $$
+    m_g = \sqrt[n]{a*b*c*d}
+    $$
+  - Média Quadrática:
+    $$
+    m_q = \sqrt{\frac{a^2+b^2+c^2+d^2}{n}}
+    $$
+
+## Física
+50. Elaborar uma **função** para converter uma velocidade em m/s (metros por segundo) para km/h (quilômetros por hora), utilizando a seguinte fórmula de conversão:
+    $$
+    k = m ∗ 3.6
+    $$
+    Onde:
+    k é km/h.
+    m é m/s.
+
+29. Elaborar uma **função** para converter um distância em milhas para quilômetros, utilizando a seguinte fórmula de conversão:
+    $$
+    K = 1.61 ∗ M
+    $$
+    Onde:
+    k é km.
+    m é Milhas.
+
+30. Elaborar uma **função** para converter um distância em quilômetros para milhas, utilizando a seguinte fórmula de conversão:
+    $$
+    k =1.61 * m
+    $$
+    Onde:
+    k é km.
+    m é Milhas.
+
 41. Elaborar funções para o cálculo de:
     $$
     v = ri
@@ -257,22 +280,3 @@ $$
     $t$ : tempo  
     $q$ : carga elétrica  
     $w$ : potência
-
-44. Elabore um programa que calcule as médias definidas a seguir para os valores reais $a$, $b$, $c$ e $d$, e o inteiro $n=4$ .
-  - Média Aritmética:
-    $$
-    m_a = \frac{a+b+c+d}{n}
-    $$
-  - Média Harmônica:
-    $$
-    m_h = \frac{n}{\frac{1}{a}+\frac{1}{b}+\frac{1}{c}+\frac{1}{d}}
-    $$
-  - Média Geométrica:
-    $$
-    m_g = \sqrt[n]{a*b*c*d}
-    $$
-  - Média Quadrática:
-    $$
-    m_q = \sqrt{\frac{a^2+b^2+c^2+d^2}{n}}
-    $$
-
