@@ -108,7 +108,7 @@ serv.shutdown(socket.SHUT_RDWR)
 
 Nesta versão, temos uma aplicação cliente/servidor, em que o cliente envia uma mensagem ao servidor e o servidor responde com outra mensagem. 
 - Cliente: envia uma mensagem ao servidor
-- Servidor: responde uma mensagem ao cliente. Após responder, aguarda por uma nova conexão.
+- Servidor: a mensagem recebida na tela e encerra a conexão. Após isso, aguarda por uma nova conexão.
 
 <Tabs groupId='language'>
 <TabItem value="python" label="Python">
@@ -140,11 +140,6 @@ client.connect((dest, port))
 #Envia mensagem ao servidor
 print('== Enviando mensagem ==')
 client.send(msg.encode())
-
-#Recebe mensagem do servidor
-print('==Recebendo mensagem do servidor ==')
-from_server = client.recv(4096)
-print(from_server.decode())
 
 #Fecha a conexão
 client.close()
@@ -186,11 +181,6 @@ while True:
     print('== Dados recebidos: ==')
     print(from_client.decode())
 
-    #Envia uma mensagem
-    print('== Enviando mensagem ==')
-    conn.send(msg.encode())
-    print('== Mensagem enviada ==')
-
     #Fecha a conexao
     conn.close()
     print('== Cliente desconectado ==')
@@ -202,8 +192,13 @@ while True:
 
 </Tabs>
 
+**Atividade**
+- Utilizando sockets, desenvolva uma aplicação que opere como um servidor de mensagens, em que o servidor recebe a mensagem de um cliente e apresenta na tela o endereço IP do cliente seguido da mensagem.
+    - Modifique a aplicação, cadastrando um determinado número de IPs. Apresente na tela apenas mensagens origindas de endereços IP cadastrados. 
+    - Modifique a aplicação, cadastrando o nome do usuário em cada IP. Ao apresentar a mensagem na tela, exiba o nome do usuário ao invés do endere;o IP.
+
 ## App v3
 
-Nesta versão, temos uma aplicação cliente/servidor, em que o cliente envia uma mensagem ao servidor e o servidor responde com outra mensagem. 
-- Cliente: envia uma mensagem ao servidor
-- Servidor: responde uma mensagem ao cliente. Após responder, aguarda por uma nova conexão. Caso a porta não esteja liberada, servidor aguarda até que a porta esteja disponível, por um número limitado de vezes.
+Nesta versão, temos uma aplicação cliente/servidor, em que o cliente envia uma mensagem ao servidor e o servidor responde com a mesma mensagem escrita em maiúsculas. 
+
+
