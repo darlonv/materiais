@@ -162,6 +162,7 @@ msg = '** Olá. Sou o servidor. **'
 
 #Objeto socket
 serv  = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+serv  = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 #Associa o socket a uma porta local
 serv.bind(('0.0.0.0',port))
@@ -184,6 +185,9 @@ while True:
     #Fecha a conexao
     conn.close()
     print('== Cliente desconectado ==')
+
+#encerra o socket
+serv.shutdown(socket.SHUT_RDWR)
 ```
 
 </TabItem>
@@ -195,7 +199,7 @@ while True:
 **Atividade**
 - Utilizando sockets, desenvolva uma aplicação que opere como um servidor de mensagens, em que o servidor recebe a mensagem de um cliente e apresenta na tela o endereço IP do cliente seguido da mensagem.
     - Modifique a aplicação, cadastrando um determinado número de IPs. Apresente na tela apenas mensagens origindas de endereços IP cadastrados. 
-    - Modifique a aplicação, cadastrando o nome do usuário em cada IP. Ao apresentar a mensagem na tela, exiba o nome do usuário ao invés do endere;o IP.
+    - Modifique a aplicação, cadastrando o nome do usuário em cada IP. Ao apresentar a mensagem na tela, exiba o nome do usuário ao invés do endereço IP.
 
 ## App v3
 
