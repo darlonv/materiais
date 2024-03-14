@@ -411,8 +411,8 @@ lógico Verdadeiro (V), observar os resultados obtidos das expressões lógicas 
   </TabItem>
 </Tabs>
 
-1. Considerando A e C variáveis inteiras, contendo os valores, 1 e 8 e, B como uma variável real, com
-o valor 4.5; e TESTE variável lógica contendo o valor verdadeiro (V), determinar os resultados
+1. Considerando A e C variáveis inteiras, contendo os valores, $1$ e $8$ e, B como uma variável real, com
+o valor $4.5$ e TESTE variável lógica contendo o valor verdadeiro (V), determinar os resultados
 obtidos da avaliação das seguintes expressões:
 <Tabs groupId='language'>
   <TabItem value="pseudocodigo" label="Pseudocódigo" default>
