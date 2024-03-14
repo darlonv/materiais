@@ -1,0 +1,12 @@
+
+# Introdução a algoritmos
+
+## Algoritmo
+Um **algoritmo** é uma sequência de passos organizada, de maneira que a **execução** dos passos possibilita atingir um objetivo.
+
+Junto à idéia de algoritmo vem a noção de **ordem**, na execução dos passos.
+
+**Exemplo**
+- Como faríamos para trocar uma lâmpada?
+- Como faríamos para fazer gelo?
+    - Quais seriam os passos?

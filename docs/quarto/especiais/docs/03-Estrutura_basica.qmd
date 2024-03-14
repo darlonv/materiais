@@ -1,0 +1,20 @@
+# Estrutura básica
+
+A estrutura básica de um algoritmo consiste na delimitação inicial para que um **código** seja executado. Este espaço é importante para para delimitar e informar ao computador qual código deve ser executado inicialmente.
+
+
+  ```javascript
+  public class Main{
+
+    public static void main(String[] args){
+
+        //o código deverá ser inserido após { e antes de }.
+        //linhas que se iniciam 
+
+        //  com // são consideradas comentários, e 
+        //  não são executadas
+    }
+
+  }
+  ```
+
