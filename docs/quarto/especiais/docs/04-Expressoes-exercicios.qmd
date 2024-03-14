@@ -1,5 +1,6 @@
-# Expressões
+# Expressões - Exercícios
 
+## Exemplo respondido
 - Faça um programa que pergunta um número ao usuário, e em seguida mostra o antecessor e o sucessor desse número.  
 
 Resposta: 
@@ -37,11 +38,55 @@ System.out.printf("O sucessor de %d é %d\n", valor, sucessor);
 1. Pergunte três valores ao usuário, que correspondem às horas, minutos e segundos do horário atual. Calcule quantos segundos se passaram desde 00:00 horas.
 
 <!-- double -->
-
-
-
 1. Escreva um programa que pergunte a quantidade de km percorridos por um carro alugado pelo usuário, assim como a quantidade de dias pelos quais o carro foi alugado. Calcule o preço a pagar, sabendo que o carro custa R\$ 60,00 por dia e R\$ 0,15 por km rodado.  
 (Fonte: MENEZES 2019, pg. 72)
+
+## Expressões
+
+1. Suponha que `A`, `B` e `C` são variáveis de tipo inteiro, com valores iguais a $5$, $10$ e $-8$, respectivamente, e uma variável real `D`, com valor de $1.5$. Quais serão os resultados das expressões aritméticas a seguir?  
+
+`2 * A % 3 - C`  
+`Math.sqrt(-2 * C) / 4`  
+`((20 / 3) / 3) + Math.pow(2, 8) / 2`  
+`(30 % 4 * Math.pow(3, 3)) * (-1)`  
+`Math.pow(-C, 2) + (D * 10) / A`  
+`Math.sqrt(Math.pow(A, B/A)) + C * D`  
+
+  
+
+1. Sendo P, Q e R variáveis de tipo inteiro, com valores iguais a 2, 3 e 12, respectivamente, e
+uma variável real S, com valor de 4.5, quais os valores fornecidos por cada uma das expressões
+aritméticas abaixo?
+
+`((100 * Q) / P + R)`  
+`S % (P - 1) - Q * R`  
+`(P * R) % 5 - Q / 2`  
+`1 + Math.sqrt( Math.pow(P, 3) + 3 * R + 5)`  
+`1 + (int)((R + P) / Math.pow (Q, 2))`  
+`Math.sqrt(Math.sqrt(16)) * Math.pow(2, 3)` 
+
+1. Considerando as variáveis numéricas X, Y e Z, contendo os valores 2, 5 e 9, respectivamente, a
+variável literal NOME, contendo o literal "MARIA"; e a variável lógica SIM, contendo o valor
+lógico Verdadeiro (V), observar os resultados obtidos das expressões lógicas a seguir.
+
+`X + Y > Z && NOME=="MARIA"`  
+`SIM || Y >= X`  
+`!SIM && Z / Y + 1 == X`  
+`NOME=="JORGE" && SIM || Math.pow(X, 2) < Z + 10` 
+
+1. Considerando A e C variáveis inteiras, contendo os valores, 1 e 8 e, B como uma variável real, com
+o valor $4.5$ e TESTE variável lógica contendo o valor verdadeiro (V), determinar os resultados
+obtidos da avaliação das seguintes expressões:
+
+`A == 1 && TESTE`  
+`A + C == Math.sqrt(81) || TESTE != false`  
+`!TESTE || C % 2 == 0.5`  
+`C < 10 || TESTE`  
+`TESTE && !TESTE`  
+`Math.pow(A, 2) + Math.sqrt(A + C) == 3 && (A + B > 13)`  
+
+
+## Matemática
 
 1. Escreva um programa para ler as dimensões de um retângulo, com o tamanho da base ($b$) e da altura ($h$). Calcule o mostre o perímetro ($p$) e área ($a$) desse retângulo.
 $$
@@ -60,6 +105,56 @@ $$
 M = \frac{N_1 \times 2 + N_2 \times 3 + N_3 \times 5}{2+3+5}
 $$  
 (Fonte: CARVALHO, 2007)
+
+## Teste de mesa
+
+1. Analise os valores que estão armazenados em cada uma das variáveis, após a execução de cada instrução. Prencha com "?" nos lugares em que o valor da variável não é conhecido.
+
+```javascript
+public class Main{
+  public static void main () {
+                          //  a   |    b   |    c   |    x   |
+      float a , b ;       //      |        |        |        | 
+      int c , x ;         //      |        |        |        | 
+      a = 6.0;            //      |        |        |        | 
+      b = a / 2;          //      |        |        |        | 
+      c = 11;             //      |        |        |        | 
+      x = (int) c / 4;    //      |        |        |        | 
+      c = c % 2;          //      |        |        |        | 
+      b = 5.4;            //      |        |        |        | 
+      c = c + 1;          //      |        |        |        | 
+      a = b + 2;          //      |        |        |        | 
+  }
+}
+``` 
+
+1. Indique os valores armazenados em cada variável, após executar cada uma das instruções
+
+```javascript
+public class Main{
+  public static void main () {
+                        //   q  |    w   |    r   |    ex  |
+    float q, w, r ;     //      |        |        |        | 
+    int ex ;            //      |        |        |        | 
+    q = 10;             //      |        |        |        | 
+    q = 10 + 30;        //      |        |        |        | 
+    w = -1;             //      |        |        |        | 
+    w = w + q;          //      |        |        |        | 
+    q = q % w;          //      |        |        |        | 
+    ex = 2 * q / w;     //      |        |        |        | 
+    r = 0;              //      |        |        |        | 
+    r = r + 1;          //      |        |        |        | 
+    r = r + 1;          //      |        |        |        | 
+
+  }
+}
+``` 
+
+ 
+
+---
+
+
 
 1. Faça um programa que solicite o preço de uma mercadoria e o percentual de desconto. Exiba o valor do desconto e o preço a pagar.  
 (Fonte: MENEZES 2019, pg. 72)
@@ -82,96 +177,7 @@ $$
 1. Uma revendedora de carros usados paga a seus funcionários vendedores um salário fixo por mês, mais  uma  comissão  fixa  de 5% sobre o valor de todos os carros vendidos pelo funcionário. Escreva um algoritmo que receba como entrada o valor total de suas vendas e seu salário fixo, e em seguida calcula e apresenta o salário final do vendedor.  
   (Adaptado de CARVALHO, 2007).
 
-1. Suponha que `A`, `B` e `C` são variáveis de tipo inteiro, com valores iguais a $5$, $10$ e $-8$, respectivamente, e uma variável real `D`, com valor de $1.5$. Quais serão os resultados das expressões aritméticas a seguir?  
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
-  `2 * A % 3 - C`  
-  `(sqrt(-2 * C) / 4)`  
-  `((20 / 3) / 3) + pow(2, 8) / 2`  
-  `(30 % 4 * pow(3, 3)) * (-1)`  
-  `pow(-C, 2) + (D * 10) / A`  
-  `sqrt(pow(A, B/A)) + C * D`  
-
-  </TabItem>
-  <TabItem value="java" label="Java">
-
-  `2 * A % 3 - C`  
-  `Math.sqrt(-2 * C) / 4`  
-  `((20 / 3) / 3) + Math.pow(2, 8) / 2`  
-  `(30 % 4 * Math.pow(3, 3)) * (-1)`  
-  `Math.pow(-C, 2) + (D * 10) / A`  
-  `Math.sqrt(Math.pow(A, B/A)) + C * D`  
-
-  </TabItem>
-  <TabItem value="python" label="Python">
-
-  `2 * A % 3 - C`  
-  `sqrt(-2 * C) / 4`  
-  `((20 / 3) / 3) + 2**8 / 2`  
-  `(30 % 4 * 3**3) * (-1)`  
-  `-C**2 + (D * 10) / A`  
-  `sqrt(A**(B/A)) + C * D`  
-
-  </TabItem>
-
-  <TabItem value="c" label="C">
-
-  `2 * A % 3 - C`  
-  `sqrt(-2 * C) / 4`  
-  `((20.0 / 3) / 3) + 2**8 / 2`  
-  `(30 % 4 * 3**3) * (-1)`  
-  `pow(-C, 2) + (d * 10) / A`  
-  `sqrt(pow(A, B / A)) + C * D`  
-
-  </TabItem>
-</Tabs>
-1. Sendo P, Q e R variáveis de tipo inteiro, com valores iguais a 2, 3 e 12, respectivamente, e
-uma variável real S, com valor de 4.5, quais os valores fornecidos por cada uma das expressões
-aritméticas abaixo?
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
-
-  `((100 * Q) / P + R)`  
-  `S % (P - 1) - Q * R`  
-  `(P * R) % 5 - Q / 2`  
-  `1 + rad( pot(P, 3) + 3 * R + 5)`  
-  `1 + ((R + P) / pot (Q, 2))`  
-  `rad(rad(16)) * pot(2, 3)` 
-
-  </TabItem>
-  <TabItem value="java" label="Java">
-
-  `((100 * Q) / P + R)`  
-  `S % (P - 1) - Q * R`  
-  `(P * R) % 5 - Q / 2`  
-  `1 + Math.sqrt( Math.pow(P, 3) + 3 * R + 5)`  
-  `1 + (int)((R + P) / Math.pow (Q, 2))`  
-  `Math.sqrt(Math.sqrt(16)) * Math.pow(2, 3)` 
-
-  </TabItem>
-  <TabItem value="python" label="Python">
-
-  `((100 * Q) / P + R)`  
-  `S % (P - 1) - Q * R`  
-  `(P * R) % 5 - Q / 2`  
-  `1 + sqrt( P**3 + 3 * R + 5)`  
-  `1 + ((R + P) / Q**2)`  
-  `sqrt(sqrt(16)) * 2**3` 
-
-  </TabItem>
-
-  <TabItem value="c" label="C">
-
-  `((100 * Q) / P + R)`  
-  `S % (P - 1) - Q * R`  
-  `(P * R) % 5 - Q / 2`  
-  `1 + sqrt( pow(P, 3) + 3 * R + 5)`  
-  `1 + ((R + P) / pow (Q, 2))`  
-  `sqrt(sqrt(16)) * pow(2, 3)`  
-
-  </TabItem>
-</Tabs>
 
 1. Considere as seguintes atribuições, R = 2, S = 5, T = -1, X = - 3, Y = -1 e Z = 0, resolver as
 expressões abaixo:
@@ -326,91 +332,7 @@ expressões abaixo:
   </TabItem>
 </Tabs>
 
-1. Considerando as variáveis numéricas X, Y e Z, contendo os valores 2, 5 e 9, respectivamente, a
-variável literal NOME, contendo o literal "MARIA"; e a variável lógica SIM, contendo o valor
-lógico Verdadeiro (V), observar os resultados obtidos das expressões lógicas a seguir.
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
-  `X + Y > Z e NOME=="MARIA"`  
-  `SIM e Y >= X`  
-  `não SIM e Z / Y + 1 == X`  
-  `NOME=="JORGE" e SIM ou X**2 < Z + 10`  
-
-  </TabItem>
-  <TabItem value="java" label="Java">
-
-  `X + Y > Z && NOME=="MARIA"`  
-  `SIM || Y >= X`  
-  `!SIM && Z / Y + 1 == X`  
-  `NOME=="JORGE" && SIM || Math.pow(X, 2) < Z + 10` 
-
-  </TabItem>
-  <TabItem value="python" label="Python">
-
-  `X + Y > Z and NOME=="MARIA"`  
-  `SIM or Y >= X`  
-  `not SIM and Z / Y + 1 == X`  
-  `NOME=="JORGE" and SIM or X**2 < Z + 10`  
-
-  </TabItem>
-
-  <TabItem value="c" label="C">
-
-  `X + Y > Z && strcmp(NOME,"MARIA")`  
-  `SIM || Y >= X`  
-  `!SIM && (int) Z / Y + 1 == X`  
-  `strcmp(NOME,"JORGE") && SIM || pow(X, 2) < Z + 10`  
-
-  </TabItem>
-</Tabs>
-
-1. Considerando A e C variáveis inteiras, contendo os valores, 1 e 8 e, B como uma variável real, com
-o valor 4.5; e TESTE variável lógica contendo o valor verdadeiro (V), determinar os resultados
-obtidos da avaliação das seguintes expressões:
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
-
-  `A == 1 e TESTE`  
-  `A + C == rad(81) ou TESTE != falso`  
-  `não TESTE ou C % 2 == 0.5`  
-  `C < 10 ou TESTE`  
-  `TESTE e não TESTE`  
-  `pot(A, 2) + rad(A + C) == 3 e (A + B > 13)` 
-
-  </TabItem>
-  <TabItem value="java" label="Java">
-
-  `A == 1 && TESTE`  
-  `A + C == Math.sqrt(81) || TESTE != false`  
-  `!TESTE || C % 2 == 0.5`  
-  `C < 10 || TESTE`  
-  `TESTE && !TESTE`  
-  `Math.pow(A, 2) + Math.sqrt(A + C) == 3 && (A + B > 13)`  
-
-  </TabItem>
-  <TabItem value="python" label="Python">
-
-  `A == 1 and TESTE`  
-  `A + C == sqrt(81) or TESTE != False`  
-  `not TESTE or C % 2 == 0.5`  
-  `C < 10 or TESTE`  
-  `TESTE and not TESTE`  
-  `pow(A, 2) + sqrt(A + C) == 3 and (A + B > 13)`  
-
-  </TabItem>
-
-  <TabItem value="c" label="C">
-
-  `A == 1 && TESTE`  
-  `A + C == sqrt(81) || TESTE != 0`  
-  `!TESTE || C % 2 == 0.5`  
-  `C < 10 || TESTE`  
-  `TESTE && !TESTE`  
-  `pow(A, 2) + sqrt(A + C) == 3 && (A + B > 13)`  
-
-  </TabItem>
-</Tabs>
 
 1. Determine os resultados na avaliação das expressões lógicas seguintes, sabendo que A, B, C
 contêm, respectivamente, 2, 7, 3.5, e que existe uma variável lógica L cujo valor é F.
@@ -558,152 +480,7 @@ falsas.
 
 ### Testes de mesa
 
-1. Analise os valores que estão armazenados em cada uma das variáveis, após a execução de cada instrução. Prencha com "?" nos lugares em que o valor da variável não é conhecido.
 
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
-
-```c
-```
-
-  </TabItem>
-  <TabItem value="java" label="Java">
-
-```javascript
-public class Main{
-  public static void main () {
-                          //  a   |    b   |    c   |    x   |
-      float a , b ;       //      |        |        |        | 
-      int c , x ;         //      |        |        |        | 
-      a = 6.0;            //      |        |        |        | 
-      b = a / 2;          //      |        |        |        | 
-      c = 11;             //      |        |        |        | 
-      x = (int) c / 4;    //      |        |        |        | 
-      c = c % 2;          //      |        |        |        | 
-      b = 5.4;            //      |        |        |        | 
-      c = c + 1;          //      |        |        |        | 
-      a = b + 2;          //      |        |        |        | 
-  }
-}
-``` 
-
-  </TabItem>
-  <TabItem value="python" label="Python">
-
-```python
-if __name__ == "__main__":
-                        #  a   |    b   |    c   |    x   |
-    a = 6.0             #      |        |        |        | 
-    b = a / 2           #      |        |        |        | 
-    c = 11              #      |        |        |        | 
-    x = int(c/4)        #      |        |        |        | 
-    c = c % 2           #      |        |        |        | 
-    b = 5.4             #      |        |        |        | 
-    c = c + 1           #      |        |        |        | 
-    a = b + 2           #      |        |        |        | 
-
-``` 
-
-  </TabItem>
-
-  <TabItem value="c" label="C">
-
-```c
-# include < stdio .h > 
-
-int main () {           //   a  |    b   |    c   |    x   |
-    float a , b ;       //      |        |        |        | 
-    int c , x ;         //      |        |        |        | 
-    a = 6.0;            //      |        |        |        | 
-    b = a / 2;          //      |        |        |        | 
-    c = 11;             //      |        |        |        | 
-    x = ( int ) c / 4;  //      |        |        |        | 
-    c = c % 2;          //      |        |        |        | 
-    b = 5.4;            //      |        |        |        | 
-    c = c + 1;          //      |        |        |        | 
-    a = b + 2;          //      |        |        |        | 
-
-    return 0;
-}
-``` 
-
-  </TabItem>
-</Tabs>
-
-1. Indique os valores armazenados em cada variável, após executar cada uma das instruções
-
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
-
-```c
-```
-
-  </TabItem>
-  <TabItem value="java" label="Java">
-
-```javascript
-public class Main{
-  public static void main () {
-                        //   q  |    w   |    r   |    ex  |
-    float q, w, r ;     //      |        |        |        | 
-    int ex ;            //      |        |        |        | 
-    q = 10;             //      |        |        |        | 
-    q = 10 + 30;        //      |        |        |        | 
-    w = -1;             //      |        |        |        | 
-    w = w + q;          //      |        |        |        | 
-    q = q % w;          //      |        |        |        | 
-    ex = 2 * q / w;     //      |        |        |        | 
-    r = 0;              //      |        |        |        | 
-    r = r + 1;          //      |        |        |        | 
-    r = r + 1;          //      |        |        |        | 
-
-  }
-}
-``` 
-
-  </TabItem>
-  <TabItem value="python" label="Python">
-
-```python
-if __name__ == "__main__":
-                        #   q  |    w   |    r   |    ex  |
-    q = 10;             #      |        |        |        | 
-    q = 10 + 30;        #      |        |        |        | 
-    w = -1;             #      |        |        |        | 
-    w = w + q;          #      |        |        |        | 
-    q = q % w;          #      |        |        |        | 
-    ex = 2 * q / w;     #      |        |        |        | 
-    r = 0;              #      |        |        |        | 
-    r = r + 1;          #      |        |        |        | 
-    r = r + 1;          #      |        |        |        | 
-``` 
-
-  </TabItem>
-
-  <TabItem value="c" label="C">
-
-```c
-# include < stdio .h > 
-
-int main () {           //   q  |    w   |    r   |    ex  |
-    float q, w, r ;     //      |        |        |        | 
-    int ex ;            //      |        |        |        | 
-    q = 10;             //      |        |        |        | 
-    q = 10 + 30;        //      |        |        |        | 
-    w = -1;             //      |        |        |        | 
-    w = w + q;          //      |        |        |        | 
-    q = q % w;          //      |        |        |        | 
-    ex = 2 * q / w;     //      |        |        |        | 
-    r = 0;              //      |        |        |        | 
-    r = r + 1;          //      |        |        |        | 
-    r = r + 1;          //      |        |        |        | 
-
-    return 0;
-}
-``` 
-
-  </TabItem>
-</Tabs>
 
 ### Matemática
 
