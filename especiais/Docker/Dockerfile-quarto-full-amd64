@@ -1,5 +1,5 @@
 # FROM analythium/r2u-quarto:20.04
-FROM darlon/quarto
+FROM darlon/quarto-amd64
 ENV TZ=America/Sao_Paulo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN apt update && apt -y install tzdata

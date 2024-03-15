@@ -1,0 +1,16 @@
+# FROM analythium/r2u-quarto:20.04
+FROM darlon/quarto-arm64
+ENV TZ=America/Sao_Paulo
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN apt update && apt -y install tzdata
+RUN apt -y install texlive-xetex
+RUN apt -y install texlive-fonts-extra
+RUN apt -y install texlive-fonts-recommended
+RUN apt -y install lmodern
+
+# RUN  apt -y install texlive-latex-extra
+# RUN  apt -y install texlive-latex-recommended
+
+#Pdf com tinytex. problema: updates a cada uso
+# RUN quarto install tool tinytex
+# RUN quarto update tinytex
