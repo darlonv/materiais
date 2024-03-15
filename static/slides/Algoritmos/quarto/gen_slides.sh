@@ -5,6 +5,8 @@ FORMAT_PDF=("pdf")
 FORMAT_HTML=("revealjs")
 # LANGUAGE=("pseudocodigo" "java" "python" "c")
 LANGUAGE=("java")
+FORMAT_PDF_SLIDES=("")
+FORMAT_HTML=("")
 
 # FORMAT=("revealjs")
 # LANGUAGE=("java")
