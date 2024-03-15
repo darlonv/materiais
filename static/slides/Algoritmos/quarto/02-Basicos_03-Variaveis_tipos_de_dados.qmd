@@ -1,5 +1,5 @@
 ---
-title: "Procedimentos e funções - Exercícios"
+title: "Variáveis e tipos de dados"
 subtitle: "Algoritmos e Estruturas de Dados"
 author: "Prof. Darlon Vasata"
 bibliography: references.bib

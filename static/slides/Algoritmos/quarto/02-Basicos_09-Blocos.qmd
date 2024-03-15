@@ -1,5 +1,5 @@
 ---
-title: "Procedimentos e funções - Exercícios"
+title: "Blocos de código"
 subtitle: "Algoritmos e Estruturas de Dados"
 author: "Prof. Darlon Vasata"
 bibliography: references.bib
