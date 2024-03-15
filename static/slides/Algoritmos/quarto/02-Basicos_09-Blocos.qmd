@@ -26,13 +26,11 @@ O exemplo apresentado abaixo apresenta apenas a estrutura para definição de c�
   início
     //comando 1
     //comando 2
-    // highlight-start
     início              //<-- Início do bloco
         //comando 3
         //comando 4
         //comando 5
     fim;                //<-- Término do bloco
-    // highlight-end
     // comando 6
     // comando 7
   fim.
@@ -51,13 +49,11 @@ O exemplo apresentado abaixo apresenta apenas a estrutura para definição de c�
 {
   // comando 1 ;
   // comando 2 ;
-  // highlight-start
   {                   //<-- Início do bloco
     // comando 3 ;
     // comando 4 ;
     // comando 5 ;
   }                   //<-- Término do bloco
-  // highlight-end
   // comando 6 ;
   // comando 7 ;
 }
@@ -74,11 +70,9 @@ Em Java, os blocos são delimitados pelas chaves `{` e `}`.
   ```python showLineNumbers
     # comando 1
     # comando 2
-    # highlight-start
         # comando 3     #<-- Início do bloco
         # comando 4
         # comando 5     #<-- Término do bloco
-    # highlight-end
     # comando 6 ;
     # comando 7 ;
   ```
@@ -95,13 +89,11 @@ Em Python, os blocos são definidos pela indentação do código, ou seja, pelo 
   {
     // comando 1 ;
     // comando 2 ;
-    // highlight-start
     {                   //<-- Início do bloco
         // comando 3 ;
         // comando 4 ;
         // comando 5 ;
     }                   //<-- Término do bloco
-    // highlight-end
     // comando 6 ;
     // comando 7 ;
   }
