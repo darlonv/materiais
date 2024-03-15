@@ -144,51 +144,48 @@ $$
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
-  `2 * A % 3 - C`  
-  `(sqrt(-2 * C) / 4)`  
-  `((20 / 3) / 3) + pow(2, 8) / 2`  
-  `(30 % 4 * pow(3, 3)) * (-1)`  
-  `pow(-C, 2) + (D * 10) / A`  
-  `sqrt(pow(A, B/A)) + C * D`  
+`2 * A % 3 - C`  
+`(sqrt(-2 * C) / 4)`  
+`((20 / 3) / 3) + pow(2, 8) / 2`  
+`(30 % 4 * pow(3, 3)) * (-1)`  
+`pow(-C, 2) + (D * 10) / A`  
+`sqrt(pow(A, B/A)) + C * D`  
 
 :::
 
 ::: {.content-visible when-profile="java"}
 
-  `2 * A % 3 - C`  
-  `Math.sqrt(-2 * C) / 4`  
-  `((20 / 3) / 3) + Math.pow(2, 8) / 2`  
-  `(30 % 4 * Math.pow(3, 3)) * (-1)`  
-  `Math.pow(-C, 2) + (D * 10) / A`  
-  `Math.sqrt(Math.pow(A, B/A)) + C * D`  
+`2 * A % 3 - C`  
+`Math.sqrt(-2 * C) / 4`  
+`((20 / 3) / 3) + Math.pow(2, 8) / 2`  
+`(30 % 4 * Math.pow(3, 3)) * (-1)`  
+`Math.pow(-C, 2) + (D * 10) / A`  
+`Math.sqrt(Math.pow(A, B/A)) + C * D`  
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-  `2 * A % 3 - C`  
-  `sqrt(-2 * C) / 4`  
-  `((20 / 3) / 3) + 2**8 / 2`  
-  `(30 % 4 * 3**3) * (-1)`  
-  `-C**2 + (D * 10) / A`  
-  `sqrt(A**(B/A)) + C * D`  
+`2 * A % 3 - C`  
+`sqrt(-2 * C) / 4`  
+`((20 / 3) / 3) + 2**8 / 2`  
+`(30 % 4 * 3**3) * (-1)`  
+`-C**2 + (D * 10) / A`  
+`sqrt(A**(B/A)) + C * D`  
 
 :::
 
 ::: {.content-visible when-profile="c"}
 
-  `2 * A % 3 - C`  
-  `sqrt(-2 * C) / 4`  
-  `((20.0 / 3) / 3) + 2**8 / 2`  
-  `(30 % 4 * 3**3) * (-1)`  
-  `pow(-C, 2) + (d * 10) / A`  
-  `sqrt(pow(A, B / A)) + C * D`  
+`2 * A % 3 - C`  
+`sqrt(-2 * C) / 4`  
+`((20.0 / 3) / 3) + 2**8 / 2`  
+`(30 % 4 * 3**3) * (-1)`  
+`pow(-C, 2) + (d * 10) / A`  
+`sqrt(pow(A, B / A)) + C * D`  
 
 :::
-
-1. Sendo P, Q e R variáveis de tipo inteiro, com valores iguais a 2, 3 e 12, respectivamente, e
-uma variável real S, com valor de 4.5, quais os valores fornecidos por cada uma das expressões
-aritméticas abaixo?
+16. Sendo P, Q e R variáveis de tipo inteiro, com valores iguais a 2, 3 e 12, respectivamente, e uma variável real S, com valor de 4.5, quais os valores fornecidos por cada uma das expressões aritméticas abaixo?
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
@@ -234,7 +231,7 @@ aritméticas abaixo?
 
 :::
 
-1. Considere as seguintes atribuições, R = 2, S = 5, T = -1, X = - 3, Y = -1 e Z = 0, resolver as
+17. Considere as seguintes atribuições, R = 2, S = 5, T = -1, X = - 3, Y = -1 e Z = 0, resolver as
 expressões abaixo:
 
 
@@ -274,7 +271,7 @@ expressões abaixo:
 
 :::
 
-1. Resolva as expressões abaixo, apresentando o resultado final. Considere o valor de `PI` como $3,14$:
+18. Resolva as expressões abaixo, apresentando o resultado final. Considere o valor de `PI` como $3,14$:
 
 
 ::: {.content-visible when-profile="pseudocodigo"}
@@ -325,7 +322,7 @@ expressões abaixo:
 
 :::
 
-1. Resolva as expressões a seguir, quanto a seu valor lógico.
+19. Resolva as expressões a seguir, quanto a seu valor lógico.
 
 
 ::: {.content-visible when-profile="pseudocodigo"}
@@ -364,7 +361,7 @@ expressões abaixo:
 
 :::
 
-1. Resolva as expressões a seguir, quanto a seu valor lógico.
+20. Resolva as expressões a seguir, quanto a seu valor lógico.
 
 
 ::: {.content-visible when-profile="pseudocodigo"}
@@ -395,7 +392,7 @@ expressões abaixo:
 
 :::
 
-1. Considerando as variáveis numéricas X, Y e Z, contendo os valores 2, 5 e 9, respectivamente, a
+21. Considerando as variáveis numéricas X, Y e Z, contendo os valores 2, 5 e 9, respectivamente, a
 variável literal NOME, contendo o literal "MARIA"; e a variável lógica SIM, contendo o valor
 lógico Verdadeiro (V), observar os resultados obtidos das expressões lógicas a seguir.
 
@@ -435,7 +432,7 @@ lógico Verdadeiro (V), observar os resultados obtidos das expressões lógicas 
 
 :::
 
-1. Considerando A e C variáveis inteiras, contendo os valores, $1$ e $8$ e, B como uma variável real, com o valor $4.5$ e TESTE variável lógica contendo o valor verdadeiro (V), determinar os resultados obtidos da avaliação das seguintes expressões:
+22. Considerando A e C variáveis inteiras, contendo os valores, $1$ e $8$ e, B como uma variável real, com o valor $4.5$ e TESTE variável lógica contendo o valor verdadeiro (V), determinar os resultados obtidos da avaliação das seguintes expressões:
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
@@ -481,7 +478,7 @@ lógico Verdadeiro (V), observar os resultados obtidos das expressões lógicas 
 
 :::
 
-1. Determine os resultados na avaliação das expressões lógicas seguintes, sabendo que A, B, C
+23. Determine os resultados na avaliação das expressões lógicas seguintes, sabendo que A, B, C
 contêm, respectivamente, 2, 7, 3.5, e que existe uma variável lógica L cujo valor é F.
 
 ::: {.content-visible when-profile="pseudocodigo"}
@@ -540,8 +537,7 @@ contêm, respectivamente, 2, 7, 3.5, e que existe uma variável lógica L cujo v
 
 :::
 
-1. Sabendo que A = 5, B = 4, C = 3 e D = 6, informe se as expressões abaixo são verdadeiras ou
-falsas.
+24. Sabendo que A = 5, B = 4, C = 3 e D = 6, informe se as expressões abaixo são verdadeiras ou falsas.
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
@@ -577,10 +573,9 @@ falsas.
   `(A - C) == 0 || !(D >= 99) && (B + 2) == 6)`  
   `(A >= C) && (B >= C))`  
 
-  </TabItem>
-</Tabs>
+:::
 
-1. Sabendo que A = 3, B = 7 e C = 4, informe se as expressões abaixo são verdadeiras ou falsas.
+25. Sabendo que A = 3, B = 7 e C = 4, informe se as expressões abaixo são verdadeiras ou falsas.
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
@@ -610,7 +605,7 @@ falsas.
   `(B + A) <= C`  
   `(C + A) > B`  
 
-  :::
+:::
 
 ::: {.content-visible when-profile="c"}
 
@@ -622,11 +617,11 @@ falsas.
 
 :::
 
-1. Elabore um programa que leia a altura de um andar do prédio e quantos andares o prédio possui. Calcule e mostre a altura do prédio.
+26. Elabore um programa que leia a altura de um andar do prédio e quantos andares o prédio possui. Calcule e mostre a altura do prédio.
 
-1. Desenvolva um programa que leia um valor. Em seguida, deve ser mostrada a parte inteira da raiz quadrada do número lido.
+27. Desenvolva um programa que leia um valor. Em seguida, deve ser mostrada a parte inteira da raiz quadrada do número lido.
 
-1. Faça um programa que calcule a médio do peso de uma família que possui 5 pessoas.
+28. Faça um programa que calcule a médio do peso de uma família que possui 5 pessoas.
 
 ### Testes de mesa
 
@@ -702,7 +697,7 @@ int main () {           //   a  |    b   |    c   |    x   |
 
 :::
 
-1. Indique os valores armazenados em cada variável, após executar cada uma das instruções
+2. Indique os valores armazenados em cada variável, após executar cada uma das instruções
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
@@ -751,7 +746,7 @@ if __name__ == "__main__":
     r = r + 1;          #      |        |        |        | 
 ``` 
 
-  :::
+:::
 
 ::: {.content-visible when-profile="c"}
 
@@ -813,7 +808,8 @@ $$
     $$
     m_q = \sqrt{\frac{a^2+b^2+c^2+d^2}{n}}
     $$
-1. Desenvolva um programa para converter o valor de uma temperatura em graus Celsius ($C$) para graus Fahrenheit ($F$). Para essa conversão, temos a seguinte fórmula:
+
+6. Desenvolva um programa para converter o valor de uma temperatura em graus Celsius ($C$) para graus Fahrenheit ($F$). Para essa conversão, temos a seguinte fórmula:
 $$
 F = \frac{9}{5}*C + 32
 $$
