@@ -17,7 +17,7 @@ format:
 
 Para que exista a interação do algoritmo desenvolvido com agentes externos a ele como o usuário, monitor, teclado, internet, mouse, arquivos, etc., é necessário que algumas funções específicas sejam utilizadas.
 
-Algoritmos tratam da transformação da informação. Podemos entender um algoritmo como uma [caixa preta](https://pt.wikipedia.org/wiki/Caixa_preta_(teoria_dos_sistemas)), ou seja, um sistema que recebe dados de **entrada** e apresenta dados de **saída** sem que possamos ver o que está ocorrendo internamente na caixa.
+Algoritmos tratam da transformação da informação. Podemos entender um algoritmo como uma [caixa preta](https://pt.wikipedia.org/wiki/Caixa_preta_(teoria_dos_sistemas)), ou seja, um sistema que recebe dados de **entrada** e apresenta dados de **saída** sem que possamos conhecer o que está ocorrendo internamente na caixa.
 
 ![Algoritmo_caixa_preta](./images/entrada_saida.png)
 
