@@ -1,2 +1,11 @@
-03-Modulos_01-Modulos.qmd
+01-Introducao_01-Logica_de_programacao.qmd
+01-Introducao_03-Linguagem_de_programacao.qmd
+02-Basicos_01-Estrutura_basica.qmd
+02-Basicos_02-Entrada_e_saida_01-Modelo_caixa_preta.qmd
+02-Basicos_02-Entrada_e_saida_02-Entrada_saida.qmd
+02-Basicos_03-Variaveis_tipos_de_dados.qmd
+02-Basicos_07-Expressoes.qmd
+02-Basicos_08-Tipos_tamanhos.qmd
+02-Basicos_09-Blocos.qmd
+03-Modulos_03-Modulos_01-Modulos.qmd
 03-Modulos_99-Exercicios_02-Funcoes_pratica.qmd
