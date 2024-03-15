@@ -19,7 +19,8 @@ Aqui abordaremos as maneiras de organizar e utilizar a memória internamente ao 
 
 Os dados fazem parte da matéria-prima básica na execução dos sistemas computacionais. Com eles podemos processá-los, transformálos, armazená-los e apresentá-los, ou seja, as tarefas que um computador é capaz de realizar. Com isto, é de fundamental importância compreender seu funcionamento dentro dos algoritmos.
 
-:::info Informação
+::: {.callout-note}
+## Informação
 **Dado** e **informação** são conceitos distintos. Uma informação é um dado com valor. Por exemplo quando observamos a data 19 de abril, temos um dado. Ao sabermos que este é o dia do índio, temos uma informação.
 :::
 
@@ -60,48 +61,43 @@ Um valor **variável** é aquele que pode ser modificado no decorrer da execuç�
 
 Um **identificador** de uma variável é um nome, que corresponde a um dado a ser utilizado no algoritmo. Comumente dizemos que um identificador é o **nome da variável**. A escolha do identificador deve sempre ser de acordo com a função da variável no algoritmo, de forma a facilitar o entendimento do código.
 
-<!-- marp --- -->
 Em nossa analogia de gavetas, podemos imaginar que o identificado é um rótulo em cada gaveta, que descreve o que nela contém.
 
 ![Memória RAM com indicação das variáveis e seus identificadores](./img/variaveis_03_identificadores.png)
 
-<!-- marp --- -->
 
-Para criar um identificador, algumas regras devem sempre ser seguidas:
+Para criar um identificador, algumas regras devem sempre ser seguidas:  
+
 1. Sempre deve começar com caractere alfabético (a-z, A-Z).
-1. Podem ser seguidos por um ou mais caracteres alfabéticos, numéricos (0-9) ou _underscore_ ( \_ ).
+1. Podem ser seguidos por um ou mais caracteres alfabéticos, numéricos (0-9) ou _underscore_ ( \_ );
 1. Caracteres especiais não podem ser utilizados;
-1. Não podem ser utilizadas palavras reservadas da linguagem. A lista de palavras reservadas é específica de cada linguagem. 
+1. Não podem ser utilizadas palavras reservadas da linguagem. A lista de palavras reservadas é específica de cada linguagem.  
 
-<!-- marp --- -->
-**Exemplos**
-- Gama
-- X
-- notas
-- soma
-- Soma
-- SoMA_Total
+**Exemplos**  
 
-**Exercício**
-- Identifique se os identificadores a seguir são válidos ou inválidos
+- Gama  
+- X  
+- notas  
+- soma  
+- Soma  
+- SoMA_Total  
 
-    - 2tempos
-    - verdadeiro-ou-falso
-    - janela_aberta
-    - nome
-    - Tamanho do lado
-    - area
-    - SomaTotal
-    - media/2
+**Exercício**  
 
+- Indique se os identificadores a seguir são válidos ou inválidos  
+    - 2tempos  
+    - verdadeiro-ou-falso  
+    - janela_aberta  
+    - nome  
+    - Tamanho do lado  
+    - area  
+    - SomaTotal  
+    - media/2  
 
-<!-- marp --- -->
 
 #### Convenções
 
 Boa parte dos programadores seguem alguma convenção ao definir os identificadores, para que o código seja mais uniforme. Estas práticas costumam facilitar o entendimento do código.
-
-<!-- marp --- -->
 
 Algumas convenções para identificadores são:
 
@@ -109,17 +105,17 @@ Algumas convenções para identificadores são:
     - idDoUsuario
     - idadePessoa
     - nomeFuncionario
+
 - ***snake_case*** : palavras são separadas por *underline* (_) entre elas. Exemplos:
     - id_do_usuario
     - idade_pessoa
     - nome_funcionario
 
-<!-- marp --- -->
-
 - ***PascalCase*** : semelhante ao *camelCase*, porém a letra inicial também é maiúscula. Exemplos:
     - IdDoUsuario
     - IdadePessoa
     - NomeFuncionario
+    
 - ***UPPER_CASE*** : todas as letras em maiúsculas, separadas por *underline*. É amplamente utilizada para a definição de constantes (veremos adiante). Exemplos:
     - ID_DO_USUARIO
     - IDADE_PESSOA
@@ -409,9 +405,10 @@ Um tipo de dado pode ser criado a partir de outros tipos de dados. Os tipos de d
 Um **inteiro** é uma informação numérica, que compreende valores que correspondem ao conjunto dos números inteiros (positivos, nulo e negativos)
 
 **Exemplo**  
+
 - O Campus possui 4 construções;
 - Estão construindo 22 casas novas no bairro vizinho;
-- O cachorro tem 8 anos de idade. 
+- O cachorro tem 8 anos de idade.
 
 #### Declaração de uma variável do tipo de dado inteiro
 
@@ -510,6 +507,7 @@ Nas funções `scanf` e `printf` um valor inteiro é reconhecido utilizando `%d`
 O tipo de dado **real** é aquele que possui um valor que está compreendido no conjunto dos números reais. São abordados os números negativos, positivos e nulo, considerando as casas decimais.
 
 **Exemplo**  
+
 - A distância do portão até a sala é de 25,7 metros.
 - O saldo bancário é de R\$ 357,32.
 - O saldo bancário é de R\$ -169,20.
@@ -609,10 +607,11 @@ Nas funções `scanf` e `printf` um valor real é reconhecido utilizando `%f` na
 
 Um dado do tipo **lógico** é aquele em que dois valores podem ser asssumidos: verdadeiro ou falso.
 
-**Exemplo**
-- A janela está aberta.
-- O carro está ligado.
-- A bicicleta está parada.
+**Exemplo**  
+
+- A janela está aberta   
+- O carro está ligado  
+- A bicicleta está parada  
 
 
 #### Declaração
@@ -733,9 +732,10 @@ Como o `bool` funciona como um inteiro, nas funções `scanf` e `printf` seu  é
 Os dado do tipo **caractere** são aqueles que pertencem ao conjunto de valores alfanuméricos (0-9), alfabéticos (a-z, A-Z) e especiais (\!\@\#\$\%\*+-/, dentre outros).
 
 **Exemplo**  
-- O professor disse: "Não use o celular durante a aula!".
-- Ao final do jornal, ele sempre fala "Boa noite".
-- O nome do presidente do clube é "Celso da Silva".
+
+- O professor disse: "Não use o celular durante a aula!".  
+- Ao final do jornal, ele sempre fala "Boa noite".  
+- O nome do presidente do clube é "Celso da Silva".  
 
 ### Declaração
 
@@ -857,46 +857,32 @@ Como o `bool` funciona como um inteiro, nas funções `scanf` e `printf` seu  é
 
 
 **Exercício**  
-- Identifique se o tipo de dado de cada variável está correto ou incorreto.
 
-    - inteiro: endereço
-
-    - inteiro: nro_gatos
-
-    - inteiro: qtde_itens
-
-    - real: soma_total
-
-    - inteiro: soma_total
-
-    - caractere: idade
-
-    - lógico: idade
+- Indique se o tipo de dado de cada variável está correto ou incorreto.  
+  - inteiro: endereço  
+  - inteiro: nro_gatos  
+  - inteiro: qtde_itens  
+  - real: soma_total  
+  - inteiro: soma_total  
+  - caractere: idade  
+  - lógico: idade  
 
 **Exercício**  
+
 - Identifique se o tipo de dado de cada variável está correto ou incorreto.
-
     - inteiro: idade
-
     - real: nome
-
     - lógico: janela_aberta
-
     - real: peso
-
     - real: tamanho
 
 **Exercícios**  
 Observe qual é o tipo de dado em cada situação ([FORBELLONE, pg. 20](https://plataforma.bvirtual.com.br/Leitor/Publicacao/200078/pdf/44)):
 
 - A placa "Pare!" tinha 2 furos de bala.
-
 - Josefina subiu 5 degraus para pegar uma maçã boa.
-
 - Alberta levou 3,5 horas para chegar ao hospital.
-
 - Astrogilda mandou pintar em um lote de 10 camisetas: "Preserve o meio ambiente", e ficou devendo R\$ 150,00 para a estamparia Pinte e Borde a ser pago em 3 parcelas.
-
 - Felisberto recebeu sua 18ª medalha por ter alcançado a marca de 578,3 segundos nos 100 metros rasos.
 
 

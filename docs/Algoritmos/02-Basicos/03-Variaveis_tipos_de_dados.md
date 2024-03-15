@@ -71,7 +71,7 @@ Para criar um identificador, algumas regras devem sempre ser seguidas:
 - SoMA_Total
 
 **Exercício**
-- Identifique se os identificadores a seguir são válidos ou inválidos
+- Indique se os identificadores a seguir são válidos ou inválidos
 
     - 2tempos
     - verdadeiro-ou-falso
