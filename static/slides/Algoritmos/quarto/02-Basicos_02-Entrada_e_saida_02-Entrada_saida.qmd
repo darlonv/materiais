@@ -249,7 +249,7 @@ Saída na tela:
 ```
 18
 ```
-<!-- marp --- -->
+
 - Pode-se também apresentar diversos resultados de uma única vez:
 
 
@@ -340,7 +340,6 @@ printf("%d", altura); // saída: 50
 ```
 
 :::
-
 
 
 Saída na tela:
