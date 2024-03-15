@@ -109,7 +109,7 @@ $$
 
 1. Faça um programa que solicite o preço de uma mercadoria e o percentual de desconto. Exiba o valor do desconto e o preço a pagar.  
 (Fonte: MENEZES 2019, pg. 72)
-
+  
 1. Faça um programa que calcule o aumento de um salário. Ele deve solicitar o valor do salário e a porcentagem de aumento. Exiba o valor do aumento e do novo salário.  
 (Fonte: MENEZES 2019, pg. 72)
 
