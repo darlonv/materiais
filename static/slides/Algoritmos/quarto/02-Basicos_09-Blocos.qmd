@@ -40,7 +40,7 @@ O exemplo apresentado abaixo apresenta apenas a estrutura para definição de c�
 
   Em portugol, os blocos são delimitados por `início` e `fim`.
 
-  Adaptado de ([Forbellone 2022, p. 43](https://plataforma.bvirtual.com.br/Leitor/Publicacao/323/pdf/))
+  Adaptado de @forbellone2022 p. 43.
 
 
 :::
@@ -63,7 +63,9 @@ O exemplo apresentado abaixo apresenta apenas a estrutura para definição de c�
 }
 ```
 
-  Em Java, os blocos são delimitados pelas chaves `{` e `}`.
+Adaptado de @forbellone2022 p. 43.  
+
+Em Java, os blocos são delimitados pelas chaves `{` e `}`. 
 
 :::
 
@@ -81,7 +83,9 @@ O exemplo apresentado abaixo apresenta apenas a estrutura para definição de c�
     # comando 7 ;
   ```
 
-Em Python, os blocos são definidos pela indentação do código, ou seja, pelo alinhamento no início de cada linha do código. Este alinhamento pode ser feito por caracteres *tab* ou *espaços*.
+Adaptado de @forbellone2022 p. 43.  
+
+Em Python, os blocos são definidos pela indentação do código, ou seja, pelo alinhamento no início de cada linha do código. Este alinhamento pode ser feito por caracteres *tab* ou *espaços*. 
 
 :::
 
@@ -103,7 +107,7 @@ Em Python, os blocos são definidos pela indentação do código, ou seja, pelo 
   }
   ```
 
-  Em C, os blocos são delimitados pelas chaves `{` e `}`.
+  Em C, os blocos são delimitados pelas chaves `{` e `}`. Adaptado de @forbellone2022 p. 43.
 
 :::
 
@@ -319,6 +323,8 @@ int main(){
 }
 ```
 
-  
 :::
 
+## Referências
+::: {#refs}
+:::

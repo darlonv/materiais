@@ -62,7 +62,7 @@ para caractere:
 |---|---|---|
 |char|2 bytes| armazena um único caractere|
 
-Fonte: [Oracle. Java Language Specification. Types, Values and Variables: 4.2.1 Integral Types and Values.](https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html#jls-4.2)
+Fonte: @Oracle:Java2023:LanguageSpecificationTypesValuesVariables
 
 :::
 
@@ -228,7 +228,7 @@ printf("Olá Mundo")
 
 Dizemos que existe um *overflow* quando o valor a ser armazenado extrapola (para mais ou para menos) o valor possível de ser armazenado utilizando determinado tipo de dado.
 
-Quando o valor extrapola o valor máximo dizemos que existe um **overflow positivo**, e quando extrapola o valor mínimo dizemos que ocorre um **overflow negativo** (STALLINGS 2010 p.270).
+Quando o valor extrapola o valor máximo dizemos que existe um **overflow positivo**, e quando extrapola o valor mínimo dizemos que ocorre um **overflow negativo** [@stallings2010 p. 270].
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
@@ -570,7 +570,7 @@ printf("Olá Mundo")
 :::
 
 ## Referências
+::: {#refs}
+:::
 
-[Oracle. Java Language Specification. Types, Values and Variables: 4.2.1 Integral Types and Values.](https://docs.oracle.com/javase/specs/jls/se21/html/jls-4.html#jls-4.2)
 
-STALLINGS, William. Organização e Arquitetura de Computadores. 8. ed. São Paulo: Pearson Practice Hall, 2010.
