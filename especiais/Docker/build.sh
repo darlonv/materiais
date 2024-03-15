@@ -7,7 +7,7 @@ then
     PLATFORM="linux/amd64"
     ARCHNAME="-amd64"
     echo ${ARCH}:
-    docker build -t darlon/quarto${ARCHNAME}:latest --platform ${PLATFORM} -f Dockerfile-quarto-amd64 .
+    docker build -t darlon/quarto${ARCHNAME}:latest      --platform ${PLATFORM} -f Dockerfile-quarto-amd64 .
     docker build -t darlon/quarto-full${ARCHNAME}:latest --platform ${PLATFORM} -f Dockerfile-quarto-full-amd64 .
 
     docker push darlon/quarto${ARCHNAME}:latest 
@@ -20,8 +20,8 @@ then
     PLATFORM="linux/arm64"
     ARCHNAME="-arm64"
     echo ${ARCH}:
-    docker build -t darlon/quarto${ARCHNAME}:latest --platform ${PLATFORM} -f Dockerfile-quarto-arm64 .
-    docker build -t darlon/quarto-full${ARCHNAME}:latest --platform ${PLATFORM} -f Dockerfile-quarto-arm64 .
+    docker build -t darlon/quarto${ARCHNAME}:latest      --platform ${PLATFORM} -f Dockerfile-quarto-arm64 .
+    docker build -t darlon/quarto-full${ARCHNAME}:latest --platform ${PLATFORM} -f Dockerfile-quarto-full-arm64 .
 
     docker push darlon/quarto${ARCHNAME}:latest 
     docker push darlon/quarto-full${ARCHNAME}:latest
