@@ -31,3 +31,6 @@ fi
 #docker manifest create darlon/quarto darlon/quarto-amd64:latest darlon/quarto-arm64:latest
 #docker manifest push darlon/quarto
 
+#docker manifest create darlon/quarto-full darlon/quarto-full-amd64:latest darlon/quarto-full-arm64:latest
+#docker manifest push darlon/quarto-full
+
