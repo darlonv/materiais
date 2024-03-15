@@ -1,5 +1,5 @@
 ---
-title: "Procedimentos e funções - Exercícios"
+title: "Entrada e saída"
 subtitle: "Algoritmos e Estruturas de Dados"
 author: "Prof. Darlon Vasata"
 bibliography: references.bib
@@ -51,20 +51,20 @@ A saída de dados que utilizaremos aqui é a tela. Para mostrar uma mensagem na 
   printf();
   ```
 
-:::
-
-:::caution Atenção
+::: {.callout-caution} 
+## Atenção
 Para que a função de saída `printf()` possa ser utilizada é necessário importar a biblioteca de entrada e saída padrão.
+
 
 Para tal, basta incluir no início do código a linha
 ```c
 #include <stdio.h>
 ```
+
 :::
 
-  </TabItem>
+:::
 
-</Tabs>
 
 **Exemplo**  
 - Para apresentar na tela a mensagem `Olá Mundo`:  
@@ -106,7 +106,9 @@ Saída na tela:
 Olá Mundo
 ```
 
-:::caution Atenção
+
+::: {.callout-caution}
+## Atenção
 
 Perceba que aqui estamos observando apenas a função de saída. Para que ela possa funcionar de maneira correta no algoritmo, é necessário que ela esteja dentro de uma **estrutura básica**.
 
@@ -292,7 +294,8 @@ A idade mínima deve ser de 18 anos
 
 No desenvolvimento de algoritmos, podemos utilizar armazenamento intermediário de valores. Para tal, devemos indicar qual é o **tipo de dado** que deverá ser guardado e um **identificador** desse armazenamento. 
 
-:::info Informação
+::: {.callout-note}
+## Informação
 O uso desse armazenamento é um tópico de grande importância no desenvolvimento de algoritmos. O veremos de forma mais detalhada ao abordarmos tipos primitivos de dados, constantes e variáveis.
 :::
 
@@ -449,7 +452,8 @@ Para a entrada de dados pode-se utilizar a seguinte função:
   entrada.close();
   ```
 
-:::caution Atenção
+::: {.callout-caution}
+## Atenção
 Para que a função de entrada possa ser utilizada é necessário importar a biblioteca também é necessário importar a biblioteca `Scanner`.
 
 Para tal, é necessário incluir no início do código a linha
@@ -459,14 +463,13 @@ import java.util.Scanner;
 ```
 :::
 
-:::caution Atenção
+::: {.callout-caution}
+## Atenção
 O código `Scanner entrada = new Scanner(System.in);` realiza uma associação do identificador `entrada` com a entrada padrão (comumente, o teclado). 
 
 Após a finalização das entradas, é necessário desassociar o identificador, com a função `entrada.close().`
 
 :::
-
-
 :::
 
 ::: {.content-visible when-profile="python"}
@@ -496,52 +499,48 @@ Após a finalização das entradas, é necessário desassociar o identificador, 
 Assim como na função de saída `printf`, para que as funções de entrada `scanf()` e `gets()` possam ser utilizadas também é necessário importar a biblioteca de entrada e saída padrão.
 :::
 
-:::
-
 Conhecendo a função que realiza a leitura de dados da entrada padrão, devemos informar qual identificador será responsável por armazenar o dado recebido na entrada.
 
 
 **Exemplo**
 - recebendo valores na entrada e armazenando
 
-<!-- marp --- -->
-
 ::: {.content-visible when-profile="pseudocodigo"}
 
-  recebendo da entrada um valor do tipo inteiro
+recebendo da entrada um valor do tipo inteiro
 
-  ```c
-  inteiro: numero;
-  leia(numero); 
-  ```
+```c
+inteiro: numero;
+leia(numero); 
+```
 
-  recebendo da entrada um valor do tipo caractere
+recebendo da entrada um valor do tipo caractere
 
-  ```c
-  caractere: palavra;
-  leia(palavra);
+```c
+caractere: palavra;
+leia(palavra);
   ```
 
 :::
 
 ::: {.content-visible when-profile="java"}
 
-  recebendo da entrada um dado do tipo inteiro:
+recebendo da entrada um dado do tipo inteiro:
 
-  ```javascript
-  int numero;
-  Scanner entrada = new Scanner(System.in);
-  numero = entrada.nextInt();
-  entrada.close();
-  ```
+```javascript
+int numero;
+Scanner entrada = new Scanner(System.in);
+numero = entrada.nextInt();
+entrada.close();
+```
 
-  recebendo da entrada um dado do tipo caractere:
-  ```javascript
-  String palavra;
-  Scanner entrada = new Scanner(System.in);
-  palavra = entrada.next();
-  entrada.close();
-  ```
+recebendo da entrada um dado do tipo caractere:
+```javascript
+String palavra;
+Scanner entrada = new Scanner(System.in);
+palavra = entrada.next();
+entrada.close();
+```
 
 :::
 
@@ -580,8 +579,6 @@ Estas diferenças e porque isto é realizado desta forma será explicado futuram
 :::
 
 
-:::
-
 
 **Exemplo**  
 - Solicite ao usuário que digite seu nome
@@ -618,82 +615,84 @@ Estas diferenças e porque isto é realizado desta forma será explicado futuram
 
 ::: {.content-visible when-profile="java"}
 
-  ```javascript
-  //identificadores
-  String nome;
+```javascript
+//identificadores
+String nome;
 
-  //entrada
-  // highlight-next-line
-  nome = entrada.next()   //recebe o dado da entrada
-  ```
+//entrada
+// highlight-next-line
+nome = entrada.next()   //recebe o dado da entrada
+```
 
-  <details>
-  <summary>Código completo</summary>
+<details>
+<summary>Código completo</summary>
 
-  ```javascript
-  public class Main{
-    public static void main(String args){
-      //identificadores
-      String nome;
-      Scanner entrada;
+```javascript
+public class Main{
+  public static void main(String args){
+    //identificadores
+    String nome;
+    Scanner entrada;
 
-      //entrada
-      entrada = new Scanner(System.in); //associa o objeto à entrada padrão
+    //entrada
+    entrada = new Scanner(System.in); //associa o objeto à entrada padrão
 
-      // highlight-next-line
-      nome = entrada.next()   //recebe o dado da entrada
+    // highlight-next-line
+    nome = entrada.next()   //recebe o dado da entrada
 
-      entrada.close()         //finaliza a entrada de dados
-    }
+    entrada.close()         //finaliza a entrada de dados
   }
-  ```
-  </details>
+}
+```
 
-  
+</details>
+
+
 :::
 
 ::: {.content-visible when-profile="python"}
 
-  A entrada de dados é a maneira como o usuário pode inserir dados para dentro do algoritmo. Em Python utilizaremos a função `input()`. 
+A entrada de dados é a maneira como o usuário pode inserir dados para dentro do algoritmo. Em Python utilizaremos a função `input()`. 
 
-  ```python showLineNumbers
-  nome = input()
-  ```
+```python showLineNumbers
+nome = input()
+```
 
-  <details>
-  <summary>Código completo</summary>
+<details>
+<summary>Código completo</summary>
 
-  ```python
-    if __name__ == "main":
-      nome = input() #recebe o dado da entrada
-  ```
-  </details>
+```python
+  if __name__ == "main":
+    nome = input() #recebe o dado da entrada
+```
+
+</details>
 
 :::
 
 ::: {.content-visible when-profile="c"}
 
+```c
+char nome[100];
+// highlight-next-line
+gets(nome); //recebe o dado da entrada
+```
+
+<details>
+  <summary>Código completo</summary>
+
   ```c
-  char nome[100];
+  #include <stdio.h>
+
+  int main(){
+    char nome[100];
   // highlight-next-line
-  gets(nome); //recebe o dado da entrada
+    gets(nome); //recebe o dado da entrada
+
+    return 0;
+  }
   ```
-
-  <details>
-    <summary>Código completo</summary>
-
-    ```c
-    #include <stdio.h>
-
-    int main(){
-      char nome[100];
-    // highlight-next-line
-      gets(nome); //recebe o dado da entrada
-
-      return 0;
-    }
-    ```
-  </details>
+</details>
 
 :::
 
@@ -749,82 +748,102 @@ Estas diferenças e porque isto é realizado desta forma será explicado futuram
 
 ::: {.content-visible when-profile="java"}
 
-  ```javascript
-  //Identificadores
-  String nome;
-  int idade;
+```javascript
+//Identificadores
+String nome;
+int idade;
 
-  //Entrada
-  System.out.println("Nome: ");
-  nome = entrada.next();
-  System.out.println("Idade: ");
-  idade = entrada.nextInt();
+//Entrada
+System.out.println("Nome: ");
+nome = entrada.next();
+System.out.println("Idade: ");
+idade = entrada.nextInt();
 
-  //Saída
-  System.out.prinln(nome + " tem " + idade + " anos de idade.");
-  ```
+//Saída
+System.out.prinln(nome + " tem " + idade + " anos de idade.");
+```
 
-  <details>
-  <summary>Código completo</summary>
+<details>
+<summary>Código completo</summary>
 
-  ```javascript
-  public class Main{
-    public static void main(String args){
-      //Variáveis
-      String nome;
-      int idade;
+```javascript
+public class Main{
+  public static void main(String args){
+    //Variáveis
+    String nome;
+    int idade;
 
-      //Entrada
-      Scanner entrada = new Scanner(System.in);
+    //Entrada
+    Scanner entrada = new Scanner(System.in);
 
-      System.out.println("Nome: ");
-      nome = entrada.next();
-      System.out.println("Idade: ");
-      idade = entrada.nextInt();
-      entrada.close()
+    System.out.println("Nome: ");
+    nome = entrada.next();
+    System.out.println("Idade: ");
+    idade = entrada.nextInt();
+    entrada.close()
 
-      //Saída
-      System.out.prinln(nome + " tem " + idade + " anos de idade.");
-    }
+    //Saída
+    System.out.prinln(nome + " tem " + idade + " anos de idade.");
   }
-  ```
-  </details>
+}
+```
+</details>
 
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
+```python
+#Entrada
+nome = input("Nome: ")
+idade = input("Idade: ")
+
+#Saída
+print(f"{nome} tem {idade} anos de idade")
+```
+
+
+<details>
+  <summary>Código completo</summary>
+
   ```python
-  #Entrada
-  nome = input("Nome: ")
-  idade = input("Idade: ")
+  if __name__ == "main":
+    #Entrada
+    nome = input("Nome: ")
+    idade = input("Idade: ")
 
-  #Saída
-  print(f"{nome} tem {idade} anos de idade")
+    #Saída
+    print(f"{nome} tem {idade} anos de idade")
   ```
-
-
-  <details>
-    <summary>Código completo</summary>
-
-    ```python
-    if __name__ == "main":
-      #Entrada
-      nome = input("Nome: ")
-      idade = input("Idade: ")
-
-      #Saída
-      print(f"{nome} tem {idade} anos de idade")
-    ```
-  </details>
+</details>
 
 
 :::
 
 ::: {.content-visible when-profile="c"}
 
-  ```c
+```c
+//Variáveis
+char nome[100];
+int idade;
+
+//Entrada
+gets(nome);
+scanf("%d", &idade)
+
+//Saída
+printf("%s %s %d %s\n", nome, "tem", idade, "anos de idade")
+```
+
+
+<details>
+  <summary>Código completo</summary>
+
+```c
+#include<stdio.h>
+
+int main(void){
   //Variáveis
   char nome[100];
   int idade;
@@ -835,29 +854,10 @@ Estas diferenças e porque isto é realizado desta forma será explicado futuram
 
   //Saída
   printf("%s %s %d %s\n", nome, "tem", idade, "anos de idade")
-  ```
+}
+```
 
-
-  <details>
-    <summary>Código completo</summary>
-
-  ```c
-  #include<stdio.h>
-
-  int main(void){
-    //Variáveis
-    char nome[100];
-    int idade;
-
-    //Entrada
-    gets(nome);
-    scanf("%d", &idade)
-
-    //Saída
-    printf("%s %s %d %s\n", nome, "tem", idade, "anos de idade")
-  }
-  ```
-  </details>
+</details>
 
 
 :::

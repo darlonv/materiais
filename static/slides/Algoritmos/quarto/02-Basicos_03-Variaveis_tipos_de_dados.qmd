@@ -137,7 +137,8 @@ Antes de fazer o uso da variável, precisamos declará-la. A declaração da var
 
 Comumente, colocamos a declaração de variáveis no início do algoritmo.
 
-:::info Informação
+::: {.callout-note}
+## Informação
 Algumas linguagens de programação requerem que a declaração de variáveis seja realizada explicitamente no início do código, ocasionando em erros caso isto não aconteça.
 :::
 
@@ -148,26 +149,27 @@ Na declaração das variáveis é necessário informar qual tipo de dado poderá
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
-  ```c
-  //variáveis
-  inteiro: idade;
-  ```
+```c
+//variáveis
+inteiro: idade;
+```
 
 :::
 
 ::: {.content-visible when-profile="java"}
 
-  ```javascript
-  //variáveis
-  int idade;
-  ```
+```javascript
+//variáveis
+int idade;
+```
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
 
-:::info Informação
+::: {.callout-note}
+## Informação
 Em Python, a declaração de variáveis antes de sua utilização não é obrigatória. A memória necessária para a variável é solicitada durante a execução do programa.
 :::
 
@@ -176,10 +178,10 @@ Em Python, a declaração de variáveis antes de sua utilização não é obriga
 ::: {.content-visible when-profile="c"}
 
 
-  ```c
-  //variáveis
-  int idade;
-  ```
+```c
+//variáveis
+int idade;
+```
 
 :::
 
@@ -453,7 +455,8 @@ Um **inteiro** é uma informação numérica, que compreende valores que corresp
   quantidade_de_caixas = entrada.nextInt(); //recebe dados da entrada padrão
   numero_de_itens_por_caixa = 50; //atribuição
 
-  System.out.println("Existem " + quantidade_de_caixas + " com " + numero_de_itens_por_caixa + " itens em cada uma."); //envia dados à saída padrão
+  System.out.println("Existem " + quantidade_de_caixas + " com " + ⏎ 
+  numero_de_itens_por_caixa + " itens em cada uma."); //envia dados à saída padrão
   ```
   
 
@@ -495,7 +498,8 @@ Um **inteiro** é uma informação numérica, que compreende valores que corresp
   printf("%s %d %s %d %s\n" , "Existem", quantidade_de_caixas, "com", numero_de_itens_por_caixa, "itens em cada uma.");//envia dados à saída padrão
   ```
 
-:::note Observação
+::: {.callout-note}
+## Observação
 Nas funções `scanf` e `printf` um valor inteiro é reconhecido utilizando `%d` na cadeia de formatação.
 :::
 
@@ -514,86 +518,88 @@ O tipo de dado **real** é aquele que possui um valor que está compreendido no 
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
-  ```c
-  real: <identificador>;
-  ```
+```c
+real: <identificador>;
+```
 
-  **Exemplo**
+**Exemplo**
 
-  ```c
-  //variáveis
-  real: peso_da_caixa;
-  real: custo_da_caixa;
+```c
+//variáveis
+real: peso_da_caixa;
+real: custo_da_caixa;
 
-  leia(peso_da_caixa); //recebe dados da entrada padrão
-  custo_da_caixa ← 10.50; //atribuição
+leia(peso_da_caixa); //recebe dados da entrada padrão
+custo_da_caixa ← 10.50; //atribuição
 
-  escreva("Uma caixa pesa ", peso_da_caixa, " e seu custo é de R$ ", custo_da_caixa, "."); //envia dados à saída padrão
-  ```
+escreva("Uma caixa pesa ", peso_da_caixa, " e seu custo é de R$ ", custo_da_caixa, "."); //envia dados à saída padrão
+```
 
 :::
 
 ::: {.content-visible when-profile="java"}
 
-  ```javascript
-  float <identificador>;
-  ```
+```javascript
+float <identificador>;
+```
 
-  **Exemplo**
+**Exemplo**
 
-  ```javascript
-  //variáveis
-  float peso_da_caixa;
-  float custo_da_caixa;
-  Scanner entrada;
+```javascript
+//variáveis
+float peso_da_caixa;
+float custo_da_caixa;
+Scanner entrada;
 
-  entrada = new Scanner(System.in);
+entrada = new Scanner(System.in);
 
-  peso_da_caixa = entrada.nextFloat(); //recebe dados da entrada padrão
-  custo_da_caixa = 10.50; //atribuição
+peso_da_caixa = entrada.nextFloat(); //recebe dados da entrada padrão
+custo_da_caixa = 10.50; //atribuição
 
-  System.out.println("Uma caixa pesa " + peso_da_caixa + " e seu custo é de R$ " + custo_da_caixa + "."); //envia dados à saída padrão
-  ```
+System.out.println("Uma caixa pesa " + peso_da_caixa + ⏎
+" e seu custo é de R$ " + custo_da_caixa + "."); //envia dados à saída padrão
+```
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-  ```python
-  <identificador> = <valor real>
-  ```
+```python
+<identificador> = <valor real>
+```
 
-  **Exemplo**
+**Exemplo**
 
-  ```python
-  peso_da_caixa = (float) input(); #recebe dados da entrada padrão
-  custo_da_caixa = 10.50; #atribuição
+```python
+peso_da_caixa = (float) input(); #recebe dados da entrada padrão
+custo_da_caixa = 10.50; #atribuição
 
-  printf(f"Uma caixa pesa {peso_da_caixa} e seu custo é de R$ {custo_da_caixa}."); //envia dados à saída padrão
-  ```
+printf(f"Uma caixa pesa {peso_da_caixa} e seu custo é de R$ {custo_da_caixa}."); //envia dados à saída padrão
+```
 
 :::
 
 ::: {.content-visible when-profile="c"}
 
-  ```c
-  float <identificador>;
-  ```
+```c
+float <identificador>;
+```
 
-  **Exemplo**
+**Exemplo**
 
-  ```c
-  //variáveis
-  float peso_da_caixa;
-  float custo_da_caixa;
+```c
+//variáveis
+float peso_da_caixa;
+float custo_da_caixa;
 
-  scanf("%f", &peso_da_caixa); //recebe dados da entrada padrão. Observe o uso do &
-  custo_da_caixa = 10.50; //atribuição
+scanf("%f", &peso_da_caixa); //recebe dados da entrada padrão. Observe o uso do &
+custo_da_caixa = 10.50; //atribuição
 
-  printf("%s %f %s %f.\n","Uma caixa pesa", peso_da_caixa, "e seu custo é de R$", custo_da_caixa); //envia dados à saída padrão
-  ```
+printf("%s %f %s %f.\n","Uma caixa pesa", peso_da_caixa, "e seu custo é de R$", custo_da_caixa); //envia dados à saída padrão
+```
 
-:::note Observação
+::: {.callout-note}
+## Observação
 Nas funções `scanf` e `printf` um valor real é reconhecido utilizando `%f` na cadeia de formatação.
 :::
 
@@ -613,107 +619,110 @@ Um dado do tipo **lógico** é aquele em que dois valores podem ser asssumidos: 
 
 ::: {.content-visible when-profile="pseudocodigo"}
 
-  ```c
-  logico: <identificador>;
-  ```
+```c
+logico: <identificador>;
+```
 
-  Os possíveis valores lógicos são `true` (verdadeiro) e `false` (falso).
+Os possíveis valores lógicos são `true` (verdadeiro) e `false` (falso).
 
-  **Exemplo**
+**Exemplo**
 
-  ```c
-  //variáveis
-  logico: caixa_vazia;
-  logico: caixa_nova;
+```c
+//variáveis
+logico: caixa_vazia;
+logico: caixa_nova;
 
-  leia(caixa_vazia); //recebe dados da entrada padrão
-  caixa_nova ← falso; //atribuição
+leia(caixa_vazia); //recebe dados da entrada padrão
+caixa_nova ← falso; //atribuição
 
-  escreva("A caixa está vazia? ", caixa_vazia); //envia dados à saída padrão
-  escreva("A caixa é nova? ", caixa_nova);  //envia dados à saída padrão
-  ```
+escreva("A caixa está vazia? ", caixa_vazia); //envia dados à saída padrão
+escreva("A caixa é nova? ", caixa_nova);  //envia dados à saída padrão
+```
 
 :::
 
 ::: {.content-visible when-profile="java"}
 
-  ```javascript
-  boolean <identificador>;
-  ```
+```javascript
+boolean <identificador>;
+```
 
-  **Exemplo**
+**Exemplo**
 
-  ```javascript
-  //variáveis
-  boolean caixa_vazia;
-  boolean caixa_nova;
-  Scanner entrada;
+```javascript
+//variáveis
+boolean caixa_vazia;
+boolean caixa_nova;
+Scanner entrada;
 
-  entrada = new Scanner(System.in);
+entrada = new Scanner(System.in);
 
-  caixa_vazia = entrada.nextBoolean(); //recebe dados da entrada padrão
-  caixa_nova = false; //atribuição
+caixa_vazia = entrada.nextBoolean(); //recebe dados da entrada padrão
+caixa_nova = false; //atribuição
 
-  System.out.println("A caixa está vazia? " + caixa_vazia); //envia dados à saída padrão
-  System.out.println("A caixa é nova? " + caixa_nova);  //envia dados à saída padrão
-  ```
+System.out.println("A caixa está vazia? " + caixa_vazia); //envia dados à saída padrão
+System.out.println("A caixa é nova? " + caixa_nova);  //envia dados à saída padrão
+```
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-  ```python
-  <identificador> = <valor lógico>
-  ```
+```python
+<identificador> = <valor lógico>
+```
 
-  Os possíveis valores lógicos são `True` (verdadeiro) e `False` (falso).
+Os possíveis valores lógicos são `True` (verdadeiro) e `False` (falso).
 
-  **Exemplo**
+**Exemplo**
 
-  ```python
-  caixa_vazia = (bool) input(); #recebe dados da entrada padrão
-  caixa_nova = False; #atribuição
+```python
+caixa_vazia = (bool) input(); #recebe dados da entrada padrão
+caixa_nova = False; #atribuição
 
-  print(f"A caixa está vazia? {caixa_vazia}"); #envia dados à saída padrão
-  print(f"A caixa é nova? {caixa_nova}");  #envia dados à saída padrão
-  ```
+print(f"A caixa está vazia? {caixa_vazia}"); #envia dados à saída padrão
+print(f"A caixa é nova? {caixa_nova}");  #envia dados à saída padrão
+```
 
 :::
 
 ::: {.content-visible when-profile="c"}
 
-:::caution Atenção
+::: {.callout-caution}
+## Atenção
 Em C não há um tipo de lógico definido nativamente. Podemos utilizar o tipo `bool` importando a biblioteca `stdbool`.
 :::
 
-  ```c
-  #include <stdbool.h>
+```c
+#include <stdbool.h>
 
-  bool <identificador>;
-  int <identificador>;
-  ```
+bool <identificador>;
+int <identificador>;
+```
 
-  **Exemplo**
-  ```c
-  #include <stdbool.h> //necessário para ter o tipo bool
-  //variáveis
-  bool caixa_vazia; //tipo lógico utilizando bool
-  int caixa_nova;  //tipo lógico utilizando int
+**Exemplo**
+```c
+#include <stdbool.h> //necessário para ter o tipo bool
+//variáveis
+bool caixa_vazia; //tipo lógico utilizando bool
+int caixa_nova;  //tipo lógico utilizando int
 
-  scanf("%d", &caixa_vazia);//recebe dados da entrada padrão. Atenção ao uso do &
-  caixa_nova = 0; //atribuição
+scanf("%d", &caixa_vazia);//recebe dados da entrada padrão. Atenção ao uso do &
+caixa_nova = 0; //atribuição
 
-  printf("%s %d", "A caixa está vazia? ", caixa_vazia); //envia dados à saída padrão
-  printf("%s %d", "A caixa é nova? ", caixa_nova);      //envia dados à saída padrão
-  ```
+printf("%s %d", "A caixa está vazia? ", caixa_vazia); //envia dados à saída padrão
+printf("%s %d", "A caixa é nova? ", caixa_nova);      //envia dados à saída padrão
+```
 
-:::note Observação
+::: {.callout-note}
+## Observação
 O tipo de dado `bool` opera da mesma maneira que um dado do tipo inteiro em que:
 - o valor 0 é entendido como falso, e
 - qualquer valor diferente de 0 é entendido como verdadeiro.
 :::
 
-:::note Observação
+::: {.callout-note}
+## Observação
 Como o `bool` funciona como um inteiro, nas funções `scanf` e `printf` seu  é reconhecido utilizando `%d` na cadeia de formatação. Valores falsos serão apresentados como 0 e verdadeiros como 1.
 :::
 
@@ -759,84 +768,87 @@ Os dado do tipo **caractere** são aqueles que pertencem ao conjunto de valores 
 
 ::: {.content-visible when-profile="java"}
 
-  ```javascript
-  String <identificador>;
-  char <identificador>;
-  ```
+```javascript
+String <identificador>;
+char <identificador>;
+```
 
-  **Exemplo**
+**Exemplo**
 
-  ```javascript
-  //variáveis
-  boolean caixa_vazia;
-  boolean caixa_nova;
-  Scanner entrada;
+```javascript
+//variáveis
+boolean caixa_vazia;
+boolean caixa_nova;
+Scanner entrada;
 
-  entrada = new Scanner(System.in);
+entrada = new Scanner(System.in);
 
-  caixa_vazia = entrada.nextBoolean(); //recebe dados da entrada padrão
-  caixa_nova = false; //atribuição
+caixa_vazia = entrada.nextBoolean(); //recebe dados da entrada padrão
+caixa_nova = false; //atribuição
 
-  System.out.println("A caixa está vazia? " + caixa_vazia); //envia dados à saída padrão
-  System.out.println("A caixa é nova? " + caixa_nova);  //envia dados à saída padrão
-  ```
+System.out.println("A caixa está vazia? " + caixa_vazia); //envia dados à saída padrão
+System.out.println("A caixa é nova? " + caixa_nova);  //envia dados à saída padrão
+```
 
 :::
 
 ::: {.content-visible when-profile="python"}
 
-  ```python
-  <identificador> = <valor lógico>
-  ```
+```python
+<identificador> = <valor lógico>
+```
 
-  Os possíveis valores lógicos são `True` (verdadeiro) e `False` (falso).
+Os possíveis valores lógicos são `True` (verdadeiro) e `False` (falso).
 
-  **Exemplo**
+**Exemplo**
 
-  ```python
-  caixa_vazia = (bool) input(); #recebe dados da entrada padrão
-  caixa_nova = False; #atribuição
+```python
+caixa_vazia = (bool) input(); #recebe dados da entrada padrão
+caixa_nova = False; #atribuição
 
-  print(f"A caixa está vazia? {caixa_vazia}"); #envia dados à saída padrão
-  print(f"A caixa é nova? {caixa_nova}");  #envia dados à saída padrão
-  ```
+print(f"A caixa está vazia? {caixa_vazia}"); #envia dados à saída padrão
+print(f"A caixa é nova? {caixa_nova}");  #envia dados à saída padrão
+```
 
 :::
 
 ::: {.content-visible when-profile="c"}
 
-:::caution Atenção
+::: {.callout-caution}
+## Atenção
 Em C não há um tipo de lógico definido nativamente. Podemos utilizar o tipo `bool` importando a biblioteca `stdbool`.
 :::
 
-  ```c
-  #include <stdbool.h>
+```c
+#include <stdbool.h>
 
-  bool <identificador>;
-  int <identificador>;
-  ```
+bool <identificador>;
+int <identificador>;
+```
 
-  **Exemplo**
-  ```c
-  #include <stdbool.h> //necessário para ter o tipo bool
-  //variáveis
-  bool caixa_vazia; //tipo lógico utilizando bool
-  int caixa_nova;  //tipo lógico utilizando int
+**Exemplo**
+```c
+#include <stdbool.h> //necessário para ter o tipo bool
+//variáveis
+bool caixa_vazia; //tipo lógico utilizando bool
+int caixa_nova;  //tipo lógico utilizando int
 
-  scanf("%d", &caixa_vazia);//recebe dados da entrada padrão. Atenção ao uso do &
-  caixa_nova = 0; //atribuição
+scanf("%d", &caixa_vazia);//recebe dados da entrada padrão. Atenção ao uso do &
+caixa_nova = 0; //atribuição
 
-  printf("%s %d", "A caixa está vazia? ", caixa_vazia); //envia dados à saída padrão
-  printf("%s %d", "A caixa é nova? ", caixa_nova);      //envia dados à saída padrão
-  ```
+printf("%s %d", "A caixa está vazia? ", caixa_vazia); //envia dados à saída padrão
+printf("%s %d", "A caixa é nova? ", caixa_nova);      //envia dados à saída padrão
+```
 
-:::note Observação
+::: {.callout-info}
+## Observação
 O tipo de dado `bool` opera da mesma maneira que um dado do tipo inteiro em que:
 - o valor 0 é entendido como falso, e
 - qualquer valor diferente de 0 é entendido como verdadeiro.
 :::
 
-:::note Observação
+::: {.callout-info}
+## Observação
 Como o `bool` funciona como um inteiro, nas funções `scanf` e `printf` seu  é reconhecido utilizando `%d` na cadeia de formatação. Valores falsos serão apresentados como 0 e verdadeiros como 1.
 :::
 
