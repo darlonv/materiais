@@ -141,8 +141,8 @@ $$
   (Adaptado de CARVALHO, 2007).
 
 1. Suponha que `A`, `B` e `C` são variáveis de tipo inteiro, com valores iguais a $5$, $10$ e $-8$, respectivamente, e uma variável real `D`, com valor de $1.5$. Quais serão os resultados das expressões aritméticas a seguir?  
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   `2 * A % 3 - C`  
   `(sqrt(-2 * C) / 4)`  
@@ -151,8 +151,9 @@ $$
   `pow(-C, 2) + (D * 10) / A`  
   `sqrt(pow(A, B/A)) + C * D`  
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   `2 * A % 3 - C`  
   `Math.sqrt(-2 * C) / 4`  
@@ -161,8 +162,9 @@ $$
   `Math.pow(-C, 2) + (D * 10) / A`  
   `Math.sqrt(Math.pow(A, B/A)) + C * D`  
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   `2 * A % 3 - C`  
   `sqrt(-2 * C) / 4`  
@@ -171,9 +173,9 @@ $$
   `-C**2 + (D * 10) / A`  
   `sqrt(A**(B/A)) + C * D`  
 
-  </TabItem>
+:::
 
-  <TabItem value="c" label="C">
+::: {.content-visible when-profile="c"}
 
   `2 * A % 3 - C`  
   `sqrt(-2 * C) / 4`  
@@ -182,13 +184,13 @@ $$
   `pow(-C, 2) + (d * 10) / A`  
   `sqrt(pow(A, B / A)) + C * D`  
 
-  </TabItem>
-</Tabs>
+:::
+
 1. Sendo P, Q e R variáveis de tipo inteiro, com valores iguais a 2, 3 e 12, respectivamente, e
 uma variável real S, com valor de 4.5, quais os valores fornecidos por cada uma das expressões
 aritméticas abaixo?
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   `((100 * Q) / P + R)`  
   `S % (P - 1) - Q * R`  
@@ -197,8 +199,9 @@ aritméticas abaixo?
   `1 + ((R + P) / pot (Q, 2))`  
   `rad(rad(16)) * pot(2, 3)` 
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   `((100 * Q) / P + R)`  
   `S % (P - 1) - Q * R`  
@@ -207,8 +210,9 @@ aritméticas abaixo?
   `1 + (int)((R + P) / Math.pow (Q, 2))`  
   `Math.sqrt(Math.sqrt(16)) * Math.pow(2, 3)` 
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   `((100 * Q) / P + R)`  
   `S % (P - 1) - Q * R`  
@@ -217,9 +221,9 @@ aritméticas abaixo?
   `1 + ((R + P) / Q**2)`  
   `sqrt(sqrt(16)) * 2**3` 
 
-  </TabItem>
+:::
 
-  <TabItem value="c" label="C">
+::: {.content-visible when-profile="c"}
 
   `((100 * Q) / P + R)`  
   `S % (P - 1) - Q * R`  
@@ -228,50 +232,52 @@ aritméticas abaixo?
   `1 + ((R + P) / pow (Q, 2))`  
   `sqrt(sqrt(16)) * pow(2, 3)`  
 
-  </TabItem>
-</Tabs>
+:::
 
 1. Considere as seguintes atribuições, R = 2, S = 5, T = -1, X = - 3, Y = -1 e Z = 0, resolver as
 expressões abaixo:
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   `(R >=5) ou (T > Z) e (X - Y + R > 3 * Z)`  
   `(T + 3 >= 4) e !(3 * R/2 < S * 3)`  
   `(X == 2) ou (Y = 1) e ((Z == 0) ou (R > 3) e (S < 10))`  
   `(R != S) ou !(sqrt(R) < sqrt(X)) e (8327 * X * S * Z == 0)` 
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   `(R >=5) || (T > Z) && (X - Y + R > 3 * Z)`  
   `(T + 3 >= 4) && !(3 * R/2 < S * 3)`  
   `(X == 2) || (Y == 1) && ((Z == 0) || (R > 3) && (S < 10))`  
   `(R != S) || !(Math.sqrt(R) < Math.sqrt(X)) && (8327 * X * S * Z == 0)` 
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   `(R >=5) or (T > Z) and (X - Y + R > 3 * Z)`  
   `(T + 3 >= 4) and not(3 * R/2 < S * 3)`  
   `(X == 2) or (Y == 1) and ((Z == 0) or (R > 3) and (S < 10))`  
   `(R != S) or not sqrt(R) < sqrt(X) and (8327 * X * S * Z == 0)`  
 
-  </TabItem>
+:::
 
-  <TabItem value="c" label="C">
+::: {.content-visible when-profile="c"}
 
   `(R >=5) || (T > Z) && (X - Y + R > 3 * Z)`  
   `(T + 3 >= 4) && !(3 * R/2 < S * 3)`  
   `(X == 2) || (Y = 1) && ((Z == 0) || (R > 3) && (S < 10))`  
   `(R != S) || !(sqrt(R) < sqrt(X)) && (8327 * X * S * Z == 0)`  
 
-  </TabItem>
-</Tabs>
+:::
 
 1. Resolva as expressões abaixo, apresentando o resultado final. Considere o valor de `PI` como $3,14$:
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   `(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`  
   `26.0 / 6.0 / 2.0`  
@@ -281,8 +287,9 @@ expressões abaixo:
   `(12 >= 5 * 2) e (4 * 5 > 24 / 6)`  
   `(2 >= 5) e não(6 <= 2 * 3) ou (10 != 10)`  
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   `(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`  
   `26.0 / 6.0 / 2.0`  
@@ -292,8 +299,9 @@ expressões abaixo:
   `(12 >= 5 * 2) && (4 * 5 > 24 / 6)`  
   `(2 >= 5) && !(6 <= 2 * 3) || (10 != 10)`  
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   `(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`  
   `26.0 / 6.0 / 2.0`  
@@ -303,9 +311,9 @@ expressões abaixo:
   `(12 >= 5 * 2) and (4 * 5 > 24 / 6)`  
   `(2 >= 5) and not(6 <= 2 * 3) or (10 != 10)`   
 
-  </TabItem>
+:::
 
-  <TabItem value="c" label="C">
+::: {.content-visible when-profile="c"}
 
   `(18 / 3 / 2 - 1) * 5 - 4 - (2 + 3 + 5) / 2`  
   `26.0 / 6.0 / 2.0`  
@@ -315,117 +323,121 @@ expressões abaixo:
   `(12 >= 5 * 2) && (4 * 5 > 24 / 6)`  
   `(2 >= 5) && !(6 <= 2 * 3) || (10 != 10)`  
 
-  </TabItem>
-</Tabs>
+:::
 
 1. Resolva as expressões a seguir, quanto a seu valor lógico.
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   `2 * 4 == 24 / 3`  
   `15 % 4 < 19 % 6`  
   `3 * 5 <= pot(3, 2) / 0.5`  
   `2 + 8 % 7 >= 3 * 6 - 15`  
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   `2 * 4 == 24 / 3`  
   `15 % 4 < 19 % 6`  
   `3 * 5 <= Math.pow(3, 2) / 0.5`  
   `2 + 8 % 7 >= 3 * 6 - 15`   
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   `2 * 4 == 24 / 3`  
   `15 % 4 < 19 % 6`  
   `3 * 5 <= 3**2 / 0.5`  
   `2 + 8 % 7 >= 3 * 6 - 15`   
 
-  </TabItem>
+:::
 
-  <TabItem value="c" label="C">
+::: {.content-visible when-profile="c"}
 
   `2 * 4 == 24 / 3`  
   `15 % 4 < 19 % 6`  
   `3 * 5 <= pow(3, 2) / 0.5`  
   `2 + 8 % 7 >= 3 * 6 - 15`  
 
-  </TabItem>
-</Tabs>
+:::
 
 1. Resolva as expressões a seguir, quanto a seu valor lógico.
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   `2 < 5 ou 15 / 3 == 5`  
   `falso ou 20 / (18 / 3) != (21 / 3) / 2`  
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   `2 < 5 || 15 / 3 == 5`  
   `false || 20.0 / (18.0 / 3) != (21.0 / 3) / 2`  
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   `2 < 5 or 15 / 3 == 5`  
   `False or 20 / (18 / 3) != (21 / 3) / 2`   
 
-  </TabItem>
+:::
 
-  <TabItem value="c" label="C">
+::: {.content-visible when-profile="c"}
 
   `2 < 5 || 15 / 3 == 5`  
   `0 || 20.0 / (18.0 / 3) != (21.0 / 3) / 2`  
 
-  </TabItem>
-</Tabs>
+:::
 
 1. Considerando as variáveis numéricas X, Y e Z, contendo os valores 2, 5 e 9, respectivamente, a
 variável literal NOME, contendo o literal "MARIA"; e a variável lógica SIM, contendo o valor
 lógico Verdadeiro (V), observar os resultados obtidos das expressões lógicas a seguir.
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   `X + Y > Z e NOME=="MARIA"`  
   `SIM e Y >= X`  
   `não SIM e Z / Y + 1 == X`  
   `NOME=="JORGE" e SIM ou X**2 < Z + 10`  
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   `X + Y > Z && NOME=="MARIA"`  
   `SIM || Y >= X`  
   `!SIM && Z / Y + 1 == X`  
   `NOME=="JORGE" && SIM || Math.pow(X, 2) < Z + 10` 
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   `X + Y > Z and NOME=="MARIA"`  
   `SIM or Y >= X`  
   `not SIM and Z / Y + 1 == X`  
   `NOME=="JORGE" and SIM or X**2 < Z + 10`  
 
-  </TabItem>
+:::
 
-  <TabItem value="c" label="C">
+::: {.content-visible when-profile="c"}
 
   `X + Y > Z && strcmp(NOME,"MARIA")`  
   `SIM || Y >= X`  
   `!SIM && (int) Z / Y + 1 == X`  
   `strcmp(NOME,"JORGE") && SIM || pow(X, 2) < Z + 10`  
 
-  </TabItem>
-</Tabs>
+:::
 
 1. Considerando A e C variáveis inteiras, contendo os valores, $1$ e $8$ e, B como uma variável real, com o valor $4.5$ e TESTE variável lógica contendo o valor verdadeiro (V), determinar os resultados obtidos da avaliação das seguintes expressões:
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   `A == 1 e TESTE`  
   `A + C == rad(81) ou TESTE != falso`  
@@ -434,8 +446,9 @@ lógico Verdadeiro (V), observar os resultados obtidos das expressões lógicas 
   `TESTE e não TESTE`  
   `pot(A, 2) + rad(A + C) == 3 e (A + B > 13)` 
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   `A == 1 && TESTE`  
   `A + C == Math.sqrt(81) || TESTE != false`  
@@ -444,8 +457,9 @@ lógico Verdadeiro (V), observar os resultados obtidos das expressões lógicas 
   `TESTE && !TESTE`  
   `Math.pow(A, 2) + Math.sqrt(A + C) == 3 && (A + B > 13)`  
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   `A == 1 and TESTE`  
   `A + C == sqrt(81) or TESTE != False`  
@@ -454,9 +468,9 @@ lógico Verdadeiro (V), observar os resultados obtidos das expressões lógicas 
   `TESTE and not TESTE`  
   `pow(A, 2) + sqrt(A + C) == 3 and (A + B > 13)`  
 
-  </TabItem>
+:::
 
-  <TabItem value="c" label="C">
+::: {.content-visible when-profile="c"}
 
   `A == 1 && TESTE`  
   `A + C == sqrt(81) || TESTE != 0`  
@@ -465,13 +479,12 @@ lógico Verdadeiro (V), observar os resultados obtidos das expressões lógicas 
   `TESTE && !TESTE`  
   `pow(A, 2) + sqrt(A + C) == 3 && (A + B > 13)`  
 
-  </TabItem>
-</Tabs>
+:::
 
 1. Determine os resultados na avaliação das expressões lógicas seguintes, sabendo que A, B, C
 contêm, respectivamente, 2, 7, 3.5, e que existe uma variável lógica L cujo valor é F.
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   `B == A * C e (L or verdadeiro)`  
   `B > A ou B == pot(A, A)`  
@@ -483,8 +496,9 @@ contêm, respectivamente, 2, 7, 3.5, e que existe uma variável lógica L cujo v
   `não (5 != 10 / 2) or 1 e 2 - 5 > 5 - 2 ou verdadeiro`  
   `pot(2, 4) != 4 + 2 or 2 + 3 * 5 / 3 % 5 > 0`
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   `B == A * C && (L || true)`  
   `B > A || B == Math.pow(A, A)`  
@@ -496,8 +510,9 @@ contêm, respectivamente, 2, 7, 3.5, e que existe uma variável lógica L cujo v
   `!(5 != 10 / 2) || true && 2 - 5 > 5 - 2 || true`  
   `Math.pow(2, 4) != 4 + 2 || 2 + 3 * 5 / 3 % 5 > 0` 
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   `B == A * C and (L or True)`  
   `B > A or B == pow(A, A)`  
@@ -509,9 +524,9 @@ contêm, respectivamente, 2, 7, 3.5, e que existe uma variável lógica L cujo v
   `not (5 != 10 / 2) or True and 2 - 5 > 5 - 2 or True`  
   `pow(2, 4) != 4 + 2 or 2 + 3 * 5 / 3 % 5 > 0` 
 
-  </TabItem>
+:::
 
-  <TabItem value="c" label="C">
+::: {.content-visible when-profile="c"}
 
   `B == A * C && (L || true)`  
   `B > A || B == pow(A, A)`  
@@ -523,38 +538,39 @@ contêm, respectivamente, 2, 7, 3.5, e que existe uma variável lógica L cujo v
   `!(5 != 10 / 2) || true && 2 - 5 > 5 - 2 || true`  
   `pow(2, 4) != 4 + 2 || 2 + 3 * 5 / 3 % 5 > 0`  
 
-  </TabItem>
-</Tabs>
+:::
 
 1. Sabendo que A = 5, B = 4, C = 3 e D = 6, informe se as expressões abaixo são verdadeiras ou
 falsas.
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   `(A > C) e (C <= D)`  
   `(A + B) > 10 ou (A + B) == (C + D)`  
   `(A - C) == 0 ou não (D >= 99) e (B + 2) == 6`  
   `(A >= C) e (B >= C)` 
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   `(A > C) && (C <= D)`  
   `(A + B) > 10 || (A + B) == (C + D)`  
   `(A - C) == 0 || !(D >= 99) && (B + 2) == 6`  
   `(A >= C) && (B >= C)` 
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   `(A > C) and (C <= D)`  
   `(A + B) > 10 or (A + B) == (C + D)`  
   `(A - C) == 0 or not (D >= 99) and (B + 2) == 6`  
   `(A >= C) and (B >= C)`  
 
-  </TabItem>
+:::
 
-  <TabItem value="c" label="C">
+::: {.content-visible when-profile="c"}
 
   `(A > C) && (C <= D)`  
   `(A + B) > 10 || (A + B) == (C + D))`  
@@ -565,8 +581,8 @@ falsas.
 </Tabs>
 
 1. Sabendo que A = 3, B = 7 e C = 4, informe se as expressões abaixo são verdadeiras ou falsas.
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+::: {.content-visible when-profile="pseudocodigo"}
 
   `(A + C) > B`  
   `B >= (A + 2)`  
@@ -574,8 +590,9 @@ falsas.
   `(B + A) <= C`  
   `(C + A) > B`  
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   `(A + C) > B`  
   `B >= (A + 2)`  
@@ -583,8 +600,9 @@ falsas.
   `(B + A) <= C`  
   `(C + A) > B`  
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   `(A + C) > B`  
   `B >= (A + 2)`  
@@ -592,9 +610,9 @@ falsas.
   `(B + A) <= C`  
   `(C + A) > B`  
 
-  </TabItem>
+  :::
 
-  <TabItem value="c" label="C">
+::: {.content-visible when-profile="c"}
 
   `(A + C) > B`  
   `B >= (A + 2)`  
@@ -602,9 +620,7 @@ falsas.
   `(B + A) <= C`  
   `(C + A) > B`  
 
-  </TabItem>
-</Tabs>
-
+:::
 
 1. Elabore um programa que leia a altura de um andar do prédio e quantos andares o prédio possui. Calcule e mostre a altura do prédio.
 
@@ -616,14 +632,14 @@ falsas.
 
 1. Analise os valores que estão armazenados em cada uma das variáveis, após a execução de cada instrução. Prencha com "?" nos lugares em que o valor da variável não é conhecido.
 
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+::: {.content-visible when-profile="pseudocodigo"}
 
 ```c
 ```
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
 ```javascript
 public class Main{
@@ -643,8 +659,9 @@ public class Main{
 }
 ``` 
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
 ```python
 if __name__ == "__main__":
@@ -660,9 +677,9 @@ if __name__ == "__main__":
 
 ``` 
 
-  </TabItem>
+:::
 
-  <TabItem value="c" label="C">
+::: {.content-visible when-profile="c"}
 
 ```c
 # include < stdio .h > 
@@ -683,19 +700,18 @@ int main () {           //   a  |    b   |    c   |    x   |
 }
 ``` 
 
-  </TabItem>
-</Tabs>
+:::
 
 1. Indique os valores armazenados em cada variável, após executar cada uma das instruções
 
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+::: {.content-visible when-profile="pseudocodigo"}
 
 ```c
 ```
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
 ```javascript
 public class Main{
@@ -717,8 +733,9 @@ public class Main{
 }
 ``` 
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
 ```python
 if __name__ == "__main__":
@@ -734,9 +751,9 @@ if __name__ == "__main__":
     r = r + 1;          #      |        |        |        | 
 ``` 
 
-  </TabItem>
+  :::
 
-  <TabItem value="c" label="C">
+::: {.content-visible when-profile="c"}
 
 ```c
 # include < stdio .h > 
@@ -758,8 +775,7 @@ int main () {           //   q  |    w   |    r   |    ex  |
 }
 ``` 
 
-  </TabItem>
-</Tabs>
+:::
 
 ### Matemática
 
@@ -812,8 +828,6 @@ $$
 1. Desenvolva um algoritmo que recebe como entrada informações da hora e minuto inicial e final da partida de um determinado jogo. Com esses dados, informe a duração total do jogo, em horas e minutos (Obs: Para simplificação do problema, você pode considerar que o jogo sempre começa e termina no mesmo dia).
 
 1. Desenvolva um algoritmo que recebe como entrada informações da hora e minuto inicial e final da partida de um determinado jogo. Com esses dados, informe a duração total do jogo, em horas e minutos. Considere que a duração de uma partida nunca será maior ou igual que 24 horas.
-
-
 
 ## Exercícios externos
 
