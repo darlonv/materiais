@@ -272,7 +272,8 @@ Valores máximos +1 para inteiros:
     max long  : -9223372036854775808
 ```
 
-:::caution Atenção
+::: {.callout-caution}
+## Atenção
 O *overflow* é um erro nos valores, e portanto deve-se evitar que ele ocorra. Por isso, deve-se tomar o cuidado ao escolher o tipo de dado a ser utilizado.
 :::
 

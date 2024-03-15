@@ -130,44 +130,42 @@ Como dito anteriormente, a atribuição é o operador que determina a passagem d
 
 ::: {.content-visible when-profile="java"}
 
-  |Operador|Função|
-  |----|----|
-  |`=`|atribuição|
+|Operador|Função|
+|----|----|
+|`=`|atribuição|
 
-  **Exemplo**  
-  - `lado = 8 ;`
-  - `distancia = 49.6 ;`
-  - `nome = "Adalberto" ;`
-  - `custo = 5.50 ;`
-
-
+**Exemplo**  
+- `lado = 8 ;`  
+- `distancia = 49.6 ;`  
+- `nome = "Adalberto" ;`  
+- `custo = 5.50 ;`  
 
 :::
 
 ::: {.content-visible when-profile="python"}
-  |Operador|Função|
-  |--------|------|
-  |`=`|atribuição|
+|Operador|Função|
+|--------|------|
+|`=`|atribuição|
 
-  **Exemplo**  
-  - `lado = 8`
-  - `distancia = 49.6`
-  - `nome = "Adalberto"`
-  - `custo = 5.50`
+**Exemplo**  
+- `lado = 8`  
+- `distancia = 49.6`  
+- `nome = "Adalberto"`  
+- `custo = 5.50`  
 
 :::
 
 ::: {.content-visible when-profile="c"}
 
-  |Operador|Função|
-  |--------|------|
-  |`=`|atribuição|
+|Operador|Função|
+|--------|------|
+|`=`|atribuição|
 
-  **Exemplo**  
-  - `lado = 8 ;`
-  - `distancia = 49.6 ;`
-  - `nome = "Adalberto" ;`
-  - `custo = 5.50 ;`
+**Exemplo**  
+- `lado = 8 ;`  
+- `distancia = 49.6 ;`  
+- `nome = "Adalberto" ;`  
+- `custo = 5.50 ;`  
 
 
 :::
@@ -230,27 +228,27 @@ escreva(valor_f);
 
 <!-- marp --- -->
 
-  **Exemplos**
-  ```js
-  int valor_i;
-  float valor_f;
+**Exemplos**
+```javascript
+int valor_i;
+float valor_f;
 
-  valor_i = 5+10;
-  System.out.println(valor_i); //15
-  valor_i = 8-4;
-  System.out.println(valor_i); //4
-  valor_i = 6*4;
-  System.out.println(valor_i); //24
-  valor_i = 10/2;
-  System.out.println(valor_i); //5
-  valor_f = 10/2;
-  System.out.println(valor_f); //5.0
-  valor_f = (float) 10/6;
-  System.out.println(valor_f); //1.6666666
-  valor_i = 25%11;
-  System.out.println(valor_i); //3
-  
-  ```
+valor_i = 5+10;
+System.out.println(valor_i); //15
+valor_i = 8-4;
+System.out.println(valor_i); //4
+valor_i = 6*4;
+System.out.println(valor_i); //24
+valor_i = 10/2;
+System.out.println(valor_i); //5
+valor_f = 10/2;
+System.out.println(valor_f); //5.0
+valor_f = (float) 10/6;
+System.out.println(valor_f); //1.6666666
+valor_i = 25%11;
+System.out.println(valor_i); //3
+
+```
 
 :::
 
