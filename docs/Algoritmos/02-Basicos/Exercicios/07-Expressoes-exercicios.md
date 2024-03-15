@@ -79,12 +79,12 @@ print(f'O sucessor de {valor} é {sucessor}', )
 
 1. Faça um programa que pergunta o nome do usuário, e em seguida mostra a frase "Boa tarde" seguida do nome do usuário.  
 
-1. Pergunte um número ao usuário, e mostre o valor desse número ao cubo.
+1. Pergunte um número ao usuário, e mostre o valor desse número ao cubo.  
 
 1. Pergunte três valores ao usuário, que correspondem às horas, minutos e segundos do horário atual. Calcule quantos segundos se passaram desde 00:00 horas.  
-(Adaptado de MENEZES 2019, pg. 72)
+(Adaptado de MENEZES 2019, pg. 72)  
 
-1. Pergunte um número ao usuário, e em seguida mostre a raiz quadrada e a raiz cúbica desse número.
+1. Pergunte um número ao usuário, e em seguida mostre a raiz quadrada e a raiz cúbica desse número.  
 
 1. Escreva um programa que pergunte a quantidade de km percorridos por um carro alugado pelo usuário, assim como a quantidade de dias pelos quais o carro foi alugado. Calcule o preço a pagar, sabendo que o carro custa R\$ 60,00 por dia e R\$ 0,15 por km rodado.  
 (Fonte: MENEZES 2019, pg. 72)
@@ -411,9 +411,7 @@ lógico Verdadeiro (V), observar os resultados obtidos das expressões lógicas 
   </TabItem>
 </Tabs>
 
-1. Considerando A e C variáveis inteiras, contendo os valores, $1$ e $8$ e, B como uma variável real, com
-o valor $4.5$ e TESTE variável lógica contendo o valor verdadeiro (V), determinar os resultados
-obtidos da avaliação das seguintes expressões:
+1. Considerando A e C variáveis inteiras, contendo os valores, $1$ e $8$ e, B como uma variável real, com o valor $4.5$ e TESTE variável lógica contendo o valor verdadeiro (V), determinar os resultados obtidos da avaliação das seguintes expressões:
 <Tabs groupId='language'>
   <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
