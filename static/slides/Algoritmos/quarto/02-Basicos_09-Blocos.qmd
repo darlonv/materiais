@@ -47,21 +47,21 @@ O exemplo apresentado abaixo apresenta apenas a estrutura para definição de c�
 
 ::: {.content-visible when-profile="java"}
 
-   ```javascript showLineNumbers
-  {
-    // comando 1 ;
-    // comando 2 ;
-    // highlight-start
-    {                   //<-- Início do bloco
-        // comando 3 ;
-        // comando 4 ;
-        // comando 5 ;
-    }                   //<-- Término do bloco
-    // highlight-end
-    // comando 6 ;
-    // comando 7 ;
-  }
-  ```
+```.javascript
+{
+  // comando 1 ;
+  // comando 2 ;
+  // highlight-start
+  {                   //<-- Início do bloco
+    // comando 3 ;
+    // comando 4 ;
+    // comando 5 ;
+  }                   //<-- Término do bloco
+  // highlight-end
+  // comando 6 ;
+  // comando 7 ;
+}
+```
 
   Em Java, os blocos são delimitados pelas chaves `{` e `}`.
 
