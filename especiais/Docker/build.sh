@@ -27,10 +27,11 @@ then
     docker push darlon/quarto-full${ARCHNAME}:latest
 fi
 
+#docker manifest rm darlon/quarto #remove possiveis manifests anteriores
+#docker manifest create darlon/quarto darlon/quarto-amd64:latest darlon/quarto-arm64:latest
+#docker manifest push darlon/quarto
 
-docker manifest create darlon/quarto darlon/quarto-amd64:latest darlon/quarto-arm64:latest
-docker manifest push darlon/quarto
-
-docker manifest create darlon/quarto-full darlon/quarto-full-amd64:latest darlon/quarto-full-arm64:latest
-docker manifest push darlon/quarto-full
+#docker manifest rm darlon/quarto-full #remove possiveis manifests anteriores
+#docker manifest create darlon/quarto-full darlon/quarto-full-amd64:latest darlon/quarto-full-arm64:latest
+#docker manifest push darlon/quarto-full
 
