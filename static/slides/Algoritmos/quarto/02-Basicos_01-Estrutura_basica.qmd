@@ -17,10 +17,9 @@ format:
 
 A estrutura básica de um algoritmo consiste na delimitação inicial para que um **código** seja executado. Este espaço é importante para para delimitar e informar ao computador qual código deve ser executado inicialmente.
 
-<!-- marp --- -->
+::: {.content-visible when-profile="pseudocodigo"}
 
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
 
   ```c
   início
@@ -36,8 +35,9 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
   fim.
   ```
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   ```javascript
   public class Main{
@@ -54,8 +54,9 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
   }
   ```
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   ```python
   if __name__ == "main":
@@ -67,8 +68,9 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
     #  não são executadas
   ```
 
-  </TabItem>
-  <TabItem value="c" label="C">
+:::
+
+::: {.content-visible when-profile="c"}
 
   ```c
   #include<stdio.h>
@@ -84,17 +86,14 @@ A estrutura básica de um algoritmo consiste na delimitação inicial para que u
   }
   ```
 
-  </TabItem>
-</Tabs>
+:::
+
 
 ## Ambiente de desenvolvimento e execução
 
 A maneira para executar um código que foi desenvolvido utilizando uma linguagem de programação específica, depende das ferramentas utilizadas e do ambiente de desenvolvimento. Neste material, levaremos em conta que o ambiente de desenvolvimento e execução é o Sistema Operacional Linux (Ubuntu) e ambiente de desenvolvimento VSCode com as extensões específicas para a linguagem.
 
-<!-- marp --- -->
-
-<Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+::: {.content-visible when-profile="pseudocodigo"}
 
   Extensões VSCode necessárias:
   <ul>
@@ -102,8 +101,9 @@ A maneira para executar um código que foi desenvolvido utilizando uma linguagem
   </ul>
 
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+:::
+
+::: {.content-visible when-profile="java"}
 
   - Ferramentas necessárias:
     - Compilador Java
@@ -129,8 +129,9 @@ java Hello
 
 
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+:::
+
+::: {.content-visible when-profile="python"}
 
   - Ferramentas necessárias:
     - Python 3
@@ -153,9 +154,9 @@ java Hello
 
 
 
-  </TabItem>
+:::
 
-  <TabItem value="c" label="C">
+::: {.content-visible when-profile="c"}
 
   - Ferramentas necessárias:
     - Compilador GCC
@@ -180,9 +181,7 @@ java Hello
     ```
 
 
-  </TabItem>
-
-</Tabs>
+:::
 
 ## Referências
 
