@@ -26,13 +26,11 @@ O exemplo apresentado abaixo apresenta apenas a estrutura para definição de c�
   início
     //comando 1
     //comando 2
-    // highlight-start
     início              //<-- Início do bloco
         //comando 3
         //comando 4
         //comando 5
     fim;                //<-- Término do bloco
-    // highlight-end
     // comando 6
     // comando 7
   fim.
@@ -40,7 +38,7 @@ O exemplo apresentado abaixo apresenta apenas a estrutura para definição de c�
 
   Em portugol, os blocos são delimitados por `início` e `fim`.
 
-  Adaptado de ([Forbellone 2022, p. 43](https://plataforma.bvirtual.com.br/Leitor/Publicacao/323/pdf/))
+  Adaptado de @forbellone2022 p. 43.
 
 
 :::
@@ -51,19 +49,19 @@ O exemplo apresentado abaixo apresenta apenas a estrutura para definição de c�
 {
   // comando 1 ;
   // comando 2 ;
-  // highlight-start
   {                   //<-- Início do bloco
     // comando 3 ;
     // comando 4 ;
     // comando 5 ;
   }                   //<-- Término do bloco
-  // highlight-end
   // comando 6 ;
   // comando 7 ;
 }
 ```
 
-  Em Java, os blocos são delimitados pelas chaves `{` e `}`.
+Adaptado de @forbellone2022 p. 43.  
+
+Em Java, os blocos são delimitados pelas chaves `{` e `}`. 
 
 :::
 
@@ -72,16 +70,16 @@ O exemplo apresentado abaixo apresenta apenas a estrutura para definição de c�
   ```python showLineNumbers
     # comando 1
     # comando 2
-    # highlight-start
         # comando 3     #<-- Início do bloco
         # comando 4
         # comando 5     #<-- Término do bloco
-    # highlight-end
     # comando 6 ;
     # comando 7 ;
   ```
 
-Em Python, os blocos são definidos pela indentação do código, ou seja, pelo alinhamento no início de cada linha do código. Este alinhamento pode ser feito por caracteres *tab* ou *espaços*.
+Adaptado de @forbellone2022 p. 43.  
+
+Em Python, os blocos são definidos pela indentação do código, ou seja, pelo alinhamento no início de cada linha do código. Este alinhamento pode ser feito por caracteres *tab* ou *espaços*. 
 
 :::
 
@@ -91,19 +89,17 @@ Em Python, os blocos são definidos pela indentação do código, ou seja, pelo 
   {
     // comando 1 ;
     // comando 2 ;
-    // highlight-start
     {                   //<-- Início do bloco
         // comando 3 ;
         // comando 4 ;
         // comando 5 ;
     }                   //<-- Término do bloco
-    // highlight-end
     // comando 6 ;
     // comando 7 ;
   }
   ```
 
-  Em C, os blocos são delimitados pelas chaves `{` e `}`.
+  Em C, os blocos são delimitados pelas chaves `{` e `}`. Adaptado de @forbellone2022 p. 43.
 
 :::
 
@@ -133,7 +129,7 @@ Podemos separar regiões do nosso código que sabemos que sempre serão repetida
   import java.util.Scanner;
   public class Main{
 
-    final static entrada;
+    static Scanner entrada;
 
     //Módulo para abrir a entrada
     public static void entradaAbrir(){
@@ -319,6 +315,8 @@ int main(){
 }
 ```
 
-  
 :::
 
+## Referências
+::: {#refs}
+:::

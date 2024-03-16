@@ -249,7 +249,7 @@ Saída na tela:
 ```
 18
 ```
-<!-- marp --- -->
+
 - Pode-se também apresentar diversos resultados de uma única vez:
 
 
@@ -340,7 +340,6 @@ printf("%d", altura); // saída: 50
 ```
 
 :::
-
 
 
 Saída na tela:
@@ -590,7 +589,6 @@ Estas diferenças e porque isto é realizado desta forma será explicado futuram
     caractere: nome;
 
     //entrada
-    // highlight-next-line
     leia(nome);   //recebe o dado da entrada
   ```
 
@@ -603,7 +601,6 @@ Estas diferenças e porque isto é realizado desta forma será explicado futuram
     caractere: nome;
 
     //entrada
-    // highlight-next-line
     leia(nome);   //recebe o dado da entrada
 
   fim.
@@ -620,7 +617,6 @@ Estas diferenças e porque isto é realizado desta forma será explicado futuram
 String nome;
 
 //entrada
-// highlight-next-line
 nome = entrada.next()   //recebe o dado da entrada
 ```
 
@@ -637,7 +633,6 @@ public class Main{
     //entrada
     entrada = new Scanner(System.in); //associa o objeto à entrada padrão
 
-    // highlight-next-line
     nome = entrada.next()   //recebe o dado da entrada
 
     entrada.close()         //finaliza a entrada de dados
@@ -674,7 +669,6 @@ nome = input()
 
 ```c
 char nome[100];
-// highlight-next-line
 gets(nome); //recebe o dado da entrada
 ```
 
@@ -686,7 +680,6 @@ gets(nome); //recebe o dado da entrada
 
   int main(){
     char nome[100];
-  // highlight-next-line
     gets(nome); //recebe o dado da entrada
 
     return 0;

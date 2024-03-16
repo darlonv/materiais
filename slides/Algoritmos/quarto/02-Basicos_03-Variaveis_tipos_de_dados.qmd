@@ -877,7 +877,7 @@ Como o `bool` funciona como um inteiro, nas funções `scanf` e `printf` seu  é
     - real: tamanho
 
 **Exercícios**  
-Observe qual é o tipo de dado em cada situação ([FORBELLONE, pg. 20](https://plataforma.bvirtual.com.br/Leitor/Publicacao/200078/pdf/44)):
+Observe qual é o tipo de dado em cada situação [@forbellone2022 p. 20]:
 
 - A placa "Pare!" tinha 2 furos de bala.
 - Josefina subiu 5 degraus para pegar uma maçã boa.
@@ -886,8 +886,6 @@ Observe qual é o tipo de dado em cada situação ([FORBELLONE, pg. 20](https://
 - Felisberto recebeu sua 18ª medalha por ter alcançado a marca de 578,3 segundos nos 100 metros rasos.
 
 
-
 ## Referências
-- [FORBELLONE, André Luiz Villar; EBERSPÄTCHER, Henri Frederico. Lógica de programação: A construção de algoritmoss e estruturas de dados com aplicações em Python. 4.ed. São Paulo: Pearson; Porto Alegre: Bookman, 2022](https://plataforma.bvirtual.com.br/Leitor/Publicacao/200078/pdf)
-
-
+::: {#refs}
+:::
