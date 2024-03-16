@@ -119,7 +119,7 @@ Podemos separar regiões do nosso código que sabemos que sempre serão repetida
   import java.util.Scanner;
   public class Main{
 
-    final static entrada;
+    static Scanner entrada;
 
     //Módulo para abrir a entrada
     public static void entradaAbrir(){
