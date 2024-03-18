@@ -6,32 +6,152 @@ import TabItem from '@theme/TabItem';
 Considere que é necessário desenvolver um programa que mostre na tela uma sequência com os números de $0$ a $5$. Como poderia ser feito?
 
 Uma das formas seria:
-``` c
-escreva(0);
-escreva(1);
-escreva(2);
-escreva(3);
-escreva(4);
-escreva(5);
-```
+
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  ```c
+  escreva(0);
+  escreva(1);
+  escreva(2);
+  escreva(3);
+  escreva(4);
+  escreva(5);
+  ```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  ```javascript
+  System.out.println(0);
+  System.out.println(1);
+  System.out.println(2);
+  System.out.println(3);
+  System.out.println(4);
+  System.out.println(5);
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python
+  println(0)
+  println(1)
+  println(2)
+  println(3)
+  println(4)
+  println(5)
+  ```
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  ```c
+  printf("0\n");
+  printf("1\n");
+  printf("2\n");
+  printf("3\n");
+  printf("4\n");
+  printf("5\n");
+  ```
+
+  </TabItem>
+
+</Tabs>
+
+
 
 Uma outra forma seria colocando cada valor em uma variável, que chamaremos de **variável de controle**. Teríamos então:
-```c
-inteiro valor;
 
-valor←0;
-escreva(valor);
-valor←1;
-escreva(valor);
-valor←2;
-escreva(valor);
-valor←3;
-escreva(valor);
-valor←4;
-escreva(valor);
-valor←5;
-escreva(valor);
-```  
+<Tabs groupId='language'>
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+  ```c
+  //variáveis
+  inteiro valor;
+
+  //processamento
+  valor←0;
+  escreva(valor);
+  valor←1;
+  escreva(valor);
+  valor←2;
+  escreva(valor);
+  valor←3;
+  escreva(valor);
+  valor←4;
+  escreva(valor);
+  valor←5;
+  escreva(valor);
+  ```
+
+  </TabItem>
+  <TabItem value="java" label="Java">
+
+  ```javascript
+  //variáveis
+  int valor;
+
+  //processamento
+  valor=0;
+  System.out.println(valor);
+  valor=1;
+  System.out.println(valor);
+  valor=2;
+  System.out.println(valor);
+  valor=3;
+  System.out.println(valor);
+  valor=4;
+  System.out.println(valor);
+  valor=5;
+  System.out.println(valor);
+  ```
+
+  </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python
+  valor=0
+  printf("%d\n", valor)
+  valor=1
+  printf("%d\n", valor)
+  valor=2
+  printf("%d\n", valor)
+  valor=3
+  printf("%d\n", valor)
+  valor=4
+  printf("%d\n", valor)
+  valor=5
+  printf("%d\n", valor)
+  ```
+
+  </TabItem>
+
+  <TabItem value="c" label="C">
+
+  ```c
+  //variáveis
+  int valor;
+
+  //processamento
+  valor=0;
+  printf("%d\n",valor);
+  valor=1;
+  printf("%d\n",valor);
+  valor=2;
+  printf("%d\n",valor);
+  valor=3;
+  printf("%d\n",valor);
+  valor=4;
+  printf("%d\n",valor);
+  valor=5;
+  printf("%d\n",valor);
+  ```
+
+  </TabItem>
+
+</Tabs>
 
 Ao observar o último exemplo, percebemos que há um padrão que se repete. A variável `var` recebe o valor que será apresentado e o `escreva` mostra na tela o valor da variável.
 
@@ -73,6 +193,17 @@ A estrutura sintática do `enquanto` segue a seguinte forma:
   ```
 
   </TabItem>
+  <TabItem value="c" label="C">
+
+  ```c
+  while(<condição>){
+    ...
+    ...código...
+    ...
+  }
+  ```
+
+  </TabItem>
 </Tabs>
 
 
@@ -93,9 +224,12 @@ Poderíamos reescrever o exemplo anterior utilizando esta estrutura.
   </TabItem>
   <TabItem value="java" label="Java">
 
-  ```js
+  ```javascript
+  //variáveis
   int valor;
   valor = 0;
+
+  //processamento e saída
   while( valor <= 5 ){
     System.out.println(valor);
     valor = valor+1;
@@ -110,6 +244,21 @@ Poderíamos reescrever o exemplo anterior utilizando esta estrutura.
   while valor<=5 :
     print(valor)
     valor = valor +1
+  ```
+
+  </TabItem>
+  <TabItem value="c" label="C">
+
+  ```js
+  //variáveis
+  int valor;
+  valor = 0;
+
+  //processamento e saída
+  while( valor <= 5 ){
+    printf("%d\n", valor);
+    valor = valor+1;
+  }
   ```
 
   </TabItem>
@@ -186,6 +335,28 @@ A estrutura sintática do comando `repita` é a seguinte:
   ```
 
   </TabItem>
+  <TabItem value="python" label="Python">
+
+  ```python
+  ...código inicial...
+  while(<condição>):
+    ...
+    ...código...
+    ...
+  ```
+
+  </TabItem>
+  <TabItem value="c" label="C">
+
+  ```c
+  do{
+    ...
+    ...código...
+    ...
+  }while(<condição>);
+  ```
+
+  </TabItem>
 </Tabs>
 
 **Exercícios**  
@@ -214,7 +385,10 @@ A sintaxe da estrutura `para` segue a seguinte forma:
   <TabItem value="java" label="Java">
 
   ```js
+  //variáveis
   int val;
+
+  //processamento
   for(val=vi; <condição> ; <incremento>){
     ...
     ...código...
@@ -240,7 +414,30 @@ A sintaxe da estrutura `para` segue a seguinte forma:
   ```
 
   </TabItem>
+  <TabItem value="c" label="C">
+
+  ```c
+  //variáveis
+  int val;
+
+  //processamento
+  for(val=vi; <condição> ; <incremento>){
+    ...
+    ...código...
+    ...
+  }
+  ```
+
+  onde:
+  - val: variável de controle;
+  - vi: valor inicial;
+  - condição: condição a ser testada no início de cada iteração;
+  - incremento: código a ser executado ao final de cada iteração.  
+  
+
+  </TabItem>
 </Tabs>
+
 
 
 
