@@ -173,18 +173,60 @@ Outra forma seria utilizar uma estrutura em que todos os valores fossem testados
   </TabItem>
   <TabItem value="python" label="Python">
 
+  
   Em Python, não há este tipo de estrutura. Porém, pode ser abordada com `elif`, que tem a ideia de `se-senão-se`
 
   ```python
-  if <variável> == X : #Verifica se a variável possui valor X
+  match <variável> : #Variável a ser observada
     #Código caso X
-  elif <variável> == Y: #Verifica se a variável possui valor Y
+    case X: #Verifica se a variável possui valor X
+      #Código caso X
+    case Y: #Verifica se a variável possui valor Y
     #Código caso Y
-  elif <variável> == Z: #Verifica se a variável possui valor Z
-    #Código caso Z
-  else: #demais casos
-    #Código demais casos
+    case X: #Verifica se a variável possui valor Z
+      #Código caso Z
+    case _: #demais casos
+      #Código demais casos
   ```
+
+:::info Informação
+A estrutura `match` está disponível em Python a partir da versão 3.10. Em versões anteriores, pode-se obter o mesmo resultado utilizando estruturas `if-elif`.
+
+  ```python
+if <variável> == X : #Verifica se a variável possui valor X
+  #Código caso X
+elif <variável> == Y: #Verifica se a variável possui valor Y
+  #Código caso Y
+elif <variável> == Z: #Verifica se a variável possui valor Z
+  #Código caso Z
+else: #demais casos
+  #Código demais casos
+```
+
+:::
+
+  </TabItem>
+  <TabItem value="c" label="C">
+
+  ```c
+  switch(<variável>){ //Variável a ser observada (char ou int)
+    case X: //Caso o valor da variável seja X
+      //Código caso X
+      break;
+    case Y: //Caso o valor da variável seja Y
+      //Código caso Y
+      break;
+    case Z: //Caso o valor da variável seja Z
+      //Código caso Z
+      break;
+    default: //demais casos
+      //Código demais casos
+  }
+  ```
+
+:::info Informação
+Em C, a estrutura `switch-case` opera apenas com dados dos tipos `char` e `int`.
+:::
 
   </TabItem>
 </Tabs>
@@ -209,10 +251,14 @@ A solução para o exemplo anterior utilizando `escolha` poderia ser da seguinte
 
     //Processamento e saída
     escolha sigla_estado //<- Variável a ser observada
-      caso "PR": escreva("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul");
-      caso "SC": escreva("Estado: Santa Catarina - Sigla: SC - Código: 2 - Região: Sul");
-      caso "RS": escreva("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul");
-      caso contrário: escreva("Estado ainda não cadastrado no sistema.");
+      caso "PR": 
+        escreva("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul");
+      caso "SC": 
+        escreva("Estado: Santa Catarina - Sigla: SC - Código: 2 - Região: Sul");
+      caso "RS": 
+        escreva("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul");
+      caso contrário: 
+        escreva("Estado ainda não cadastrado no sistema.");
     fimescolha;
   fim.
   ```
@@ -235,9 +281,7 @@ A solução para o exemplo anterior utilizando `escolha` poderia ser da seguinte
   entrada.close();
 
   //Processamento e saída
-  // highlight-start
-  switch(sigla_estado) //<- Verifica se o estado é Paraná
-  // highlight-end
+  switch(sigla_estado) //<- Variável a ser observada
   {
     case "PR":
     {
@@ -258,7 +302,6 @@ A solução para o exemplo anterior utilizando `escolha` poderia ser da seguinte
     {
       System.out.println("Estado ainda não cadastrado no sistema.");
     }
-    // highlight-end
   }
   ```
 
@@ -277,17 +320,60 @@ A solução para o exemplo anterior utilizando `escolha` poderia ser da seguinte
   sigla_estado = input("Entre com a sigla do estado: ")
 
   #Processamento e saída
-  if sigla_estado == "PR": #<- Verifica se o estado é Paraná (verificação inicial)
-    print("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul")
-  # highlight-start
-  elif sigla_estado == "SC": #<- Verifica se o estado é Santa Catarina
-    print("Estado: Santa Catarina - Sigla: Sc - Código: 42 - Região: Sul")
-  elif sigla_estado == "RS": #<- Verifica se o estado é Rio Grande do Sul
-    print("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul")
-  else: #<- Não restou outra opção
-    escreva("Estado ainda não cadastrado no sistema.")
-  # highlight-end
+  match sigla_estado: #<- Variável a ser observada
+    case "PR": #<- Verifica se o estado é Paraná
+      print("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul")
+    case "SC": #<- Verifica se o estado é Santa Catarina
+      print("Estado: Santa Catarina - Sigla: Sc - Código: 42 - Região: Sul")
+    case "RS": #<- Verifica se o estado é Rio Grande do Sul
+      print("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul")
+    case _: #<- Não restou outra opção
+      print("Estado ainda não cadastrado no sistema.")
   ```
+  </TabItem>
+  <TabItem value="c" label="C">
+
+  Em C, a estrutura que realiza este tipo de operação é o `switch-case`.
+
+  ```c
+  //Variáveis
+  int codigo_estado;
+  
+  //Entrada
+  printf("Entre com o código do estado: "\n);
+  scanf("%d", &codigo_estado);
+
+  //Processamento e saída
+  switch(codigo_estado) //<- Variável a ser observada
+  {
+    case 41:
+    {
+      printf("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul");
+      break;
+    }
+    case 42:
+    {
+      printf("Estado: Santa Catarina - Sigla: SC - Código: 2 - Região: Sul");
+      break;
+    }
+    case 43:
+    {
+      printf("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul");
+      break;
+    }
+    default:
+    {
+      printf("Estado ainda não cadastrado no sistema.");
+    }
+  }
+  ```
+
+  Em C, os comandos `break` e `default` são opcionais. Seus significados são:  
+
+
+  -  `break`: Indica que nenhuma outra opção precisa ser consultada.  
+  -  `default`: Esta opção será selecionada caso nenuma das alternativas anteriores seja atingida.  
+
 
   </TabItem>
 </Tabs>
