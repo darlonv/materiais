@@ -249,7 +249,7 @@ Quando o trecho de código é composto de mais de uma linha, precisamos definir 
 - Peça ao usuário para digitar um número inteiro. De acordo com o número digitado, mostre a mensagem:
     - *"Número positivo"*, caso o número digitado seja positivo;
     - *"Número negativo"*, caso o número digitado seja negativo;
-    - *"Número nulo"*, caso o número digitado não seja 0 (não é positivo nem negativo).
+    - *"Número nulo"*, caso o número digitado seja 0 (não é positivo nem negativo).
 
 - Considere que há uma turma de alunos que participam de uma disciplina sobre Algoritmos e Estruturas de dados, que possui a carga horária de $160$ horas. Desenvolva um algoritmo em que o aluno informa a quantidade de faltas que possui na disciplina, e caso o número de presenças seja inferior a $75\%$ da carga horária, mostre na tela a mensagem *"Número de presenças insuficiente. Aluno reprovado por faltas."*
 
