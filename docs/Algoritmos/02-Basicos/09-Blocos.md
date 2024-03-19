@@ -211,7 +211,7 @@ Esta prática ainda pode ser melhorada. Quando for realizada a leitura de um val
   import java.util.Scanner;
   public class Main{
 
-    final static entrada;
+    static Scanner entrada;
 
     //Módulo para abrir a entrada
     public static void entradaAbrir(){
