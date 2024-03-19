@@ -10,6 +10,64 @@ Chamamos de **escopo** ao espaço em que determinada variável pode ser utilizad
 Uma variável é considerada **local** quando esta existe apenas em um módulo específico.
 
 **Exemplo**
+
+<Tabs groupId='language'>
+<TabItem value="pseudocodigo" label="Pseudocódigo" default>
+
+```c
+escreva("Olá Mundo");
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```javascript
+public static void funcaoA(){
+    //variáveis declaradas dentro da função
+    int valor; 
+    valor = 10;
+    System.out.println("Valor na funcao A (antes)  : " + valor);
+    funcaoB();
+    System.out.println("Valor na funcao A (depois) :" + valor);
+}
+
+public static void funcaoB(){
+    //variáveis declaradas dentro da função
+    int valor;
+    valor = 20;
+    System.out.println("Valor na funcao B: " + valor);
+}
+
+public static void main(String[] args){
+    funcaoA();
+}
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+print("Olá Mundo")
+```
+
+</TabItem>
+
+<TabItem value="c" label="C">
+
+```c
+printf("Olá Mundo")
+```
+
+</TabItem>
+
+</Tabs>
+
+Observe que dentro das funções as variáveis possuem o mesmo identificador. Porém, como cada variável pertence ao módulo, estas são variáveis **diferentes**, ou seja, ocupam locais diferentes na memória.  
+
+Chamamos de **escopo** à área em que a variável existem. Em escopos diferentes, variáveis locais podem utilizar os mesmos nomes. Como estão em escopos diferentes são **variáveis diferentes**.
+
+**Exemplo**
+
 <Tabs groupId='language'>
   <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
@@ -41,35 +99,35 @@ Uma variável é considerada **local** quando esta existe apenas em um módulo e
   </TabItem>
   <TabItem value="java" label="Java">
 
-  ```javascript
-  public static float media3Valores(int a, int b, int c){
-    //variáveis
-    int soma;
-    float media;
+```javascript
+public static float media3Valores(int a, int b, int c){
+  //variáveis
+  int soma;
+  float media;
 
-    //processamento
-    soma = a+b+c;
-    media = soma/3;
+  //processamento
+  soma = a+b+c;
+  media = (float) soma/3;
 
-    //retorno
-    return media;
-  }
+  //retorno
+  return media;
+}
+  
+public static void main(String[] args){
+  //variáveis e entrada
+  int x,y,z;
 
-  public static void main(String[] args){
-    //variáveis e entrada
-    int x,y,z;
+  entradaAbrir();
+  System.out.println("Entre com três valores: ");
+  x = lerInt("X: ");
+  y = lerInt("Y: ");
+  z = lerInt("Z: ");
+  entradaFechar();
 
-    entradaAbrir()/
-    System.out.println("Entre com três valores: ");
-    x = lerInt();
-    y = lerInt();
-    z = lerInt();
-    entradaFechar();
-
-    //chamada ao método e saída
-    System.out.printf("A média é %f\n", media3Valores(x,y,z));
-  }
-  ```
+  //chamada ao método e saída
+  System.out.printf("A média é %f\n", media3Valores(x,y,z));
+}
+```
 
   </TabItem>
   <TabItem value="python" label="Python">
@@ -85,7 +143,7 @@ Uma variável é considerada **local** quando esta existe apenas em um módulo e
 
     #variáveis e entrada
     print("Entre com três valores: ")
-    x, y, z = lerInt(), lerInt(), lerInt()
+    x, y, z = lerInt("X: "), lerInt("Y: "), lerInt("Z: ")
 
     print("A média é ", media3Valores(x,y,z))
   ```
@@ -133,35 +191,39 @@ Acessar estas variáveis fora de seu escopo ocasiona em um erro.
   </TabItem>
   <TabItem value="java" label="Java">
 
-  ```javascript
-  public static float media3Valores(int a, int b, int c){
-    //variáveis
-    int soma;
-    float media;
+```javascript
+public static float media3Valores(int a, int b, int c){
+  //variáveis
+  int soma;
+  float media;
 
-    //processamento
-    soma = a+b+c;
-    media = soma/3;
+  //processamento
+  soma = a+b+c;
+  media = (float) soma/3;
 
-    //retorno
-    return media;
-  }
+  //retorno
+  return media;
+}
 
-  public static void main(String[] args){
-    //variáveis e entrada
-    int x,y,z;
-    System.out.println("Entre com três valores: ");
-    Scanner entrada = new Scanner(System.in);
-    x = entrada.nextInt(); y = entrada.nextInt(); z = entrada.nextInt();
+public static void main(String[] args){
+  //variáveis e entrada
+  int x,y,z;
 
-    //chamada ao método e saída
-    System.out.printf("A média é %f\n", media3Valores(x,y,z));
+  entradaAbrir();
+  System.out.println("Entre com três valores: ");
+  x = lerInt("X: ");
+  y = lerInt("Y: ");
+  z = lerInt("Z: ");
+  entradaFechar();
 
-    //erro aqui
-    //highlight-next-line
-    System.out.printf("A soma dos valores é ", soma);//soma não existe neste escopo
-  }
-  ```
+  //chamada à função e saída
+  System.out.printf("A média é %f\n", media3Valores(x,y,z));
+
+  //erro aqui
+  //highlight-next-line
+  System.out.printf("A soma dos valores é ", soma);//soma não existe neste escopo
+}
+```
 
   </TabItem>
   <TabItem value="python" label="Python">
@@ -173,100 +235,107 @@ Acessar estas variáveis fora de seu escopo ocasiona em um erro.
   </TabItem>
 </Tabs>
 
-Em escopos diferentes, variáveis locais podem utilizar os mesmos nomes. Como estão em escopos diferentes são **variáveis diferentes**.
+### Parâmetros de funções
 
-**Exemplo**
+Os parâmetros de funções são também variáveis locais.
+
+**Exemplo**  
+
 <Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+<TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
-  ```c
-  inicio
-    modulo mostraValorMaisDez(inteiro: x)
-        inteiro: v; //variável v local à função
-        //highlight-next-line
-        v = x+10;  //um valor é atribuído a v dentro da função
-        escreva("V dentro do módulo: ", v);
-    fimmodulo;
+```c
+escreva("Olá Mundo");
+```
 
-    //variáveis
-    inteiro: v; //variável v local ao código principal
-    //highlight-next-line
-    v = 10; //um valor é atribuído a v fora da função
-    escreva("V fora do módulo: ", v); //mostra o valor 10
-    mostraValorMaisDez(v);            //mostra o valor 20
-    escreva("V fora do módulo: ", v); //mostra o valor 10. O valor original foi mantido.
+</TabItem>
+<TabItem value="java" label="Java">
 
-  fim.
-  ```
+```javascript
+public static void funcaoA(int valor){ //Parâmetros de funções são variáveis locais
+        System.out.println("Valor na funcao A (antes)  : " + valor);
+        funcaoB(valor +1);
+        System.out.println("Valor na funcao A (depois) :" + valor);
+    }
 
-  </TabItem>
-  <TabItem value="java" label="Java">
-
-  ```javascript
-    public static void mostraValorMaisDez(int x){
-        int v; //variável v local à função
-        //highlight-next-line
-        v = x+10;  //um valor é atribuído a v dentro da função
-        System.out.printf("V dentro do módulo: %d\n", v);
+    public static void funcaoB(int valor){ //Parâmetros de funções são variáveis locais
+        System.out.println("Valor na funcao B (antes)  : " + valor);
+        valor++;
+        System.out.println("Valor na funcao B (depois) : " + valor);
     }
 
     public static void main(String[] args){
-        //variáveis
-        int v; //variável v local ao código principal
-        //highlight-next-line
-        v = 10; //um valor é atribuído a v fora da função
-        System.out.printf("V fora do módulo: %d\n", v); //mostra o valor 10
-        mostraValorMaisDez(v);                          //mostra o valor 20
-        System.out.printf("V fora do módulo: %d\n", v); //mostra o valor 10. O valor original foi mantido.
+        funcaoA(10);
     }
-  ```
+```
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+</TabItem>
+<TabItem value="python" label="Python">
 
-  ```python
-    def mostraValorMaisDez(x):
-        #highlight-next-line
-        v = x+10;  //um valor é atribuído a v dentro da função
-        print("V dentro do módulo: ", v)
-    
-    #highlight-next-line
-    v = 10; #um valor é atribuído a v fora da função
-    print("V fora do módulo:", v) #mostra o valor 10
-    mostraValorMaisDez(v)         #mostra o valor 20
-    print("V fora do módulo:", v) #mostra o valor 10. O valor original foi mantido.
-  ```
+```python
+print("Olá Mundo")
+```
 
-  </TabItem>
+</TabItem>
 </Tabs>
+
+
 
 ## Variáveis globais
 
-Aa variáveis **globais** são aquelas que podem ser acessadas por todos, e portanto, são **compartilhadas** entre os módulos.
+Aa variáveis **globais** são aquelas que podem ser acessadas por todos, e portanto, são **acessíveis** pelos diversos módulos.
 
 Para definir uma variável como global, basta declará-la fora do módulo.
 
 <Tabs groupId='language'>
-  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
+<TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
-  ```c
-  escreva("Olá Mundo");
-  ```
+```c
+escreva("Olá Mundo");
+```
 
-  </TabItem>
-  <TabItem value="java" label="Java">
+</TabItem>
+<TabItem value="java" label="Java">
 
-  ```javascript
-  System.out.println("Olá Mundo");
-  ```
+```javascript
+//variáveis globais
+static int var_global; //<- A variável é definida fora das funções
 
-  </TabItem>
-  <TabItem value="python" label="Python">
+public static void varGlobalSetar(int valor){
+    var_global = valor;
+}
 
-  ```python
-  print("Olá Mundo")
-  ```
+public static void varGlobalIncrementar(){
+    var_global++;
+}
 
-  </TabItem>
+public static void varGlobalMostrar(){
+    System.out.println(var_global);
+}
+
+public static void main(String[] args){
+
+    varGlobalSetar(10);
+    varGlobalIncrementar();
+    varGlobalMostrar();
+    varGlobalIncrementar();
+    varGlobalMostrar();
+}
+```
+
+</TabItem>
+<TabItem value="python" label="Python">
+
+```python
+print("Olá Mundo")
+```
+
+</TabItem>
 </Tabs>
+
+:::caution Variáveis globais
+Variáveis globais são um recurso muito poderoso no desenvolvimento de algoritmos. Porém, devem ser utilizados com cautela. 
+:::
+
+O ideal de programação é a organização em módulos de forma que as variáveis sejam sempre pertences ao módulo, ou seja, variáveis locais. Uma boa prática é sempre realizar a interação com funções utilizando parâmetros e retornos.
 
