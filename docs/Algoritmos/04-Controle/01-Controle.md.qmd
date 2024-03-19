@@ -1,0 +1,29 @@
+---
+title: ""
+subtitle: "Algoritmos e Estruturas de Dados"
+author: "Prof. Darlon Vasata"
+bibliography: references.bib
+csl: abnt.csl
+
+format:
+  revealjs:
+    smaller: true
+
+  beamer:
+    fontsize: "8pt"
+---
+
+---
+title: "<!-- title -->"
+subtitle: "Algoritmos e Estruturas de Dados"
+author: "Prof. Darlon Vasata"
+bibliography: references.bib
+csl: abnt.csl
+
+format:
+  revealjs:
+    smaller: true
+
+  beamer:
+    fontsize: "8pt"
+---

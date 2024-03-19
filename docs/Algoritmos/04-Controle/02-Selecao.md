@@ -4,14 +4,18 @@ import TabItem from '@theme/TabItem';
 # Seleção
 
 Uma estrutura de **seleção** possibilita que determinadas ações, ou seja, linhas de um algoritmo, sejam executadas em ou não. A **decisão** se essas linhas serão ou não executadas depende uma **condição** [@forbellone2022 p. 50].
+<!-- --- -->
 
 A estrutura de seleção é dada pelo uso da estrutura `se`. Com ela é possível definir *se*  determinado trecho de código seja executado de acordo com determinada **condição**. A **condição** é uma expressão que resulta em `verdadeiro` ou `falso`. Caso o resultado da expressão seja `verdadeiro`, o trecho de código é executado.
+<!-- --- -->
 
-## Simples
+## Seleção simples
 
 A seleção **simples** consiste em executar determinado trecho de código caso o resultado da expressão seja verdadeiro.
+<!-- --- -->
 
 ### Sintaxe
+
 
 Estrutura do código de seleção simples.
 
@@ -45,6 +49,8 @@ Estrutura do código de seleção simples.
 
   </TabItem>
 </Tabs>
+
+<!-- --- -->
 
 **Exemplo**  
 - Peça ao usuário que digite um número inteiro `x`, que corresponde à sua idade em anos. Mostre como saída a mensagem "*Parabéns! Você tem `x` anos!*." E caso a idade do usuário seja maior que 18 anos, também deve ser mostrada a mensagem "*Você é maior de idade.*".
@@ -112,7 +118,10 @@ Estrutura do código de seleção simples.
   </TabItem>
 </Tabs>
 
+<!-- --- -->
+
 A estrutura apresentada no exemplo pode ser utilizada **apenas** quando o trecho de código a ser executado seja de apenas **uma única linha**. 
+<!-- --- -->
 
 ### Blocos
 
@@ -156,10 +165,13 @@ Quando o trecho de código é composto de mais de uma linha, precisamos definir 
   </TabItem>
 </Tabs>
 
+<!-- --- -->
 
 **Exemplo**
 
 - Peça ao usuário que digite um número $x$. Mostre esse número elevado ao quadrado ($x^2$). E caso o número digitado seja maior que 10, mostre também esse número elevado à terceira ($x^3$) e quarta ($x^4$) potências.
+
+<!-- --- -->
 
 <Tabs groupId='language'>
   <TabItem value="portugol" label="Portugol" default>
@@ -241,24 +253,29 @@ Quando o trecho de código é composto de mais de uma linha, precisamos definir 
   </TabItem>
 </Tabs>
 
+<!-- --- -->
+
 **Atividades**  
 
 - Desenvolva um algoritmo em que o usuário digita um valor. De acordo com o valor mostre a seguinte mensagem:
     - *"Par"* caso o número digitado seja par;
     - *"Ímpar"* caso o número digitado seja ímpar.
+<!-- --- -->
 - Peça ao usuário para digitar um número inteiro. De acordo com o número digitado, mostre a mensagem:
     - *"Número positivo"*, caso o número digitado seja positivo;
     - *"Número negativo"*, caso o número digitado seja negativo;
     - *"Número nulo"*, caso o número digitado seja 0 (não é positivo nem negativo).
-
+<!-- --- -->
 - Considere que há uma turma de alunos que participam de uma disciplina sobre Algoritmos e Estruturas de dados, que possui a carga horária de $160$ horas. Desenvolva um algoritmo em que o aluno informa a quantidade de faltas que possui na disciplina, e caso o número de presenças seja inferior a $75\%$ da carga horária, mostre na tela a mensagem *"Número de presenças insuficiente. Aluno reprovado por faltas."*
+<!-- --- -->
 
-## Composta
+## Seleção composta
 
 Vamos partir do seguinte exemplo:
 - Desenvolva um algoritmo em que o usuário digita um valor. De acordo com o valor mostre a seguinte mensagem:
     - *"Par"* caso o número digitado seja par;
     - *"Ímpar"* caso o número digitado seja ímpar.
+<!-- --- -->
 
 <Tabs groupId='language'>
   <TabItem value="portugol" label="Portugol" default>
@@ -325,11 +342,13 @@ Vamos partir do seguinte exemplo:
   </TabItem>
 </Tabs>
 
+<!-- --- -->
+
 Observe no algoritmo acima que os testes são realizados duas vezes. E incluse, perceba que os resultados não se sobrepõem, visto que as condição são o inverso uma da outra. Ou o número é par ou é impar, não há como ser ambos simultaneamente.
+<!-- --- -->
 
 A seleção composta é uma ampliação da seleção simples. A ideia é que podemos ter duas escolhas, e executar uma (e apenas uma) delas. Uma para o caso do resultado da expressão ser `verdadeiro` e outra para resultado `falso`. 
-
-Podemos executar código caso o resultado da expressão seja `falso` utilizando a palavra `senão`.
+<!-- --- -->
 
 ### Sintaxe
 
@@ -393,6 +412,8 @@ Podemos executar código caso o resultado da expressão seja `falso` utilizando 
 
   </TabItem>
 </Tabs>
+
+<!-- --- -->
 
 Desta forma, o exercício anterior poderia ser resolvido da seguinte maneira:
 
@@ -466,6 +487,8 @@ Desta forma, o exercício anterior poderia ser resolvido da seguinte maneira:
   </TabItem>
 </Tabs>
 
+<!-- --- -->
+
 
 Podemos observar melhor a solução deste problema utilizando fluxogramas:
 
@@ -498,11 +521,12 @@ flowchart TD
     senao --> fim
 ```
 Observe que há dois caminhos possíveis, e qual caminho seguir depende do resultado da expressão.
+<!-- --- -->
 
+## Seleção encadeada
 
-## Encadeada
-
-A seleção encadeada consiste em tratar situações em que não ocorrem apenas duas possibilidades. Nestes casos, o emprego da estrutura `se` ocorre em diversos níveis.
+A seleção encadeada ou *aninhada* consiste em tratar situações em que não ocorrem apenas duas possibilidades. Nestes casos, o emprego da estrutura `se` ocorre em diversos níveis.
+<!-- --- -->
 
 Voltemos ao nosso exemplo dos números positivos, negativos e nulos.
 
@@ -583,6 +607,8 @@ Voltemos ao nosso exemplo dos números positivos, negativos e nulos.
 
   </TabItem>
 </Tabs>
+
+<!-- --- -->
 
 Neste caso, todas as condições são testadas. Isto pode ser melhorado aninhando estruturas `se`. 
 
@@ -670,8 +696,9 @@ Utilizando estruturas de seleção encadeadas, apenas duas das condições são 
   </TabItem>
 </Tabs>
 
+<!-- --- -->
+
 
 ## Referências
 ::: {#refs}
 :::
-

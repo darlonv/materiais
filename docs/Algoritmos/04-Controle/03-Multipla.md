@@ -4,9 +4,11 @@ import TabItem from '@theme/TabItem';
 # Múltipla escolha
 
 Em situações em que precisamos testar diversos valores pontuais, poderíamos utilizar a diversas expressões `se` encadeadas, formando uma seleção encadeada do tipo `se-senão-se`, e testar os possíveis valores.
+<!-- --- -->
 
 **Exemplo** 
 - A região Sul do Brasil possui três estados. De acordo com o IBGE, cada estado possui uma sigla e um código. Peça ao usuário que digite a sigla do estado, e apresente na tela o nome do estado,  código do estado e em que região do país se encontra. Caso a siga do estado entrada pelo usuário não esteja cadastrada, mostre a mensagem *"Estado ainda não cadastrado no sistema."*.  
+<!-- --- -->
 
 :::note Dados
 
@@ -20,6 +22,7 @@ Fonte: [IBGE. Códigos dos municípios IBGE.](https://www.ibge.gov.br/explica/co
 
 :::
 
+<!-- --- -->
 
 
 Uma abordagem para a solução seria testar cada valor de forma encadeada.
@@ -129,9 +132,14 @@ System.out.printf("O sucessor de %d é %d\n", valor, sucessor);
   </TabItem>
 </Tabs>
 
+
 </details>
 
+<!-- --- -->
+
 Outra forma seria utilizar uma estrutura em que todos os valores fossem testados de uma forma não aninhada, com a estrutura `escolha`.
+
+<!-- --- -->
 
 ## Sintaxe
 
@@ -378,6 +386,8 @@ A solução para o exemplo anterior utilizando `escolha` poderia ser da seguinte
   </TabItem>
 </Tabs>
 
+<!-- --- -->
+
 <!-- </details> -->
 
 <details>
@@ -404,14 +414,17 @@ A solução para o exemplo anterior utilizando `escolha` poderia ser da seguinte
 
 </details>
 
+<!-- --- -->
 
 **Atividades**  
 - Amplie a tabela de estados, considerando estados das regiões Sudeste e Centro-Oeste. Além do nome do estado, informe também código do estado, nome da região e código da região.
 - Amplie a tabela de estados, para incluir todos os estados do Brasil. Além do nome do estado, informe também código do estado, nome da região e código da região.
 
+<!-- --- -->
 
 ## Referências
 - [Forbellone, André Luiz Villar; Eberspätcher, Henri Frederico. Lógica de programação: a construção de algoritmos e estruturas de dados. 4.ed. São Paulo: Pearson Prentice Hall, 2022.](https://plataforma.bvirtual.com.br/Leitor/Publicacao/323/pdf/)
 
 ### Materiais externos
 - [IBGE. Códigos dos municípios IBGE.](https://www.ibge.gov.br/explica/codigos-dos-municipios.php)
+
