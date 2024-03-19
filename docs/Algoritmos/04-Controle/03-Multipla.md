@@ -239,6 +239,8 @@ Em C, a estrutura `switch-case` opera apenas com dados dos tipos `char` e `int`.
   </TabItem>
 </Tabs>
 
+<!-- --- -->
+
 **Exemplo**  
 A solução para o exemplo anterior utilizando `escolha` poderia ser da seguinte forma:
 
@@ -246,7 +248,7 @@ A solução para o exemplo anterior utilizando `escolha` poderia ser da seguinte
   <summary>Resposta</summary> -->
 <Tabs groupId='language'>
 
-  <TabItem value="pseudocodigo" label="Pseudocódigo">
+  <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
   ```c
   início
@@ -388,37 +390,9 @@ A solução para o exemplo anterior utilizando `escolha` poderia ser da seguinte
 
 <!-- --- -->
 
-<!-- </details> -->
-
-<details>
-  <summary>Fluxograma</summary>
-
-  ```mermaid
-  %%{ init: { 'flowchart': { 'curve': 'stepAfter' } } }%%
-  graph TD
-      inicio("inicio")
-      fim("fim.")
-      A["caractere: sigla_estado"]
-      B("leia(sigla_estado)")
-      B --> C{"escolha
-      sigla_estado"}
-      C -->|"PR"| D["escreva(Paraná)"]
-      C -->|"SC"| E["escreva(Santa Catarina)"]
-      C -->|"RS"| F["escreva(Rio Grande do Sul)"]
-      A --> B
-      inicio --> A
-      D --> fim
-      E --> fim
-      F --> fim
-  ```
-
-</details>
-
-<!-- --- -->
-
 **Atividades**  
-- Amplie a tabela de estados, considerando estados das regiões Sudeste e Centro-Oeste. Além do nome do estado, informe também código do estado, nome da região e código da região.
-- Amplie a tabela de estados, para incluir todos os estados do Brasil. Além do nome do estado, informe também código do estado, nome da região e código da região.
+- Amplie a tabela de estados, considerando estados das regiões Sudeste e Centro-Oeste. Além do nome do estado, informe também código do estado, nome da região e código da região.  
+- Amplie a tabela de estados, para incluir todos os estados do Brasil. Além do nome do estado, informe também código do estado, nome da região e código da região.  
 
 <!-- --- -->
 
