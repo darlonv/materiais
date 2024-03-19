@@ -32,7 +32,7 @@
 
 ## Exercícios
 
-15. Considerando as seguintes informações de um automóvel: marca, quilometragem inicial, quilometragem final, litros consumidos e capacidade do tanque de combustível. Elaborar um programa e funções que emita um relatório na tela contendo os dados informado e qual o consumo do automóvel em km/litros e qual a sua autonomia (km/tanque).
+15. Considere as seguintes informações de um automóvel: marca, quilometragem inicial, quilometragem final, litros consumidos e capacidade do tanque de combustível. Elabore um programa com funções de forma que seja aprsentado na tela um relatório, contendo os dados informando qual foi consumo do automóvel em km/litro e qual a sua autonomia (km/tanque).
 
 16. Elaborar uma **função** para calcula o valor a ser pago pelos passageiros pelo excesso de bagagem. Considerando que até 25kg o valor é R$2.50 e o excedente custa R$0.75 por quilo. Por fim, exiba o peso total, o peso excedente e o valor a ser pago pelo passageiro.
 
