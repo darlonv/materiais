@@ -278,12 +278,12 @@ Observe que antes de adentrar na estrutura, é necessário inicializar a variáv
 - Peça ao usuário que digite 5 números positivos. Em seguida, mostre o menor valor entre os números digitados.
 - Atualize o exercício anterior, informando também o maior valor digitado.
 - Desenvolva um algoritmo que calcula o MDC entre dois números inteiros positivos.
-:::info 
+:::info MDC
 O MDC (Máximo Divisor Comum) é o maior valor que divide simultaneamente dois números.
 :::
 
 - Desenvolva um algoritmo que calcula e mostra o MMC entre dois números inteiros positivos.
-:::info
+:::info MMC
 O MMC (Mínimo múltiplo Comum) é o menor valor que é múltiplo de ambos os números.
 :::
 
@@ -397,9 +397,9 @@ A sintaxe da estrutura `para` segue a seguinte forma:
   ```
 
   onde:
-  - val: variável de controle;
-  - vi: valor inicial;
-  - condição: condição a ser testada no início de cada iteração;
+  - val: variável de controle;  
+  - vi: valor inicial;  
+  - condição: condição a ser testada no início de cada iteração;  
   - incremento: código a ser executado ao final de cada iteração.  
   
 
