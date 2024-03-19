@@ -23,18 +23,34 @@ def replace(content):
 
     content = content.replace('<TabItem value="portugol" label="Portugol" default>',
                               '\n::: {.content-visible when-profile="pseudocodigo"}\n')
-    content = content.replace('<TabItem value="pseudocodigo" label="pseudocodigo" default>',
+    content = content.replace('<TabItem value="pseudocodigo" label="Pseudocódigo" default>',
                               '\n::: {.content-visible when-profile="pseudocodigo"}\n')
     content = content.replace(
         '<TabItem value="java" label="Java">', '\n::: {.content-visible when-profile="java"}\n')
     content = content.replace('<TabItem value="python" label="Python">',
                               '\n::: {.content-visible when-profile="python"}\n')
     content = content.replace(
-        '<TabItem value="python" label="c">', '\n::: {.content-visible when-profile="c"}\n')
+        '<TabItem value="c" label="C">', '\n::: {.content-visible when-profile="c"}\n')
     content = content.replace("</TabItem>", "\n:::\n")
     content = content.replace("```mermaid", "```{mermaid}")
     content = content.replace(
         "<!-- --- -->", '\n\n::: {.content-visible when-profile="slides"}\n\n---\n\n:::\n\n')
+    # Admonitions
+    # caution
+    content = content.replace(
+        ":::caution", '\n::: {.callout-caution}\n## ')
+    # note
+    content = content.replace(
+        ":::note", '\n::: {.callout-note}\n## ')
+    # info
+    content = content.replace(
+        ":::info", '\n::: {.callout-note}\n## ')
+    # tip
+    content = content.replace(
+        ":::tip", '\n::: {.callout-tip}\n## ')
+    # danger
+    content = content.replace(
+        ":::danger", '\n::: {.callout-danger}\n## ')
 
     return content
 
