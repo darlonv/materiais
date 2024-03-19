@@ -34,7 +34,7 @@ def replace(content):
     content = content.replace("</TabItem>", "\n:::\n")
     content = content.replace("```mermaid", "```{mermaid}")
     content = content.replace(
-        "<!-- --- -->", '\n\n::: {.content-visible when-profile="slides"}\n---\n:::\n\n')
+        "<!-- --- -->", '\n\n::: {.content-visible when-profile="slides"}\n\n---\n\n:::\n\n')
 
     return content
 
@@ -70,10 +70,14 @@ def getTitle(content):
 
 def loadFile(filename):
     content = ''
-    # with open(filename, 'r') as file:
-    # content = file.read()
+    with open(filename, 'r') as file:
+        content = file.read()
+    return content
 
-    content = """---
+
+def loadHeader(filename):
+    content = """
+---
 title: "<!-- title -->"
 subtitle: "Algoritmos e Estruturas de Dados"
 author: "Prof. Darlon Vasata"
@@ -86,7 +90,8 @@ format:
 
   beamer:
     fontsize: "8pt"
----"""
+---
+"""
 
     return content
 
@@ -104,11 +109,13 @@ def startMd2Qmd(filename_in, filename_header="./quarto_pdf_header.txt"):
     content = loadFile(filename_in)
     # print(content)
     content = convertDoc2Quarto(content)
-    header = loadFile(filename_header)
+    header = loadHeader(filename_header)
     title = getTitle(content)
     # print(len(title), title)
     header = fillTitle(header, title)
+    # print(header)
     content = insertHeader(header, content)
+    # print(content)
     saveFile(filename_out, content)
 
 
