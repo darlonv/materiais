@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-docker run --rm  -v $(pwd):/data -w /data -it darlon/quarto-full /bin/bash
+docker run --rm --name docker-quarto-bash -v $(pwd):/data -w /data -it darlon/quarto-full /bin/bash
 
 
 #Install chrome on docker to compile mermaid on quarto
