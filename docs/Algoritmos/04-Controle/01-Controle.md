@@ -2,7 +2,7 @@
 
 
 
-No desenvolvimento de algorimos, sempre planejamos as ações seguindos os conceitos de **entrada**, **processamento** e **saída**. Já sabemos que podemos elaborar os algoritmos com o uso de variáveis, funções e expressões ([FORBELLONE 2022, pg. 45](https://plataforma.bvirtual.com.br/Leitor/Publicacao/200078/pdf/69)).
+No desenvolvimento de algorimos, sempre planejamos as ações seguindos os conceitos de **entrada**, **processamento** e **saída**. Já sabemos que podemos elaborar os algoritmos com o uso de variáveis, funções e expressões [@forbellone2022 p. 45].
 
 Até agora, elaboramos nossos algorimos de forma que todas as instruções presentes no algoritmo são executadas: linha por linha e uma única vez.
 
@@ -13,6 +13,5 @@ As estruturas que definem qual trecho será ou não executado, ou se será execu
 
 
 ## Referências
-
-- [FORBELLONE, André Luiz Villar; EBERSPÄTCHER, Henri Frederico. Lógica de programação: A construção de algoritmoss e estruturas de dados com aplicações em Python. 4.ed. São Paulo: Pearson; Porto Alegre: Bookman, 2022](https://plataforma.bvirtual.com.br/Leitor/Publicacao/200078/pdf/69)
-
+::: {#refs}
+:::
