@@ -23,7 +23,11 @@ def replace(content):
 
     content = content.replace('<TabItem value="portugol" label="Portugol" default>',
                               '\n::: {.content-visible when-profile="pseudocodigo"}\n')
+    content = content.replace('<TabItem value="portugol" label="Portugol">',
+                              '\n::: {.content-visible when-profile="pseudocodigo"}\n')
     content = content.replace('<TabItem value="pseudocodigo" label="Pseudocódigo" default>',
+                              '\n::: {.content-visible when-profile="pseudocodigo"}\n')
+    content = content.replace('<TabItem value="pseudocodigo" label="Pseudocódigo">',
                               '\n::: {.content-visible when-profile="pseudocodigo"}\n')
     content = content.replace(
         '<TabItem value="java" label="Java">', '\n::: {.content-visible when-profile="java"}\n')
