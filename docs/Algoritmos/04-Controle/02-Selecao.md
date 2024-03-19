@@ -489,40 +489,6 @@ Desta forma, o exercício anterior poderia ser resolvido da seguinte maneira:
 
 <!-- --- -->
 
-
-Podemos observar melhor a solução deste problema utilizando fluxogramas:
-
-```mermaid
-%%{ init: { 'flowchart': { 'curve': 'stepAfter' } } }%%
-flowchart TD
-    inicio("
-        Início;
-        ")
-    entrada["
-        inteiro: valor;
-        escreva(&quot;Valor: &quot;);
-        leia(valor);
-        "]
-    se{"
-        se (valor mod 2 = 0)
-        "}
-    entao["
-        escreva(&quot;Par&quot;);
-        "]
-    senao["
-        escreva(&quot;Par&quot;);
-        "]
-    fim(Fim.)
-
-    inicio --> entrada --> se
-    se -->|então| entao
-    se -->|senão| senao
-    entao --> fim
-    senao --> fim
-```
-Observe que há dois caminhos possíveis, e qual caminho seguir depende do resultado da expressão.
-<!-- --- -->
-
 ## Seleção encadeada
 
 A seleção encadeada ou *aninhada* consiste em tratar situações em que não ocorrem apenas duas possibilidades. Nestes casos, o emprego da estrutura `se` ocorre em diversos níveis.
