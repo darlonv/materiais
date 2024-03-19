@@ -272,12 +272,12 @@ Observe que antes de adentrar na estrutura, é necessário inicializar a variáv
 :::
 
 **Exercícios**  
-- Desenvolva um algoritmo que realiza uma contagem regressiva para o lançamento de um foguete. Seu programa deve apresentar na tela uma sequência de valores, iniciando de 10 e finalizando em 0.
+- Desenvolva um algoritmo que realiza uma contagem regressiva para o lançamento de um foguete. Seu programa deve apresentar na tela uma sequência de valores, iniciando de 10 e finalizando em 0.  
 - Peça ao usuário que digite diversos números inteiros, parando quando o número 0 for digitado. Para cada número digitado, informe se este é par ou ímpar.
-- Peça ao usuário que digite um número inteiro. Em seguida, apresente a tabuada desse número, de 1 a 10.
-- Peça ao usuário que digite 5 números positivos. Em seguida, mostre o menor valor entre os números digitados.
-- Atualize o exercício anterior, informando também o maior valor digitado.
-- Desenvolva um algoritmo que calcula o MDC entre dois números inteiros positivos.
+- Peça ao usuário que digite um número inteiro. Em seguida, apresente a tabuada desse número, de 1 a 10.  
+- Peça ao usuário que digite 5 números positivos. Em seguida, mostre o menor valor entre os números digitados.  
+- Atualize o exercício anterior, informando também o maior valor digitado.  
+- Desenvolva um algoritmo que calcula o MDC entre dois números inteiros positivos.  
 :::info MDC
 O MDC (Máximo Divisor Comum) é o maior valor que divide simultaneamente dois números.
 :::
@@ -302,7 +302,7 @@ O MMC (Mínimo múltiplo Comum) é o menor valor que é múltiplo de ambos os n�
 - Peça ao usuário que digite diversos números inteiros, parando quando um valor negativo for digitado. Mostre a média entre todos os valores digitados.
 
 - Desenvolva um algorimo solicite ao usuário um número e exiba a sequência de Fibonacci até o valor fornecido.
-:::info
+:::info Fibonacci
 A sequência de Fibonacci é uma sequência de números em que a cada número da sequência é a soma dos dois números anteriores na sequência. Os primeiros números na sequência são 1 e 1. Os primeiros números da sequência são 1, 1, 2, 3, 5, 8, 13, 21, 33, ...
 ::: 
 
@@ -360,8 +360,8 @@ A estrutura sintática do comando `repita` é a seguinte:
 </Tabs>
 
 **Exercícios**  
-- Escreva um programa que solicite ao usuário digitar um número maior que 10. O programa deve continuar solicitando o número até que o usuário insira um número válido.
-- Desenvolva um algoritmo que peça ao usuário solicite ao usuário adivinhar um número secreto entre 1 e 100. O programa deve continuar solicitando palpites até que o usuário acerte o número secreto. Como dica, o programa deve informar se o valor digitado foi alto ou baixo.
+- Escreva um programa que solicite ao usuário digitar um número maior que 10. O programa deve continuar solicitando o número até que o usuário insira um número válido.  
+- Desenvolva um algoritmo que peça ao usuário solicite ao usuário adivinhar um número secreto entre 1 e 100. O programa deve continuar solicitando palpites até que o usuário acerte o número secreto. Como dica, o programa deve informar se o valor digitado foi alto ou baixo.  
 - Elabore um algoritmo que realiza o levantamento de roupas em uma loja. As roupas podem ser calças (J), camisetas (T) ou camisas (C). O usuário deve entrar com J, T ou C simulando a leitura das peças. Ao final, o algoritmo deve mostrar a quantidade e porcentagem de calças, camisetas e camisas que foram registradas. Para finalizar a contagem, o usuário deve digitar a letra F.
 
 ## para
