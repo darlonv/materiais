@@ -125,7 +125,7 @@ public static void main(String[] args){
   entradaFechar();
 
   //chamada ao método e saída
-  System.out.printf("A média é %f\n", media3Valores(x,y,z));
+  System.out.println("A média é " + media3Valores(x,y,z));
 }
 ```
 
@@ -217,11 +217,11 @@ public static void main(String[] args){
   entradaFechar();
 
   //chamada à função e saída
-  System.out.printf("A média é %f\n", media3Valores(x,y,z));
+  System.out.println("A média é " + media3Valores(x,y,z));
 
   //erro aqui
   //highlight-next-line
-  System.out.printf("A soma dos valores é ", soma);//soma não existe neste escopo
+  System.out.println("A soma dos valores é " + soma);//soma não existe neste escopo
 }
 ```
 
@@ -334,7 +334,7 @@ print("Olá Mundo")
 </Tabs>
 
 :::caution Variáveis globais
-Variáveis globais são um recurso muito poderoso no desenvolvimento de algoritmos. Porém, devem ser utilizados com cautela. 
+Variáveis globais são um recurso muito poderoso no desenvolvimento de algoritmos. Porém, devem ser utilizados com cautela. O uso de variáveis globais pode dificultar a leitura do código, bem como levar a inconsistências de estados de variáveis.
 :::
 
 O ideal de programação é a organização em módulos de forma que as variáveis sejam sempre pertences ao módulo, ou seja, variáveis locais. Uma boa prática é sempre realizar a interação com funções utilizando parâmetros e retornos.
