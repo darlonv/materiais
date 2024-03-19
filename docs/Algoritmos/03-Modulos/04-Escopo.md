@@ -58,9 +58,13 @@ Uma variável é considerada **local** quando esta existe apenas em um módulo e
   public static void main(String[] args){
     //variáveis e entrada
     int x,y,z;
+
+    entradaAbrir()/
     System.out.println("Entre com três valores: ");
-    Scanner entrada = new Scanner(System.in);
-    x = entrada.nextInt(); y = entrada.nextInt(); z = entrada.nextInt();
+    x = lerInt();
+    y = lerInt();
+    z = lerInt();
+    entradaFechar();
 
     //chamada ao método e saída
     System.out.printf("A média é %f\n", media3Valores(x,y,z));
@@ -81,7 +85,7 @@ Uma variável é considerada **local** quando esta existe apenas em um módulo e
 
     #variáveis e entrada
     print("Entre com três valores: ")
-    x, y, z = int(input()), int(input()), int(input())
+    x, y, z = lerInt(), lerInt(), lerInt()
 
     print("A média é ", media3Valores(x,y,z))
   ```
@@ -236,10 +240,9 @@ Em escopos diferentes, variáveis locais podem utilizar os mesmos nomes. Como es
   </TabItem>
 </Tabs>
 
-
 ## Variáveis globais
 
-Aa variáveis **globais** são aquelas que podem ser acessadas por todos, e portanto, são **compartilhadas** entre todos os módulos.
+Aa variáveis **globais** são aquelas que podem ser acessadas por todos, e portanto, são **compartilhadas** entre os módulos.
 
 Para definir uma variável como global, basta declará-la fora do módulo.
 
@@ -266,3 +269,4 @@ Para definir uma variável como global, basta declará-la fora do módulo.
 
   </TabItem>
 </Tabs>
+
