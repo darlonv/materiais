@@ -206,3 +206,23 @@ serv.shutdown(socket.SHUT_RDWR)
 Nesta versão, temos uma aplicação cliente/servidor, em que o cliente envia uma mensagem ao servidor e o servidor responde com a mesma mensagem escrita em maiúsculas. 
 
 
+## App v4
+
+Nesta versão, temos uma aplicação cliente/servidor, em que o cliente envia uma mensagem ao servidor utilizando um conteúdo no formato `json`. O servidor interpreta o conteúdo e resolve uma determinada operação. 
+
+**Exemplo**  
+
+- Cliente -> Servidor:
+```json
+{
+    "operacao": "+",
+    "operandos": [4,5]
+}
+```
+
+- Servidor -> Cliente:
+```json
+{
+    "resposta": 9
+}
+```
