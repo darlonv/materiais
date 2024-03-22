@@ -162,7 +162,7 @@ msg = '** Olá. Sou o servidor. **'
 
 #Objeto socket
 serv  = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-serv  = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+serv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEPORT, 1)
 
 #Associa o socket a uma porta local
 serv.bind(('0.0.0.0',port))
