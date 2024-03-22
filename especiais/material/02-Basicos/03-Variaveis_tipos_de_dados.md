@@ -19,6 +19,7 @@ Um valor **variável** é aquele que pode ser modificado no decorrer da execuç�
 
  
 **Exemplos**
+
 - Valores indicados pelo usuário
     - Os valores para A e B são 15 e 50
     - O lado do quadrado
@@ -36,13 +37,15 @@ Em nossa analogia de gavetas, podemos imaginar que o identificado é um rótulo 
 ![Memória RAM com indicação das variáveis e seus identificadores](./img/variaveis_03_identificadores.png)
 
 
-Para criar um identificador, algumas regras devem sempre ser seguidas:
-1. Sempre deve começar com caractere alfabético (a-z, A-Z).
-1. Podem ser seguidos por um ou mais caracteres alfabéticos, numéricos (0-9) ou _underscore_ ( \_ ).
+Para criar um identificador, algumas regras devem sempre ser seguidas:  
+
+1. Sempre deve começar com caractere alfabético (a-z, A-Z);  
+1. Podem ser seguidos por um ou mais caracteres alfabéticos, numéricos (0-9) ou _underscore_ ( \_ );  
 1. Caracteres especiais não podem ser utilizados;
-1. Não podem ser utilizadas palavras reservadas da linguagem. A lista de palavras reservadas é específica de cada linguagem. 
+1. Não podem ser utilizadas palavras reservadas da linguagem. A lista de palavras reservadas é específica de cada linguagem.  
 
 **Exemplos**
+
 - Gama
 - X
 - notas
@@ -51,6 +54,7 @@ Para criar um identificador, algumas regras devem sempre ser seguidas:
 - SoMA_Total
 
 **Exercício**
+
 - Indique se os identificadores a seguir são válidos ou inválidos
     - 2tempos
     - verdadeiro-ou-falso
@@ -92,6 +96,7 @@ Comumente, colocamos a declaração de variáveis no início do algoritmo.
 Na declaração das variáveis é necessário informar qual tipo de dado poderá ser armazenado naquela variável.
 
 **Exemplo**
+
 - declaração de uma variável chamada `idade`, que armazenará valores do tipo inteiro.
 
   ```javascript
@@ -110,6 +115,7 @@ O operador de atribuição é:
   ```
 
 **Exemplo**
+
 - Uma variável do tipo inteiro chamada `distancia` é criada, e o valor 2000 é atribuído a ela.
 
 
@@ -124,7 +130,7 @@ distancia = 2000; //lê-se "distancia recebe o valor 20000"
 
 Após atribuir o valor à variável, este valor fica armazenado na memória RAM no espaço reservado para a execução da aplicação.
 
-![Memória RAM com a memória preenchida com o valor 2000 no espaço reservado para a variável distancia](./img/variaveis_04_atribuicao.png)
+![Memória RAM com a memória preenchida com o valor 2000 no espaço reservado para a variável distância](./img/variaveis_04_atribuicao.png)
 
 #### Substituições
 
@@ -148,6 +154,7 @@ Saída na tela:
 ```
 
 **Exercício**
+
 - Observe o código abaixo, e diga qual será a saída apresentada pelo algoritmo.
 
 
@@ -172,6 +179,7 @@ Um tipo de dado pode ser criado a partir de outros tipos de dados. Os tipos de d
 Um **inteiro** é uma informação numérica, que compreende valores que correspondem ao conjunto dos números inteiros (positivos, nulo e negativos)
 
 **Exemplo**  
+
 - O Campus possui 4 construções;
 - Estão construindo 22 casas novas no bairro vizinho;
 - O cachorro tem 8 anos de idade. 
@@ -204,6 +212,7 @@ Um **inteiro** é uma informação numérica, que compreende valores que corresp
 O tipo de dado **real** é aquele que possui um valor que está compreendido no conjunto dos números reais. São abordados os números negativos, positivos e nulo, considerando as casas decimais.
 
 **Exemplo**  
+
 - A distância do portão até a sala é de 25,7 metros.
 - O saldo bancário é de R\$ 357,32.
 - O saldo bancário é de R\$ -169,20.
@@ -237,6 +246,7 @@ System.out.println("Uma caixa pesa " + peso_da_caixa + " e seu custo é de R$ " 
 Um dado do tipo **lógico** é aquele em que dois valores podem ser asssumidos: verdadeiro ou falso.
 
 **Exemplo**
+
 - A janela está aberta.
 - O carro está ligado.
 - A bicicleta está parada.
@@ -249,7 +259,7 @@ Um dado do tipo **lógico** é aquele em que dois valores podem ser asssumidos: 
   boolean <identificador>;
   ```
 
-  **Exemplo**
+**Exemplo**
 
 ```javascript
 //variáveis
@@ -272,6 +282,7 @@ System.out.println("A caixa é nova? " + caixa_nova);  //envia dados à saída p
 Os dado do tipo **caractere** são aqueles que pertencem ao conjunto de valores alfanuméricos (0-9), alfabéticos (a-z, A-Z) e especiais (\!\@\#\$\%\*+-/, dentre outros).
 
 **Exemplo**  
+
 - O professor disse: "Não use o celular durante a aula!".
 - Ao final do jornal, ele sempre fala "Boa noite".
 - O nome do presidente do clube é "Celso da Silva".
@@ -305,6 +316,7 @@ System.out.println("A caixa é nova? " + caixa_nova);  //envia dados à saída p
 
 
 **Exercício**  
+
 - Identifique se o tipo de dado de cada variável está correto ou incorreto.
   - inteiro: endereço
   - inteiro: nro_gatos
@@ -315,6 +327,7 @@ System.out.println("A caixa é nova? " + caixa_nova);  //envia dados à saída p
   - lógico: idade
 
 **Exercício**  
+
 - Identifique se o tipo de dado de cada variável está correto ou incorreto.
   - inteiro: idade
   - real: nome

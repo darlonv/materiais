@@ -1,6 +1,3 @@
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 # Funções de entrada e saída
 
 As funções de entrada e saída realizam a conexão do algoritmo com o ambiente externo, recebendo e enviando dados.
