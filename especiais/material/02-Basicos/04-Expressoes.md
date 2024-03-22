@@ -16,6 +16,7 @@ soma = 5 + 4 ;
 ```
 
 em que:
+
 - `5` e `4` são valores, 
 - `+` é um operador aritmético, 
 - `=` é o operador de atribuição,
@@ -39,6 +40,7 @@ Como dito anteriormente, a atribuição é o operador que determina a passagem d
 |`=`|atribuição|
 
 **Exemplo**
+
 - `lado = 8 ;`
 - `distancia = 49.6 ;`
 - `nome = "Adalberto" ;`
