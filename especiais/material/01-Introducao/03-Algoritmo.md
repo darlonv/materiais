@@ -1,0 +1,50 @@
+
+# Algoritmo
+Um **algoritmo** é uma sequência de passos organizada, de maneira que a **execução** dos passos possibilita atingir um objetivo.
+
+Junto à idéia de algoritmo vem a noção de **ordem**, na execução dos passos.
+
+**Exemplo**
+- Como faríamos para trocar uma lâmpada?
+
+<details>
+  <summary>Resposta</summary>
+
+```bash
+pegar uma escada
+colocar a escada abaixo da lâmpada
+pegar uma lâmpada nova
+subir na escada
+retirar a lâmpada velha
+colocar a lâmpada nova
+```
+</details>
+
+
+**Exercício**
+
+- Abaixo há um algoritmo para trocar uma lâmpada.  
+  - Ele resolve o problema?  
+  - O que há de errado?
+
+```
+colocar a escada abaixo da lâmpada
+pegar uma escada
+retirar a lâmpada velha
+subir na escada
+colocar a lâmpada nova
+pegar uma lâmpada nova
+```
+
+<details>
+  <summary>Resposta</summary>
+A ordem está incorreta. Desta forma, o algoritmo não resolve o problema.
+</details>
+
+**Exercícios**
+
+- Desenvolva um algoritmo para fazer gelo.
+- Desenvolva um algoritmo para fazer café.
+- Desenvolva um algoritmo para trocar o pneu de um carro.
+
+
