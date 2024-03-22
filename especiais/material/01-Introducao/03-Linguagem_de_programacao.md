@@ -25,12 +25,3 @@ Elabore um algoritmo que mova três discos de uma Torre de Hanói, que consiste 
 
 
 
-![Torre de Hanói 3 discos](https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Linalg_towers_of_hanoi_1.png/800px-Linalg_towers_of_hanoi_1.png)  
-Imagem: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Linalg_towers_of_hanoi_1.png)  
-
-
-Resolva o problema da Torre de Hanói, considerando **4 discos**. 
-
-![Torre de Hanói](https://upload.wikimedia.org/wikipedia/commons/0/07/Tower_of_Hanoi.jpeg)  
-Imagem: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Linalg_towers_of_hanoi_1.png)  
-
