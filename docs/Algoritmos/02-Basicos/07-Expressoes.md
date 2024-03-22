@@ -293,7 +293,8 @@ escreva(valor_f);
   |`div(x,y)` | quociente da divisão inteira.| `div(20,6) = 3` |          |
 
   **Exemplos**
-  ```js
+  
+  ```c
   #import <math.h> //Necessário para as funções pow e sqrt
   int valor_i;
   float valor_f;
