@@ -82,7 +82,7 @@ Estrutura do código de seleção simples.
   </TabItem>
   <TabItem value="java" label="Java">
 
-  ```c showLineNumbers
+  ```javascript showLineNumbers
   //variáveis
   int idade;
   Scanner entrada;
@@ -94,7 +94,7 @@ Estrutura do código de seleção simples.
   entrada.close();
 
   //saída
-  System.out.printf("Parabéns! Você tem %d anos.\n", idade);
+  System.out.println("Parabéns! Você tem "+ idade " anos.",);
   // highlight-start
   if(idade > 18)
     System.out.println("Você é maior de idade.");
