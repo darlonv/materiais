@@ -14,4 +14,4 @@ LANGS=(${PARAMS[@]:1}) #demais argumentos são linguagens. ultima linguagem cons
 
 
 #./filter_content.sh ${FILE} | pandoc -t json --bibliography references.bib --citeproc  | ./java_filter_panflute.py ${LANGS[@]} | pandoc -f json -o ${FILE}.${LANGS[-1]}.pdf
-filter_content.sh ${FILE} | pandoc -t json --bibliography ${REFS}/references.bib --citeproc  | java_filter_panflute.py ${LANGS[@]} | pandoc -f json -o ${FILE}.${LANGS[0]}.pdf
+filter_content.sh ${FILE} | pandoc -t json --bibliography ${REFS}/references.bib --citeproc --csl ${REFS}/abnt.csl | java_filter_panflute.py ${LANGS[@]} | pandoc -f json -o ${FILE}.${LANGS[0]}.pdf
