@@ -1,4 +1,6 @@
+from pandocfilters import toJSONFilter, Str, CodeBlock
 import json
+
 
 def walk(node):
     # for key, value in node.items():
@@ -21,19 +23,30 @@ def iterate_nested_json_for_loop(json_obj):
             iterate_nested_json_for_loop(value)
         else:
             print(f"{key}: {value}")
-            print('============') 
+            print('============')
+
+
+# if __name__ == "__main__":
+#     text = input()
+
+#     print(text)
+
+
+def caps(key, value, format, meta):
+    # if key == 'Str':
+    # return Str(value.upper())
+    if key == 'CodeBlock':
+        return Str(value)
+        # return []
 
 
 if __name__ == "__main__":
-    text = input()
+    toJSONFilter(caps)
 
-    # print(text)
-
-    data = json.loads(text)
-    for d in data['blocks']:
-        iterate_nested_json_for_loop(d)
+    # data = json.loads(text)
+    # for d in data['blocks']:
+    # iterate_nested_json_for_loop(d)
     # print(data.keys())
     # print(data['blocks'])
 
     # print(json.dumps(data, indent=2))
-
