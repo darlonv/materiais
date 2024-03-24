@@ -666,7 +666,3 @@ print("Nulo")
 <!-- --- -->
 
 [@forbellone2022]
-
-## Referências
-::: {#refs}
-:::

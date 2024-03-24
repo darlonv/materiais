@@ -51,7 +51,3 @@ if <expressão>:
 </Tabs>
 
 <!-- --- -->
-
-## Referências
-::: {#refs}
-:::
