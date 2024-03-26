@@ -24,7 +24,7 @@ import TabItem from '@theme/TabItem';
 
 1. Faça um programa em que são solicitados ao ao usuário dois valores (operandos) e um operador, que pode ser `+`, `-`, `*` ou `/`. De acordo com o operador digitado, mostre o resultado da operação.
 
-1. Desenvolva um algoritmo que possui como entrada 3 valores (A, B e C), que represem as medidas dos lados de um triângulo. Informe se pode ou não existir um triângulo com as medidas informadas.  
+1. Desenvolva um algoritmo que possui como entrada 3 valores (A, B e C), que representam as medidas dos lados de um triângulo. Informe se pode ou não existir um triângulo com as medidas informadas.  
     1. Resolva o problema utilizando a estrutura **se** apenas uma vez no algoritmo.  
 
 :::note Triângulo
