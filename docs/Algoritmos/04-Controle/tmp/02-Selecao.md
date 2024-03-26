@@ -3,6 +3,7 @@ import TabItem from '@theme/TabItem';
 
 # Seleção
 
+
 Uma estrutura de **seleção** possibilita que determinadas ações, ou seja, linhas de um algoritmo, sejam executadas em ou não. A **decisão** se essas linhas serão ou não executadas depende uma **condição** [@forbellone2022 p. 50].
 <!-- --- -->
 
@@ -22,7 +23,7 @@ Estrutura do código de seleção simples.
 <Tabs groupId='language'>
 <TabItem value="portugol" label="Portugol" default>
 
-```c
+```boo
 se(<expressão>)
 então
 //código a ser executado caso o 
@@ -58,7 +59,7 @@ if <expressão>:
 <Tabs groupId='language'>
 <TabItem value="portugol" label="Portugol" default>
 
-```c 
+```boo
 início
 //variáveis
 inteiro: idade;
@@ -130,7 +131,7 @@ Quando o trecho de código é composto de mais de uma linha, precisamos definir 
 <Tabs groupId='language'>
 <TabItem value="portugol" label="Portugol" default>
 
-```c
+```boo
 se(<expressão>)
 então
 início
@@ -176,7 +177,7 @@ if <expressão>:
 <Tabs groupId='language'>
 <TabItem value="portugol" label="Portugol" default>
 
-```c
+```boo
 início
 //variáveis
 inteiro: x;
@@ -280,7 +281,7 @@ Vamos partir do seguinte exemplo:
 <Tabs groupId='language'>
 <TabItem value="portugol" label="Portugol" default>
 
-```c
+```boo
 início
 //variáveis
 inteiro: valor;
@@ -355,7 +356,7 @@ A seleção composta é uma ampliação da seleção simples. A ideia é que pod
 <Tabs groupId='language'>
 <TabItem value="portugol" label="Portugol" default>
 
-```c
+```boo
 se(<expressão>)
 então
 início
@@ -420,7 +421,7 @@ Desta forma, o exercício anterior poderia ser resolvido da seguinte maneira:
 <Tabs groupId='language'>
 <TabItem value="portugol" label="Portugol" default>
 
-```c
+```boo
 início
 //variáveis
 inteiro: valor;
@@ -499,7 +500,7 @@ Voltemos ao nosso exemplo dos números positivos, negativos e nulos.
 <Tabs groupId='language'>
 <TabItem value="portugol" label="Portugol" default>
 
-```c
+```boo
 início
 //variáveis
 inteiro: valor;
@@ -583,7 +584,7 @@ Utilizando estruturas de seleção encadeadas, apenas duas das condições são 
 <Tabs groupId='language'>
 <TabItem value="portugol" label="Portugol" default>
 
-```c
+```boo
 início
 //variáveis
 inteiro: valor;
@@ -664,7 +665,4 @@ print("Nulo")
 
 <!-- --- -->
 
-
-## Referências
-::: {#refs}
-:::
+[@forbellone2022]
