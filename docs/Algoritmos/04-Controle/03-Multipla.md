@@ -67,8 +67,8 @@ Uma abordagem para a solução seria testar cada valor de forma encadeada.
   fim.
 
 //Saída
-System.out.printf("O antecessor de %d é %d\n", valor, antecessor);
-System.out.printf("O sucessor de %d é %d\n", valor, sucessor);
+escreva("O antecessor de ", valor, " é ", antecessor);
+escreva("O sucessor de ", valor, " é ", sucessor);
   ```
 
   </TabItem>

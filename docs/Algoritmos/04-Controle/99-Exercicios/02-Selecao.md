@@ -16,7 +16,7 @@ import TabItem from '@theme/TabItem';
 1. Faça um programa que recebe um número inteiro e informa se esse número é divisível por 10, por 5, por 2 ou se não é divisível por nenhum destes.
 
 
-1. As maçãs custam R$ 0,30  cada se forem compradas menos do que uma dúzia, e R$ 0,25 se forem compradas pelo menos doze. Escreva um algotitmo que após receber o número de maçãs compradas, calcula e mostra o valor total da compra.
+1. As maçãs custam R$ 0,30  cada se forem compradas menos do que uma dúzia, e R$ 0,25 se forem compradas pelo menos doze. Escreva um algoritmo que após receber o número de maçãs compradas, calcula e mostra o valor total da compra.
 
 1. Construa um algoritmo que calcule e imprima o peso ideal de uma pessoa, utilizando o seguinte cálculo:
     - para homens: (72.7 * Altura) – 58  
