@@ -52,7 +52,7 @@ Em resumo, o Modelo de Camadas de Protocolos OSI fornece uma estrutura abstrata 
 
 
 
-## TCP/IP
+<!-- ## TCP/IP
 
 O Modelo TCP/IP é uma simplificação do Modelo OSI e é amplamente usado em redes modernas, especialmente na Internet. 
 
@@ -69,4 +69,27 @@ Camada de Aplicação: Agrupa as funções das camadas de sessão, apresentaçã
 
 </div>
 
-Figura: Camadas do modelo TCP/IP.
+Figura: Camadas do modelo TCP/IP. -->
+
+## Internet
+
+O Modelo de pilha de ptotocolos da Internet é uma abordagem apresentada em KUROSE, que possui 5 camadas. 
+
+Suas camadas são:
+- Aplicação (Abrange também a camada de Apresentação do modelo OSI)
+- Transporte: (Abrange também a camada de Sessão do modelo OSI)
+- Rede
+- Enlace
+- Física
+
+<div style={{textAlign: 'center'}}>
+
+![Camadas do modelo de Internet. Cada camada está dentro de um retângulo, onde estão organizados verticalmente. 5 camadas, do topo para baixo: aplicação, transporte, rede, enlace e física.](./images/03-internet.png)
+
+</div>
+
+Figura: Camadas do modelo de Internet [@kurose2021 p. 39].
+
+## Referências
+
+KUROSE, J. F.; ROSS, K. W. Redes de computadores e a internet: uma abordagem top-down. 8. ed. São Paulo, SP: Grupo A, 2021. E-book. Disponível em: https://plataforma.bvirtual.com.br. Acesso em: 27 mar. 2024.
