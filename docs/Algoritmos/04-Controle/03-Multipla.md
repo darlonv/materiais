@@ -34,27 +34,28 @@ Uma abordagem para a solução seria testar cada valor de forma encadeada.
   <TabItem value="pseudocodigo" label="Pseudocódigo">
 
   ```c
+  inicio
   //Variáveis
-  caractere sigla_estado;
+  inteiro codigo_estado;
 
   //Entrada
-  escreva("Entre com o sigla do estado: ");
-  leia(sigla_estado)
+  escreva("Entre com o código do estado: ");
+  leia(codigo_estado)
 
   //Processamento e saída
-  se (sigla_estado == "PR"): //<- Verifica se o estado é Paraná
+  se (codigo_estado == 41): //<- Verifica se o estado é Paraná
   então
     início
       escreva("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul");
     fim;
   senão
-    se (sigla_estado == "SC"): //<- Verifica se o estado é Santa Catarina
+    se (codigo_estado == 42): //<- Verifica se o estado é Santa Catarina
     então
       início
         escreva("Estado: Santa Catarina - Sigla: SC - Código: 2 - Região: Sul");
       fim;
     senão
-      se (sigla_estado == "RS"): //<- Verifica se o estado é Paraná
+      se (codigo_estado == 43): //<- Verifica se o estado é Paraná
       então
         início
           escreva("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul");
@@ -64,49 +65,45 @@ Uma abordagem para a solução seria testar cada valor de forma encadeada.
           escreva("Estado ainda não cadastrado no sistema.")
         fim.
   fimse;
-  fim.
-
-//Saída
-escreva("O antecessor de ", valor, " é ", antecessor);
-escreva("O sucessor de ", valor, " é ", sucessor);
+fim.
   ```
 
   </TabItem>
   
   <TabItem value="java" label="Java">
 
-  ```c
-  //Variáveis
-  String sigla_estado;
-  Scanner entrada;
+  ```javascript
+//Variáveis
+int codigo_estado;
+Scanner entrada;
 
-  //Entrada
-  System.out.println("Entre com o código do estado: ");
-  entrada = new Scanner(System.in);
-  sigla_estado = entrada.next();
-  entrada.close();
+//Entrada
+System.out.println("Entre com o código do estado: ");
+entrada = new Scanner(System.in);
+codigo_estado = entrada.nextInt();
+entrada.close();
 
-  //Processamento e saída
-  if (sigla_estado.equals("PR")) //<- Verifica se o estado é Paraná
+//Processamento e saída
+if (codigo_estado == 41 ) //<- Verifica se o estado é Paraná
+{
+  System.out.println("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul");
+}
+else
+{
+  if (codigo_estado == 42) //<- Verifica se o estado é Santa Catarina
   {
-    System.out.println("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul");
+    System.out.println("Estado: Santa Catarina - Sigla: SC - Código: 2 - Região: Sul");
   }
   else
-  {
-    if (sigla_estado.equals("SC")) //<- Verifica se o estado é Santa Catarina
+    if (codigo_estado == 43) //<- Verifica se o estado é Paraná
     {
-      System.out.println("Estado: Santa Catarina - Sigla: SC - Código: 2 - Região: Sul");
+      System.out.println("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul");
     }
-    else
-      if (sigla_estado.equals("RS")) //<- Verifica se o estado é Paraná
-      {
-        System.out.println("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul");
-      }
-      else //<- Não restou outra opção
-      {
-        System.out.println("Estado ainda não cadastrado no sistema.");
-      }
-  }
+    else //<- Não restou outra opção
+    {
+      System.out.println("Estado ainda não cadastrado no sistema.");
+    }
+}
   ```
 
   </TabItem>
@@ -114,19 +111,53 @@ escreva("O sucessor de ", valor, " é ", sucessor);
 
   ```python
   #Variáveis e entrada
-  sigla_estado = input("Entre com a sigla do estado: ")
+  codigo_estado = int(input("Entre com a sigla do estado: "))
 
   #Processamento e saída
-  if sigla_estado == "PR": #<- Verifica se o estado é Paraná
+  if codigo_estado == 41: #<- Verifica se o estado é Paraná
       print("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul")
   else:
-    if sigla_estado == "SC": #<- Verifica se o estado é Santa Catarina
+    if codigo_estado == 42: #<- Verifica se o estado é Santa Catarina
         print("Estado: Santa Catarina - Sigla: Sc - Código: 42 - Região: Sul")
     else:
-      if sigla_estado == "RS": #<- Verifica se o estado é Rio Grande do Sul
+      if codigo_estado == 43: #<- Verifica se o estado é Rio Grande do Sul
           print("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul")
       else: #<- Não restou outra opção
-          escreva("Estado ainda não cadastrado no sistema.")
+          print("Estado ainda não cadastrado no sistema.")
+  ```
+
+  </TabItem>
+  <TabItem value="c" label="C">
+
+  ```c
+//Variáveis
+int codigo_estado;
+
+//Entrada
+printf("Entre com o código do estado: ");
+scanf("%d", &codigo_estado);
+
+//Processamento e saída
+if (codigo_estado == 41 ) //<- Verifica se o estado é Paraná
+{
+  printf("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul");
+}
+else
+{
+  if (codigo_estado == 42) //<- Verifica se o estado é Santa Catarina
+  {
+    printf("Estado: Santa Catarina - Sigla: SC - Código: 2 - Região: Sul");
+  }
+  else
+    if (codigo_estado == 43) //<- Verifica se o estado é Paraná
+    {
+      printf("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul");
+    }
+    else //<- Não restou outra opção
+    {
+      printf("Estado ainda não cadastrado no sistema.");
+    }
+}
   ```
 
   </TabItem>
@@ -180,9 +211,6 @@ Outra forma seria utilizar uma estrutura em que todos os valores fossem testados
 
   </TabItem>
   <TabItem value="python" label="Python">
-
-  
-  Em Python, não há este tipo de estrutura. Porém, pode ser abordada com `elif`, que tem a ideia de `se-senão-se`
 
   ```python
   match <variável> : #Variável a ser observada
@@ -250,70 +278,59 @@ A solução para o exemplo anterior utilizando `escolha` poderia ser da seguinte
 
   <TabItem value="pseudocodigo" label="Pseudocódigo" default>
 
-  ```c
-  início
-    //Variáveis
-    caractere sigla_estado;
+```c
+inicio
+  //Variáveis
+  inteiro codigo_estado;
 
-    //Entrada
-    escreva("Entre com o sigla do estado: ");
-    leia(sigla_estado)
+  //Entrada
+  escreva("Entre com o código do estado: ");
+  leia(codigo_estado)
 
-    //Processamento e saída
-    escolha sigla_estado //<- Variável a ser observada
-      caso "PR": 
-        escreva("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul");
-      caso "SC": 
-        escreva("Estado: Santa Catarina - Sigla: SC - Código: 2 - Região: Sul");
-      caso "RS": 
-        escreva("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul");
-      caso contrário: 
-        escreva("Estado ainda não cadastrado no sistema.");
-    fimescolha;
-  fim.
-  ```
+  //Processamento e saída
+  escolha codigo_estado
+    caso 41:
+      escreva("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul");
+    caso 42:
+      escreva("Estado: Santa Catarina - Sigla: SC - Código: 2 - Região: Sul");
+    caso 43:
+      escreva("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul");
+    caso contrário:
+      escreva("Estado ainda não cadastrado no sistema.");
+  fimescolha;
+fim.
+```
 
   </TabItem>
   
   <TabItem value="java" label="Java">
 
-  Em Java, a estrutura que realiza este tipo de operação é o `switch-case`.
+```javascript
+//Variáveis
+int codigo_estado;
+Scanner entrada;
 
-  ```c
-  //Variáveis
-  String sigla_estado;
-  Scanner entrada;
+//Entrada
+System.out.println("Entre com o código do estado: ");
+entrada = new Scanner(System.in);
+codigo_estado = entrada.nextInt();
+entrada.close();
 
-  //Entrada
-  System.out.println("Entre com o código do estado: ");
-  entrada = new Scanner(System.in);
-  Sigla_estado = entrada.next();
-  entrada.close();
-
-  //Processamento e saída
-  switch(sigla_estado) //<- Variável a ser observada
-  {
-    case "PR":
-    {
-      System.out.println("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul");
-      break;
-    }
-    case "SC":
-    {
-      System.out.println("Estado: Santa Catarina - Sigla: SC - Código: 2 - Região: Sul");
-      break;
-    }
-    case "RS":
-    {
-      System.out.println("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul");
-      break;
-    }
-    default:
-    {
-      System.out.println("Estado ainda não cadastrado no sistema.");
-    }
-  }
-  ```
+//Processamento e saída
+switch(codigo_estado){
+  case 41:
+    System.out.println("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul");
+    break;
+  case 42:
+    System.out.println("Estado: Santa Catarina - Sigla: SC - Código: 2 - Região: Sul");
+    break;
+  case 43:
+    System.out.println("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul");
+    break;
+  default:
+    System.out.println("Estado ainda não cadastrado no sistema.");
+}
+```
 
   Em Java, os comandos `break` e `default` são opcionais. Seus significados são:  
 
@@ -325,57 +342,47 @@ A solução para o exemplo anterior utilizando `escolha` poderia ser da seguinte
   </TabItem>
   <TabItem value="python" label="Python">
 
-  ```python
-  #Variáveis e entrada
-  sigla_estado = input("Entre com a sigla do estado: ")
+```python
+#Variáveis e entrada
+codigo_estado = int(input("Entre com a sigla do estado: "))
 
-  #Processamento e saída
-  match sigla_estado: #<- Variável a ser observada
-    case "PR": #<- Verifica se o estado é Paraná
-      print("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul")
-    case "SC": #<- Verifica se o estado é Santa Catarina
-      print("Estado: Santa Catarina - Sigla: Sc - Código: 42 - Região: Sul")
-    case "RS": #<- Verifica se o estado é Rio Grande do Sul
-      print("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul")
-    case _: #<- Não restou outra opção
-      print("Estado ainda não cadastrado no sistema.")
-  ```
+#Processamento e saída
+match codigo_estado :
+  case 41: 
+    print("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul")
+  case 42: 
+    print("Estado: Santa Catarina - Sigla: Sc - Código: 42 - Região: Sul")
+  case 43: 
+    print("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul")
+  case _: 
+    print("Estado ainda não cadastrado no sistema.")
+```
+
   </TabItem>
   <TabItem value="c" label="C">
 
-  Em C, a estrutura que realiza este tipo de operação é o `switch-case`.
-
   ```c
   //Variáveis
-  int codigo_estado;
-  
-  //Entrada
-  printf("Entre com o código do estado: "\n);
-  scanf("%d", &codigo_estado);
+int codigo_estado;
 
-  //Processamento e saída
-  switch(codigo_estado) //<- Variável a ser observada
-  {
-    case 41:
-    {
-      printf("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul");
-      break;
-    }
-    case 42:
-    {
-      printf("Estado: Santa Catarina - Sigla: SC - Código: 2 - Região: Sul");
-      break;
-    }
-    case 43:
-    {
-      printf("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul");
-      break;
-    }
-    default:
-    {
-      printf("Estado ainda não cadastrado no sistema.");
-    }
-  }
+//Entrada
+printf("Entre com o código do estado: \n");
+scanf("%d", &codigo_estado);
+
+//Processamento e saída
+switch(codigo_estado){
+  case 41:
+    printf("Estado: Paraná - Sigla: PR - Código: 41 - Região: Sul\n");
+    break;
+  case 42:
+    printf("Estado: Santa Catarina - Sigla: SC - Código: 2 - Região: Sul\n");
+    break;
+  case 43:
+    printf("Estado: Rio Grande do Sul - Sigla: RS - Código: 43 - Região: Sul\n");
+    break;
+  default:
+    printf("Estado ainda não cadastrado no sistema.\n");
+}
   ```
 
   Em C, os comandos `break` e `default` são opcionais. Seus significados são:  
