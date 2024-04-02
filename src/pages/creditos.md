@@ -1,8 +1,8 @@
 ---
-title: Licensing
+title: Créditos
 ---
 
-# Images and icons
+# Imagens e ícones
 
 
 <!-- - Ícones:  <a href="https://www.svgrepo.com/collection/coco-bold-icons/" target="_blank">Coco Bold Icons, on SVG Repo</a>. By Amir Baqian -->

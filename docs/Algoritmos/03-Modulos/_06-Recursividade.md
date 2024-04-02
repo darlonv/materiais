@@ -190,8 +190,8 @@ Considere os dois módulos abaixo, sem e com recursividade. Ambas realizam a som
     int n;
 
     n = 10;
-    System.out.printf("Soma da sequência de 1 a %d : %d\n", n, somaSequencia(n));   //<-- sem recursividade
-    System.out.printf("Soma da sequência de 1 a %d : %d\n", n, somaSequenciaRec(n));   //<-- sem recursividade
+    System.out.println("Soma da sequência de 1 a " + n + " : " + somaSequencia(n) );   //<-- sem recursividade
+    System.out.println("Soma da sequência de 1 a " + n + " : " + somaSequenciaRec(n));   //<-- sem recursividade
   }
   ```
 
@@ -242,10 +242,10 @@ Considere os dois módulos abaixo, sem e com recursividade. Ambas realizam a som
 ```javascript
 public static void hanoi(int n, char origem, char destino, char auxiliar){
   if(n==1){
-    System.out.printf("Mova o disco %d de %c para %c.\n", n, origem, destino);
+    System.out.println("Mova o disco " + n + " de " + ordem + " para " + destino);
   }else{
     hanoi(n-1, origem, auxiliar, destino);
-    System.out.printf("Mova o disco %d de %c para %c.\n", n, origem, destino);
+    System.out.println("Mova o disco " + n + " de " + origem + " para " + destino);
     hanoi(n-1, auxiliar, destino, origem);
   }
 }

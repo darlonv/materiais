@@ -143,7 +143,7 @@
     ax^2 + bx +c = 0
     $$
 
-    As raízes podem ser obtidas por meio da fórmula do bhaskara:
+    As raízes podem ser obtidas por meio da fórmula de Bhaskara:
     $$
     x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
     $$

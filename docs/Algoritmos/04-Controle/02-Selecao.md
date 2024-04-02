@@ -218,15 +218,15 @@ Quando o trecho de código é composto de mais de uma linha, precisamos definir 
 
   //processamento e saída
   x_elev = x*x;
-  System.out.printf("%d^2= %d\n", x, x_elev);
+  System.out.prinln(x + "^2= " + x_elev);
 
   if(x>10)
   // highlight-start
   { 
     x_elev = x_elev*x;
-    System.out.printf("%d^3= %d\n", x, x_elev);
+    System.out.println(x + "^3= " + x_elev);
     x_elev = x_elev*x;
-    System.out.printf("%d^4= %d\n", x, x_elev);
+    System.out.println(x + "^4= " + x_elev);
   } 
   // highlight-end
   ```
@@ -578,7 +578,7 @@ Voltemos ao nosso exemplo dos números positivos, negativos e nulos.
 
 Neste caso, todas as condições são testadas. Isto pode ser melhorado aninhando estruturas `se`. 
 
-Utilizando estruturas de seleção encadeadas, apenas duas das condições são executas.
+Utilizando estruturas de seleção encadeadas, apenas duas das condições são executadas.
 
 <Tabs groupId='language'>
   <TabItem value="portugol" label="Portugol" default>
