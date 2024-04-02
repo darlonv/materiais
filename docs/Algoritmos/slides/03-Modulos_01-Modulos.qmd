@@ -107,7 +107,7 @@ pubic static void Main(String[] args){
     entradaAbrir();
     System.out.println("Nome: ");
     nome = entrada.next();
-    System.out.printf("Boa noite, %s\n", nome);
+    System.out.println("Boa noite, " + nome);
     entradaFechar()
 
     // highlight-next-line
@@ -199,7 +199,7 @@ pubic static void Main(String[] args){
     entradaAbrir();
     System.out.println("Nome: ");
     nome = entrada.next();
-    System.out.printf("Boa noite, %s\n", nome);
+    System.out.println("Boa noite, " + nome);
     entradaFechar();
 
     // highlight-next-line
@@ -324,7 +324,7 @@ public static void main(String[] args){
     idade_media = (idade_p1 + idade_p2 + idade_p3)/3;
 
     //saida
-    System.out.printf("A idade média é %f\n", idade_media);
+    System.out.println("A idade média é " + idade_media);
 }
   ```
 
@@ -437,7 +437,7 @@ public static void main(String[] args){
     idade_media = idadeMediaTresPessoas();
 
     //saida
-    System.out.printf("A idade média é %f\n", idade_media);
+    System.out.println("A idade média é " + idade_media);
 }
   ```
 
@@ -675,7 +675,7 @@ fim.
     x = entrada.nextInt(); y = entrada.nextInt(); z = entrada.nextInt();
 
     //chamada ao método e saída
-    System.out.printf("A média é %f\n", media3Valores(x,y,z));
+    System.out.println("A média é " + media3Valores(x,y,z));
   }
   ```
 
@@ -776,11 +776,11 @@ Acessar estas variáveis fora de seu escopo ocasiona em um erro.
     x = entrada.nextInt(); y = entrada.nextInt(); z = entrada.nextInt();
 
     //chamada ao método e saída
-    System.out.printf("A média é %f\n", media3Valores(x,y,z));
+    System.out.println("A média é " + media3Valores(x,y,z));
 
     //erro aqui
     //highlight-next-line
-    System.out.printf("A soma dos valores é ", soma);//soma não existe neste escopo
+    System.out.println("A soma dos valores é " + soma);//soma não existe neste escopo
   }
   ```
 
@@ -830,7 +830,7 @@ Em escopos diferentes, variáveis locais podem utilizar os mesmos nomes. Como es
         int v; //variável v local à função
         //highlight-next-line
         v = x+10;  //um valor é atribuído a v dentro da função
-        System.out.printf("V dentro do módulo: %d\n", v);
+        System.out.println("V dentro do módulo: " + v);
     }
 
     public static void main(String[] args){
@@ -838,9 +838,9 @@ Em escopos diferentes, variáveis locais podem utilizar os mesmos nomes. Como es
         int v; //variável v local ao código principal
         //highlight-next-line
         v = 10; //um valor é atribuído a v fora da função
-        System.out.printf("V fora do módulo: %d\n", v); //mostra o valor 10
+        System.out.println("V fora do módulo: " + v); //mostra o valor 10
         mostraValorMaisDez(v);                          //mostra o valor 20
-        System.out.printf("V fora do módulo: %d\n", v); //mostra o valor 10. O valor original foi mantido.
+        System.out.println("V fora do módulo: " + v); //mostra o valor 10. O valor original foi mantido.
     }
   ```
 

@@ -61,7 +61,7 @@ pubic static void Main(String[] args){
     entradaAbrir();
     System.out.println("Nome: ");
     nome = entrada.next();
-    System.out.printf("Boa noite, %s\n", nome);
+    System.out.prinln("Boa noite, " + nome);
     entradaFechar();
 
     // highlight-next-line
@@ -141,7 +141,7 @@ pubic static void Main(String[] args){
     entradaAbrir();
     System.out.println("Nome: ");
     nome = entrada.next();
-    System.out.printf("Boa noite, %s\n", nome);
+    System.out.println("Boa noite, " + nome);
     entradaFechar();
 
     // highlight-next-line
@@ -240,7 +240,7 @@ public static void main(String[] args){
     idade_media = (idade_p1 + idade_p2 + idade_p3)/3;
 
     //saida
-    System.out.printf("A idade média é %f\n", idade_media);
+    System.out.prinln("A idade média é " + idade_media);
 }
   ```
 
@@ -341,7 +341,7 @@ public static void main(String[] args){
     idade_media = idadeMediaTresPessoas();
 
     //saida
-    System.out.printf("A idade média é %f\n", idade_media);
+    System.out.prinln("A idade média é " + idade_media);
 }
   ```
 
