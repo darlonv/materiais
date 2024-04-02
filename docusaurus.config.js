@@ -144,8 +144,8 @@ const config = {
             title: 'Mais',
             items: [
               {
-                label: 'Licensing',
-                to: '/licensing',
+                label: 'Créditos',
+                to: '/creditos',
               },
               {
                 label: 'GitHub',
