@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 
 1. Desenvolva um algoritmo que tem como entrada um número de 0 a 999. Em seguida, o programa apresenta esse número por extenso. 
 
-1. Desenvolva um algoritmo que tem como entrada um número de 0 a 999. Em seguida, o programa apresenta o número ordinal correspondente em sua forma por extenso. 
+1. Desenvolva um algoritmo que tem como entrada um número de 1 a 999. Em seguida, o programa apresenta o número ordinal correspondente em sua forma por extenso. 
 
   :::note Definição
 
