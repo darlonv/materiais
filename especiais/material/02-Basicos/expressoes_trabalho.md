@@ -15,13 +15,15 @@ Desenvolva os exercícios abaixo utilizando Java, cada um em um arquivo .java di
 
 3. Escreva um programa para ler as dimensões de um retângulo, com o tamanho da base ($b$) e da altura ($h$). Calcule o mostre o perímetro ($p$) e área ($a$) desse retângulo.
 $$
-p = 2(b+h)\\
+p = 2(b+h)
+$$
+$$
 a = bh
 $$  
 
-4. Faça um algoritmo para calcular a distância entre dois pontos $A$ e $B$ em um plano cartesiano. O ponto $A$ possui as coordenadas $(x_1, y_1)$ e o ponto $B$ possui as coordenadas $(x_1, y_2)$. A distância $d$ entre os pontos $A$ e $B$ é dada pela seguinte fórmula:
+4. Faça um algoritmo para calcular a distância entre dois pontos $A$ e $B$ em um plano cartesiano. O ponto $A$ possui as coordenadas $(x_1, y_1)$ e o ponto $B$ possui as coordenadas $(x_2, y_2)$. A distância $d$ entre os pontos $A$ e $B$ é dada pela seguinte fórmula:
 $$
-d = \sqrt{(x_2-x_2)^2+(y_2-y_2)^2}
+d = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}
 $$
 
 ### Desafios
