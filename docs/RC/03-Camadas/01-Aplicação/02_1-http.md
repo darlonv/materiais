@@ -68,6 +68,8 @@ Em que:
 - `http://darlonv.github.io:8080/redes?aula=dns#url`
 
 
+Na formação de uma URL, alguns caracteres precisam ser representados utilizando uma codificação diferente, a [Percent Encoding](https://en.wikipedia.org/wiki/Percent-encoding).
+
 As requisições HTTP são compostas por um método, uma URL  e um cabeçalho, seguido pelo corpo da mensagem, que é opcional. Métodos comuns são `GET`, `POST`, `PUT`, `DELETE` e `HEAD`.
 
 ### Métodos
